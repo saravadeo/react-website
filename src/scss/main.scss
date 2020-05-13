@@ -1,0 +1,61 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+@import "base/utilities";
+@import "components/button";
+@import "components/card";
+@import "components/composition";
+@import "components/feature_box";
+@import "components/story";
+@import "components/bg-video";
+@import "components/form";
+@import "components/popup";
+@import "layout/header";
+@import "layout/grid";
+@import "layout/navigation";
+@import "pages/home";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  zoom: 97%;
+
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
+}
+
+body {
+  //box-sizing: border-box;
+  padding: 3rem;
+  @include respond(tab-port) {
+    padding: 0;
+  }
+}
+
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
+
+
+
+
