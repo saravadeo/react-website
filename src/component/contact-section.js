@@ -20,11 +20,22 @@ class ContactSection extends Component {
                           action  : "submit_clicked"
                       });
         if ( this.state.name && this.state.email && this.state.phoneNumber ) {
-            this.setState({
-                              name       : "",
-                              email      : "",
-                              phoneNumber: ""
-                          });
+            const { name, email, phoneNumber } = this.state;
+            const payload = { "text": `Name: ${ name }\nEmail: ${ email }\nPhone Number: ${ phoneNumber }` };
+            fetch("https://hooks.slack.com/services/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", {
+                method: "post",
+                body  : JSON.stringify(payload)
+            }).then(() => {
+                this.setState({
+                                  name       : "",
+                                  email      : "",
+                                  phoneNumber: ""
+                              });
+                alert("Thanks for contacting me. I will get back soon.");
+            }).catch(() => {
+                alert("Please try again later.");
+            });
+            
         }
     };
     
@@ -47,21 +58,22 @@ class ContactSection extends Component {
                                 </div>
                                 <div className="form__group">
                                     <input id="name" type="text" className="form__input" placeholder="Full name"
-                                           onChange={this.onChange}
+                                           onChange={ this.onChange }
                                            value={ this.state.name }
                                            required/>
                                     <label htmlFor="name" className="form__label">Full name</label>
                                 </div>
                                 <div className="form__group">
                                     <input id="email" type="email" className="form__input" placeholder="Email address"
-                                           onChange={this.onChange}
+                                           onChange={ this.onChange }
                                            value={ this.state.email }
                                            required/>
                                     <label htmlFor="email" className="form__label">Email address</label>
                                 </div>
                                 <div className="form__group">
-                                    <input id="phoneNumber" type="number" className="form__input" placeholder="Phone number"
-                                           onChange={this.onChange}
+                                    <input id="phoneNumber" type="number" className="form__input"
+                                           placeholder="Phone number"
+                                           onChange={ this.onChange }
                                            value={ this.state.phoneNumber }
                                            required/>
                                     <label htmlFor="phone" className="form__label">Phone number</label>
