@@ -19,7 +19,73 @@ class ExperienceSection extends Component {
                         Experience
                     </h2>
                 </div>
-                <div className="row">
+                <div className="card__container">
+                    <div className="col-1-of-3">
+                        <div className="card">
+                            <div className="card__side card__side--front">
+                                <div className="card__picture card__picture--5">
+                                    &nbsp;
+                                </div>
+                                <h4 className="card__heading">
+                            <span className="card__heading-span card__heading-span--5">
+                                Technical Lead
+                            </span>
+                                </h4>
+                                <div className="card__details">
+                                    <ul>
+                                        <li>Node, React</li>
+                                        <li>Express</li>
+                                        <li>MySQL, Elasticsearch</li>
+                                        <li>AWS</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className="card__side card__side--back card__side--back-5">
+                                <div className="card__cta">
+                                    <div className="card__price-box">
+                                        <div className="card__price-only">
+                                            Designing complete architecture of user facing website
+                                            and operation admin panel. Working on large scale traffic, looking at complete infra-structure with cost optimization.
+                                            Involved in all third party service consumer backend architecture
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-1-of-3">
+                        <div className="card">
+                            <div className="card__side card__side--front">
+                                <div className="card__picture card__picture--4">
+                                    &nbsp;
+                                </div>
+                                <h4 className="card__heading">
+                            <span className="card__heading-span card__heading-span--4">
+                                Lead Software Engineer
+                            </span>
+                                </h4>
+                                <div className="card__details">
+                                    <ul>
+                                        <li>Node, React</li>
+                                        <li>NestJS</li>
+                                        <li>MongoDB, Elasticsearch</li>
+                                        <li>AWS</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className="card__side card__side--back card__side--back-4">
+                                <div className="card__cta">
+                                    <div className="card__price-box">
+                                        <div className="card__price-only">
+                                            Designing complete architecture of user facing website
+                                            and operation admin panel. Involved in business requirements,
+                                            managed complete tech team, worked with founders.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div className="col-1-of-3">
                         <div className="card">
                             <div className="card__side card__side--front">

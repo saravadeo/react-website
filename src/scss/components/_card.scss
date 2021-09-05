@@ -5,6 +5,13 @@
   position: relative;
   height: 52rem;
 
+  &__container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 6rem;
+    padding: 0px 6rem;
+  }
+
   &__side {
     height: 46rem;
     transition: all .8s ease;
@@ -34,6 +41,14 @@
 
       &-3 {
         background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+      }
+
+      &-4 {
+        background-image: linear-gradient(to right bottom, $color-tertiary-light-1, $color-tertiary-dark-1);
+      }
+
+      &-5 {
+        background-image: linear-gradient(to right bottom, $color-tertiary-light-2, $color-tertiary-dark-2);
       }
     }
   }
@@ -65,6 +80,14 @@
     &--3 {
       background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, 0.6), rgba($color-tertiary-dark, 0.6)), url(../../img/nat-7.jpg);
     }
+
+    &--4 {
+      background-image: linear-gradient(to right bottom, rgba($color-tertiary-light-1, 0.6), rgba($color-tertiary-dark-1, 0.6)), url(../../img/stylecracker.jpg);
+    }
+
+    &--5 {
+      background-image: linear-gradient(to right bottom, rgba($color-tertiary-light-2, 0.6), rgba($color-tertiary-dark-2, 0.6)), url(../../img/dsg.png);
+    }
   }
 
   &__heading {
@@ -94,6 +117,14 @@
 
     &--3 {
       background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, .85), rgba($color-tertiary-dark, .85));
+    }
+
+    &--4 {
+      background-image: linear-gradient(to right bottom, rgba($color-tertiary-light-1, .85), rgba($color-tertiary-dark-1, .85));
+    }
+
+    &--5 {
+      background-image: linear-gradient(to right bottom, rgba($color-tertiary-light-2, .85), rgba($color-tertiary-dark-2, .85));
     }
   }
 
