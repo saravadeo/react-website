@@ -10,6 +10,25 @@
     grid-template-columns: auto auto auto;
     grid-column-gap: 6rem;
     padding: 0px 6rem;
+
+    @include respond(tab-land) {
+      grid-template-columns: auto auto;
+      padding: 0 3rem 6rem;
+      grid-row-gap: 6rem;
+    }
+
+    @include respond(tab-port) {
+      grid-template-columns: auto auto;
+      padding: 0 3rem 6rem;
+      grid-row-gap: 6rem;
+    }
+
+    @include respond(phone) {
+      grid-template-columns: auto;
+      grid-column-gap: 6rem;
+      padding: 0 3rem 6rem;
+      grid-row-gap: 6rem;
+    }
   }
 
   &__side {
