@@ -26,7 +26,7 @@ class AboutSection extends Component {
                         <p className="paragraph">
                             <span className="font-bold">Full Stack Developer | Artist | Dancer | Sportsman</span>
                             <span>
-                        A Full Stack Developer with 4 years of experience in Java, Spring, Javascript, React etc.
+                        A Full Stack Developer with 6+ years of experience in Node, Java, Javascript, React etc.
                         Application development with Agile methodology with extreme programming focused on OOPS
                         concept and clean code.
                     </span>
@@ -35,9 +35,7 @@ class AboutSection extends Component {
                             Vision
                         </h3>
                         <p className="paragraph">
-                            My vision is to create a product that can easily accessible for the poorest to poor and
-                            richest to
-                            richer.
+                            My vision is to create a product that can easily accessible for every category of people.
                         </p>
                         <a href="#section-technologies" onClick={ this.onKnowMoreClick } className="btn-text">Know
                             more &rarr;</a>
