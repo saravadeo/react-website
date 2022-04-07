@@ -44,9 +44,7 @@ class ExperienceSection extends Component {
                                 <div className="card__cta">
                                     <div className="card__price-box">
                                         <div className="card__price-only">
-                                            Designing complete architecture of user facing website
-                                            and operation admin panel. Working on large scale traffic, looking at complete infra-structure with cost optimization.
-                                            Involved in all third party service consumer backend architecture
+                                            Developing scalable applications using microservice architecture. Owning multiple services in microservice, also responsible for architecting AWS infrastructure. Also developing mobile applications from scratch.
                                         </div>
                                     </div>
                                 </div>
@@ -77,9 +75,7 @@ class ExperienceSection extends Component {
                                 <div className="card__cta">
                                     <div className="card__price-box">
                                         <div className="card__price-only">
-                                            Designing complete architecture of user facing website
-                                            and operation admin panel. Involved in business requirements,
-                                            managed complete tech team, worked with founders.
+                                            Developing the whole system from scratch. Lead of technology team and architecting back-end and front-end modules like Website, Admin and Inventory.
                                         </div>
                                     </div>
                                 </div>
