@@ -22,7 +22,7 @@ class ContactSection extends Component {
         if ( this.state.name && this.state.email && this.state.phoneNumber ) {
             const { name, email, phoneNumber } = this.state;
             const payload = { "text": `Name: ${ name }\nEmail: ${ email }\nPhone Number: ${ phoneNumber }` };
-            fetch("https://hooks.slack.com/services/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", {
+            fetch("https://hooks.slack.com/services/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", {
                 method: "post",
                 body  : JSON.stringify(payload)
             }).then(() => {
