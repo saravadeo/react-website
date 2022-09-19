@@ -21,10 +21,13 @@ class ContactSection extends Component {
                       });
         if ( this.state.name && this.state.email && this.state.phoneNumber ) {
             const { name, email, phoneNumber } = this.state;
-            const payload = { "text": `Name: ${ name }\nEmail: ${ email }\nPhone Number: ${ phoneNumber }` };
-            fetch("https://hooks.slack.com/services/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", {
+            const formData = new FormData();
+            formData.append('name', name);
+            formData.append('email', email);
+            formData.append('phone', phoneNumber);
+            fetch("https://script.google.com/macros/s/AKfycbyJNgXOEAsINcL7Yae4wWY3-MhRafmM5miJ7-pAz4dSGROdR1Yc6ZPRX3i0EvTKRuyF/exec", {
                 method: "post",
-                body  : JSON.stringify(payload)
+                body  : formData
             }).then(() => {
                 this.setState({
                                   name       : "",
