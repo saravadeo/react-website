@@ -1,0 +1,12 @@
+.moon {
+  &-time {
+    font-size: 72px;
+    font-weight: 600;
+    text-align:center;
+    color: white;
+
+    @include respond(tab-port) {
+      font-size: 36px;
+    }
+  }
+}
