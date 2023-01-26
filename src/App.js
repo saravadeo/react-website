@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import "./scss/main.scss";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ReactGA from 'react-ga';
 import Home from "./screen/home";
-import Moon from "./screen/moon";
 
 class App extends Component {
     
@@ -13,12 +11,7 @@ class App extends Component {
     
     render() {
         return (
-          <BrowserRouter>
-            <Routes>
-                <Route index element={<Home />} />
-                <Route path="moon" element={<Moon />} />
-            </Routes>
-          </BrowserRouter>
+          <Home/>
         );
     }
 }
