@@ -1,13 +1,9 @@
 import React, { Component } from "react";
 import "./scss/main.scss";
-import Header               from "./component/header";
-import AboutSection         from "./component/about-section";
-import TechnologySection    from "./component/technology-section";
-import ExperienceSection    from "./component/experience-section";
-import StoriesSection       from "./component/stories-section";
-import ContactSection       from "./component/contact-section";
-import SideBar              from "./component/side-bar";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ReactGA from 'react-ga';
+import Home from "./screen/home";
+import Moon from "./screen/moon";
 
 class App extends Component {
     
@@ -17,15 +13,12 @@ class App extends Component {
     
     render() {
         return (
-            <div className="App">
-                <SideBar/>
-                <Header/>
-                <AboutSection/>
-                <TechnologySection/>
-                <ExperienceSection/>
-                <StoriesSection/>
-                <ContactSection/>
-            </div>
+          <BrowserRouter>
+            <Routes>
+                <Route index element={<Home />} />
+                <Route path="moon" element={<Moon />} />
+            </Routes>
+          </BrowserRouter>
         );
     }
 }
