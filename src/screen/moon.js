@@ -35,7 +35,7 @@ class Moon extends Component {
     return (
       <div className="App">
         <img style={{width:'100%', height:"auto"}} alt="" src={ require("../img/moon.jpg") }/>
-        <div style={{position: 'fixed', bottom: '50%', left: 0, right: 0,}}>
+        <div style={{position: 'absolute', bottom: '50%', left: 0, right: 0,}}>
           {this.renderTimeDifference()}
         </div>
       </div>

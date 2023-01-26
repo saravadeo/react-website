@@ -6,6 +6,7 @@ import TechnologySection from "../component/technology-section";
 import ExperienceSection from "../component/experience-section";
 import StoriesSection from "../component/stories-section";
 import ContactSection from "../component/contact-section";
+import Moon from "./moon";
 
 class Home extends Component {
   render() {
@@ -18,6 +19,9 @@ class Home extends Component {
         <ExperienceSection/>
         <StoriesSection/>
         <ContactSection/>
+        <div style={{position:'relative'}}>
+        <Moon/>
+        </div>
       </div>
     );
   }
