@@ -9,21 +9,39 @@ import ContactSection from "../component/contact-section";
 import Moon from "./moon";
 
 class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      moon: false
+    }
+  }
+
+  onShowMoon = () => {
+    this.setState({moon: !this.state.moon})
+  }
+
   render() {
     return (
       <div className="App">
-        <SideBar/>
-        <Header/>
-        <AboutSection/>
-        <TechnologySection/>
-        <ExperienceSection/>
-        <StoriesSection/>
-        <ContactSection/>
-        <div style={{position:'relative'}}>
-        <Moon/>
-        </div>
+        {!this.state.moon ? (
+          <>
+            <SideBar/>
+            <Header/>
+            <AboutSection/>
+            <TechnologySection/>
+            <ExperienceSection/>
+            <StoriesSection/>
+            <ContactSection onShowMoon={this.onShowMoon}/>
+          </>
+          ) :
+          (
+            <div style={{position: 'relative'}}>
+              <Moon onShowMoon={this.onShowMoon}/>
+            </div>
+          )}
       </div>
     );
   }
 }
+
 export default Home;
