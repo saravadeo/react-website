@@ -38,6 +38,7 @@ class Moon extends Component {
         <div style={{position: 'absolute', bottom: '50%', left: 0, right: 0,}}>
           {this.renderTimeDifference()}
         </div>
+        <div style={{height: 30, width: 100, position:'absolute', bottom: 0, right: 0}} onClick={this.props.onShowMoon} />
       </div>
     );
   }

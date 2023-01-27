@@ -3,8 +3,8 @@ import ReactGA              from "react-ga";
 
 class ContactSection extends Component {
     
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             name       : "",
             email      : "",
@@ -49,7 +49,7 @@ class ContactSection extends Component {
     
     render() {
         return (
-            <section id="section-contact" className="section-contact">
+            <section id="section-contact" className="section-contact" style={{position:'relative'}}>
                 <div className="row">
                     <div className="contact">
                         <div className="contact__form">
@@ -88,6 +88,7 @@ class ContactSection extends Component {
                         </div>
                     </div>
                 </div>
+                <div style={{height: 30, width: 100, position:'absolute', bottom: 0, right: 0}} onClick={this.props.onShowMoon} />
             </section>
         );
     }
