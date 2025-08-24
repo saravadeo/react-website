@@ -40,9 +40,6 @@ class SideBar extends Component {
                         <li className="navigation__item" onClick={ this.togglePopup }><a href="#section-experience"
                                                                                          className="navigation__link">Experience</a>
                         </li>
-                        <li className="navigation__item" onClick={ this.togglePopup }><a href="#section-stories"
-                                                                                         className="navigation__link">Key
-                            People</a></li>
                         <li className="navigation__item" onClick={ this.togglePopup }><a href="#section-contact"
                                                                                          className="navigation__link">Contact
                             us</a></li>

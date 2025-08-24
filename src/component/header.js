@@ -19,7 +19,8 @@ class Header extends Component {
                 <div className="header__text-box">
                     <h1 className="header-primary">
                         <span className="header-primary-main">Onkar Sarvade</span>
-                        <span className="header-primary-sub">Software Developer</span>
+                        <span className="header-primary-sub">Lead Software Engineer & System Architect</span>
+                        <span className="header-primary-sub1">Building scalable, distributed systems powering millions of users | Expert in Kafka, Node.js, AWS, and Observability</span>
                     </h1>
                     <a href="#section-about" className="btn btn-white btn-animated" onClick={ this.onAboutMeClick }>About
                         me</a>

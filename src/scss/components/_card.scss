@@ -69,6 +69,10 @@
       &-5 {
         background-image: linear-gradient(to right bottom, $color-tertiary-light-2, $color-tertiary-dark-2);
       }
+
+      &-6 {
+        background-image: linear-gradient(to right bottom, $color-tertiary-light-3, $color-tertiary-dark-3);
+      }
     }
   }
 
@@ -106,6 +110,10 @@
 
     &--5 {
       background-image: linear-gradient(to right bottom, rgba($color-tertiary-light-2, 0.6), rgba($color-tertiary-dark-2, 0.6)), url(../../img/dsg.png);
+    }
+
+    &--6 {
+      background-image: linear-gradient(to right bottom, rgba($color-tertiary-light-3, 0.6), rgba($color-tertiary-dark-3, 0.6)), url(../../img/dream11.png);
     }
   }
 
@@ -145,6 +153,10 @@
     &--5 {
       background-image: linear-gradient(to right bottom, rgba($color-tertiary-light-2, .85), rgba($color-tertiary-dark-2, .85));
     }
+
+    &--6 {
+      background-image: linear-gradient(to right bottom, rgba($color-tertiary-light-3, .85), rgba($color-tertiary-dark-3, .85));
+    }
   }
 
   &__details {
@@ -164,6 +176,34 @@
           border-bottom: 1px solid #eee;
         }
       }
+    }
+
+    .card__company {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: $color-primary;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+    }
+
+    .card__achievement {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: $color-black;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      line-height: 1.4;
+      padding: 0 1rem;
+    }
+
+    .card__responsibilities {
+      font-size: 1.4rem;
+      color: $color-grey;
+      text-align: left;
+      line-height: 1.6;
+      padding: 0 0.5rem;
     }
   }
 
@@ -185,7 +225,34 @@
     margin: 0 3rem;
     line-height: 2.8rem;
     font-size: 1.6rem;
-    text-transform: uppercase;
+    text-transform: none;
+    text-align: left;
+
+    h4 {
+      color: $color-white;
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin: 1.5rem 0 1rem 0;
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba($color-white, 0.3);
+      padding-bottom: 0.5rem;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0 0 1.5rem 0;
+      padding: 0;
+
+      li {
+        color: $color-white;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        margin-bottom: 0.5rem;
+        padding: 0;
+        border: none;
+        text-align: left;
+      }
+    }
   }
 
   &__price-value {

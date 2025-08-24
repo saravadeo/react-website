@@ -24,18 +24,16 @@ class AboutSection extends Component {
                             About me
                         </h3>
                         <p className="paragraph">
-                            <span className="font-bold">Full Stack Developer | Artist | Dancer | Sportsman</span>
+                            <span className="font-bold">Lead Software Engineer & System Architect</span>
                             <span>
-                        A Full Stack Developer with 6+ years of experience in Node, Java, Javascript, React etc.
-                        Application development with Agile methodology with extreme programming focused on OOPS
-                        concept and clean code.
-                    </span>
+                            10+ years experience, event-driven architecture, AI-driven automation, observability systems, leadership & mentorship. I love solving complex problems and mentoring teams to build clean, resilient software
+                            </span>
                         </p>
                         <h3 className="header-tertiary u-margin-bottom-small">
                             Vision
                         </h3>
                         <p className="paragraph">
-                            My vision is to create a product that can easily accessible for every category of people.
+                        “My vision is to design technology that is powerful at scale, yet simple enough for everyone to use.”
                         </p>
                         <a href="#section-technologies" onClick={ this.onKnowMoreClick } className="btn-text">Know
                             more &rarr;</a>

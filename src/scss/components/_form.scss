@@ -97,3 +97,105 @@
     opacity: 1;
   }
 }
+
+// Success Popup Styles
+.success-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color-black, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.success-popup {
+  background: $color-white;
+  border-radius: 12px;
+  padding: 3rem;
+  text-align: center;
+  position: relative;
+  max-width: 40rem;
+  width: 90%;
+  box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
+  animation: slideUp 0.4s ease-out;
+  
+  &__icon {
+    width: 6rem;
+    height: 6rem;
+    margin: 0 auto 2rem;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-white;
+    
+    svg {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+  
+  &__title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: $color-black;
+    margin-bottom: 1.5rem;
+    text-transform: none;
+  }
+  
+  &__message {
+    font-size: 1.6rem;
+    color: $color-grey;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  
+  &__close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s;
+    
+    svg {
+      width: 2rem;
+      height: 2rem;
+      color: $color-grey;
+    }
+    
+    &:hover {
+      background-color: rgba($color-grey, 0.1);
+      transform: scale(1.1);
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(3rem) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

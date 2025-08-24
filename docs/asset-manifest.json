@@ -1,32 +1,27 @@
 {
   "files": {
-    "main.css": "/react-website/static/css/main.71e0da44.chunk.css",
-    "main.js": "/react-website/static/js/main.0c718105.chunk.js",
-    "runtime-main.js": "/react-website/static/js/runtime-main.12b40ab1.js",
-    "static/js/2.81bbd243.chunk.js": "/react-website/static/js/2.81bbd243.chunk.js",
-    "index.html": "/index.html",
-    "precache-manifest.90be2ff9a65938877c5821fb0316df2b.js": "/precache-manifest.90be2ff9a65938877c5821fb0316df2b.js",
-    "service-worker.js": "/service-worker.js",
-    "static/js/2.81bbd243.chunk.js.LICENSE.txt": "/react-website/static/js/2.81bbd243.chunk.js.LICENSE.txt",
-    "static/media/main.scss": "/react-website/static/media/stylecracker.524896db.jpg",
-    "static/media/moon.jpg": "/react-website/static/media/moon.3839ed5e.jpg",
-    "static/media/nat-1-large.jpg": "/react-website/static/media/nat-1-large.56bf8fa7.jpg",
-    "static/media/nat-1.jpg": "/react-website/static/media/nat-1.295db0b0.jpg",
-    "static/media/nat-2-large.jpg": "/react-website/static/media/nat-2-large.157b8c46.jpg",
-    "static/media/nat-2.jpg": "/react-website/static/media/nat-2.b88a245e.jpg",
-    "static/media/nat-3-large.jpg": "/react-website/static/media/nat-3-large.3875379d.jpg",
-    "static/media/nat-3.jpg": "/react-website/static/media/nat-3.c777e8e0.jpg",
-    "static/media/nat-8.jpg": "/react-website/static/media/nat-8.5ed8880c.jpg",
-    "static/media/nat-81.jpg": "/react-website/static/media/nat-81.cd6054cf.jpg",
-    "static/media/nat-9.jpg": "/react-website/static/media/nat-9.d4058087.jpg",
-    "static/media/nat-91.jpg": "/react-website/static/media/nat-91.04e15372.jpg",
-    "static/media/video.webm": "/react-website/static/media/video.a6e5c0d2.webm",
-    "static/media/video.mp4": "/react-website/static/media/video.c67a14fe.mp4"
+    "main.css": "/static/css/main.e4af2fec.css",
+    "main.js": "/static/js/main.1624a593.js",
+    "static/media/nat-2.jpg": "/static/media/nat-2.c93b61047910ffc4cf87.jpg",
+    "static/media/nat-3.jpg": "/static/media/nat-3.ab6c711782bce61c97b7.jpg",
+    "static/media/nat-1.jpg": "/static/media/nat-1.d1ff635a064f70e25516.jpg",
+    "static/media/moon.jpg": "/static/media/moon.a1efc7b37e00c0714995.jpg",
+    "static/media/nat-10.jpg": "/static/media/nat-10.e60f32e89067a31068bc.jpg",
+    "static/media/hero.jpg": "/static/media/hero.88912c53b624b5541fb2.jpg",
+    "static/media/nat-4.jpg": "/static/media/nat-4.479c0acf3ef6a5885903.jpg",
+    "static/media/nat-7.jpg": "/static/media/nat-7.6536af422f228a193b5c.jpg",
+    "static/media/nat-3-large.jpg": "/static/media/nat-3-large.de5f6bcf4cdf95fd7b8c.jpg",
+    "static/media/nat-6.jpg": "/static/media/nat-6.ec4e39e9bbca24bc4a83.jpg",
+    "static/media/nat-5.jpg": "/static/media/nat-5.3f26d387cc9c4ea0a411.jpg",
+    "static/media/nat-2-large.jpg": "/static/media/nat-2-large.d27f127db98663f42798.jpg",
+    "static/media/nat-1-large.jpg": "/static/media/nat-1-large.ef12517a66bb5c80cc6d.jpg",
+    "static/media/dsg.png": "/static/media/dsg.50273fcc83d5ca26a33d.png",
+    "static/media/stylecracker.jpg": "/static/media/stylecracker.29363e6dc281381a6dec.jpg",
+    "static/media/dream11.png": "/static/media/dream11.fec56bd5bb850b764ad7.png",
+    "index.html": "/index.html"
   },
   "entrypoints": [
-    "static/js/runtime-main.12b40ab1.js",
-    "static/js/2.81bbd243.chunk.js",
-    "static/css/main.71e0da44.chunk.css",
-    "static/js/main.0c718105.chunk.js"
+    "static/css/main.e4af2fec.css",
+    "static/js/main.1624a593.js"
   ]
 }
