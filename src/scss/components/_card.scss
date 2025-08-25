@@ -3,7 +3,7 @@
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 52rem;
+  height: 56rem;
 
   &__container {
     display: grid;
@@ -32,7 +32,7 @@
   }
 
   &__side {
-    height: 46rem;
+    height: 52rem;
     transition: all .8s ease;
     position: absolute;
     top: 0;

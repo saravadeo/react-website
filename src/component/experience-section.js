@@ -28,16 +28,16 @@ class ExperienceSection extends Component {
                                 </div>
                                 <h4 className="card__heading">
                             <span className="card__heading-span card__heading-span--6">
-                                Senior Software Engineer
+                                Lead Software Engineer
                             </span>
                                 </h4>
                                 <div className="card__details">
-                                    <div className="card__company">Dream11</div>
+                                    <div className="card__company">Dream11 (DreamSports)</div>
                                     <div className="card__achievement">
-                                        Platform serving millions of users daily on India's largest fantasy sports platform
+                                        Working on Dream11's Observability Platform managing 16+ Gbps log traffic
                                     </div>
                                     <div className="card__responsibilities">
-                                        Lead development of high-performance microservices architecture, maintain platform stability during peak traffic events, and collaborate with cross-functional teams
+                                        Building and scaling systems for logs, metrics, traces, and incident management using distributed tracing, alerting, and monitoring tools. Actively exploring AI-driven anomaly detection and alert noise reduction.
                                     </div>
                                 </div>
                             </div>
@@ -47,17 +47,17 @@ class ExperienceSection extends Component {
                                         <div className="card__price-only">
                                             <h4>Technologies Used</h4>
                                             <ul>
-                                                <li>• Node.js, React, TypeScript</li>
-                                                <li>• Microservices, AWS, Redis</li>
-                                                <li>• High-scale distributed systems</li>
-                                                <li>• Real-time features & optimization</li>
+                                                <li>• Distributed tracing & monitoring tools</li>
+                                                <li>• High-throughput log processing (16+ Gbps)</li>
+                                                <li>• AI-driven anomaly detection</li>
+                                                <li>• Incident management systems</li>
                                             </ul>
-                                            <h4>Key Responsibilities</h4>
+                                            <h4>Key Achievements</h4>
                                             <ul>
-                                                <li>• Maintain platform stability during peak traffic</li>
-                                                <li>• Cross-functional team collaboration</li>
-                                                <li>• Innovative solution delivery</li>
-                                                <li>• Performance optimization</li>
+                                                <li>• Managing massive log traffic scale</li>
+                                                <li>• AI-powered alert noise reduction</li>
+                                                <li>• End-to-end observability platform</li>
+                                                <li>• Real-time monitoring & alerting</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -73,16 +73,16 @@ class ExperienceSection extends Component {
                                 </div>
                                 <h4 className="card__heading">
                             <span className="card__heading-span card__heading-span--5">
-                                Technical Lead
+                                Head of Engineering
                             </span>
                                 </h4>
                                 <div className="card__details">
-                                    <div className="card__company">Technology Leadership</div>
+                                    <div className="card__company">DreamSetGo (DreamSports)</div>
                                     <div className="card__achievement">
-                                        Lead team of developers building scalable applications with microservice architecture
+                                        Engineered DORA - full-scale Admin Panel/ERP system covering entire lifecycle
                                     </div>
                                     <div className="card__responsibilities">
-                                        Own multiple critical services, architect AWS infrastructure, and mentor junior developers while implementing CI/CD pipelines
+                                        Led technology function as Head of Engineering for lean, high-impact team. Owned end-to-end system architecture, designed scalable microservices, and built fault-tolerant distributed systems. Built SAP-style process automation covering website content management, lead capture, package customization, sales workflow, invoicing, and operational dashboards.
                                     </div>
                                 </div>
                             </div>
@@ -92,17 +92,17 @@ class ExperienceSection extends Component {
                                         <div className="card__price-only">
                                             <h4>Technologies Used</h4>
                                             <ul>
-                                                <li>• Node.js, React, Express</li>
-                                                <li>• Microservices Architecture</li>
-                                                <li>• MySQL, Elasticsearch, Redis</li>
-                                                <li>• AWS Infrastructure & Services</li>
+                                                <li>• Microservices architecture</li>
+                                                <li>• AWS infrastructure & services</li>
+                                                <li>• ERP system architecture</li>
+                                                <li>• Process automation</li>
                                             </ul>
-                                            <h4>Leadership Skills</h4>
+                                            <h4>Leadership & Achievements</h4>
                                             <ul>
-                                                <li>• Team management & mentoring</li>
-                                                <li>• Code reviews & quality standards</li>
-                                                <li>• CI/CD pipeline implementation</li>
-                                                <li>• Technical decision making</li>
+                                                <li>• DORA ERP system development</li>
+                                                <li>• End-to-end system ownership</li>
+                                                <li>• SAP-style process automation</li>
+                                                <li>• Technology roadmap planning</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -118,16 +118,16 @@ class ExperienceSection extends Component {
                                 </div>
                                 <h4 className="card__heading">
                             <span className="card__heading-span card__heading-span--4">
-                                Lead Software Engineer
+                                Software Engineer - Team Lead
                             </span>
                                 </h4>
                                 <div className="card__details">
-                                    <div className="card__company">System Architecture</div>
+                                    <div className="card__company">StyleCracker</div>
                                     <div className="card__achievement">
-                                        Built complete system from scratch including Website, Admin Panel, and Inventory Management
+                                        Led technology team development and system architecture
                                     </div>
                                     <div className="card__responsibilities">
-                                        Lead technology team development, architect backend and frontend modules, and implement best practices for testing and deployment
+                                        Led technology team development, architected both backend and frontend modules including web applications, admin portals, and inventory management systems. Implemented best practices for testing and deployment while ensuring rapid, reliable delivery.
                                     </div>
                                 </div>
                             </div>
@@ -137,17 +137,17 @@ class ExperienceSection extends Component {
                                         <div className="card__price-only">
                                             <h4>Technologies Used</h4>
                                             <ul>
-                                                <li>• Node.js, React, NestJS</li>
-                                                <li>• MongoDB, Elasticsearch</li>
-                                                <li>• AWS Cloud Services</li>
+                                                <li>• Full-stack development</li>
+                                                <li>• Web applications & admin portals</li>
+                                                <li>• Inventory management systems</li>
                                                 <li>• Testing & deployment tools</li>
                                             </ul>
                                             <h4>Project Scope</h4>
                                             <ul>
-                                                <li>• Stakeholder collaboration</li>
-                                                <li>• Requirements gathering & delivery</li>
-                                                <li>• End-to-end development</li>
+                                                <li>• Technology team leadership</li>
+                                                <li>• Backend and frontend architecture</li>
                                                 <li>• Best practices implementation</li>
+                                                <li>• Rapid, reliable delivery</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -167,12 +167,12 @@ class ExperienceSection extends Component {
                             </span>
                                 </h4>
                                 <div className="card__details">
-                                    <div className="card__company">Full-Stack Development</div>
+                                    <div className="card__company">GupShup</div>
                                     <div className="card__achievement">
-                                        Developed robust backend systems and responsive desktop applications
+                                        Developed Java-based backend systems and successful Blockchain POC
                                     </div>
                                     <div className="card__responsibilities">
-                                        Research and develop blockchain POC using Hyperledger Fabric, implement RESTful APIs, and optimize system performance
+                                        Developed robust backend systems using Java and conducted successful research and development of blockchain technology using Hyperledger Fabric. Implemented RESTful APIs and database optimization techniques for improved performance.
                                     </div>
                                 </div>
                             </div>
@@ -182,17 +182,17 @@ class ExperienceSection extends Component {
                                         <div className="card__price-only">
                                             <h4>Technologies Used</h4>
                                             <ul>
-                                                <li>• Java, Spring, Jersey</li>
-                                                <li>• React, Angular</li>
+                                                <li>• Java backend development</li>
                                                 <li>• Hyperledger Fabric</li>
-                                                <li>• MySQL, PostgreSQL</li>
+                                                <li>• RESTful APIs</li>
+                                                <li>• Database optimization</li>
                                             </ul>
                                             <h4>Technical Focus</h4>
                                             <ul>
                                                 <li>• Backend system architecture</li>
-                                                <li>• Desktop application development</li>
                                                 <li>• Blockchain technology research</li>
                                                 <li>• Performance optimization</li>
+                                                <li>• API development</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -208,16 +208,16 @@ class ExperienceSection extends Component {
                                 </div>
                                 <h4 className="card__heading">
                             <span className="card__heading-span card__heading-span--2">
-                                Software Engineer
+                                Senior Software Engineer
                             </span>
                                 </h4>
                                 <div className="card__details">
-                                    <div className="card__company">Financial Technology</div>
+                                    <div className="card__company">Kyepot</div>
                                     <div className="card__achievement">
-                                        Built comprehensive financial application with optimized database architecture
+                                        Built financial app from ground up with robust ledger system database
                                     </div>
                                     <div className="card__responsibilities">
-                                        Manage complete product lifecycle, create custom React Native plugins for SMS reading and UPI payment integration
+                                        Played a pivotal role in developing a comprehensive financial application from scratch. Designed and optimized database architecture for a complex ledger system. Involved in the complete product development lifecycle from requirement gathering to deployment.
                                     </div>
                                 </div>
                             </div>
@@ -227,17 +227,17 @@ class ExperienceSection extends Component {
                                         <div className="card__price-only">
                                             <h4>Technologies Used</h4>
                                             <ul>
-                                                <li>• Java, Spring, Hibernate</li>
-                                                <li>• React, React Native</li>
-                                                <li>• Apache Kafka, Redis</li>
-                                                <li>• MySQL, Elasticsearch</li>
+                                                <li>• Financial application development</li>
+                                                <li>• Database architecture design</li>
+                                                <li>• Ledger system implementation</li>
+                                                <li>• Product lifecycle management</li>
                                             </ul>
-                                            <h4>Innovations</h4>
+                                            <h4>Key Contributions</h4>
                                             <ul>
-                                                <li>• SMS reading functionality</li>
-                                                <li>• UPI payment integration</li>
-                                                <li>• Native Android features</li>
-                                                <li>• Custom plugin development</li>
+                                                <li>• Complete financial app development</li>
+                                                <li>• Complex database architecture</li>
+                                                <li>• End-to-end product delivery</li>
+                                                <li>• Financial system expertise</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -257,12 +257,12 @@ class ExperienceSection extends Component {
                             </span>
                                 </h4>
                                 <div className="card__details">
-                                    <div className="card__company">Data & Analytics</div>
+                                    <div className="card__company">TIBCO Software Limited</div>
                                     <div className="card__achievement">
-                                        Developed Nielsen data applications for store management and metrics creation
+                                        Developed data management application for Nielsen using TIBCO tools
                                     </div>
                                     <div className="card__responsibilities">
-                                        Work with TIBCO BusinessWorks (BW), create data visualization dashboards, and implement data processing workflows
+                                        Developed a data management application for Nielsen using TIBCO BusinessWorks (BW) that generated multiple metrics from store-related data. Implemented data processing workflows and created interactive dashboards for business intelligence and analytics.
                                     </div>
                                 </div>
                             </div>
@@ -272,17 +272,17 @@ class ExperienceSection extends Component {
                                         <div className="card__price-only">
                                             <h4>Technologies Used</h4>
                                             <ul>
-                                                <li>• TIBCO BW, Spotfire</li>
-                                                <li>• Java, React</li>
-                                                <li>• Oracle Database</li>
-                                                <li>• Data visualization tools</li>
+                                                <li>• TIBCO BusinessWorks (BW)</li>
+                                                <li>• Data management systems</li>
+                                                <li>• Business intelligence tools</li>
+                                                <li>• Analytics dashboards</li>
                                             </ul>
                                             <h4>Business Impact</h4>
                                             <ul>
+                                                <li>• Nielsen data applications</li>
+                                                <li>• Multiple metrics generation</li>
                                                 <li>• Store data management</li>
-                                                <li>• Multiple metrics creation</li>
-                                                <li>• Business intelligence dashboards</li>
-                                                <li>• Data processing workflows</li>
+                                                <li>• Business intelligence solutions</li>
                                             </ul>
                                         </div>
                                     </div>

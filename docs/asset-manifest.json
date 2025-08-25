@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-website/static/css/main.7795702b.css",
-    "main.js": "/react-website/static/js/main.77ecb75b.js",
+    "main.css": "/react-website/static/css/main.39bb0385.css",
+    "main.js": "/react-website/static/js/main.6ae27ec2.js",
     "static/media/nat-2.jpg": "/react-website/static/media/nat-2.c93b61047910ffc4cf87.jpg",
     "static/media/nat-3.jpg": "/react-website/static/media/nat-3.ab6c711782bce61c97b7.jpg",
     "static/media/nat-1.jpg": "/react-website/static/media/nat-1.d1ff635a064f70e25516.jpg",
@@ -21,7 +21,7 @@
     "index.html": "/react-website/index.html"
   },
   "entrypoints": [
-    "static/css/main.7795702b.css",
-    "static/js/main.77ecb75b.js"
+    "static/css/main.39bb0385.css",
+    "static/js/main.6ae27ec2.js"
   ]
 }
