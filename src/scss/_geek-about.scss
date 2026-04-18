@@ -1,0 +1,216 @@
+// Geek About Section Styles
+@import "geek-theme";
+
+.geek-about {
+  background: $geek-bg-primary;
+  padding: 8rem 2rem;
+  min-height: 100vh;
+}
+
+.geek-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// Section Header
+.geek-section-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid $geek-border;
+}
+
+.geek-section-prompt {
+  color: $geek-accent-green;
+  font-family: $font-mono;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.geek-section-title {
+  color: $geek-text-primary;
+  font-family: $font-mono;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+// Grid Layout
+.geek-about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  
+  @media (max-width: 968px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Code Block
+.geek-code-block {
+  @include geek-terminal;
+  margin-bottom: 3rem;
+  overflow: hidden;
+}
+
+.geek-code-header {
+  background: $geek-bg-tertiary;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $geek-border;
+}
+
+.geek-code-dots {
+  color: $geek-text-secondary;
+  letter-spacing: 0.3rem;
+}
+
+.geek-code-lang {
+  color: $geek-text-secondary;
+  font-family: $font-mono;
+  font-size: 1.2rem;
+}
+
+.geek-code-content {
+  padding: 2rem;
+  margin: 0;
+  color: $geek-text-primary;
+  font-family: $font-mono;
+  font-size: 1.4rem;
+  line-height: 1.8;
+  overflow-x: auto;
+  
+  // Syntax highlighting
+  .json-key {
+    color: $geek-accent-blue;
+  }
+  
+  .json-string {
+    color: $geek-accent-green;
+  }
+  
+  .json-boolean {
+    color: $geek-accent-purple;
+  }
+}
+
+// Bio Text
+.geek-about-text {
+  color: $geek-text-secondary;
+  font-size: 1.6rem;
+  line-height: 1.8;
+  
+  p {
+    margin-bottom: 1.5rem;
+  }
+}
+
+// Skills Section
+.geek-about-skills {
+  @include geek-card;
+  padding: 3rem;
+}
+
+.geek-skills-title {
+  color: $geek-text-primary;
+  font-family: $font-mono;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  
+  .geek-icon {
+    color: $geek-accent-green;
+  }
+}
+
+.geek-skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.geek-skill-group {
+  border-left: 2px solid $geek-border;
+  padding-left: 1.5rem;
+}
+
+.geek-skill-category {
+  color: $geek-accent-blue;
+  font-family: $font-mono;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  
+  .geek-skill-arrow {
+    color: $geek-accent-green;
+  }
+}
+
+.geek-skill-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.geek-skill-tag {
+  background: $geek-bg-tertiary;
+  border: 1px solid $geek-border;
+  color: $geek-text-secondary;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  font-family: $font-mono;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  
+  &:hover {
+    background: $geek-accent-blue;
+    border-color: $geek-accent-blue;
+    color: white;
+    transform: translateY(-2px);
+  }
+}
+
+// Stats Bar
+.geek-stats-bar {
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  margin-top: 6rem;
+  padding-top: 4rem;
+  border-top: 2px solid $geek-border;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+  }
+}
+
+.geek-stat-item {
+  text-align: center;
+}
+
+.geek-stat-number {
+  display: block;
+  color: $geek-accent-green;
+  font-family: $font-mono;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.geek-stat-label {
+  color: $geek-text-secondary;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}

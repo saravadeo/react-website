@@ -1,14 +1,21 @@
 import React, { Component } from "react";
 import "./scss/main.scss";
-import Header               from "./component/header";
-import AboutSection         from "./component/about-section";
-import TechnologySection    from "./component/technology-section";
-import ExperienceSection    from "./component/experience-section";
-import StoriesSection       from "./component/stories-section";
-import ContactSection       from "./component/contact-section";
-import SideBar              from "./component/side-bar";
-import BlogList             from "./components/Blog/BlogList";
-import BlogPost             from "./components/Blog/BlogPost";
+
+// Geek Theme Components
+import GeekHeader from "./component/geek-header";
+import GeekAbout from "./component/geek-about";
+
+// Original Components (will be styled)
+import TechnologySection from "./component/technology-section";
+import ExperienceSection from "./component/experience-section";
+import StoriesSection from "./component/stories-section";
+import ContactSection from "./component/contact-section";
+import SideBar from "./component/side-bar";
+
+// Blog Components
+import BlogList from "./components/Blog/BlogList";
+import BlogPost from "./components/Blog/BlogPost";
+
 import ReactGA from 'react-ga';
 
 class App extends Component {
@@ -38,77 +45,80 @@ class App extends Component {
         window.history.pushState({}, '', '/blog');
     };
     
-    navigateToBlogPost = (slug) => {
-        this.setState({ currentPage: 'blog-post', blogSlug: slug });
-        window.history.pushState({}, '', `/blog/${slug}`);
-    };
-    
     navigateHome = () => {
-        this.setState({ currentPage: 'home' });
+        this.setState({ currentPage: 'home', blogSlug: null });
         window.history.pushState({}, '', '/');
     };
     
     render() {
         const { currentPage, blogSlug } = this.state;
         
+        if (currentPage === 'home') {
+            return (
+                <div className="App">
+                    <GeekHeader onBlogClick={this.navigateToBlog} />
+                    <GeekAbout />
+                    <TechnologySection />
+                    <ExperienceSection />
+                    <StoriesSection />
+                    <ContactSection />
+                    <SideBar />
+                </div>
+            );
+        }
+        
+        if (currentPage === 'blog') {
+            return (
+                <div className="App">
+                    <nav className="geek-nav-bar">
+                        <button 
+                            className="geek-nav-btn"
+                            onClick={this.navigateHome}
+                        >
+                            ← cd ~
+                        </button>
+                        <span className="geek-nav-title">~/blog</span>
+                    </nav>
+                    <BlogList />
+                </div>
+            );
+        }
+        
+        if (currentPage === 'blog-post') {
+            return (
+                <div className="App">
+                    <nav className="geek-nav-bar">
+                        <button 
+                            className="geek-nav-btn"
+                            onClick={() => window.history.back()}
+                        >
+                            ← cd ..
+                        </button>
+                        <span className="geek-nav-title">~/blog/{blogSlug}</span>
+                    </nav>
+                    <BlogPost />
+                </div>
+            );
+        }
+        
         return (
             <div className="App">
-                {currentPage === 'home' && (
-                    <>
-                        <SideBar/>
-                        <Header/>
-                        <AboutSection/>
-                        <TechnologySection/>
-                        <ExperienceSection/>
-                        <StoriesSection/>
-                        <ContactSection/>
-                        
-                        {/* Blog Section Link */}
-                        <section className="blog-preview-section">
-                            <div className="container">
-                                <h2>Latest from the Blog</h2>
-                                <p>Technical insights and tutorials</p>
-                                <button 
-                                    className="btn btn-primary"
-                                    onClick={this.navigateToBlog}
-                                >
-                                    View Blog
-                                </button>
-                            </div>
-                        </section>
-                    </>
-                )}
-                
-                {currentPage === 'blog' && (
-                    <>
-                        <nav className="blog-nav">
-                            <button 
-                                className="blog-nav-home"
-                                onClick={this.navigateHome}
-                            >
-                                ← Back to Home
-                            </button>
-                        </nav>
-                        <BlogList />
-                    </>
-                )}
-                
-                {currentPage === 'blog-post' && (
-                    <>
-                        <nav className="blog-nav">
-                            <button 
-                                className="blog-nav-home"
-                                onClick={() => window.history.back()}
-                            >
-                                ← Back
-                            </button>
-                        </nav>
-                        <BlogPost />
-                    </>
-                )}
+                <GeekHeader onBlogClick={this.navigateToBlog} />
             </div>
         );
     }
 }
 
 export default App;
+
+// Geek Theme Styles
+.geek-theme {
+  background: #0d1117;
+  color: #c9d1d9;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+}
+
+// Import geek theme files
+@import "./scss/geek-theme";
+@import "./scss/geek-header";
+@import "./scss/geek-about";

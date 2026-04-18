@@ -1,0 +1,270 @@
+// Geek Header Styles
+@import "geek-theme";
+
+.geek-header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, $geek-bg-primary 0%, #1a1f2e 100%);
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+    
+    // Background grid effect
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: 
+            linear-gradient(rgba(88, 166, 255, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(88, 166, 255, 0.03) 1px, transparent 1px);
+        background-size: 50px 50px;
+        pointer-events: none;
+    }
+}
+
+// Terminal Window
+.geek-terminal {
+    @include geek-terminal;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    
+    // Scanline effect
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: rgba(88, 166, 255, 0.1);
+        animation: scanline 4s linear infinite;
+        pointer-events: none;
+    }
+}
+
+.geek-terminal-header {
+    background: $geek-bg-tertiary;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid $geek-border;
+}
+
+.geek-terminal-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.geek-btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: block;
+}
+
+.geeks-btn-red { background: #ff5f56; }
+.geeks-btn-yellow { background: #ffbd2e; }
+.geeks-btn-green { background: #27c93f; }
+
+.geek-terminal-title {
+    color: $geek-text-secondary;
+    font-family: $font-mono;
+    font-size: 1.2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.geek-terminal-body {
+    padding: 2rem;
+    font-family: $font-mono;
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+.geek-line {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.geek-prompt {
+    color: $geek-accent-green;
+    margin-right: 1rem;
+    font-weight: bold;
+}
+
+.geek-command {
+    color: $geek-text-primary;
+}
+
+.geek-output {
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.geek-name {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 1rem 0;
+    
+    @media (max-width: 768px) {
+        font-size: 2.5rem;
+    }
+}
+
+.geek-bracket {
+    color: $geek-accent-blue;
+}
+
+.geek-role {
+    font-size: 1.8rem;
+    color: $geek-text-secondary;
+}
+
+.geek-cursor {
+    color: $geek-accent-green;
+    animation: blink 1s step-end infinite;
+}
+
+// Stats
+.geek-stats {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 3rem;
+    z-index: 1;
+    
+    @media (max-width: 768px) {
+        gap: 1.5rem;
+    }
+}
+
+.geek-stat {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-family: $font-mono;
+    font-size: 1.4rem;
+}
+
+.geek-stat-label {
+    color: $geek-text-secondary;
+}
+
+.geek-stat-value {
+    color: $geek-text-primary;
+}
+
+.geek-status-active {
+    color: $geek-accent-green;
+}
+
+.geek-tag {
+    background: $geek-bg-tertiary;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    border: 1px solid $geek-border;
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+// CTAs
+.geek-ctas {
+    display: flex;
+    gap: 2rem;
+    z-index: 1;
+    
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.geek-btn-primary {
+    background: $geek-accent-green;
+    color: white;
+    padding: 1.2rem 2.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: $font-mono;
+    font-size: 1.4rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid $geek-accent-green;
+    
+    &:hover {
+        background: transparent;
+        color: $geek-accent-green;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(35, 134, 54, 0.3);
+    }
+}
+
+.geek-btn-secondary {
+    background: transparent;
+    color: $geek-accent-blue;
+    padding: 1.2rem 2.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: $font-mono;
+    font-size: 1.4rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid $geek-accent-blue;
+    
+    &:hover {
+        background: $geek-accent-blue;
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(88, 166, 255, 0.3);
+    }
+}
+
+.geek-icon {
+    font-size: 1.2em;
+}
+
+// Scroll indicator
+.geek-scroll {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: $geek-text-secondary;
+    font-family: $font-mono;
+    font-size: 1.2rem;
+    animation: bounce 2s infinite;
+}
+
+.geek-scroll-arrow {
+    font-size: 1.5rem;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-10px); }
+}

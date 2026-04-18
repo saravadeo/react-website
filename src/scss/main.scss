@@ -122,3 +122,61 @@ body {
     }
   }
 }
+
+// Geek Theme Imports
+@import "geek-theme";
+@import "geek-header";
+
+// Geek Global Styles
+.geek-nav-bar {
+  background: #161b22;
+  border-bottom: 1px solid #30363d;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  
+  .geek-nav-btn {
+    background: transparent;
+    border: 1px solid #30363d;
+    color: #58a6ff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.4rem;
+    transition: all 0.3s;
+    
+    &:hover {
+      background: #238636;
+      border-color: #238636;
+      color: white;
+    }
+  }
+  
+  .geek-nav-title {
+    color: #8b949e;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.4rem;
+    margin-left: auto;
+  }
+}
+
+// Section Styling
+.section-about,
+.section-technology,
+.section-experience,
+.section-stories,
+.section-contact {
+  background: #0d1117;
+  padding: 8rem 0;
+}
+
+// Override original styles for dark theme
+.App {
+  background: #0d1117;
+  min-height: 100vh;
+}
