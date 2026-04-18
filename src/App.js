@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import "./scss/main.scss";
 
 // Components
@@ -30,14 +30,14 @@ const HomePage = () => (
 const BlogPage = () => (
   <>
     <nav className="nav-bar">
-      <a href="/" className="nav-btn">← Back to Home</a>
+      <a href="#/" className="nav-btn">← Back to Home</a>
       <span className="nav-title">Blog</span>
     </nav>
     <BlogList />
   </>
 );
 
-// Blog post page with nav
+// Blog post page
 const BlogPostPage = () => (
   <>
     <nav className="nav-bar">
@@ -52,11 +52,11 @@ const App = () => {
   return (
     <Router>
       <div className="App">
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route exact path="/blog" component={BlogPage} />
-          <Route path="/blog/:slug" component={BlogPostPage} />
-        </Switch>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:slug" element={<BlogPostPage />} />
+        </Routes>
       </div>
     </Router>
   );
