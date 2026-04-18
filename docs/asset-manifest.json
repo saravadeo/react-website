@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/react-website/static/css/main.e13155a2.chunk.css",
+    "main.js": "/react-website/static/js/main.dd47ea5e.chunk.js",
+    "runtime-main.js": "/react-website/static/js/runtime-main.13098694.js",
+    "static/js/2.e38b6e71.chunk.js": "/react-website/static/js/2.e38b6e71.chunk.js",
+    "index.html": "/react-website/index.html",
+    "precache-manifest.fbf9c4a6d0d4126a6e1409c5535c8cd1.js": "/react-website/precache-manifest.fbf9c4a6d0d4126a6e1409c5535c8cd1.js",
+    "service-worker.js": "/react-website/service-worker.js",
+    "static/js/2.e38b6e71.chunk.js.LICENSE.txt": "/react-website/static/js/2.e38b6e71.chunk.js.LICENSE.txt",
+    "static/media/main.scss": "/react-website/static/media/nat-7.a803e5dc.jpg",
+    "static/media/nat-8.jpg": "/react-website/static/media/nat-8.5ed8880c.jpg",
+    "static/media/nat-81.jpg": "/react-website/static/media/nat-81.cd6054cf.jpg",
+    "static/media/nat-9.jpg": "/react-website/static/media/nat-9.d4058087.jpg",
+    "static/media/nat-91.jpg": "/react-website/static/media/nat-91.04e15372.jpg",
+    "static/media/video.webm": "/react-website/static/media/video.a6e5c0d2.webm",
+    "static/media/video.mp4": "/react-website/static/media/video.c67a14fe.mp4"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.13098694.js",
+    "static/js/2.e38b6e71.chunk.js",
+    "static/css/main.e13155a2.chunk.css",
+    "static/js/main.dd47ea5e.chunk.js"
+  ]
+}
