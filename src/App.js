@@ -1,54 +1,125 @@
 import React, { useState, useEffect } from "react";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  HashRouter as Router,
+  Routes,
+  Route,
+  Link,
+  useLocation,
+  useNavigate,
+} from "react-router-dom";
+import BlogList from "./components/Blog/BlogList";
+import BlogPost from "./components/Blog/BlogPost";
 import "./scss/main.scss";
 
-// Navigation Component
+const SECTION_SCROLL_KEY = "pendingSection";
+
+const scrollToId = (id) => {
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+};
+
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const onHome = location.pathname === "/";
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100);
-    };
-    window.addEventListener("scroll", handleScroll);
+    const handleScroll = () => setIsScrolled(window.scrollY > 48);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
-    { name: "Home", href: "#" },
-    { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
-    { name: "Experience", href: "#experience" },
-    { name: "Open Source", href: "#opensource" },
-    { name: "Education", href: "#education" },
-    { name: "Contact", href: "#contact" },
+  useEffect(() => {
+    document.body.classList.toggle("nav-open", isMobileMenuOpen);
+    return () => document.body.classList.remove("nav-open");
+  }, [isMobileMenuOpen]);
+
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
+
+  const handleSectionClick = (e, sectionId) => {
+    e.preventDefault();
+    setIsMobileMenuOpen(false);
+    if (onHome) {
+      scrollToId(sectionId);
+    } else {
+      sessionStorage.setItem(SECTION_SCROLL_KEY, sectionId);
+      navigate("/");
+    }
+  };
+
+  const handleHomeClick = (e) => {
+    setIsMobileMenuOpen(false);
+    if (onHome) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
+  const sectionLinks = [
+    { name: "About", id: "about" },
+    { name: "Skills", id: "skills" },
+    { name: "Experience", id: "experience" },
+    { name: "Open Source", id: "opensource" },
+    { name: "Education", id: "education" },
+    { name: "Contact", id: "contact" },
   ];
 
   return (
-    <nav className={`nav ${isScrolled ? "nav--scrolled" : ""}`}>
+    <nav
+      className={`nav ${isScrolled ? "nav--scrolled" : ""}`}
+      aria-label="Primary"
+    >
       <div className="nav__container">
-        <a href="#" className="nav__logo">
+        <Link to="/" className="nav__logo" onClick={handleHomeClick}>
           <span className="nav__logo-bracket">[</span>
           <span className="nav__logo-text">OS</span>
           <span className="nav__logo-bracket">]</span>
-        </a>
+        </Link>
         <button
+          type="button"
           className="nav__mobile-toggle"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="primary-menu"
+          aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+          onClick={() => setIsMobileMenuOpen((open) => !open)}
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          <span aria-hidden="true" />
+          <span aria-hidden="true" />
+          <span aria-hidden="true" />
         </button>
-        <ul className={`nav__menu ${isMobileMenuOpen ? "nav__menu--open" : ""}`}>
-          {navLinks.map((link) => (
-            <li key={link.name}>
-              <a href={link.href} onClick={() => setIsMobileMenuOpen(false)}>
+        <ul
+          id="primary-menu"
+          className={`nav__menu ${isMobileMenuOpen ? "nav__menu--open" : ""}`}
+        >
+          <li>
+            <Link to="/" onClick={handleHomeClick}>
+              Home
+            </Link>
+          </li>
+          {sectionLinks.map((link) => (
+            <li key={link.id}>
+              <a
+                href={`#${link.id}`}
+                onClick={(e) => handleSectionClick(e, link.id)}
+              >
                 {link.name}
               </a>
             </li>
           ))}
+          <li>
+            <Link
+              to="/blog"
+              className={
+                location.pathname.startsWith("/blog") ? "nav__link--active" : ""
+              }
+            >
+              Blog
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>
@@ -59,14 +130,13 @@ const Navigation = () => {
 const useTypingEffect = (texts, typingSpeed = 80, pauseTime = 2000) => {
   const [displayedText, setDisplayedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isTyping, setIsTyping] = useState(true);
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
     let timeout;
     const currentText = texts[currentIndex];
 
-    if (isTyping && !isDeleting) {
+    if (!isDeleting) {
       if (displayedText.length < currentText.length) {
         timeout = setTimeout(() => {
           setDisplayedText(currentText.slice(0, displayedText.length + 1));
@@ -86,9 +156,9 @@ const useTypingEffect = (texts, typingSpeed = 80, pauseTime = 2000) => {
     }
 
     return () => clearTimeout(timeout);
-  }, [displayedText, isTyping, isDeleting, currentIndex, texts, typingSpeed, pauseTime]);
+  }, [displayedText, isDeleting, currentIndex, texts, typingSpeed, pauseTime]);
 
-  return { displayedText, isTyping: isTyping && !isDeleting };
+  return { displayedText, isTyping: !isDeleting };
 };
 
 // Hero Section
@@ -283,7 +353,7 @@ const Skills = () => {
     {
       title: "Open Source",
       icon: "🌟",
-      skills: ["Vert.x", "Datadog", "Apache Kafka", "Spark", "Logwise Foundations"],
+      skills: ["Vert.x", "Datadog", "Apache Kafka", "Spark", "LogWise"],
     },
   ];
 
@@ -443,16 +513,25 @@ const OpenSource = () => {
       link: "https://github.com/vert-x3/vertx-mysql-postgresql-client",
     },
     {
-      title: "Datadog dd-trace-java",
-      description: "Contributed to Datadog's Java tracer by fixing cross-platform UTF-8 encoding issues affecting international deployments",
-      tags: ["Datadog", "Java", "Open Source"],
-      link: "https://github.com/DataDog/dd-trace-java",
+      title: "Datadog dd-trace-java (#8471)",
+      description:
+        "Vert.x PostgreSQL client instrumentation for Datadog APM — merged contribution in the Java tracer",
+      tags: ["Datadog", "Vert.x", "PostgreSQL", "APM"],
+      link: "https://github.com/DataDog/dd-trace-java/pull/8471",
     },
     {
-      title: "Logwise Foundations",
-      description: "Authored open-source logging stack with automated deployment, dashboards, and production-grade scaling guides",
-      tags: ["Logging", "DevOps", "Open Source"],
-      link: "#",
+      title: "Datadog dd-trace-java (#11149)",
+      description:
+        "Cross-platform UTF-8 handling: explicit charset for String.getBytes() to fix encoding on international deployments",
+      tags: ["Datadog", "Java", "UTF-8"],
+      link: "https://github.com/DataDog/dd-trace-java/pull/11149",
+    },
+    {
+      title: "LogWise",
+      description:
+        "Open-source end-to-end logging: Vector → Kafka → Spark → S3/Athena, Grafana dashboards, and deployment automation",
+      tags: ["Logging", "Kafka", "Spark", "Grafana"],
+      link: "https://github.com/dream-horizon-org/logwise",
     },
     {
       title: "Spark Structured Streaming",
@@ -467,10 +546,11 @@ const OpenSource = () => {
       link: "https://github.com/apache/kafka",
     },
     {
-      title: "Prerender.io CloudFront",
-      description: "Enriched SEO for SPAs by integrating Prerender.io with CloudFront origin request for better search engine indexing",
-      tags: ["AWS", "CloudFront", "SEO", "SPA"],
-      link: "#",
+      title: "Prerender.io + CloudFront + S3",
+      description:
+        "AWS CloudFormation and manual setup for Prerender.io with CloudFront and S3 to improve SEO for JavaScript SPAs",
+      tags: ["AWS", "CloudFront", "SEO", "Prerender.io"],
+      link: "https://github.com/saravadeo/prerender-io-cloudfront-s3",
     },
     {
       title: "React Native Mobile App",
@@ -488,27 +568,40 @@ const OpenSource = () => {
           <h2 className="section__title">Open Source Contributions</h2>
         </div>
         <div className="opensource__grid">
-          {contributions.map((contrib, index) => (
-            <a
-              key={index}
-              href={contrib.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="opensource__card"
-            >
-              <div className="opensource__card-header">
-                <span className="opensource__icon" aria-hidden="true">[&lt;&gt;]</span>
-                <span className="opensource__arrow">↗</span>
-              </div>
-              <h3 className="opensource__title">{contrib.title}</h3>
-              <p className="opensource__description">{contrib.description}</p>
-              <div className="opensource__tags">
-                {contrib.tags.map((tag, idx) => (
-                  <span key={idx} className="opensource__tag">{tag}</span>
-                ))}
-              </div>
-            </a>
-          ))}
+          {contributions.map((contrib, index) => {
+            const isExternal =
+              contrib.link && /^https?:\/\//i.test(contrib.link);
+            return (
+              <a
+                key={index}
+                href={contrib.link}
+                target={isExternal ? "_blank" : undefined}
+                rel={isExternal ? "noopener noreferrer" : undefined}
+                className="opensource__card"
+                onClick={
+                  contrib.link === "#" ? (e) => e.preventDefault() : undefined
+                }
+              >
+                <div className="opensource__card-header">
+                  <span className="opensource__icon" aria-hidden="true">
+                    [&lt;&gt;]
+                  </span>
+                  <span className="opensource__arrow" aria-hidden="true">
+                    {isExternal ? "↗" : "—"}
+                  </span>
+                </div>
+                <h3 className="opensource__title">{contrib.title}</h3>
+                <p className="opensource__description">{contrib.description}</p>
+                <div className="opensource__tags">
+                  {contrib.tags.map((tag, idx) => (
+                    <span key={idx} className="opensource__tag">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </a>
+            );
+          })}
         </div>
       </div>
     </section>
@@ -553,10 +646,20 @@ const Contact = () => {
   const contacts = [
     { icon: "📧", label: "Email", value: "saravadeo@yahoo.com", href: "mailto:saravadeo@yahoo.com" },
     { icon: "📱", label: "Phone", value: "+91 9960498810", href: "tel:+919960498810" },
-    { icon: "📍", label: "Location", value: "Mumbai, India", href: "#" },
-    { icon: "💼", label: "LinkedIn", value: "linkedin.com/in/onkarsarvade", href: "https://linkedin.com/in/onkarsarvade" },
+    { icon: "📍", label: "Location", value: "Mumbai, India", href: "#contact" },
+    {
+      icon: "💼",
+      label: "LinkedIn",
+      value: "linkedin.com/in/onkar-sarvade-4b36ab63",
+      href: "https://www.linkedin.com/in/onkar-sarvade-4b36ab63/",
+    },
     { icon: "⚡", label: "GitHub", value: "github.com/saravadeo", href: "https://github.com/saravadeo" },
-    { icon: "🌐", label: "StackOverflow", value: "stackoverflow.com/users/onkarsarvade", href: "https://stackoverflow.com" },
+    {
+      icon: "🌐",
+      label: "Stack Overflow",
+      value: "stackoverflow.com/users/4539951/onkar-saravade",
+      href: "https://stackoverflow.com/users/4539951/onkar-saravade",
+    },
   ];
 
   return (
@@ -568,19 +671,29 @@ const Contact = () => {
         </div>
         <div className="contact__content">
           <p className="contact__text">
-            I'm always interested in discussing distributed systems, observability, cloud architecture, 
-            and new opportunities. Let's connect and build something amazing together.
+            I&apos;m always interested in discussing distributed systems, observability, cloud architecture,
+            and new opportunities. Let&apos;s connect and build something amazing together.
           </p>
           <div className="contact__grid">
-            {contacts.map((contact, index) => (
-              <a key={index} href={contact.href} className="contact__card" target="_blank" rel="noopener noreferrer">
-                <span className="contact__icon">{contact.icon}</span>
-                <div className="contact__info">
-                  <span className="contact__label">{contact.label}</span>
-                  <span className="contact__value">{contact.value}</span>
-                </div>
-              </a>
-            ))}
+            {contacts.map((contact, index) => {
+              const openInNewTab = /^https?:\/\//.test(contact.href);
+              return (
+                <a
+                  key={index}
+                  href={contact.href}
+                  className="contact__card"
+                  {...(openInNewTab
+                    ? { target: "_blank", rel: "noopener noreferrer" }
+                    : {})}
+                >
+                  <span className="contact__icon">{contact.icon}</span>
+                  <div className="contact__info">
+                    <span className="contact__label">{contact.label}</span>
+                    <span className="contact__value">{contact.value}</span>
+                  </div>
+                </a>
+              );
+            })}
           </div>
         </div>
       </div>
@@ -599,15 +712,16 @@ const Footer = () => {
             <p className="footer__tagline">Distributed Systems • Scalable Architecture</p>
           </div>
           <div className="footer__links">
-            <a href="#">Home</a>
+            <Link to="/">Home</Link>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#experience">Experience</a>
+            <Link to="/blog">Blog</Link>
             <a href="#contact">Contact</a>
           </div>
         </div>
         <div className="footer__bottom">
-          <p>© 2024 Onkar Sarvade. All rights reserved.</p>
+          <p>© 2026 Onkar Sarvade. All rights reserved.</p>
           <p className="footer__tech">Built with React • Styled with SCSS</p>
         </div>
       </div>
@@ -615,24 +729,46 @@ const Footer = () => {
   );
 };
 
-// Main App
-const App = () => {
+const HomePage = () => {
+  useEffect(() => {
+    const pending = sessionStorage.getItem(SECTION_SCROLL_KEY);
+    if (pending) {
+      sessionStorage.removeItem(SECTION_SCROLL_KEY);
+      const t = window.setTimeout(() => scrollToId(pending), 80);
+      return () => window.clearTimeout(t);
+    }
+  }, []);
+
   return (
-    <Router>
-      <div className="App">
-        <Navigation />
-        <Hero />
-        <StatsBar />
-        <KeyImpact />
-        <Skills />
-        <Experience />
-        <OpenSource />
-        <Education />
-        <Contact />
-        <Footer />
-      </div>
-    </Router>
+    <>
+      <Hero />
+      <StatsBar />
+      <KeyImpact />
+      <Skills />
+      <Experience />
+      <OpenSource />
+      <Education />
+      <Contact />
+      <Footer />
+    </>
   );
 };
+
+const AppShell = () => (
+  <div className="App">
+    <Navigation />
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/blog" element={<BlogList />} />
+      <Route path="/blog/:slug" element={<BlogPost />} />
+    </Routes>
+  </div>
+);
+
+const App = () => (
+  <Router>
+    <AppShell />
+  </Router>
+);
 
 export default App;

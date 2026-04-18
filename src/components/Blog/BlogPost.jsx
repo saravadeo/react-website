@@ -71,15 +71,28 @@ const BlogPost = () => {
 
   if (!post) {
     return (
-      <div className="blog-error">
-        <h1>Post Not Found</h1>
-        <p>The blog post you're looking for doesn't exist.</p>
-        <Link to="/blog" className="blog-back-link">← Back to blog</Link>
+      <div className="blog-page">
+        <div className="blog-page__toolbar">
+          <Link to="/" className="blog-back-home">
+            ← Portfolio
+          </Link>
+        </div>
+        <div className="blog-error">
+          <h1>Post Not Found</h1>
+          <p>The blog post you&apos;re looking for doesn&apos;t exist.</p>
+          <Link to="/blog" className="blog-back-link">← Back to blog</Link>
+        </div>
       </div>
     );
   }
 
   return (
+    <div className="blog-page">
+      <div className="blog-page__toolbar">
+        <Link to="/" className="blog-back-home">
+          ← Portfolio
+        </Link>
+      </div>
     <article className="blog-post">
       <header className="blog-post-header">
         <div className="blog-post-meta">
@@ -132,6 +145,7 @@ const BlogPost = () => {
         </Link>
       </footer>
     </article>
+    </div>
   );
 };
 

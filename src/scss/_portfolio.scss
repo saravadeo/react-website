@@ -1,0 +1,1044 @@
+// Portfolio layout — matches App.js structure; responsive desktop + mobile
+
+// ——— Hero (terminal) ———
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: calc(5.5rem + env(safe-area-inset-top, 0)) 1.25rem 4rem;
+  overflow: hidden;
+  background: $geek-bg-primary;
+
+  &__background {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  &__grid {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba($geek-border, 0.35) 1px, transparent 1px),
+      linear-gradient(90deg, rgba($geek-border, 0.35) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, black 20%, transparent 70%);
+    opacity: 0.5;
+  }
+
+  &__gradient {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 100% 80% at 50% -20%, rgba($geek-accent-purple, 0.18), transparent 55%),
+      radial-gradient(ellipse 60% 50% at 100% 50%, rgba($geek-accent-blue, 0.08), transparent 50%),
+      radial-gradient(ellipse 50% 40% at 0% 80%, rgba($geek-accent-green-bright, 0.06), transparent 50%);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 920px;
+    margin: 0 auto;
+  }
+
+  &__terminal {
+    @include geek-terminal;
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+  }
+
+  &__terminal-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.65rem 1rem;
+    background: rgba($geek-bg-tertiary, 0.6);
+    border-bottom: 1px solid $geek-border;
+    flex-wrap: wrap;
+  }
+
+  &__terminal-btn {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    flex-shrink: 0;
+
+    &--red {
+      background: #ff5f57;
+    }
+    &--yellow {
+      background: #febc2e;
+    }
+    &--green {
+      background: #28c840;
+    }
+  }
+
+  &__terminal-title {
+    margin-left: auto;
+    font-family: $font-mono;
+    font-size: 0.75rem;
+    color: $geek-text-muted;
+    white-space: nowrap;
+  }
+
+  &__terminal-body {
+    padding: 1rem 1rem 1.25rem;
+    font-family: $font-mono;
+    font-size: clamp(0.8rem, 2.5vw, 0.95rem);
+    line-height: 1.65;
+  }
+
+  &__line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.35rem 0.5rem;
+    margin-bottom: 0.35rem;
+    word-break: break-word;
+
+    &--output {
+      padding-left: 1.25rem;
+      margin-bottom: 0.65rem;
+    }
+
+    &--typing {
+      color: $geek-accent-green-bright;
+      min-height: 1.6em;
+    }
+
+    &--prompt {
+      margin-bottom: 0;
+    }
+  }
+
+  &__prompt {
+    color: $geek-accent-purple-light;
+    flex-shrink: 0;
+    user-select: none;
+  }
+
+  &__command {
+    color: $geek-text-secondary;
+  }
+
+  &__name {
+    font-family: $font-sans;
+    font-size: clamp(1.65rem, 5vw, 2.75rem);
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: -0.02em;
+    @include gradient-text;
+    line-height: 1.15;
+  }
+
+  &__title {
+    font-family: $font-sans;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    font-weight: 600;
+    color: $geek-accent-purple-light;
+    margin: 0 0 0.35rem;
+    line-height: 1.3;
+  }
+
+  &__subtitle {
+    font-family: $font-sans;
+    font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+    color: $geek-text-secondary;
+    margin: 0;
+    line-height: 1.45;
+  }
+
+  &__typing {
+    color: $geek-accent-green-bright;
+  }
+
+  &__cursor {
+    color: $geek-accent-green-bright;
+    font-weight: 400;
+
+    &--blink {
+      animation: blink 1s step-end infinite;
+    }
+  }
+
+  &__summary {
+    margin-top: 1.75rem;
+    padding: 1.25rem 1.35rem;
+    background: rgba($geek-bg-secondary, 0.65);
+    border: 1px solid $geek-border;
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+
+    p {
+      margin: 0;
+      font-size: clamp(0.95rem, 2.8vw, 1.05rem);
+      line-height: 1.75;
+      color: $geek-text-secondary;
+
+      strong {
+        color: $geek-text-primary;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    justify-content: flex-start;
+  }
+
+  &__scroll {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.75rem;
+    color: $geek-text-muted;
+    font-family: $font-mono;
+    opacity: 0.85;
+    pointer-events: none;
+  }
+
+  &__scroll-arrow {
+    animation: float 2.5s ease-in-out infinite;
+  }
+}
+
+// ——— Buttons ———
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.35rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s, border-color 0.2s;
+  font-family: $font-sans;
+  min-height: 44px;
+
+  &--primary {
+    background: linear-gradient(135deg, $geek-accent-purple 0%, $geek-accent-purple-dark 100%);
+    color: #fff;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba($geek-accent-purple, 0.35);
+    }
+  }
+
+  &--secondary {
+    background: rgba($geek-bg-tertiary, 0.8);
+    color: $geek-text-primary;
+    border: 1px solid $geek-border;
+
+    &:hover {
+      border-color: $geek-accent-purple;
+      background: rgba($geek-accent-purple, 0.08);
+    }
+  }
+
+  &--ghost {
+    background: transparent;
+    color: $geek-text-secondary;
+    border: 1px solid transparent;
+
+    &:hover {
+      color: $geek-text-primary;
+      border-color: $geek-border;
+    }
+  }
+}
+
+// ——— Stats ———
+.stats-bar {
+  position: relative;
+  background: $geek-bg-secondary;
+  border-top: 1px solid $geek-border;
+  border-bottom: 1px solid $geek-border;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 1.25rem 1rem;
+    align-items: start;
+  }
+
+  &__item {
+    text-align: center;
+    padding: 0.5rem;
+  }
+
+  &__value {
+    display: block;
+    font-family: $font-mono;
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    font-weight: 800;
+    color: $geek-accent-purple-light;
+    line-height: 1.1;
+    margin-bottom: 0.35rem;
+  }
+
+  &__label {
+    font-size: clamp(0.65rem, 2vw, 0.8rem);
+    color: $geek-text-secondary;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    line-height: 1.35;
+  }
+}
+
+// ——— Sections (shared) ———
+.section {
+  padding: clamp(3rem, 8vw, 5.5rem) 0;
+
+  &__header {
+    margin-bottom: clamp(2rem, 5vw, 3rem);
+    max-width: 720px;
+  }
+
+  &__eyebrow {
+    display: inline-block;
+    font-family: $font-mono;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: $geek-accent-blue;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.5rem;
+  }
+
+  &__title {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 800;
+    color: $geek-text-primary;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin: 0 0 0.75rem;
+  }
+
+  &__subtitle {
+    font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+    color: $geek-text-secondary;
+    line-height: 1.65;
+    margin: 0;
+  }
+}
+
+.section--impact {
+  background: $geek-bg-primary;
+}
+
+.section--skills {
+  background: $geek-bg-secondary;
+}
+
+.section--experience {
+  background: $geek-bg-primary;
+}
+
+.section--opensource {
+  background: $geek-bg-secondary;
+}
+
+.section--education {
+  background: $geek-bg-primary;
+}
+
+.section--contact {
+  background: $geek-bg-secondary;
+  border-top: 1px solid $geek-border;
+}
+
+// ——— Impact ———
+.impact {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 1.25rem;
+  }
+
+  &__card {
+    @include geek-card;
+    padding: 1.5rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    height: 100%;
+  }
+
+  &__icon {
+    font-size: 1.75rem;
+    line-height: 1;
+  }
+
+  &__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: $geek-text-primary;
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  &__description {
+    font-size: 0.95rem;
+    color: $geek-text-secondary;
+    line-height: 1.65;
+    margin: 0;
+    flex-grow: 1;
+  }
+
+  &__metrics {
+    font-family: $font-mono;
+    font-size: 0.75rem;
+    color: $geek-accent-cyan;
+    padding-top: 0.5rem;
+    border-top: 1px solid $geek-border;
+  }
+}
+
+// ——— Skills ———
+.skills {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: 1.25rem;
+  }
+
+  &__card {
+    background: $geek-bg-tertiary;
+    border: 1px solid $geek-border;
+    border-radius: 12px;
+    padding: 1.35rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+
+    &:hover {
+      border-color: $geek-border-light;
+      box-shadow: $shadow-md;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-bottom: 1rem;
+  }
+
+  &__icon {
+    font-size: 1.35rem;
+    line-height: 1;
+  }
+
+  &__category-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: $geek-text-primary;
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+
+  &__badge {
+    font-family: $font-mono;
+    font-size: 0.78rem;
+    padding: 0.35rem 0.65rem;
+    border-radius: 6px;
+    background: rgba($geek-accent-purple, 0.12);
+    color: $geek-accent-purple-light;
+    border: 1px solid rgba($geek-accent-purple, 0.25);
+  }
+}
+
+// ——— Experience timeline ———
+.experience {
+  &__timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0 1.25rem;
+    padding-bottom: 2.5rem;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  &__timeline-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20px;
+    flex-shrink: 0;
+  }
+
+  &__timeline-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, $geek-accent-purple, $geek-accent-blue);
+    border: 3px solid $geek-bg-primary;
+    box-shadow: 0 0 0 1px $geek-border;
+    flex-shrink: 0;
+    margin-top: 0.35rem;
+  }
+
+  &__timeline-line {
+    width: 2px;
+    flex: 1;
+    min-height: 2rem;
+    margin-top: 0.35rem;
+    background: linear-gradient(180deg, $geek-accent-purple 0%, $geek-border 100%);
+    border-radius: 1px;
+  }
+
+  &__content {
+    background: $geek-bg-secondary;
+    border: 1px solid $geek-border;
+    border-radius: 12px;
+    padding: 1.35rem 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.85rem;
+  }
+
+  &__meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    min-width: 0;
+  }
+
+  &__company {
+    font-size: clamp(1rem, 2.5vw, 1.15rem);
+    font-weight: 700;
+    color: $geek-text-primary;
+    line-height: 1.3;
+  }
+
+  &__location {
+    font-size: 0.85rem;
+    color: $geek-text-muted;
+  }
+
+  &__period {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.35rem;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  &__date {
+    font-family: $font-mono;
+    font-size: 0.8rem;
+    color: $geek-accent-blue;
+    background: rgba($geek-accent-blue, 0.1);
+    padding: 0.3rem 0.55rem;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+
+  &__type {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: $geek-text-muted;
+  }
+
+  &__role {
+    font-size: 1rem;
+    font-weight: 600;
+    color: $geek-accent-purple-light;
+    margin: 0 0 1rem;
+    line-height: 1.4;
+  }
+
+  &__achievements {
+    margin: 0 0 1.15rem;
+    padding: 0;
+    list-style: none;
+
+    li {
+      position: relative;
+      padding-left: 1.15rem;
+      margin-bottom: 0.65rem;
+      font-size: 0.92rem;
+      line-height: 1.65;
+      color: $geek-text-secondary;
+
+      &::before {
+        content: "\203A";
+        position: absolute;
+        left: 0;
+        color: $geek-accent-green-bright;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  &__tech-tag {
+    font-family: $font-mono;
+    font-size: 0.72rem;
+    padding: 0.28rem 0.5rem;
+    border-radius: 4px;
+    background: rgba($geek-accent-purple, 0.1);
+    color: $geek-accent-purple-light;
+    border: 1px solid rgba($geek-accent-purple, 0.2);
+  }
+}
+
+// ——— Open source ———
+.opensource {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: 1.25rem;
+  }
+
+  &__card {
+    @include geek-card;
+    padding: 1.35rem;
+    border-radius: 12px;
+    color: inherit;
+    height: 100%;
+  }
+
+  &__card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.85rem;
+  }
+
+  &__icon {
+    font-family: $font-mono;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: $geek-accent-purple-light;
+  }
+
+  &__arrow {
+    color: $geek-text-muted;
+    font-size: 1.1rem;
+  }
+
+  &__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: $geek-text-primary;
+    margin: 0 0 0.5rem;
+    line-height: 1.35;
+  }
+
+  &__description {
+    font-size: 0.9rem;
+    color: $geek-text-secondary;
+    line-height: 1.65;
+    margin: 0 0 1rem;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  &__tag {
+    font-family: $font-mono;
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    background: rgba($geek-accent-purple, 0.12);
+    color: $geek-accent-purple-light;
+  }
+}
+
+// ——— Education ———
+.education {
+  &__card {
+    background: $geek-bg-secondary;
+    border: 1px solid $geek-border;
+    border-radius: 12px;
+    padding: 1.5rem;
+    max-width: 900px;
+  }
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid $geek-border;
+  }
+
+  &__institution {
+    min-width: 0;
+  }
+
+  &__name {
+    font-size: clamp(1.1rem, 3vw, 1.35rem);
+    font-weight: 800;
+    color: $geek-text-primary;
+    margin: 0 0 0.35rem;
+    line-height: 1.25;
+  }
+
+  &__type {
+    font-size: 0.85rem;
+    color: $geek-text-muted;
+  }
+
+  &__period {
+    font-family: $font-mono;
+    font-size: 0.85rem;
+    color: $geek-accent-blue;
+    background: rgba($geek-accent-blue, 0.1);
+    padding: 0.4rem 0.65rem;
+    border-radius: 6px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  &__details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1.25rem;
+  }
+
+  &__degree {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    min-width: 0;
+  }
+
+  &__degree-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: $geek-accent-purple-light;
+  }
+
+  &__major {
+    font-size: 0.95rem;
+    color: $geek-text-secondary;
+  }
+
+  &__gpa {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.2rem;
+    text-align: right;
+  }
+
+  &__gpa-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: $geek-text-muted;
+  }
+
+  &__gpa-value {
+    font-family: $font-mono;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: $geek-text-primary;
+  }
+}
+
+// ——— Contact ———
+.contact {
+  &__content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  &__text {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: $geek-text-secondary;
+    margin: 0 0 2rem;
+    text-align: center;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+    gap: 1rem;
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.15rem;
+    background: $geek-bg-tertiary;
+    border: 1px solid $geek-border;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s, background 0.2s, transform 0.2s;
+    min-height: 44px;
+
+    &:hover {
+      border-color: $geek-accent-purple;
+      background: rgba($geek-accent-purple, 0.06);
+      transform: translateY(-2px);
+    }
+
+    &:focus-visible {
+      outline: 2px solid $geek-accent-purple;
+      outline-offset: 2px;
+    }
+  }
+
+  &__icon {
+    font-size: 1.35rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    min-width: 0;
+  }
+
+  &__label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: $geek-text-muted;
+  }
+
+  &__value {
+    font-size: 0.9rem;
+    color: $geek-text-primary;
+    word-break: break-word;
+  }
+}
+
+// ——— Footer ———
+.footer {
+  background: $geek-bg-primary;
+  border-top: 1px solid $geek-border;
+  padding: 2.5rem 1.5rem 2rem;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__brand {
+    min-width: 0;
+  }
+
+  &__logo {
+    font-family: $font-mono;
+    font-weight: 800;
+    font-size: 1.25rem;
+    color: $geek-accent-purple-light;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  &__tagline {
+    font-size: 0.9rem;
+    color: $geek-text-secondary;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+
+    a {
+      color: $geek-text-secondary;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+
+      &:hover {
+        color: $geek-accent-purple-light;
+      }
+    }
+  }
+
+  &__bottom {
+    padding-top: 1.5rem;
+    border-top: 1px solid $geek-border;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.75rem;
+    font-size: 0.8rem;
+    color: $geek-text-muted;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__tech {
+    font-family: $font-mono;
+    font-size: 0.75rem;
+  }
+}
+
+// ——— Responsive tweaks ———
+@media (max-width: 768px) {
+  .hero {
+    padding: calc(4.5rem + env(safe-area-inset-top, 0)) 1rem 3.5rem;
+
+    &__terminal-body {
+      padding: 0.85rem 0.85rem 1rem;
+    }
+
+    &__actions {
+      flex-direction: column;
+
+      .btn {
+        width: 100%;
+      }
+    }
+
+    &__scroll {
+      display: none;
+    }
+  }
+
+  .stats-bar__container {
+    padding: 1.5rem 1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .experience {
+    &__item {
+      gap: 0 0.75rem;
+    }
+
+    &__period {
+      align-items: flex-start;
+      text-align: left;
+      width: 100%;
+    }
+
+    &__content {
+      padding: 1.1rem 1.15rem;
+    }
+  }
+
+  .education {
+    &__header {
+      flex-direction: column;
+    }
+
+    &__gpa {
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    &__details {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .footer {
+    &__content {
+      flex-direction: column;
+    }
+
+    &__links {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    &__bottom {
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-bar__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .impact__card,
+  .skills__card,
+  .opensource__card {
+    padding: 1.15rem;
+  }
+}

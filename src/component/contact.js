@@ -26,7 +26,7 @@ const Contact = () => {
                             GitHub
                         </a>
                         
-                        <a href="https://linkedin.com/in/onkarsarvade" target="_blank" rel="noopener noreferrer" className="contact__link">
+                        <a href="https://www.linkedin.com/in/onkar-sarvade-4b36ab63/" target="_blank" rel="noopener noreferrer" className="contact__link">
                             <span className="contact__link-icon">💼</span>
                             LinkedIn
                         </a>

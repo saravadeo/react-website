@@ -7,6 +7,12 @@ const BlogList = () => {
   const { posts } = blogData;
 
   return (
+    <div className="blog-page">
+      <div className="blog-page__toolbar">
+        <Link to="/" className="blog-back-home">
+          ← Portfolio
+        </Link>
+      </div>
     <div className="blog-container">
       <header className="blog-header">
         <h1 className="blog-title">Blog</h1>
@@ -47,6 +53,7 @@ const BlogList = () => {
           <p>No blog posts yet. Check back soon!</p>
         </div>
       )}
+    </div>
     </div>
   );
 };
