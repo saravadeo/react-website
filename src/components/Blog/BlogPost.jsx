@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import blogData from '../../data/blogList.json';
 import './Blog.css';
 
-const BlogPost = () => {
-  const { slug } = useParams();
-  const navigate = useNavigate();
+const BlogPost = ({ match }) => {
+  const slug = match.params.slug;
   const [content, setContent] = useState('');
   const [loading, setLoading] = useState(true);
 
@@ -135,4 +134,4 @@ const BlogPost = () => {
   );
 };
 
-export default BlogPost;
+export default withRouter(BlogPost);

@@ -110,15 +110,3 @@ class App extends Component {
 }
 
 export default App;
-
-// Geek Theme Styles
-.geek-theme {
-  background: #0d1117;
-  color: #c9d1d9;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
-}
-
-// Import geek theme files
-@import "./scss/geek-theme";
-@import "./scss/geek-header";
-@import "./scss/geek-about";
