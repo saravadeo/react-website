@@ -16,7 +16,9 @@ const BlogPost = () => {
   useEffect(() => {
     const loadContent = async () => {
       try {
-        const response = await fetch(`/blogs/${slug}.md`);
+        // Use PUBLIC_URL for GitHub Pages compatibility
+        const baseUrl = process.env.PUBLIC_URL || '';
+        const response = await fetch(`${baseUrl}/blogs/${slug}.md`);
         if (response.ok) {
           const text = await response.text();
           setContent(text);
