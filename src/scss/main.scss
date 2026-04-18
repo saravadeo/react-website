@@ -272,10 +272,10 @@ body {
 
 // Stats Bar
 .stats-bar {
-  background: $geek-bg-secondary;
+  background: linear-gradient(135deg, $geek-bg-secondary 0%, $geek-bg-tertiary 100%);
   border-top: 1px solid $geek-border;
   border-bottom: 1px solid $geek-border;
-  padding: 2rem 0;
+  padding: 3rem 0;
   
   &__grid {
     display: grid;
@@ -284,28 +284,34 @@ body {
     
     @media (max-width: 768px) {
       grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
     }
   }
   
   &__item {
     text-align: center;
+    padding: 1rem;
     
     &-number {
       display: block;
-      font-size: 2rem;
-      font-weight: 700;
+      font-size: 3rem;
+      font-weight: 800;
       color: $geek-accent-purple;
       font-family: $font-mono;
+      text-shadow: 0 0 30px rgba($geek-accent-purple, 0.5);
+      margin-bottom: 0.5rem;
       
       @media (max-width: 768px) {
-        font-size: 1.5rem;
+        font-size: 2rem;
       }
     }
     
     &-label {
-      font-size: 0.85rem;
+      font-size: 0.95rem;
       color: $geek-text-secondary;
-      margin-top: 0.25rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
   }
 }
