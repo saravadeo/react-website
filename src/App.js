@@ -497,7 +497,7 @@ const OpenSource = () => {
               className="opensource__card"
             >
               <div className="opensource__card-header">
-                <span className="opensource__icon" aria-hidden="true">[<>]</span>
+                <span className="opensource__icon" aria-hidden="true">[&lt;&gt;]</span>
                 <span className="opensource__arrow">↗</span>
               </div>
               <h3 className="opensource__title">{contrib.title}</h3>
