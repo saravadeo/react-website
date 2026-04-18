@@ -7,53 +7,75 @@ const BlogList = () => {
   const { posts } = blogData;
 
   return (
-    <div className="blog-page">
-      <div className="blog-page__toolbar">
-        <Link to="/" className="blog-back-home">
-          ← Portfolio
-        </Link>
-      </div>
-    <div className="blog-container">
-      <header className="blog-header">
-        <h1 className="blog-title">Blog</h1>
-        <p className="blog-subtitle">
-          Technical insights, tutorials, and lessons learned from building production systems.
-        </p>
-      </header>
-
-      <div className="blog-grid">
-        {posts.map((post) => (
-          <article key={post.id} className="blog-card">
-            <div className="blog-card-meta">
-              <span className="blog-date">{post.date}</span>
-              <span className="blog-readtime">{post.readTime} read</span>
-            </div>
-
-            <h2 className="blog-card-title">
-              <Link to={`/blog/${post.slug}`}>{post.title}</Link>
-            </h2>
-
-            <p className="blog-card-excerpt">{post.excerpt}</p>
-
-            <div className="blog-card-tags">
-              {post.tags.map((tag) => (
-                <span key={tag} className="blog-tag">{tag}</span>
-              ))}
-            </div>
-
-            <Link to={`/blog/${post.slug}`} className="blog-read-more">
-              Read article →
-            </Link>
-          </article>
-        ))}
+    <div className="blog-page blog-page--list">
+      <div className="blog-page__bg" aria-hidden="true">
+        <div className="blog-page__grid" />
+        <div className="blog-page__glow" />
       </div>
 
-      {posts.length === 0 && (
-        <div className="blog-empty">
-          <p>No blog posts yet. Check back soon!</p>
-        </div>
-      )}
-    </div>
+      <div className="blog-container blog-container--list">
+        <nav className="blog-breadcrumb" aria-label="Breadcrumb">
+          <Link to="/" className="blog-breadcrumb__link">
+            ← Portfolio
+          </Link>
+          <span className="blog-breadcrumb__sep">/</span>
+          <span className="blog-breadcrumb__current">Blog</span>
+        </nav>
+
+        <header className="blog-list-hero">
+          <span className="blog-list-eyebrow">Writing</span>
+          <h1 className="blog-list-title">Blog</h1>
+          <p className="blog-list-lede">
+            Technical notes on production systems — observability, cloud, and
+            shipping reliable software.
+          </p>
+        </header>
+
+        {posts.length === 0 ? (
+          <div className="blog-list-empty">
+            <p>No posts yet. Check back soon.</p>
+          </div>
+        ) : (
+          <ul className="blog-list-grid">
+            {posts.map((post) => (
+              <li key={post.id} className="blog-list-grid__cell">
+                <article className="blog-list-card">
+                  <div className="blog-list-card__accent" aria-hidden="true" />
+                  <div className="blog-list-card__meta">
+                    <time dateTime={post.date} className="blog-list-card__date">
+                      {post.date}
+                    </time>
+                    <span className="blog-list-card__dot">·</span>
+                    <span className="blog-list-card__read">{post.readTime} read</span>
+                  </div>
+                  <h2 className="blog-list-card__title">
+                    <Link to={`/blog/${post.slug}`} className="blog-list-card__link">
+                      {post.title}
+                    </Link>
+                  </h2>
+                  <p className="blog-list-card__excerpt">{post.excerpt}</p>
+                  <div className="blog-list-card__tags">
+                    {post.tags.map((tag) => (
+                      <span key={tag} className="blog-list-card__tag">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <Link
+                    to={`/blog/${post.slug}`}
+                    className="blog-list-card__cta"
+                  >
+                    Read article
+                    <span className="blog-list-card__cta-arrow" aria-hidden="true">
+                      →
+                    </span>
+                  </Link>
+                </article>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
     </div>
   );
 };
