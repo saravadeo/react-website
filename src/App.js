@@ -1,20 +1,17 @@
 import React, { Component } from "react";
 import "./scss/main.scss";
 
-// Geek Theme Components
-import GeekHeader from "./component/geek-header";
-import GeekAbout from "./component/geek-about";
+// Components
+import Header from "./component/header";
+import About from "./component/about";
+import Skills from "./component/skills";
+import Experience from "./component/experience";
+import BlogSection from "./component/blog-section";
+import Contact from "./component/contact";
 
-// Original Components (will be styled)
-import TechnologySection from "./component/technology-section";
-import ExperienceSection from "./component/experience-section";
-import ContactSection from "./component/contact-section";
-
-// Blog Components
+// Blog Pages
 import BlogList from "./components/Blog/BlogList";
 import BlogPost from "./components/Blog/BlogPost";
-
-import ReactGA from 'react-ga4';
 
 class App extends Component {
     constructor(props) {
@@ -26,8 +23,6 @@ class App extends Component {
     }
     
     componentDidMount() {
-        ReactGA.initialize('G-XXXXXXXXXX'); // Replace with your GA4 tracking ID
-        
         // Check URL for blog routes
         const path = window.location.pathname;
         if (path.startsWith('/blog/')) {
@@ -54,26 +49,24 @@ class App extends Component {
         if (currentPage === 'home') {
             return (
                 <div className="App">
-                    <GeekHeader onBlogClick={this.navigateToBlog} />
-                    <GeekAbout />
-                    <TechnologySection />
-                    <ExperienceSection />
-                    <ContactSection />
+                    <Header onBlogClick={this.navigateToBlog} />
+                    <About />
+                    <Skills />
+                    <Experience />
+                    <BlogSection onBlogClick={this.navigateToBlog} />
+                    <Contact />
                 </div>
             );
         }
         
         if (currentPage === 'blog') {
             return (
-                <div className="App">
-                    <nav className="geek-nav-bar">
-                        <button 
-                            className="geek-nav-btn"
-                            onClick={this.navigateHome}
-                        >
-                            ← cd ~
+                <div className="App blog-page">
+                    <nav className="nav-bar">
+                        <button className="nav-btn" onClick={this.navigateHome}>
+                            ← Back to Home
                         </button>
-                        <span className="geek-nav-title">~/blog</span>
+                        <span className="nav-title">Blog</span>
                     </nav>
                     <BlogList />
                 </div>
@@ -82,15 +75,12 @@ class App extends Component {
         
         if (currentPage === 'blog-post') {
             return (
-                <div className="App">
-                    <nav className="geek-nav-bar">
-                        <button 
-                            className="geek-nav-btn"
-                            onClick={() => window.history.back()}
-                        >
-                            ← cd ..
+                <div className="App blog-page">
+                    <nav className="nav-bar">
+                        <button className="nav-btn" onClick={() => window.history.back()}>
+                            ← Back
                         </button>
-                        <span className="geek-nav-title">~/blog/{blogSlug}</span>
+                        <span className="nav-title">{blogSlug}</span>
                     </nav>
                     <BlogPost />
                 </div>
@@ -99,7 +89,7 @@ class App extends Component {
         
         return (
             <div className="App">
-                <GeekHeader onBlogClick={this.navigateToBlog} />
+                <Header onBlogClick={this.navigateToBlog} />
             </div>
         );
     }
