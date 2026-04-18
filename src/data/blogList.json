@@ -1,0 +1,13 @@
+{
+  "posts": [
+    {
+      "id": "seo-prerender-cloudfront",
+      "title": "SEO Optimization with Prerender.io and AWS CloudFront",
+      "date": "2026-04-18",
+      "excerpt": "How to optimize SEO for JavaScript websites using Prerender.io with AWS CloudFront and S3. Learn server-side pre-rendering techniques for better search visibility.",
+      "slug": "seo-prerender-cloudfront",
+      "tags": ["seo", "aws", "cloudfront", "javascript"],
+      "readTime": "5 min"
+    }
+  ]
+}

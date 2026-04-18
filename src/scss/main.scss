@@ -59,3 +59,66 @@ body {
 
 
 
+
+// Blog section styles
+@import "../components/Blog/Blog.css";
+
+.blog-preview-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 8rem 2rem;
+  text-align: center;
+  color: white;
+  
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+  
+  .btn {
+    background: white;
+    color: #667eea;
+    padding: 1.2rem 3rem;
+    font-size: 1.4rem;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    cursor: pointer;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+  }
+}
+
+.blog-nav {
+  padding: 2rem;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  
+  .blog-nav-home {
+    background: none;
+    border: none;
+    color: #667eea;
+    font-size: 1.4rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background 0.2s;
+    
+    &:hover {
+      background: #f0f4ff;
+    }
+  }
+}
