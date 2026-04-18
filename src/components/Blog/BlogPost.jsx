@@ -53,20 +53,41 @@ const BlogPost = () => {
 
     // Extract frontmatter
     const frontmatterMatch = markdown.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
-    const content = frontmatterMatch ? frontmatterMatch[2] : markdown;
+    let content = frontmatterMatch ? frontmatterMatch[2] : markdown;
 
-    // Simple markdown to HTML conversion
-    return content
-      .replace(/^# (.*$)/gim, '<h1>$1</h1>')
-      .replace(/^## (.*$)/gim, '<h2>$1</h2>')
-      .replace(/^### (.*$)/gim, '<h3>$1</h3>')
-      .replace(/\*\*(.*)\*\*/gim, '<strong>$1</strong>')
-      .replace(/\*(.*)\*/gim, '<em>$1</em>')
-      .replace(/`([^`]+)`/gim, '<code>$1</code>')
-      .replace(/```([\s\S]*?)```/gim, '<pre><code>$1</code></pre>')
-      .replace(/\[([^\]]+)\]\(([^)]+)\)/gim, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
-      .replace(/^- (.*$)/gim, '<li>$1</li>')
-      .replace(/\n/gim, '<br />');
+    // Better markdown to HTML conversion
+    // Replace code blocks first
+    content = content.replace(/```([\s\S]*?)```/gim, '<pre><code>$1</code></pre>');
+    
+    // Replace inline code
+    content = content.replace(/`([^`]+)`/gim, '<code>$1</code>');
+    
+    // Replace headers
+    content = content.replace(/^### (.*$)/gim, '<h3>$1</h3>');
+    content = content.replace(/^## (.*$)/gim, '<h2>$1</h2>');
+    content = content.replace(/^# (.*$)/gim, '<h1>$1</h1>');
+    
+    // Replace bold and italic
+    content = content.replace(/\*\*([^*]+)\*\*/gim, '<strong>$1</strong>');
+    content = content.replace(/\*([^*]+)\*/gim, '<em>$1</em>');
+    
+    // Replace links
+    content = content.replace(/\[([^\]]+)\]\(([^)]+)\)/gim, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+    
+    // Replace list items
+    content = content.replace(/^- (.*$)/gim, '<li>$1</li>');
+    content = content.replace(/(<li>.*<\/li>\n?)+/gim, '<ul>$&</ul>');
+    
+    // Replace newlines with paragraphs
+    content = content.replace(/\n\n/gim, '</p><p>');
+    content = content.replace(/\n/gim, '<br />');
+    
+    // Wrap in paragraphs if not already wrapped
+    if (!content.startsWith('<')) {
+      content = '<p>' + content + '</p>';
+    }
+
+    return content;
   };
 
   if (!post) {
