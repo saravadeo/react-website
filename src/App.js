@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./scss/main.scss";
 
 // Components
@@ -13,86 +14,52 @@ import Contact from "./component/contact";
 import BlogList from "./components/Blog/BlogList";
 import BlogPost from "./components/Blog/BlogPost";
 
-class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            currentPage: 'home',
-            blogSlug: null
-        };
-    }
-    
-    componentDidMount() {
-        // Check URL for blog routes
-        const path = window.location.pathname;
-        if (path.startsWith('/blog/')) {
-            const slug = path.replace('/blog/', '');
-            this.setState({ currentPage: 'blog-post', blogSlug: slug });
-        } else if (path === '/blog') {
-            this.setState({ currentPage: 'blog' });
-        }
-    }
-    
-    navigateToBlog = () => {
-        this.setState({ currentPage: 'blog' });
-        window.history.pushState({}, '', '/blog');
-    };
-    
-    navigateHome = () => {
-        this.setState({ currentPage: 'home', blogSlug: null });
-        window.history.pushState({}, '', '/');
-    };
-    
-    render() {
-        const { currentPage, blogSlug } = this.state;
-        
-        if (currentPage === 'home') {
-            return (
-                <div className="App">
-                    <Header onBlogClick={this.navigateToBlog} />
-                    <About />
-                    <Skills />
-                    <Experience />
-                    <BlogSection onBlogClick={this.navigateToBlog} />
-                    <Contact />
-                </div>
-            );
-        }
-        
-        if (currentPage === 'blog') {
-            return (
-                <div className="App blog-page">
-                    <nav className="nav-bar">
-                        <button className="nav-btn" onClick={this.navigateHome}>
-                            ← Back to Home
-                        </button>
-                        <span className="nav-title">Blog</span>
-                    </nav>
-                    <BlogList />
-                </div>
-            );
-        }
-        
-        if (currentPage === 'blog-post') {
-            return (
-                <div className="App blog-page">
-                    <nav className="nav-bar">
-                        <button className="nav-btn" onClick={() => window.history.back()}>
-                            ← Back
-                        </button>
-                        <span className="nav-title">{blogSlug}</span>
-                    </nav>
-                    <BlogPost />
-                </div>
-            );
-        }
-        
-        return (
-            <div className="App">
-                <Header onBlogClick={this.navigateToBlog} />
-            </div>
-        );
-    }
-}
+// Home page component
+const HomePage = () => (
+  <>
+    <Header />
+    <About />
+    <Skills />
+    <Experience />
+    <BlogSection />
+    <Contact />
+  </>
+);
+
+// Blog page with nav
+const BlogPage = () => (
+  <>
+    <nav className="nav-bar">
+      <a href="/" className="nav-btn">← Back to Home</a>
+      <span className="nav-title">Blog</span>
+    </nav>
+    <BlogList />
+  </>
+);
+
+// Blog post page with nav
+const BlogPostPage = () => (
+  <>
+    <nav className="nav-bar">
+      <a href="#/blog" className="nav-btn">← Back</a>
+      <span className="nav-title">Post</span>
+    </nav>
+    <BlogPost />
+  </>
+);
+
+const App = () => {
+  return (
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/blog" component={BlogPage} />
+          <Route path="/blog/:slug" component={BlogPostPage} />
+        </Switch>
+      </div>
+    </Router>
+  );
+};
 
 export default App;
