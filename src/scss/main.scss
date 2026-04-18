@@ -578,16 +578,23 @@ body {
 .opensource {
   &__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 1.5rem;
+    
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
   }
   
-  &__item {
+  &__card {
     background: $geek-bg-secondary;
     border: 1px solid $geek-border;
     border-radius: 8px;
     padding: 1.5rem;
     transition: all 0.2s;
+    display: block;
+    text-decoration: none;
     
     &:hover {
       border-color: $geek-accent-purple;
@@ -595,40 +602,58 @@ body {
       box-shadow: 0 8px 24px rgba($geek-accent-purple, 0.1);
     }
     
-    &-header {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 1rem;
+    @media (max-width: 768px) {
+      padding: 1.25rem;
     }
-    
-    &-icon {
-      font-size: 1.5rem;
-    }
-    
-    &-title {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: $geek-text-primary;
-    }
-    
-    p {
-      color: $geek-text-secondary;
-      font-size: 0.9rem;
-      line-height: 1.6;
-      margin-bottom: 1rem;
-    }
-    
-    &-link {
-      color: $geek-accent-blue;
-      font-size: 0.85rem;
-      text-decoration: none;
-      font-family: $font-mono;
-      
-      &:hover {
-        text-decoration: underline;
-      }
-    }
+  }
+  
+  &__card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  &__icon {
+    font-size: 1.25rem;
+    color: $geek-accent-purple;
+    font-family: $font-mono;
+    font-weight: 700;
+  }
+  
+  &__arrow {
+    margin-left: auto;
+    color: $geek-text-secondary;
+    font-size: 1rem;
+  }
+  
+  &__title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: $geek-text-primary;
+    margin-bottom: 0.5rem;
+  }
+  
+  &__description {
+    color: $geek-text-secondary;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  &__tag {
+    background: rgba($geek-accent-purple, 0.1);
+    color: $geek-accent-purple;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-family: $font-mono;
   }
 }
 
@@ -777,28 +802,51 @@ body {
       opacity: 0;
       pointer-events: none;
       transition: all 0.3s;
+      z-index: 999;
       
       &--open {
         transform: translateY(0);
         opacity: 1;
         pointer-events: auto;
       }
+      
+      li {
+        width: 100%;
+        text-align: center;
+        
+        a {
+          display: block;
+          padding: 0.75rem;
+          font-size: 1rem;
+        }
+      }
     }
     
     &__mobile-toggle {
       display: flex;
+      z-index: 1001;
     }
   }
   
   .hero {
     padding: 5rem 1rem 3rem;
+    min-height: auto;
     
     &__name {
       font-size: 2rem;
+      line-height: 1.2;
     }
     
     &__title {
-      font-size: 1.25rem;
+      font-size: 1.1rem;
+    }
+    
+    &__typing {
+      font-size: 0.85rem;
+    }
+    
+    &__summary {
+      font-size: 0.95rem;
     }
     
     &__cta {
@@ -812,13 +860,21 @@ body {
   }
   
   .stats-bar {
+    padding: 2rem 0;
+    
     &__grid {
       grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
+      gap: 1.5rem 1rem;
     }
     
-    &__item-number {
-      font-size: 1.5rem;
+    &__item {
+      &-number {
+        font-size: 1.75rem;
+      }
+      
+      &-label {
+        font-size: 0.8rem;
+      }
     }
   }
   
@@ -834,8 +890,128 @@ body {
     }
   }
   
-  .experience__timeline {
-    padding-left: 1.5rem;
+  .skills {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+    
+    &__category {
+      padding: 1.25rem;
+    }
+  }
+  
+  .experience {
+    &__timeline {
+      padding-left: 1rem;
+      
+      &::before {
+        left: 0;
+      }
+    }
+    
+    &__item {
+      padding-bottom: 2rem;
+      
+      &::before {
+        left: -1rem;
+        width: 10px;
+        height: 10px;
+        margin-left: -4px;
+      }
+    }
+    
+    &__header {
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+    
+    &__company {
+      font-size: 1.1rem;
+    }
+    
+    &__role {
+      font-size: 0.95rem;
+    }
+    
+    &__achievements {
+      li {
+        font-size: 0.9rem;
+      }
+    }
+  }
+  
+  .opensource {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+    
+    &__card {
+      padding: 1.25rem;
+    }
+  }
+  
+  .contact {
+    &__title {
+      font-size: 1.5rem;
+    }
+    
+    &__link {
+      padding: 0.875rem 1rem;
+      font-size: 0.9rem;
+    }
+  }
+  
+  .about {
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    
+    &__highlight {
+      padding: 0.875rem;
+    }
+  }
+  
+  .education {
+    &__item {
+      flex-direction: column;
+      padding: 1.25rem;
+      
+      &-meta {
+        text-align: left;
+      }
+    }
+  }
+}
+
+// Extra small screens
+@media (max-width: 480px) {
+  .hero {
+    &__name {
+      font-size: 1.75rem;
+    }
+  }
+  
+  .stats-bar {
+    &__item {
+      &-number {
+        font-size: 1.5rem;
+      }
+      
+      &-label {
+        font-size: 0.75rem;
+      }
+    }
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .nav {
+    &__container {
+      padding: 0 1rem;
+    }
   }
 }
 
