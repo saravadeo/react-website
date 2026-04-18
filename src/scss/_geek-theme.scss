@@ -1,43 +1,102 @@
-// Technical Geek Theme - Dark Mode Developer Portfolio
+// Technical Geek Theme - Premium Dark Mode Developer Portfolio
+// Colors optimized for premium feel with high contrast
 
-// Color Palette
+// Primary Background Colors (GitHub Dark-like depth)
 $geek-bg-primary: #0d1117;
 $geek-bg-secondary: #161b22;
 $geek-bg-tertiary: #21262d;
-$geek-text-primary: #c9d1d9;
+$geek-bg-card: #1c2128;
+$geek-bg-elevated: #22262d;
+
+// Text Colors (High contrast for readability)
+$geek-text-primary: #e6edf3;
 $geek-text-secondary: #8b949e;
-$geek-accent-blue: #58a6ff;
-$geek-accent-green: #238636;
+$geek-text-muted: #6e7681;
+
+// Accent Colors (Premium purple/violet theme)
 $geek-accent-purple: #8957e5;
+$geek-accent-purple-light: #a371f7;
+$geek-accent-purple-dark: #6e40c9;
+$geek-accent-blue: #58a6ff;
+$geek-accent-cyan: #39d0d8;
+$geek-accent-green: #238636;
+$geek-accent-green-bright: #2ea043;
 $geek-accent-orange: #f78166;
+$geek-accent-yellow: #d29922;
+$geek-accent-pink: #db61a2;
+
+// Borders & Effects
 $geek-border: #30363d;
+$geek-border-light: #3d444d;
+$geek-border-glow: rgba($geek-accent-purple, 0.3);
 $geek-code-bg: #161b22;
 
+// Gradients
+$gradient-hero: linear-gradient(135deg, $geek-bg-primary 0%, $geek-bg-secondary 50%, rgba($geek-accent-purple, 0.05) 100%);
+$gradient-accent: linear-gradient(135deg, $geek-accent-purple 0%, $geek-accent-purple-light 100%);
+$gradient-text: linear-gradient(135deg, $geek-text-primary 0%, $geek-accent-purple-light 100%);
+$gradient-card: linear-gradient(180deg, $geek-bg-secondary 0%, rgba($geek-accent-purple, 0.02) 100%);
+$gradient-terminal: linear-gradient(180deg, $geek-code-bg 0%, rgba($geek-accent-purple, 0.05) 100%);
+
 // Typography
-$font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
-$font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+$font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace;
+$font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+// Shadows & Glows
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.4);
+$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+$shadow-glow-purple: 0 0 30px rgba($geek-accent-purple, 0.4), 0 0 60px rgba($geek-accent-purple, 0.2);
+$shadow-glow-blue: 0 0 30px rgba($geek-accent-blue, 0.3), 0 0 60px rgba($geek-accent-blue, 0.15);
+$shadow-glow-green: 0 0 20px rgba($geek-accent-green-bright, 0.4);
 
 // Mixins
 @mixin geek-card {
   background: $geek-bg-secondary;
   border: 1px solid $geek-border;
-  border-radius: 6px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  box-shadow: $shadow-lg;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  &:hover {
+    border-color: $geek-border-light;
+    box-shadow: $shadow-xl, $shadow-glow-purple;
+    transform: translateY(-2px);
+  }
 }
 
 @mixin geek-terminal {
-  background: $geek-code-bg;
+  background: linear-gradient(180deg, $geek-code-bg 0%, rgba($geek-accent-purple, 0.03) 100%);
   border: 1px solid $geek-border;
-  border-radius: 6px;
+  border-radius: 12px;
   font-family: $font-mono;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), $shadow-xl;
+}
+
+@mixin glow-purple {
+  box-shadow: 0 0 40px rgba($geek-accent-purple, 0.4), 0 0 80px rgba($geek-accent-purple, 0.2);
 }
 
 @mixin glow-blue {
-  box-shadow: 0 0 20px rgba(88, 166, 255, 0.3);
+  box-shadow: 0 0 30px rgba($geek-accent-blue, 0.4), 0 0 60px rgba($geek-accent-blue, 0.2);
 }
 
 @mixin glow-green {
-  box-shadow: 0 0 20px rgba(35, 134, 54, 0.3);
+  box-shadow: 0 0 25px rgba($geek-accent-green-bright, 0.4);
+}
+
+@mixin gradient-text {
+  background: $gradient-text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 // Animations
@@ -51,10 +110,10 @@ $font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetic
   to { width: 100%; }
 }
 
-@keyframes slideIn {
+@keyframes slideInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -62,9 +121,55 @@ $font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetic
   }
 }
 
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 @keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
+  0%, 100% { 
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% { 
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba($geek-accent-purple, 0.4);
+  }
+  50% { 
+    box-shadow: 0 0 40px rgba($geek-accent-purple, 0.6);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
 @keyframes scanline {
@@ -72,6 +177,12 @@ $font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetic
   100% { transform: translateY(100%); }
 }
 
+@keyframes border-glow {
+  0%, 100% { border-color: rgba($geek-accent-purple, 0.3); }
+  50% { border-color: rgba($geek-accent-purple, 0.6); }
+}
+
+// Animation Classes
 .geek-typing {
   overflow: hidden;
   white-space: nowrap;
@@ -83,11 +194,19 @@ $font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetic
 }
 
 .geek-slide-in {
-  animation: slideIn 0.6s ease-out forwards;
+  animation: slideInUp 0.6s ease-out forwards;
 }
 
 .geek-pulse {
   animation: pulse 2s ease-in-out infinite;
+}
+
+.geek-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.geek-glow-pulse {
+  animation: glow-pulse 2s ease-in-out infinite;
 }
 
 // Cursor
@@ -95,7 +214,32 @@ $font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetic
   display: inline-block;
   width: 10px;
   height: 1.2em;
-  background: $geek-accent-green;
+  background: $geek-accent-green-bright;
   margin-left: 2px;
   animation: blink 1s step-end infinite;
+}
+
+// Scrollbar Styling
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: $geek-bg-primary;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $geek-border;
+  border-radius: 4px;
+  
+  &:hover {
+    background: $geek-border-light;
+  }
+}
+
+// Selection
+::selection {
+  background: rgba($geek-accent-purple, 0.3);
+  color: $geek-text-primary;
 }
