@@ -176,6 +176,11 @@ const Hero = () => {
 
   const { displayedText, isTyping } = useTypingEffect(techStacks, 60, 2500);
 
+  const handleSectionClick = (e, sectionId) => {
+    e.preventDefault();
+    scrollToId(sectionId);
+  };
+
   return (
     <section className="hero">
       <div className="hero__background">
@@ -224,8 +229,8 @@ const Hero = () => {
           <p>Staff-level engineer and system architect with <strong>11+ years</strong> of experience designing and scaling distributed systems and internal platforms serving <strong>millions of users</strong> across fintech, e-commerce, and sports tech.</p>
         </div>
         <div className="hero__actions">
-          <a href="#contact" className="btn btn--primary">Get in Touch</a>
-          <a href="#experience" className="btn btn--secondary">View Experience</a>
+          <a href="#contact" onClick={(e) => handleSectionClick(e, 'contact')} className="btn btn--primary">Get in Touch</a>
+          <a href="#experience" onClick={(e) => handleSectionClick(e, 'experience')} className="btn btn--secondary">View Experience</a>
           <a href="https://github.com/saravadeo" target="_blank" rel="noopener noreferrer" className="btn btn--ghost">GitHub →</a>
         </div>
       </div>
@@ -703,6 +708,20 @@ const Contact = () => {
 
 // Footer
 const Footer = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const onHome = location.pathname === "/";
+
+  const handleSectionClick = (e, sectionId) => {
+    e.preventDefault();
+    if (onHome) {
+      scrollToId(sectionId);
+    } else {
+      sessionStorage.setItem(SECTION_SCROLL_KEY, sectionId);
+      navigate("/");
+    }
+  };
+
   return (
     <footer className="footer">
       <div className="footer__container">
@@ -713,11 +732,11 @@ const Footer = () => {
           </div>
           <div className="footer__links">
             <Link to="/">Home</Link>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#experience">Experience</a>
+            <a href="#about" onClick={(e) => handleSectionClick(e, 'about')}>About</a>
+            <a href="#skills" onClick={(e) => handleSectionClick(e, 'skills')}>Skills</a>
+            <a href="#experience" onClick={(e) => handleSectionClick(e, 'experience')}>Experience</a>
             <Link to="/blog">Blog</Link>
-            <a href="#contact">Contact</a>
+            <a href="#contact" onClick={(e) => handleSectionClick(e, 'contact')}>Contact</a>
           </div>
         </div>
         <div className="footer__bottom">
