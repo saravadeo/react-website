@@ -8,15 +8,13 @@ import GeekAbout from "./component/geek-about";
 // Original Components (will be styled)
 import TechnologySection from "./component/technology-section";
 import ExperienceSection from "./component/experience-section";
-import StoriesSection from "./component/stories-section";
 import ContactSection from "./component/contact-section";
-import SideBar from "./component/side-bar";
 
 // Blog Components
 import BlogList from "./components/Blog/BlogList";
 import BlogPost from "./components/Blog/BlogPost";
 
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 class App extends Component {
     constructor(props) {
@@ -28,7 +26,7 @@ class App extends Component {
     }
     
     componentDidMount() {
-        ReactGA.initialize('UA-165274480-1');
+        ReactGA.initialize('G-XXXXXXXXXX'); // Replace with your GA4 tracking ID
         
         // Check URL for blog routes
         const path = window.location.pathname;
@@ -60,9 +58,7 @@ class App extends Component {
                     <GeekAbout />
                     <TechnologySection />
                     <ExperienceSection />
-                    <StoriesSection />
                     <ContactSection />
-                    <SideBar />
                 </div>
             );
         }

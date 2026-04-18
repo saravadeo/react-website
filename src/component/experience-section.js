@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ReactGA              from "react-ga";
+import ReactGA              from "react-ga4";
 
 class ExperienceSection extends Component {
     

@@ -1,49 +1,11 @@
 import React, { Component } from "react";
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 
 class GeekHeader extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            typedText: "",
-            fullText: "Software Engineer // Full Stack Developer",
-            showCursor: true
-        };
-    }
-    
-    componentDidMount() {
-        this.typeText();
-    }
-    
-    typeText = () => {
-        const { fullText } = this.state;
-        let currentIndex = 0;
-        
-        const typeInterval = setInterval(() => {
-            if (currentIndex <= fullText.length) {
-                this.setState({ typedText: fullText.slice(0, currentIndex) });
-                currentIndex++;
-            } else {
-                clearInterval(typeInterval);
-            }
-        }, 50);
-    };
-    
-    onTerminalClick = () => {
-        ReactGA.event({
-            category: "Header",
-            action: "terminal_clicked"
-        });
-    };
-    
     render() {
-        const { typedText, showCursor } = this.state;
-        
         return (
             <header className="geek-header">
-                {/* Terminal Window */}
                 <div className="geek-terminal">
-                    {/* Terminal Header */}
                     <div className="geek-terminal-header">
                         <div className="geek-terminal-buttons">
                             <span className="geek-btn geeks-btn-red"></span>
@@ -53,7 +15,6 @@ class GeekHeader extends Component {
                         <span className="geek-terminal-title">onkar@portfolio:~</span>
                     </div>
                     
-                    {/* Terminal Body */}
                     <div className="geek-terminal-body">
                         <div className="geek-line">
                             <span className="geek-prompt">$</span>
@@ -74,10 +35,7 @@ class GeekHeader extends Component {
                         </div>
                         
                         <div className="geek-line geek-output">
-                            <p className="geek-role">
-                                {typedText}
-                                {showCursor && <span className="geek-cursor">█</span>}
-                            </p>
+                            <p className="geek-role">Software Engineer // Full Stack Developer</p>
                         </div>
                         
                         <div className="geek-line">
@@ -87,38 +45,24 @@ class GeekHeader extends Component {
                     </div>
                 </div>
                 
-                {/* Quick Stats */}
                 <div className="geek-stats">
                     <div className="geek-stat">
                         <span className="geek-stat-label">Status:</span>
-                        <span className="geek-stat-value geek-status-active">● Available for hire</span>
+                        <span className="geek-stat-value geek-status-active">● Available</span>
                     </div>
                     <div className="geek-stat">
                         <span className="geek-stat-label">Location:</span>
-                        <span className="geek-stat-value">Remote / Worldwide</span>
-                    </div>
-                    <div className="geek-stat">
-                        <span className="geek-stat-label">Stack:</span>
-                        <span className="geek-stat-value geek-tag">React</span>
-                        <span className="geek-stat-value geek-tag">Node.js</span>
-                        <span className="geek-stat-value geek-tag">AWS</span>
+                        <span className="geek-stat-value">Remote</span>
                     </div>
                 </div>
                 
-                {/* CTA Buttons */}
                 <div className="geek-ctas">
-                    <a href="#section-about" className="geek-btn-primary" onClick={this.onTerminalClick}>
+                    <a href="#section-about" className="geek-btn-primary">
                         <span className="geek-icon">$</span> ./view-profile.sh
                     </a>
-                    <a href="https://github.com/saravadeo" target="_blank" rel="noopener noreferrer" className="geek-btn-secondary">
-                        <span className="geek-icon">⚡</span> GitHub
-                    </a>
-                </div>
-                
-                {/* Scroll Indicator */}
-                <div className="geek-scroll">
-                    <span className="geek-scroll-text">Scroll to explore</span>
-                    <span className="geek-scroll-arrow">↓</span>
+                    <button onClick={this.props.onBlogClick} className="geek-btn-secondary">
+                        <span className="geek-icon">#</span> Blog
+                    </button>
                 </div>
             </header>
         );
