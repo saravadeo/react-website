@@ -512,15 +512,6 @@ const Experience = () => {
 const OpenSource = () => {
   const contributions = [
     {
-      title: "Vert.x PostgreSQL Tracing",
-      org: "Eclipse Vert.x",
-      description: "Added support for automatic PostgreSQL query tracing in Vert.x 4, enabling Datadog APM integration for better observability",
-      tags: ["Vert.x", "PostgreSQL", "Datadog", "APM"],
-      link: "https://github.com/vert-x3/vertx-mysql-postgresql-client",
-      type: "tracing",
-      status: "merged"
-    },
-    {
       title: "dd-trace-java #8471",
       org: "Datadog",
       description:
@@ -551,20 +542,11 @@ const OpenSource = () => {
       status: "maintainer"
     },
     {
-      title: "Spark Structured Streaming",
-      org: "Datadog",
-      description: "Implemented Spark Structured Streaming integration using bytecode instrumentation for enhanced monitoring capabilities",
-      tags: ["Apache Spark", "Streaming", "Java"],
+      title: "Spark Streaming & Kafka Rack-Aware",
+      org: "Datadog / Apache Kafka",
+      description: "Implemented Spark Structured Streaming integration using bytecode instrumentation and added support for follower fetching with rack-aware assignment in Kafka",
+      tags: ["Apache Spark", "Kafka", "Bytecode Instrumentation"],
       link: "#",
-      type: "instrumentation",
-      status: "merged"
-    },
-    {
-      title: "Kafka Rack-Aware Assignment",
-      org: "Apache Kafka",
-      description: "Added support for follower fetching with rack-aware assignment in Apache Kafka, improving data locality and performance",
-      tags: ["Apache Kafka", "Distributed Systems"],
-      link: "https://github.com/apache/kafka",
       type: "feature",
       status: "merged"
     },
@@ -624,7 +606,7 @@ const OpenSource = () => {
         
         <div className="opensource__stats">
           <div className="opensource__stat">
-            <span className="opensource__stat-number">8+</span>
+            <span className="opensource__stat-number">6</span>
             <span className="opensource__stat-label">Projects</span>
           </div>
           <div className="opensource__stat">
