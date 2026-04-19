@@ -513,69 +513,135 @@ const OpenSource = () => {
   const contributions = [
     {
       title: "Vert.x PostgreSQL Tracing",
+      org: "Eclipse Vert.x",
       description: "Added support for automatic PostgreSQL query tracing in Vert.x 4, enabling Datadog APM integration for better observability",
       tags: ["Vert.x", "PostgreSQL", "Datadog", "APM"],
       link: "https://github.com/vert-x3/vertx-mysql-postgresql-client",
+      type: "tracing",
+      status: "merged"
     },
     {
-      title: "Datadog dd-trace-java (#8471)",
+      title: "dd-trace-java #8471",
+      org: "Datadog",
       description:
         "Vert.x PostgreSQL client instrumentation for Datadog APM — merged contribution in the Java tracer",
       tags: ["Datadog", "Vert.x", "PostgreSQL", "APM"],
       link: "https://github.com/DataDog/dd-trace-java/pull/8471",
+      type: "instrumentation",
+      status: "merged"
     },
     {
-      title: "Datadog dd-trace-java (#11149)",
+      title: "dd-trace-java #11149",
+      org: "Datadog",
       description:
         "Cross-platform UTF-8 handling: explicit charset for String.getBytes() to fix encoding on international deployments",
       tags: ["Datadog", "Java", "UTF-8"],
       link: "https://github.com/DataDog/dd-trace-java/pull/11149",
+      type: "bugfix",
+      status: "merged"
     },
     {
       title: "LogWise",
+      org: "Dream Horizon",
       description:
         "Open-source end-to-end logging: Vector → Kafka → Spark → S3/Athena, Grafana dashboards, and deployment automation",
       tags: ["Logging", "Kafka", "Spark", "Grafana"],
       link: "https://github.com/dream-horizon-org/logwise",
+      type: "project",
+      status: "maintainer"
     },
     {
       title: "Spark Structured Streaming",
+      org: "Datadog",
       description: "Implemented Spark Structured Streaming integration using bytecode instrumentation for enhanced monitoring capabilities",
       tags: ["Apache Spark", "Streaming", "Java"],
       link: "#",
+      type: "instrumentation",
+      status: "merged"
     },
     {
       title: "Kafka Rack-Aware Assignment",
+      org: "Apache Kafka",
       description: "Added support for follower fetching with rack-aware assignment in Apache Kafka, improving data locality and performance",
       tags: ["Apache Kafka", "Distributed Systems"],
       link: "https://github.com/apache/kafka",
+      type: "feature",
+      status: "merged"
     },
     {
-      title: "Prerender.io + CloudFront + S3",
+      title: "Prerender.io AWS Setup",
+      org: "Personal",
       description:
         "AWS CloudFormation and manual setup for Prerender.io with CloudFront and S3 to improve SEO for JavaScript SPAs",
       tags: ["AWS", "CloudFront", "SEO", "Prerender.io"],
       link: "https://github.com/saravadeo/prerender-io-cloudfront-s3",
+      type: "tool",
+      status: "maintainer"
     },
     {
       title: "React Native Mobile App",
+      org: "Kyepot",
       description: "Contributed to RN app with 100k+ downloads and 4+ star rating, implementing key features and performance optimizations",
       tags: ["React Native", "Mobile", "Android"],
       link: "#",
+      type: "app",
+      status: "shipped"
     },
   ];
+
+  const getIconForType = (type) => {
+    const icons = {
+      tracing: "🔍",
+      instrumentation: "🔧",
+      bugfix: "🐛",
+      project: "📦",
+      feature: "✨",
+      tool: "🛠️",
+      app: "📱"
+    };
+    return icons[type] || "📝";
+  };
+
+  const getStatusBadge = (status) => {
+    const badges = {
+      merged: { text: "Merged", class: "status--merged" },
+      maintainer: { text: "Maintainer", class: "status--maintainer" },
+      shipped: { text: "Shipped", class: "status--shipped" }
+    };
+    return badges[status] || { text: status, class: "" };
+  };
 
   return (
     <section id="opensource" className="section section--opensource">
       <div className="container">
-        <div className="section__header">
+        <div className="section__header section__header--centered">
           <span className="section__eyebrow">Community</span>
           <h2 className="section__title">Open Source Contributions</h2>
+          <p className="section__subtitle">
+            Contributing to observability, distributed systems, and developer tooling
+          </p>
         </div>
+        
+        <div className="opensource__stats">
+          <div className="opensource__stat">
+            <span className="opensource__stat-number">8+</span>
+            <span className="opensource__stat-label">Projects</span>
+          </div>
+          <div className="opensource__stat">
+            <span className="opensource__stat-number">3</span>
+            <span className="opensource__stat-label">Major Orgs</span>
+          </div>
+          <div className="opensource__stat">
+            <span className="opensource__stat-number">100K+</span>
+            <span className="opensource__stat-label">Users Impacted</span>
+          </div>
+        </div>
+
         <div className="opensource__grid">
           {contributions.map((contrib, index) => {
             const isExternal =
               contrib.link && /^https?:\/\//i.test(contrib.link);
+            const statusBadge = getStatusBadge(contrib.status);
             return (
               <a
                 key={index}
@@ -588,12 +654,20 @@ const OpenSource = () => {
                 }
               >
                 <div className="opensource__card-header">
-                  <span className="opensource__icon" aria-hidden="true">
-                    [&lt;&gt;]
-                  </span>
-                  <span className="opensource__arrow" aria-hidden="true">
-                    {isExternal ? "↗" : "—"}
-                  </span>
+                  <div className="opensource__meta">
+                    <span className="opensource__icon" aria-hidden="true">
+                      {getIconForType(contrib.type)}
+                    </span>
+                    <span className="opensource__org">{contrib.org}</span>
+                  </div>
+                  <div className="opensource__badges">
+                    <span className={`opensource__status ${statusBadge.class}`}>
+                      {statusBadge.text}
+                    </span>
+                    {isExternal && (
+                      <span className="opensource__arrow" aria-hidden="true">↗</span>
+                    )}
+                  </div>
                 </div>
                 <h3 className="opensource__title">{contrib.title}</h3>
                 <p className="opensource__description">{contrib.description}</p>
@@ -607,6 +681,18 @@ const OpenSource = () => {
               </a>
             );
           })}
+        </div>
+        
+        <div className="opensource__cta">
+          <a 
+            href="https://github.com/saravadeo" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="btn btn--secondary btn--large"
+          >
+            <span>View GitHub Profile</span>
+            <span className="opensource__cta-arrow">→</span>
+          </a>
         </div>
       </div>
     </section>
