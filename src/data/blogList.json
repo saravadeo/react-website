@@ -2,12 +2,12 @@
   "posts": [
     {
       "id": "mysql-unexpected-behaviour",
-      "title": "MySQL Unexpected Behaviour",
+      "title": "MySQL Implicit Type Conversion: The Hidden Bug That Broke Production Queries",
       "date": "2026-04-18",
-      "excerpt": "Understanding MySQL's implicit type conversion quirks and how they can cause silent bugs in production systems.",
+      "excerpt": "A deep dive into MySQL's implicit type conversion behavior that caused unexpected query results in production. Learn why '1 - 3 - 4' = 1 evaluates to TRUE and how to prevent these silent bugs.",
       "slug": "mysql-unexpected-behaviour",
-      "tags": ["mysql", "sql", "database", "debugging"],
-      "readTime": "1 min"
+      "tags": ["mysql", "sql", "database", "debugging", "performance", "type-conversion"],
+      "readTime": "5 min"
     },
     {
       "id": "seo-prerender-cloudfront",
