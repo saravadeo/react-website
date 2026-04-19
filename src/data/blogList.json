@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "id": "mysql-unexpected-behaviour",
+      "title": "MySQL Unexpected Behaviour",
+      "date": "2026-04-18",
+      "excerpt": "Understanding MySQL's implicit type conversion quirks and how they can cause silent bugs in production systems.",
+      "slug": "mysql-unexpected-behaviour",
+      "tags": ["mysql", "sql", "database", "debugging"],
+      "readTime": "1 min"
+    },
+    {
       "id": "seo-prerender-cloudfront",
       "title": "SEO Optimization with Prerender.io and AWS CloudFront",
       "date": "2026-04-18",
