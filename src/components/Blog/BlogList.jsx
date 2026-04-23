@@ -39,38 +39,35 @@ const BlogList = () => {
           <ul className="blog-list-grid">
             {posts.map((post) => (
               <li key={post.id} className="blog-list-grid__cell">
-                <article className="blog-list-card">
-                  <div className="blog-list-card__accent" aria-hidden="true" />
-                  <div className="blog-list-card__meta">
-                    <time dateTime={post.date} className="blog-list-card__date">
-                      {post.date}
-                    </time>
-                    <span className="blog-list-card__dot">·</span>
-                    <span className="blog-list-card__read">{post.readTime} read</span>
-                  </div>
-                  <h2 className="blog-list-card__title">
-                    <Link to={`/blog/${post.slug}`} className="blog-list-card__link">
+                <Link to={`/blog/${post.slug}`} className="blog-list-card-link">
+                  <article className="blog-list-card">
+                    <div className="blog-list-card__accent" aria-hidden="true" />
+                    <div className="blog-list-card__meta">
+                      <time dateTime={post.date} className="blog-list-card__date">
+                        {post.date}
+                      </time>
+                      <span className="blog-list-card__dot">·</span>
+                      <span className="blog-list-card__read">{post.readTime} read</span>
+                    </div>
+                    <h2 className="blog-list-card__title">
                       {post.title}
-                    </Link>
-                  </h2>
-                  <p className="blog-list-card__excerpt">{post.excerpt}</p>
-                  <div className="blog-list-card__tags">
-                    {post.tags.map((tag) => (
-                      <span key={tag} className="blog-list-card__tag">
-                        {tag}
+                    </h2>
+                    <p className="blog-list-card__excerpt">{post.excerpt}</p>
+                    <div className="blog-list-card__tags">
+                      {post.tags.map((tag) => (
+                        <span key={tag} className="blog-list-card__tag">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <span className="blog-list-card__cta">
+                      Read article
+                      <span className="blog-list-card__cta-arrow" aria-hidden="true">
+                        →
                       </span>
-                    ))}
-                  </div>
-                  <Link
-                    to={`/blog/${post.slug}`}
-                    className="blog-list-card__cta"
-                  >
-                    Read article
-                    <span className="blog-list-card__cta-arrow" aria-hidden="true">
-                      →
                     </span>
-                  </Link>
-                </article>
+                  </article>
+                </Link>
               </li>
             ))}
           </ul>
