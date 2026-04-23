@@ -1,6 +1,17 @@
 {
   "posts": [
     {
+      "id": "the-meaning-of-onkar",
+      "title": "The Meaning of Onkar",
+      "date": "2026-04-23",
+      "excerpt": "Technical deep dive based on production experience.",
+      "slug": "the-meaning-of-onkar",
+      "tags": [
+        "idea"
+      ],
+      "readTime": "2 min"
+    },
+    {
       "id": "technical-deep-dive-lessons-from-production",
       "title": "Technical Deep Dive: Lessons from Production",
       "date": "2026-04-23",
