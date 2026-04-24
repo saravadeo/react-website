@@ -2,14 +2,12 @@
   "posts": [
     {
       "id": "understanding-blockingqueue",
-      "title": "Understanding BlockingQueue",
+      "title": "Understanding BlockingQueue in Java: A System Design Primitive",
       "date": "2026-04-24",
-      "excerpt": "Technical deep dive based on production experience.",
+      "excerpt": "BlockingQueue is a thread-safe queue from java.util.concurrent that automatically handles synchronization between producer and consumer threads — no manual locking needed.",
       "slug": "understanding-blockingqueue",
-      "tags": [
-        "work"
-      ],
-      "readTime": "3 min"
+      "tags": ["java", "concurrency", "distributed-systems", "blocking-queue", "producer-consumer", "backend", "system-design"],
+      "readTime": "6 min"
     },
     {
       "id": "the-meaning-of-onkar",
