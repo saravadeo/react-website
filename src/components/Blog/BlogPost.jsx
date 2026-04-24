@@ -107,13 +107,13 @@ const BlogPost = () => {
   return (
     <div className="blog-page">
       <Helmet>
-        <title>{post.title} — Onkar Saravade Blog</title>
+        <title>{post.title} — Onkar Sarvade Blog</title>
         <meta name="description" content={post.excerpt} />
-        <meta name="keywords" content={`Onkar Saravade, ${post.tags.join(', ')}, system design, backend engineering, distributed systems`} />
-        <meta property="og:title" content={`${post.title} — Onkar Saravade`} />
+        <meta name="keywords" content={`Onkar Sarvade, ${post.tags.join(', ')}, system design, backend engineering, distributed systems`} />
+        <meta property="og:title" content={`${post.title} — Onkar Sarvade`} />
         <meta property="og:description" content={post.excerpt} />
         <meta property="og:type" content="article" />
-        <meta name="twitter:title" content={`${post.title} — Onkar Saravade`} />
+        <meta name="twitter:title" content={`${post.title} — Onkar Sarvade`} />
         <meta name="twitter:description" content={post.excerpt} />
         <link rel="canonical" href={`https://saravadeo.github.io/react-website/#/blog/${post.slug}`} />
         <script type="application/ld+json">{JSON.stringify({
@@ -124,11 +124,11 @@ const BlogPost = () => {
           "datePublished": post.date,
           "author": {
             "@type": "Person",
-            "name": "Onkar Saravade"
+            "name": "Onkar Sarvade"
           },
           "publisher": {
             "@type": "Person",
-            "name": "Onkar Saravade"
+            "name": "Onkar Sarvade"
           },
           "keywords": post.tags.join(', ')
         })}</script>

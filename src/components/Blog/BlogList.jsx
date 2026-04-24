@@ -10,12 +10,12 @@ const BlogList = () => {
   return (
     <div className="blog-page blog-page--list">
       <Helmet>
-        <title>Blog — Onkar Saravade | System Design & Backend Engineering</title>
-        <meta name="description" content="Technical blog by Onkar Saravade on system design, backend engineering, distributed systems, scalable architecture, and lessons from building production platforms." />
-        <meta name="keywords" content="Onkar Saravade blog, system design, backend engineering, distributed systems, scalable architecture, observability, microservices, cloud native" />
-        <meta property="og:title" content="Blog — Onkar Saravade | System Design & Backend Engineering" />
+        <title>Blog — Onkar Sarvade | System Design & Backend Engineering</title>
+        <meta name="description" content="Technical blog by Onkar Sarvade on system design, backend engineering, distributed systems, scalable architecture, and lessons from building production platforms." />
+        <meta name="keywords" content="Onkar Sarvade blog, system design, backend engineering, distributed systems, scalable architecture, observability, microservices, cloud native" />
+        <meta property="og:title" content="Blog — Onkar Sarvade | System Design & Backend Engineering" />
         <meta property="og:description" content="Technical articles on system design, backend engineering, distributed systems, and building scalable production platforms." />
-        <meta name="twitter:title" content="Blog — Onkar Saravade | System Design & Backend Engineering" />
+        <meta name="twitter:title" content="Blog — Onkar Sarvade | System Design & Backend Engineering" />
         <meta name="twitter:description" content="Technical articles on system design, backend engineering, and building scalable production platforms." />
         <link rel="canonical" href="https://saravadeo.github.io/react-website/#/blog" />
       </Helmet>

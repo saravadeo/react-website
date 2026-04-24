@@ -202,7 +202,7 @@ const Hero = () => {
               <span className="hero__command"> whoami</span>
             </div>
             <div className="hero__line hero__line--output">
-              <h1 className="hero__name">Onkar Saravade</h1>
+              <h1 className="hero__name">Onkar Sarvade</h1>
             </div>
             <div className="hero__line">
               <span className="hero__prompt">$</span>
@@ -808,7 +808,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer__bottom">
-          <p>© 2026 Onkar Saravade. All rights reserved.</p>
+          <p>© 2026 Onkar Sarvade. All rights reserved.</p>
           <p className="footer__tech">Built with React • Styled with SCSS</p>
         </div>
       </div>
@@ -829,12 +829,12 @@ const HomePage = () => {
   const homePageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Onkar Saravade - Full Stack Developer & Distributed Systems Engineer",
-    "description": "Portfolio of Onkar Saravade showcasing 11+ years of experience in full stack development, distributed systems engineering, scalable backend architecture, and cloud-native applications.",
+    "name": "Onkar Sarvade - Full Stack Developer & Distributed Systems Engineer",
+    "description": "Portfolio of Onkar Sarvade showcasing 11+ years of experience in full stack development, distributed systems engineering, scalable backend architecture, and cloud-native applications.",
     "url": "https://saravadeo.github.io/react-website/",
     "mainEntity": {
       "@type": "Person",
-      "name": "Onkar Saravade",
+      "name": "Onkar Sarvade",
       "jobTitle": "Full Stack Developer & Distributed Systems Engineer",
       "address": {
         "@type": "PostalAddress",
@@ -848,13 +848,13 @@ const HomePage = () => {
   return (
     <>
       <Helmet>
-        <title>Onkar Saravade | Full Stack Developer & Distributed Systems Engineer</title>
-        <meta name="description" content="Onkar Saravade — Full Stack Developer and Distributed Systems Engineer with 11+ years building scalable backend systems, microservices architecture, and high-performance observability platforms." />
-        <meta name="keywords" content="Onkar Saravade, Onkar Saravade portfolio, Onkar full stack developer, Onkar distributed systems engineer, Full Stack Developer, Distributed Systems Engineer, Scalable System Design, Backend Engineer, High Performance Backend, Cloud Native Applications, Microservices Architecture, Event Driven Systems, Observability Engineering, Fault Tolerant Systems" />
-        <meta property="og:title" content="Onkar Saravade | Full Stack Developer & Distributed Systems Engineer" />
-        <meta property="og:description" content="Onkar Saravade — Full Stack Developer and Distributed Systems Engineer building scalable backend systems, microservices, and observability platforms." />
+        <title>Onkar Sarvade | Full Stack Developer & Distributed Systems Engineer</title>
+        <meta name="description" content="Onkar Sarvade — Full Stack Developer and Distributed Systems Engineer with 11+ years building scalable backend systems, microservices architecture, and high-performance observability platforms." />
+        <meta name="keywords" content="Onkar Sarvade, Onkar Sarvade portfolio, Onkar full stack developer, Onkar distributed systems engineer, Full Stack Developer, Distributed Systems Engineer, Scalable System Design, Backend Engineer, High Performance Backend, Cloud Native Applications, Microservices Architecture, Event Driven Systems, Observability Engineering, Fault Tolerant Systems" />
+        <meta property="og:title" content="Onkar Sarvade | Full Stack Developer & Distributed Systems Engineer" />
+        <meta property="og:description" content="Onkar Sarvade — Full Stack Developer and Distributed Systems Engineer building scalable backend systems, microservices, and observability platforms." />
         <meta property="og:url" content="https://saravadeo.github.io/react-website/" />
-        <meta name="twitter:title" content="Onkar Saravade | Full Stack Developer & Distributed Systems Engineer" />
+        <meta name="twitter:title" content="Onkar Sarvade | Full Stack Developer & Distributed Systems Engineer" />
         <meta name="twitter:description" content="Full Stack Developer and Distributed Systems Engineer with 11+ years building scalable backend systems and observability platforms." />
         <link rel="canonical" href="https://saravadeo.github.io/react-website/" />
         <meta name="geo.region" content="IN-MH" />
