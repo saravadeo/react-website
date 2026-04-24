@@ -93,19 +93,13 @@ All operations are **atomic** and safe across threads.
 
 ```java
 BlockingQueue<Integer> queue = new LinkedBlockingQueue<>(3);
-```
 
-### Producer Methods
-
-```java
+// Producer methods
 queue.put(1);                          // blocks if full
 queue.offer(1);                         // returns false if full
 queue.offer(1, 2, TimeUnit.SECONDS);    // waits with timeout
-```
 
-### Consumer Methods
-
-```java
+// Consumer methods
 queue.take();                           // blocks if empty
 queue.poll();                           // returns null if empty
 queue.poll(2, TimeUnit.SECONDS);        // waits with timeout
