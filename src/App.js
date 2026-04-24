@@ -7,6 +7,7 @@ import {
   useLocation,
   useNavigate,
 } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import BlogList from "./components/Blog/BlogList";
 import BlogPost from "./components/Blog/BlogPost";
 import "./scss/main.scss";
@@ -201,15 +202,15 @@ const Hero = () => {
               <span className="hero__command"> whoami</span>
             </div>
             <div className="hero__line hero__line--output">
-              <h1 className="hero__name">Onkar Sarvade</h1>
+              <h1 className="hero__name">Onkar Saravade</h1>
             </div>
             <div className="hero__line">
               <span className="hero__prompt">$</span>
               <span className="hero__command"> cat role.txt</span>
             </div>
             <div className="hero__line hero__line--output">
-              <p className="hero__title">Software Development Engineer III (SDE-3)</p>
-              <p className="hero__subtitle">Distributed Systems | Scalable Cloud Architecture</p>
+              <p className="hero__title">Full Stack Developer & Distributed Systems Engineer</p>
+              <p className="hero__subtitle">Scalable Backend Architecture | Cloud Native Systems</p>
             </div>
             <div className="hero__line">
               <span className="hero__prompt">$</span>
@@ -226,7 +227,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="hero__summary">
-          <p>Staff-level engineer and system architect with <strong>11+ years</strong> of experience designing and scaling distributed systems and internal platforms serving <strong>millions of users</strong> across fintech, e-commerce, and sports tech.</p>
+          <p>Full stack developer and distributed systems engineer with <strong>11+ years</strong> of experience designing scalable backend platforms, event-driven microservices, and fault-tolerant cloud-native systems serving <strong>millions of users</strong> across fintech, e-commerce, and sports tech.</p>
         </div>
         <div className="hero__actions">
           <a href="#contact" onClick={(e) => handleSectionClick(e, 'contact')} className="btn btn--primary">Get in Touch</a>
@@ -271,26 +272,26 @@ const KeyImpact = () => {
   const impacts = [
     {
       icon: "📊",
-      title: "Observability Platform",
-      description: "Scaled platform processing 16+ Gbps telemetry across 600+ services, supporting 500+ engineers with real-time insights",
+      title: "Observability Engineering Platform",
+      description: "Built a scalable observability platform processing 16+ Gbps telemetry across 600+ microservices, enabling 500+ engineers with real-time insights for fault-tolerant systems",
       metrics: "16+ Gbps • 600+ services • 500+ engineers",
     },
     {
       icon: "🎯",
-      title: "Telemetry Standards",
-      description: "Established organization-wide standards for logs, metrics, and traces across all engineering teams",
+      title: "Scalable System Design Standards",
+      description: "Established organization-wide standards for distributed tracing, metrics, and logging across all engineering teams building high-performance backends",
       metrics: "Standardized • Automated • Monitored",
     },
     {
       icon: "⚙️",
-      title: "DORA ERP Platform",
-      description: "Architected and delivered ERP-scale internal platform automating CMS, sales, invoicing, and operations workflows",
+      title: "Cloud-Native ERP Platform",
+      description: "Architected and delivered a cloud-native internal platform automating CMS, sales, invoicing, and operations with event-driven microservices architecture",
       metrics: "CMS • Sales • Invoicing • Operations",
     },
     {
       icon: "🤖",
-      title: "AI-Powered Diagnostics",
-      description: "Introduced AI-assisted anomaly detection and automated root-cause analysis using LangChain and LangGraph",
+      title: "AI-Powered Observability Diagnostics",
+      description: "Introduced AI-assisted anomaly detection and automated root-cause analysis for event-driven systems using LangChain and LangGraph observability patterns",
       metrics: "LangChain • LangGraph • LLM Orchestration",
     },
   ];
@@ -300,7 +301,7 @@ const KeyImpact = () => {
       <div className="container">
         <div className="section__header">
           <span className="section__eyebrow">Leadership</span>
-          <h2 className="section__title">Key Impact & Technical Leadership</h2>
+          <h2 className="section__title">Building Scalable Systems & Technical Leadership</h2>
         </div>
         <div className="impact__grid">
           {impacts.map((impact, index) => (
@@ -331,12 +332,12 @@ const Skills = () => {
       skills: ["AWS EC2", "RDS", "SQS", "CloudFront", "Distributed Cloud Systems"],
     },
     {
-      title: "Observability",
+      title: "Observability Engineering",
       icon: "🔍",
       skills: ["OpenTelemetry", "Distributed Tracing", "Monitoring", "Alerting", "Telemetry Systems", "Incident Management", "SigNoz", "ClickHouse"],
     },
     {
-      title: "Messaging & Events",
+      title: "Event-Driven Systems",
       icon: "📨",
       skills: ["Apache Kafka", "Event-Driven Architecture", "High-Throughput Messaging", "Stream Processing"],
     },
@@ -348,7 +349,7 @@ const Skills = () => {
     {
       title: "Architecture",
       icon: "🏗️",
-      skills: ["Distributed Systems", "Event-Driven Architecture", "Microservices", "Component-Driven UI", "System Design"],
+      skills: ["Distributed Systems", "Event-Driven Architecture", "Microservices", "Component-Driven UI", "Scalable System Design"],
     },
     {
       title: "AI & ML Systems",
@@ -367,7 +368,7 @@ const Skills = () => {
       <div className="container">
         <div className="section__header">
           <span className="section__eyebrow">Expertise</span>
-          <h2 className="section__title">Technical Skills</h2>
+          <h2 className="section__title">Full Stack & Backend Engineering Skills</h2>
         </div>
         <div className="skills__grid">
           {skillCategories.map((category, index) => (
@@ -401,12 +402,12 @@ const Experience = () => {
       period: "Sept 2020 - Present",
       type: "Full-time",
       achievements: [
-        "Architected and scaled centralized observability platform processing 16+ Gbps telemetry across 600+ services used by 500+ engineers",
-        "Designed and deployed cloud-native observability stack using OpenTelemetry, ClickHouse, and SigNoz",
-        "Led initiatives to standardize telemetry instrumentation and monitoring practices organization-wide",
-        "Built AI-assisted anomaly detection and automated root-cause diagnostics using LangChain and LangGraph",
-        "Head of Engineering for DreamSetGo - owned end-to-end system architecture, designed scalable microservices",
-        "Engineered DORA - full-scale Admin Panel/ERP system covering CMS, lead capture, package customization, sales workflow, invoicing, and operational dashboards",
+        "Architected and scaled a centralized observability engineering platform processing 16+ Gbps telemetry across 600+ microservices, enabling 500+ engineers with real-time insights",
+        "Designed and deployed cloud-native observability stacks using OpenTelemetry, ClickHouse, and SigNoz for fault-tolerant distributed systems",
+        "Led initiatives to standardize telemetry instrumentation and scalable system design practices across the organization",
+        "Built AI-assisted anomaly detection and automated root-cause diagnostics for event-driven systems using LangChain and LangGraph",
+        "Head of Engineering for DreamSetGo — owned end-to-end system architecture, designed high-performance backend microservices",
+        "Engineered DORA — full-scale Admin Panel/ERP platform with event-driven architecture covering CMS, lead capture, package customization, sales workflow, invoicing, and operational dashboards",
       ],
       technologies: ["OpenTelemetry", "ClickHouse", "SigNoz", "LangChain", "LangGraph", "AWS", "Kafka", "Java", "Node.js"],
     },
@@ -467,8 +468,8 @@ const Experience = () => {
       <div className="container">
         <div className="section__header">
           <span className="section__eyebrow">Career</span>
-          <h2 className="section__title">Work Experience</h2>
-          <p className="section__subtitle">11+ years of building scalable systems and leading engineering teams</p>
+          <h2 className="section__title">Backend & Full Stack Development Experience</h2>
+          <p className="section__subtitle">11+ years building scalable backend systems, microservices, and distributed platforms</p>
         </div>
         <div className="experience__timeline">
           {experiences.map((exp, index) => (
@@ -719,7 +720,7 @@ const Contact = () => {
   const contacts = [
     { icon: "📧", label: "Email", value: "saravadeo@yahoo.com", href: "mailto:saravadeo@yahoo.com" },
     { icon: "📱", label: "Phone", value: "+91 9960498810", href: "tel:+919960498810" },
-    { icon: "📍", label: "Location", value: "Mumbai, India", href: "#contact" },
+    { icon: "📍", label: "Location", value: "Mumbai, Maharashtra, India", href: "https://maps.google.com/?q=Mumbai+Maharashtra+India" },
     {
       icon: "💼",
       label: "LinkedIn",
@@ -744,8 +745,7 @@ const Contact = () => {
         </div>
         <div className="contact__content">
           <p className="contact__text">
-            I&apos;m always interested in discussing distributed systems, observability, cloud architecture,
-            and new opportunities. Let&apos;s connect and build something amazing together.
+            I&apos;m always interested in discussing distributed systems engineering, scalable backend architecture, cloud-native development, and new opportunities. Let&apos;s connect and build something resilient together.
           </p>
           <div className="contact__grid">
             {contacts.map((contact, index) => {
@@ -796,7 +796,7 @@ const Footer = () => {
         <div className="footer__content">
           <div className="footer__brand">
             <span className="footer__logo">[OS]</span>
-            <p className="footer__tagline">Distributed Systems • Scalable Architecture</p>
+            <p className="footer__tagline">Full Stack Developer • Distributed Systems Engineer</p>
           </div>
           <div className="footer__links">
             <Link to="/">Home</Link>
@@ -808,7 +808,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer__bottom">
-          <p>© 2026 Onkar Sarvade. All rights reserved.</p>
+          <p>© 2026 Onkar Saravade. All rights reserved.</p>
           <p className="footer__tech">Built with React • Styled with SCSS</p>
         </div>
       </div>
@@ -826,8 +826,41 @@ const HomePage = () => {
     }
   }, []);
 
+  const homePageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Onkar Saravade - Full Stack Developer & Distributed Systems Engineer",
+    "description": "Portfolio of Onkar Saravade showcasing 11+ years of experience in full stack development, distributed systems engineering, scalable backend architecture, and cloud-native applications.",
+    "url": "https://saravadeo.github.io/react-website/",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Onkar Saravade",
+      "jobTitle": "Full Stack Developer & Distributed Systems Engineer",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Mumbai",
+        "addressRegion": "Maharashtra",
+        "addressCountry": "IN"
+      }
+    }
+  };
+
   return (
     <>
+      <Helmet>
+        <title>Onkar Saravade | Full Stack Developer & Distributed Systems Engineer</title>
+        <meta name="description" content="Onkar Saravade — Full Stack Developer and Distributed Systems Engineer with 11+ years building scalable backend systems, microservices architecture, and high-performance observability platforms." />
+        <meta name="keywords" content="Onkar Saravade, Onkar Saravade portfolio, Onkar full stack developer, Onkar distributed systems engineer, Full Stack Developer, Distributed Systems Engineer, Scalable System Design, Backend Engineer, High Performance Backend, Cloud Native Applications, Microservices Architecture, Event Driven Systems, Observability Engineering, Fault Tolerant Systems" />
+        <meta property="og:title" content="Onkar Saravade | Full Stack Developer & Distributed Systems Engineer" />
+        <meta property="og:description" content="Onkar Saravade — Full Stack Developer and Distributed Systems Engineer building scalable backend systems, microservices, and observability platforms." />
+        <meta property="og:url" content="https://saravadeo.github.io/react-website/" />
+        <meta name="twitter:title" content="Onkar Saravade | Full Stack Developer & Distributed Systems Engineer" />
+        <meta name="twitter:description" content="Full Stack Developer and Distributed Systems Engineer with 11+ years building scalable backend systems and observability platforms." />
+        <link rel="canonical" href="https://saravadeo.github.io/react-website/" />
+        <meta name="geo.region" content="IN-MH" />
+        <meta name="geo.placename" content="Mumbai" />
+        <script type="application/ld+json">{JSON.stringify(homePageSchema)}</script>
+      </Helmet>
       <Hero />
       <StatsBar />
       <KeyImpact />

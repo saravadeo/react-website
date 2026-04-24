@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import blogData from '../../data/blogList.json';
 import './Blog.css';
 
@@ -8,6 +9,16 @@ const BlogList = () => {
 
   return (
     <div className="blog-page blog-page--list">
+      <Helmet>
+        <title>Blog — Onkar Saravade | System Design & Backend Engineering</title>
+        <meta name="description" content="Technical blog by Onkar Saravade on system design, backend engineering, distributed systems, scalable architecture, and lessons from building production platforms." />
+        <meta name="keywords" content="Onkar Saravade blog, system design, backend engineering, distributed systems, scalable architecture, observability, microservices, cloud native" />
+        <meta property="og:title" content="Blog — Onkar Saravade | System Design & Backend Engineering" />
+        <meta property="og:description" content="Technical articles on system design, backend engineering, distributed systems, and building scalable production platforms." />
+        <meta name="twitter:title" content="Blog — Onkar Saravade | System Design & Backend Engineering" />
+        <meta name="twitter:description" content="Technical articles on system design, backend engineering, and building scalable production platforms." />
+        <link rel="canonical" href="https://saravadeo.github.io/react-website/#/blog" />
+      </Helmet>
       <div className="blog-page__bg" aria-hidden="true">
         <div className="blog-page__grid" />
         <div className="blog-page__glow" />
@@ -24,10 +35,9 @@ const BlogList = () => {
 
         <header className="blog-list-hero">
           <span className="blog-list-eyebrow">Writing</span>
-          <h1 className="blog-list-title">Blog</h1>
+          <h1 className="blog-list-title">System Design & Backend Engineering Blog</h1>
           <p className="blog-list-lede">
-            Technical notes on production systems — observability, cloud, and
-            shipping reliable software.
+            Technical notes on scalable system design, backend engineering, distributed systems, and shipping reliable cloud-native software.
           </p>
         </header>
 

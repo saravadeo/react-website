@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import blogData from '../../data/blogList.json';
 import './Blog.css';
 
@@ -105,6 +106,33 @@ const BlogPost = () => {
 
   return (
     <div className="blog-page">
+      <Helmet>
+        <title>{post.title} — Onkar Saravade Blog</title>
+        <meta name="description" content={post.excerpt} />
+        <meta name="keywords" content={`Onkar Saravade, ${post.tags.join(', ')}, system design, backend engineering, distributed systems`} />
+        <meta property="og:title" content={`${post.title} — Onkar Saravade`} />
+        <meta property="og:description" content={post.excerpt} />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:title" content={`${post.title} — Onkar Saravade`} />
+        <meta name="twitter:description" content={post.excerpt} />
+        <link rel="canonical" href={`https://saravadeo.github.io/react-website/#/blog/${post.slug}`} />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": post.title,
+          "description": post.excerpt,
+          "datePublished": post.date,
+          "author": {
+            "@type": "Person",
+            "name": "Onkar Saravade"
+          },
+          "publisher": {
+            "@type": "Person",
+            "name": "Onkar Saravade"
+          },
+          "keywords": post.tags.join(', ')
+        })}</script>
+      </Helmet>
       {/* Background */}
       <div className="blog-page__bg">
         <div className="blog-page__grid" />
