@@ -1,12 +1,26 @@
 {
   "posts": [
     {
+      "id": "understanding-blockingqueue",
+      "title": "Understanding BlockingQueue",
+      "date": "2026-04-24",
+      "excerpt": "Technical deep dive based on production experience.",
+      "slug": "understanding-blockingqueue",
+      "tags": [
+        "work"
+      ],
+      "readTime": "3 min"
+    },
+    {
       "id": "the-meaning-of-onkar",
       "title": "The Meaning of Onkar",
       "date": "2026-04-23",
       "excerpt": "The name Onkar is derived from the Sanskrit word Omkar — the embodiment of the sacred sound Om. It represents ultimate reality, universal consciousness, and the origin of existence.",
       "slug": "the-meaning-of-onkar",
-      "tags": ["idea", "philosophy"],
+      "tags": [
+        "idea",
+        "philosophy"
+      ],
       "readTime": "2 min"
     },
     {
@@ -15,7 +29,14 @@
       "date": "2026-04-18",
       "excerpt": "A deep dive into MySQL's implicit type conversion behavior that caused unexpected query results in production. Learn why '1 - 3 - 4' = 1 evaluates to TRUE and how to prevent these silent bugs.",
       "slug": "mysql-unexpected-behaviour",
-      "tags": ["mysql", "sql", "database", "debugging", "performance", "type-conversion"],
+      "tags": [
+        "mysql",
+        "sql",
+        "database",
+        "debugging",
+        "performance",
+        "type-conversion"
+      ],
       "readTime": "5 min"
     },
     {
@@ -24,7 +45,12 @@
       "date": "2026-04-18",
       "excerpt": "How to optimize SEO for JavaScript websites using Prerender.io with AWS CloudFront and S3. Learn server-side pre-rendering techniques for better search visibility.",
       "slug": "seo-prerender-cloudfront",
-      "tags": ["seo", "aws", "cloudfront", "javascript"],
+      "tags": [
+        "seo",
+        "aws",
+        "cloudfront",
+        "javascript"
+      ],
       "readTime": "5 min"
     }
   ]
