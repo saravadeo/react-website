@@ -396,7 +396,7 @@ const Skills = () => {
 const Experience = () => {
   const experiences = [
     {
-      role: "Staff Software Engineer",
+      role: "Software Development Engineer III (SDE-3)",
       company: "Sporta Technologies Private Limited (Dream11)",
       location: "Mumbai, India",
       period: "Sept 2020 - Present",
