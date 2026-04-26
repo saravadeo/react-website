@@ -209,7 +209,7 @@ const Hero = () => {
               <span className="hero__command"> cat role.txt</span>
             </div>
             <div className="hero__line hero__line--output">
-              <p className="hero__title">Full Stack Developer & Distributed Systems Engineer</p>
+              <p className="hero__title">Staff Software Engineer</p>
               <p className="hero__subtitle">Scalable Backend Architecture | Cloud Native Systems</p>
             </div>
             <div className="hero__line">
@@ -368,7 +368,7 @@ const Skills = () => {
       <div className="container">
         <div className="section__header">
           <span className="section__eyebrow">Expertise</span>
-          <h2 className="section__title">Full Stack & Backend Engineering Skills</h2>
+          <h2 className="section__title">Backend & Systems Engineering Skills</h2>
         </div>
         <div className="skills__grid">
           {skillCategories.map((category, index) => (
@@ -396,7 +396,7 @@ const Skills = () => {
 const Experience = () => {
   const experiences = [
     {
-      role: "Software Development Engineer III (SDE-3)",
+      role: "Staff Software Engineer",
       company: "Sporta Technologies Private Limited (Dream11)",
       location: "Mumbai, India",
       period: "Sept 2020 - Present",
@@ -468,7 +468,7 @@ const Experience = () => {
       <div className="container">
         <div className="section__header">
           <span className="section__eyebrow">Career</span>
-          <h2 className="section__title">Backend & Full Stack Development Experience</h2>
+          <h2 className="section__title">Backend & Systems Engineering Experience</h2>
           <p className="section__subtitle">11+ years building scalable backend systems, microservices, and distributed platforms</p>
         </div>
         <div className="experience__timeline">
@@ -796,7 +796,7 @@ const Footer = () => {
         <div className="footer__content">
           <div className="footer__brand">
             <span className="footer__logo">[OS]</span>
-            <p className="footer__tagline">Full Stack Developer • Distributed Systems Engineer</p>
+            <p className="footer__tagline">Staff Software Engineer • Distributed Systems</p>
           </div>
           <div className="footer__links">
             <Link to="/">Home</Link>
@@ -829,13 +829,13 @@ const HomePage = () => {
   const homePageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Onkar Sarvade - Full Stack Developer & Distributed Systems Engineer",
-    "description": "Portfolio of Onkar Sarvade showcasing 11+ years of experience in full stack development, distributed systems engineering, scalable backend architecture, and cloud-native applications.",
+    "name": "Onkar Sarvade - Staff Software Engineer",
+    "description": "Portfolio of Onkar Sarvade — Staff Software Engineer with 11+ years of experience in distributed systems, scalable backend architecture, and cloud-native applications.",
     "url": "https://saravadeo.github.io/react-website/",
     "mainEntity": {
       "@type": "Person",
       "name": "Onkar Sarvade",
-      "jobTitle": "Full Stack Developer & Distributed Systems Engineer",
+      "jobTitle": "Staff Software Engineer",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Mumbai",
@@ -848,14 +848,14 @@ const HomePage = () => {
   return (
     <>
       <Helmet>
-        <title>Onkar Sarvade | Full Stack Developer & Distributed Systems Engineer</title>
-        <meta name="description" content="Onkar Sarvade — Full Stack Developer and Distributed Systems Engineer with 11+ years building scalable backend systems, microservices architecture, and high-performance observability platforms." />
-        <meta name="keywords" content="Onkar Sarvade, Onkar Sarvade portfolio, Onkar full stack developer, Onkar distributed systems engineer, Full Stack Developer, Distributed Systems Engineer, Scalable System Design, Backend Engineer, High Performance Backend, Cloud Native Applications, Microservices Architecture, Event Driven Systems, Observability Engineering, Fault Tolerant Systems" />
-        <meta property="og:title" content="Onkar Sarvade | Full Stack Developer & Distributed Systems Engineer" />
-        <meta property="og:description" content="Onkar Sarvade — Full Stack Developer and Distributed Systems Engineer building scalable backend systems, microservices, and observability platforms." />
+        <title>Onkar Sarvade | Staff Software Engineer</title>
+        <meta name="description" content="Onkar Sarvade — Staff Software Engineer with 11+ years building scalable backend systems, microservices architecture, and high-performance observability platforms." />
+        <meta name="keywords" content="Onkar Sarvade, Staff Software Engineer, Distributed Systems, Scalable Backend, Microservices Architecture, Cloud Native Applications, Observability Engineering, Event Driven Systems, Fault Tolerant Systems, OpenTelemetry, Apache Kafka, AWS, System Design, Backend Engineering" />
+        <meta property="og:title" content="Onkar Sarvade | Staff Software Engineer" />
+        <meta property="og:description" content="Onkar Sarvade — Staff Software Engineer building scalable backend systems, microservices, and observability platforms." />
         <meta property="og:url" content="https://saravadeo.github.io/react-website/" />
-        <meta name="twitter:title" content="Onkar Sarvade | Full Stack Developer & Distributed Systems Engineer" />
-        <meta name="twitter:description" content="Full Stack Developer and Distributed Systems Engineer with 11+ years building scalable backend systems and observability platforms." />
+        <meta name="twitter:title" content="Onkar Sarvade | Staff Software Engineer" />
+        <meta name="twitter:description" content="Staff Software Engineer with 11+ years building scalable backend systems and observability platforms." />
         <link rel="canonical" href="https://saravadeo.github.io/react-website/" />
         <meta name="geo.region" content="IN-MH" />
         <meta name="geo.placename" content="Mumbai" />
