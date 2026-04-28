@@ -4,6 +4,8 @@ import { Helmet } from 'react-helmet-async';
 import blogData from '../../data/blogList.json';
 import './Blog.css';
 
+const TURNSTILE_SITEKEY = '';
+
 const BlogPost = () => {
   const { slug } = useParams();
   const [content, setContent] = useState('');
@@ -46,23 +48,25 @@ const BlogPost = () => {
   // Handle reaction click
   const handleReaction = useCallback((type) => {
     const newUserState = !userReactions[type];
-    const delta = newUserState ? 1 : -1;
 
     // Optimistic UI update
     const updatedUser = { ...userReactions, [type]: newUserState };
+    const delta = newUserState ? 1 : -1;
     const updatedCounts = { ...reactionCounts, [type]: Math.max(0, (reactionCounts[type] || 0) + delta) };
     setUserReactions(updatedUser);
     setReactionCounts(updatedCounts);
     localStorage.setItem(`blog-rx-${slug}`, JSON.stringify(updatedUser));
 
-    // Send reaction to server (fire-and-forget)
-    try {
-      fetch('https://reactions-api.onkar.workers.dev/react', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ slug, type, delta }),
-      }).catch(() => {});
-    } catch {}
+    // Only send to server when adding a reaction (delta: 1)
+    if (!userReactions[type]) {
+      try {
+        fetch('https://reactions-api.onkarsarvade17.workers.dev/react', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ slug, type, delta: 1 }),
+        }).catch(() => {});
+      } catch {}
+    }
   }, [slug, userReactions, reactionCounts]);
 
   // Load blog content
@@ -204,6 +208,13 @@ const BlogPost = () => {
               />
             )}
           </div>
+
+          {/* Turnstile widget (hidden, only if sitekey configured) */}
+          {TURNSTILE_SITEKEY && (
+            <div style={{ display: 'none' }}>
+              <div className="cf-turnstile" data-sitekey={TURNSTILE_SITEKEY} />
+            </div>
+          )}
 
           {/* Reactions */}
           <div className="blog-reactions">
