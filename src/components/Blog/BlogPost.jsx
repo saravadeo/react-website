@@ -10,7 +10,6 @@ const BlogPost = () => {
   const [loading, setLoading] = useState(true);
   const [reactionCounts, setReactionCounts] = useState({ liked: 0, learned: 0, fire: 0 });
   const [userReactions, setUserReactions] = useState({ liked: false, learned: false, fire: false });
-  const [reactError, setReactError] = useState('');
 
   const post = blogData.posts.find((p) => p.slug === slug);
   const postIndex = blogData.posts.findIndex((p) => p.slug === slug);
@@ -30,13 +29,13 @@ const BlogPost = () => {
           }
         }
       } catch {
-        // Non-critical — counts just stay at 0
+        // Non-critical
       }
     };
     fetchReactions();
   }, [slug]);
 
-  // Load user's previous reactions from localStorage (toggle state only)
+  // Load user's previous reactions (toggle state only)
   useEffect(() => {
     try {
       const stored = localStorage.getItem(`blog-rx-${slug}`);
@@ -44,8 +43,8 @@ const BlogPost = () => {
     } catch {}
   }, [slug]);
 
-  // Handle reaction — optimistic UI + GitHub API write
-  const handleReaction = useCallback(async (type) => {
+  // Handle reaction click
+  const handleReaction = useCallback((type) => {
     const newUserState = !userReactions[type];
     const delta = newUserState ? 1 : -1;
 
@@ -55,46 +54,15 @@ const BlogPost = () => {
     setUserReactions(updatedUser);
     setReactionCounts(updatedCounts);
     localStorage.setItem(`blog-rx-${slug}`, JSON.stringify(updatedUser));
-    setReactError('');
 
-    // Try to persist to GitHub
+    // Send reaction to server (fire-and-forget)
     try {
-      const REPO = 'saravadeo/react-website';
-      const FILE_PATH = 'public/reactions.json';
-      const BRANCH = 'master';
-
-      // Read current file
-      const metaRes = await fetch(`https://api.github.com/repos/${REPO}/contents/${FILE_PATH}?ref=${BRANCH}`);
-      if (!metaRes.ok) throw new Error('fetch_failed');
-      const metaData = await metaRes.json();
-      const sha = metaData.sha;
-      const currentData = JSON.parse(atob(metaData.content));
-
-      if (!currentData[slug]) currentData[slug] = { liked: 0, learned: 0, fire: 0 };
-      currentData[slug][type] = Math.max(0, (currentData[slug][type] || 0) + delta);
-
-      // Write back
-      const token = window.__REACTIONS_TOKEN__ || '';
-      const putRes = await fetch(`https://api.github.com/repos/${REPO}/contents/${FILE_PATH}`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-          ...(token ? { Authorization: `token ${token}` } : {}),
-        },
-        body: JSON.stringify({
-          message: `reaction: ${type} ${newUserState ? '+1' : '-1'} on ${slug}`,
-          content: btoa(unescape(encodeURIComponent(JSON.stringify(currentData, null, 2)))),
-          sha,
-          branch: BRANCH,
-        }),
-      });
-
-      if (!putRes.ok) {
-        throw new Error('write_failed');
-      }
-    } catch {
-      setReactError('Reaction saved locally. (Server sync requires setup.)');
-    }
+      fetch('https://reactions-api.onkar.workers.dev/react', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ slug, type, delta }),
+      }).catch(() => {});
+    } catch {}
   }, [slug, userReactions, reactionCounts]);
 
   // Load blog content
@@ -269,7 +237,6 @@ const BlogPost = () => {
                 {reactionCounts.fire > 0 && <span className="blog-reactions__count">{reactionCounts.fire}</span>}
               </button>
             </div>
-            {reactError && <p className="blog-reactions__note">{reactError}</p>}
           </div>
 
           <footer className="blog-footer">
