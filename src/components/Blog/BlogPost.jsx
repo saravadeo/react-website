@@ -4,14 +4,13 @@ import { Helmet } from 'react-helmet-async';
 import blogData from '../../data/blogList.json';
 import './Blog.css';
 
-const REACTIONS_URL = `${process.env.PUBLIC_URL || ''}/reactions.json`;
-
 const BlogPost = () => {
   const { slug } = useParams();
   const [content, setContent] = useState('');
   const [loading, setLoading] = useState(true);
   const [reactionCounts, setReactionCounts] = useState({ liked: 0, learned: 0, fire: 0 });
   const [userReactions, setUserReactions] = useState({ liked: false, learned: false, fire: false });
+  const [reactError, setReactError] = useState('');
 
   const post = blogData.posts.find((p) => p.slug === slug);
   const postIndex = blogData.posts.findIndex((p) => p.slug === slug);
@@ -22,33 +21,32 @@ const BlogPost = () => {
   useEffect(() => {
     const fetchReactions = async () => {
       try {
-        // Add cache-bust param to avoid stale CDN cache
-        const res = await fetch(`${REACTIONS_URL}?t=${Date.now()}`);
+        const baseUrl = process.env.PUBLIC_URL || '';
+        const res = await fetch(`${baseUrl}/reactions.json?t=${Date.now()}`);
         if (res.ok) {
           const data = await res.json();
           if (data[slug]) {
             setReactionCounts(data[slug]);
           }
         }
-      } catch (e) {
-        // Silently fail — reactions are non-critical
+      } catch {
+        // Non-critical — counts just stay at 0
       }
     };
     fetchReactions();
   }, [slug]);
 
-  // Load user's previous reactions from localStorage (client-side only toggle state)
+  // Load user's previous reactions from localStorage (toggle state only)
   useEffect(() => {
-    const stored = localStorage.getItem(`blog-rex-${slug}`);
-    if (stored) {
-      try { setUserReactions(JSON.parse(stored)); } catch {}
-    }
+    try {
+      const stored = localStorage.getItem(`blog-rx-${slug}`);
+      if (stored) setUserReactions(JSON.parse(stored));
+    } catch {}
   }, [slug]);
 
-  // Persist user reactions to reactions.json via GitHub API
+  // Handle reaction — optimistic UI + GitHub API write
   const handleReaction = useCallback(async (type) => {
-    const prevUserState = userReactions[type];
-    const newUserState = !prevUserState;
+    const newUserState = !userReactions[type];
     const delta = newUserState ? 1 : -1;
 
     // Optimistic UI update
@@ -57,61 +55,49 @@ const BlogPost = () => {
     setUserReactions(updatedUser);
     setReactionCounts(updatedCounts);
     localStorage.setItem(`blog-rx-${slug}`, JSON.stringify(updatedUser));
+    setReactError('');
 
-    // Push update to GitHub repo (reactions.json)
+    // Try to persist to GitHub
     try {
-      const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_REACTIONS_TOKEN;
       const REPO = 'saravadeo/react-website';
       const FILE_PATH = 'public/reactions.json';
       const BRANCH = 'master';
 
-      // Get current file SHA
-      const metaRes = await fetch(
-        `https://api.github.com/repos/${REPO}/contents/${FILE_PATH}?ref=${BRANCH}`,
-        GITHUB_TOKEN ? { headers: { Authorization: `token ${GITHUB_TOKEN}` } } : {}
-      );
-
-      if (!metaRes.ok) throw new Error('Failed to fetch file metadata');
+      // Read current file
+      const metaRes = await fetch(`https://api.github.com/repos/${REPO}/contents/${FILE_PATH}?ref=${BRANCH}`);
+      if (!metaRes.ok) throw new Error('fetch_failed');
       const metaData = await metaRes.json();
       const sha = metaData.sha;
-
-      // Build updated reactions data
       const currentData = JSON.parse(atob(metaData.content));
+
       if (!currentData[slug]) currentData[slug] = { liked: 0, learned: 0, fire: 0 };
       currentData[slug][type] = Math.max(0, (currentData[slug][type] || 0) + delta);
 
-      // Commit updated file
-      const putRes = await fetch(
-        `https://api.github.com/repos/${REPO}/contents/${FILE_PATH}`,
-        {
-          method: 'PUT',
-          headers: {
-            'Content-Type': 'application/json',
-            ...(GITHUB_TOKEN ? { Authorization: `token ${GITHUB_TOKEN}` } : {}),
-          },
-          body: JSON.stringify({
-            message: `reaction: ${type} on ${slug}`,
-            content: btoa(unescape(encodeURIComponent(JSON.stringify(currentData, null, 2)))),
-            sha,
-            branch: BRANCH,
-          }),
-        }
-      );
+      // Write back
+      const token = window.__REACTIONS_TOKEN__ || '';
+      const putRes = await fetch(`https://api.github.com/repos/${REPO}/contents/${FILE_PATH}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          ...(token ? { Authorization: `token ${token}` } : {}),
+        },
+        body: JSON.stringify({
+          message: `reaction: ${type} ${newUserState ? '+1' : '-1'} on ${slug}`,
+          content: btoa(unescape(encodeURIComponent(JSON.stringify(currentData, null, 2)))),
+          sha,
+          branch: BRANCH,
+        }),
+      });
 
       if (!putRes.ok) {
-        // Revert optimistic update on failure
-        setUserReactions({ ...userReactions });
-        setReactionCounts({ ...reactionCounts });
-        localStorage.setItem(`blog-rx-${slug}`, JSON.stringify(userReactions));
+        throw new Error('write_failed');
       }
-    } catch (e) {
-      // Revert optimistic update on error
-      setUserReactions({ ...userReactions });
-      setReactionCounts({ ...reactionCounts });
-      localStorage.setItem(`blog-rx-${slug}`, JSON.stringify(userReactions));
+    } catch {
+      setReactError('Reaction saved locally. (Server sync requires setup.)');
     }
   }, [slug, userReactions, reactionCounts]);
 
+  // Load blog content
   useEffect(() => {
     const loadContent = async () => {
       try {
@@ -123,8 +109,7 @@ const BlogPost = () => {
         } else {
           setContent('# Post Not Found\n\nSorry, this post is not available.');
         }
-      } catch (error) {
-        console.error('Error loading blog post:', error);
+      } catch {
         setContent('# Error\n\nFailed to load blog post.');
       } finally {
         setLoading(false);
@@ -138,10 +123,8 @@ const BlogPost = () => {
     }
   }, [slug, post]);
 
-  // Parse markdown to HTML
   const parseMarkdown = (markdown) => {
     if (!markdown) return '';
-
     const frontmatterMatch = markdown.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
     let body = frontmatterMatch ? frontmatterMatch[2] : markdown;
 
@@ -160,13 +143,10 @@ const BlogPost = () => {
         para = para.trim();
         if (!para) return '';
         if (para.startsWith('<h') || para.startsWith('<pre') || para.startsWith('<li')) return para;
-        if (para.includes('<li>')) {
-          return '<ul>' + para + '</ul>';
-        }
+        if (para.includes('<li>')) return '<ul>' + para + '</ul>';
         return '<p>' + para + '</p>';
       })
       .join('\n');
-
     return html;
   };
 
@@ -289,6 +269,7 @@ const BlogPost = () => {
                 {reactionCounts.fire > 0 && <span className="blog-reactions__count">{reactionCounts.fire}</span>}
               </button>
             </div>
+            {reactError && <p className="blog-reactions__note">{reactError}</p>}
           </div>
 
           <footer className="blog-footer">

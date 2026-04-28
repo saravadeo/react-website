@@ -367,6 +367,14 @@
   color: #a371f7;
 }
 
+.blog-reactions__note {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #6e7681;
+  margin: 0.75rem 0 0;
+  font-style: italic;
+}
+
 .blog-reactions__count {
   font-family: "JetBrains Mono", ui-monospace, monospace;
   font-size: 0.75rem;
