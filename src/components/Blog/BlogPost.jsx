@@ -1,39 +1,120 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import blogData from '../../data/blogList.json';
 import './Blog.css';
 
+const REACTIONS_URL = `${process.env.PUBLIC_URL || ''}/reactions.json`;
+
 const BlogPost = () => {
   const { slug } = useParams();
   const [content, setContent] = useState('');
   const [loading, setLoading] = useState(true);
-  const [reactions, setReactions] = useState({ liked: false, learned: false, fire: false });
-
-  useEffect(() => {
-    if (post) {
-      const stored = localStorage.getItem(`blog-reaction-${slug}`);
-      if (stored) setReactions(JSON.parse(stored));
-    }
-  }, [slug, post]);
-
-  const handleReaction = (type) => {
-    setReactions(prev => {
-      const updated = { ...prev, [type]: !prev[type] };
-      localStorage.setItem(`blog-reaction-${slug}`, JSON.stringify(updated));
-      return updated;
-    });
-  };
+  const [reactionCounts, setReactionCounts] = useState({ liked: 0, learned: 0, fire: 0 });
+  const [userReactions, setUserReactions] = useState({ liked: false, learned: false, fire: false });
 
   const post = blogData.posts.find((p) => p.slug === slug);
   const postIndex = blogData.posts.findIndex((p) => p.slug === slug);
   const prevPost = postIndex > 0 ? blogData.posts[postIndex - 1] : null;
   const nextPost = postIndex < blogData.posts.length - 1 ? blogData.posts[postIndex + 1] : null;
 
+  // Load reaction counts from reactions.json
+  useEffect(() => {
+    const fetchReactions = async () => {
+      try {
+        // Add cache-bust param to avoid stale CDN cache
+        const res = await fetch(`${REACTIONS_URL}?t=${Date.now()}`);
+        if (res.ok) {
+          const data = await res.json();
+          if (data[slug]) {
+            setReactionCounts(data[slug]);
+          }
+        }
+      } catch (e) {
+        // Silently fail — reactions are non-critical
+      }
+    };
+    fetchReactions();
+  }, [slug]);
+
+  // Load user's previous reactions from localStorage (client-side only toggle state)
+  useEffect(() => {
+    const stored = localStorage.getItem(`blog-rex-${slug}`);
+    if (stored) {
+      try { setUserReactions(JSON.parse(stored)); } catch {}
+    }
+  }, [slug]);
+
+  // Persist user reactions to reactions.json via GitHub API
+  const handleReaction = useCallback(async (type) => {
+    const prevUserState = userReactions[type];
+    const newUserState = !prevUserState;
+    const delta = newUserState ? 1 : -1;
+
+    // Optimistic UI update
+    const updatedUser = { ...userReactions, [type]: newUserState };
+    const updatedCounts = { ...reactionCounts, [type]: Math.max(0, (reactionCounts[type] || 0) + delta) };
+    setUserReactions(updatedUser);
+    setReactionCounts(updatedCounts);
+    localStorage.setItem(`blog-rx-${slug}`, JSON.stringify(updatedUser));
+
+    // Push update to GitHub repo (reactions.json)
+    try {
+      const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_REACTIONS_TOKEN;
+      const REPO = 'saravadeo/react-website';
+      const FILE_PATH = 'public/reactions.json';
+      const BRANCH = 'master';
+
+      // Get current file SHA
+      const metaRes = await fetch(
+        `https://api.github.com/repos/${REPO}/contents/${FILE_PATH}?ref=${BRANCH}`,
+        GITHUB_TOKEN ? { headers: { Authorization: `token ${GITHUB_TOKEN}` } } : {}
+      );
+
+      if (!metaRes.ok) throw new Error('Failed to fetch file metadata');
+      const metaData = await metaRes.json();
+      const sha = metaData.sha;
+
+      // Build updated reactions data
+      const currentData = JSON.parse(atob(metaData.content));
+      if (!currentData[slug]) currentData[slug] = { liked: 0, learned: 0, fire: 0 };
+      currentData[slug][type] = Math.max(0, (currentData[slug][type] || 0) + delta);
+
+      // Commit updated file
+      const putRes = await fetch(
+        `https://api.github.com/repos/${REPO}/contents/${FILE_PATH}`,
+        {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+            ...(GITHUB_TOKEN ? { Authorization: `token ${GITHUB_TOKEN}` } : {}),
+          },
+          body: JSON.stringify({
+            message: `reaction: ${type} on ${slug}`,
+            content: btoa(unescape(encodeURIComponent(JSON.stringify(currentData, null, 2)))),
+            sha,
+            branch: BRANCH,
+          }),
+        }
+      );
+
+      if (!putRes.ok) {
+        // Revert optimistic update on failure
+        setUserReactions({ ...userReactions });
+        setReactionCounts({ ...reactionCounts });
+        localStorage.setItem(`blog-rx-${slug}`, JSON.stringify(userReactions));
+      }
+    } catch (e) {
+      // Revert optimistic update on error
+      setUserReactions({ ...userReactions });
+      setReactionCounts({ ...reactionCounts });
+      localStorage.setItem(`blog-rx-${slug}`, JSON.stringify(userReactions));
+    }
+  }, [slug, userReactions, reactionCounts]);
+
   useEffect(() => {
     const loadContent = async () => {
       try {
-        // Use PUBLIC_URL for GitHub Pages compatibility
         const baseUrl = process.env.PUBLIC_URL || '';
         const response = await fetch(`${baseUrl}/blogs/${slug}.md`);
         if (response.ok) {
@@ -64,24 +145,16 @@ const BlogPost = () => {
     const frontmatterMatch = markdown.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
     let body = frontmatterMatch ? frontmatterMatch[2] : markdown;
 
-    // Convert markdown to HTML
     let html = body
-      // Code blocks first
       .replace(/```(\w+)?\n([\s\S]*?)```/g, '<pre class="blog-code"><code class="language-$1">$2</code></pre>')
-      // Headers
       .replace(/^### (.*$)/gim, '<h3>$1</h3>')
       .replace(/^## (.*$)/gim, '<h2>$1</h2>')
       .replace(/^# (.*$)/gim, '<h1>$1</h1>')
-      // Bold and italic
       .replace(/\*\*([^*]+)\*\*/gim, '<strong>$1</strong>')
       .replace(/\*([^*]+)\*/gim, '<em>$1</em>')
-      // Inline code
       .replace(/`([^`]+)`/gim, '<code>$1</code>')
-      // Links
       .replace(/\[([^\]]+)\]\(([^)]+)\)/gim, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
-      // Lists
       .replace(/^- (.*$)/gim, '<li>$1</li>')
-      // Paragraphs (must be last)
       .split('\n\n')
       .map(para => {
         para = para.trim();
@@ -138,25 +211,18 @@ const BlogPost = () => {
           "headline": post.title,
           "description": post.excerpt,
           "datePublished": post.date,
-          "author": {
-            "@type": "Person",
-            "name": "Onkar Sarvade"
-          },
-          "publisher": {
-            "@type": "Person",
-            "name": "Onkar Sarvade"
-          },
+          "author": { "@type": "Person", "name": "Onkar Sarvade" },
+          "publisher": { "@type": "Person", "name": "Onkar Sarvade" },
           "keywords": post.tags.join(', ')
         })}</script>
       </Helmet>
-      {/* Background */}
+
       <div className="blog-page__bg">
         <div className="blog-page__grid" />
         <div className="blog-page__glow" />
       </div>
 
       <div className="blog-container">
-        {/* Navigation */}
         <nav className="blog-breadcrumb">
           <Link to="/" className="blog-breadcrumb__link">← Portfolio</Link>
           <span className="blog-breadcrumb__sep">/</span>
@@ -165,9 +231,7 @@ const BlogPost = () => {
           <span className="blog-breadcrumb__current">{post.slug}</span>
         </nav>
 
-        {/* Article */}
         <article className="blog-article">
-          {/* Header */}
           <header className="blog-header">
             <div className="blog-meta">
               <time className="blog-meta__date">{post.date}</time>
@@ -182,12 +246,11 @@ const BlogPost = () => {
             </div>
           </header>
 
-          {/* Content */}
           <div className="blog-content">
             {loading ? (
               <div className="blog-loading">Loading...</div>
             ) : (
-              <div 
+              <div
                 className="blog-content__body"
                 dangerouslySetInnerHTML={{ __html: parseMarkdown(content) }}
               />
@@ -199,33 +262,35 @@ const BlogPost = () => {
             <p className="blog-reactions__prompt">How was this article?</p>
             <div className="blog-reactions__buttons">
               <button
-                className={`blog-reactions__btn ${reactions.liked ? 'blog-reactions__btn--active' : ''}`}
+                className={`blog-reactions__btn ${userReactions.liked ? 'blog-reactions__btn--active' : ''}`}
                 onClick={() => handleReaction('liked')}
-                aria-label="Like"
+                aria-label="Helpful"
               >
                 <span className="blog-reactions__emoji">👍</span>
                 <span className="blog-reactions__label">Helpful</span>
+                {reactionCounts.liked > 0 && <span className="blog-reactions__count">{reactionCounts.liked}</span>}
               </button>
               <button
-                className={`blog-reactions__btn ${reactions.learned ? 'blog-reactions__btn--active' : ''}`}
+                className={`blog-reactions__btn ${userReactions.learned ? 'blog-reactions__btn--active' : ''}`}
                 onClick={() => handleReaction('learned')}
                 aria-label="Learned something"
               >
                 <span className="blog-reactions__emoji">💡</span>
                 <span className="blog-reactions__label">Learned something</span>
+                {reactionCounts.learned > 0 && <span className="blog-reactions__count">{reactionCounts.learned}</span>}
               </button>
               <button
-                className={`blog-reactions__btn ${reactions.fire ? 'blog-reactions__btn--active' : ''}`}
+                className={`blog-reactions__btn ${userReactions.fire ? 'blog-reactions__btn--active' : ''}`}
                 onClick={() => handleReaction('fire')}
-                aria-label="Fire"
+                aria-label="Insightful"
               >
                 <span className="blog-reactions__emoji">🔥</span>
                 <span className="blog-reactions__label">Insightful</span>
+                {reactionCounts.fire > 0 && <span className="blog-reactions__count">{reactionCounts.fire}</span>}
               </button>
             </div>
           </div>
 
-          {/* Footer / Navigation */}
           <footer className="blog-footer">
             <div className="blog-nav">
               {prevPost && (

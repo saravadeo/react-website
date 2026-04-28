@@ -367,6 +367,21 @@
   color: #a371f7;
 }
 
+.blog-reactions__count {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  min-width: 1.2rem;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  text-align: center;
+  border-radius: 6px;
+  background: rgba(137, 87, 229, 0.25);
+  color: #a371f7;
+  padding: 0 0.3rem;
+  margin-left: 0.15rem;
+}
+
 /* Responsive */
 @media (max-width: 480px) {
   .blog-reactions {
