@@ -8,6 +8,22 @@ const BlogPost = () => {
   const { slug } = useParams();
   const [content, setContent] = useState('');
   const [loading, setLoading] = useState(true);
+  const [reactions, setReactions] = useState({ liked: false, learned: false, fire: false });
+
+  useEffect(() => {
+    if (post) {
+      const stored = localStorage.getItem(`blog-reaction-${slug}`);
+      if (stored) setReactions(JSON.parse(stored));
+    }
+  }, [slug, post]);
+
+  const handleReaction = (type) => {
+    setReactions(prev => {
+      const updated = { ...prev, [type]: !prev[type] };
+      localStorage.setItem(`blog-reaction-${slug}`, JSON.stringify(updated));
+      return updated;
+    });
+  };
 
   const post = blogData.posts.find((p) => p.slug === slug);
   const postIndex = blogData.posts.findIndex((p) => p.slug === slug);
@@ -176,6 +192,37 @@ const BlogPost = () => {
                 dangerouslySetInnerHTML={{ __html: parseMarkdown(content) }}
               />
             )}
+          </div>
+
+          {/* Reactions */}
+          <div className="blog-reactions">
+            <p className="blog-reactions__prompt">How was this article?</p>
+            <div className="blog-reactions__buttons">
+              <button
+                className={`blog-reactions__btn ${reactions.liked ? 'blog-reactions__btn--active' : ''}`}
+                onClick={() => handleReaction('liked')}
+                aria-label="Like"
+              >
+                <span className="blog-reactions__emoji">👍</span>
+                <span className="blog-reactions__label">Helpful</span>
+              </button>
+              <button
+                className={`blog-reactions__btn ${reactions.learned ? 'blog-reactions__btn--active' : ''}`}
+                onClick={() => handleReaction('learned')}
+                aria-label="Learned something"
+              >
+                <span className="blog-reactions__emoji">💡</span>
+                <span className="blog-reactions__label">Learned something</span>
+              </button>
+              <button
+                className={`blog-reactions__btn ${reactions.fire ? 'blog-reactions__btn--active' : ''}`}
+                onClick={() => handleReaction('fire')}
+                aria-label="Fire"
+              >
+                <span className="blog-reactions__emoji">🔥</span>
+                <span className="blog-reactions__label">Insightful</span>
+              </button>
+            </div>
           </div>
 
           {/* Footer / Navigation */}
