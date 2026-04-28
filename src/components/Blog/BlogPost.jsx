@@ -5,6 +5,7 @@ import blogData from '../../data/blogList.json';
 import './Blog.css';
 
 const TURNSTILE_SITEKEY = '';
+const REACTIONS_API = 'https://reactions-api.onkarsarvade17.workers.dev';
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -22,8 +23,7 @@ const BlogPost = () => {
   useEffect(() => {
     const fetchReactions = async () => {
       try {
-        const baseUrl = process.env.PUBLIC_URL || '';
-        const res = await fetch(`${baseUrl}/reactions.json?t=${Date.now()}`);
+        const res = await fetch(`${REACTIONS_API}?t=${Date.now()}`);
         if (res.ok) {
           const data = await res.json();
           if (data[slug]) {
@@ -60,7 +60,7 @@ const BlogPost = () => {
     // Only send to server when adding a reaction (delta: 1)
     if (!userReactions[type]) {
       try {
-        fetch('https://reactions-api.onkarsarvade17.workers.dev/react', {
+        fetch(`${REACTIONS_API}/react`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ slug, type, delta: 1 }),
