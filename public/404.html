@@ -5,14 +5,11 @@
     <title>Redirecting...</title>
     <script>
       // Single Page App redirect hack for GitHub Pages
-      // When a user navigates directly to a route like /blog, GitHub Pages serves 404.html
-      // Store the intended URL in sessionStorage and redirect to index.html
-      // The script in index.html will then restore the correct URL via history.replaceState
+      // Store the full URL so index.html can restore it via history.replaceState
       sessionStorage.redirect = window.location.href;
-      window.location.replace(
-        window.location.origin +
-        window.location.pathname.split('/').slice(0, -1).join('/') + '/'
-      );
+      // Redirect to the root of the react-website subpath
+      var l = window.location;
+      l.replace(l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + '/react-website/');
     </script>
   </head>
   <body>

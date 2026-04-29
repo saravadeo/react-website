@@ -886,7 +886,7 @@ const AppShell = () => (
 );
 
 const App = () => (
-  <Router>
+  <Router basename="/react-website">
     <AppShell />
   </Router>
 );
