@@ -17,7 +17,7 @@ const BlogList = () => {
         <meta property="og:description" content="Technical articles on system design, backend engineering, distributed systems, and building scalable production platforms." />
         <meta name="twitter:title" content="Blog — Onkar Sarvade | System Design & Backend Engineering" />
         <meta name="twitter:description" content="Technical articles on system design, backend engineering, and building scalable production platforms." />
-        <link rel="canonical" href="https://saravadeo.github.io/react-website/#/blog" />
+        <link rel="canonical" href="https://saravadeo.github.io/react-website/blog" />
       </Helmet>
       <div className="blog-page__bg" aria-hidden="true">
         <div className="blog-page__grid" />
