@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "From 100 Clicks to One Prompt: Building a Natural Language Interface for My Entire Web App",
+      "slug": "from-100-clicks-to-one-prompt",
+      "date": "2026-04-29",
+      "readTime": "12 min",
+      "tags": ["natural-language-interface", "langchain", "langgraph", "mcp", "llm", "ai-agents", "system-design", "chatbot", "distributed-systems"],
+      "excerpt": "How I replaced a 100-click web workflow with a single natural language prompt — using LangChain, LangGraph, MCP, and Redis to build a production-ready AI-powered interface."
+    },
+    {
       "id": "how-i-automated-my-technical-blog-with-openclaw",
       "title": "How I Automated My Technical Blog with OpenClaw",
       "date": "2026-04-26",
