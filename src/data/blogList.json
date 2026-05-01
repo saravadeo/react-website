@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "id": "the-soul-of-chhatrapati-shivaji-maharaj-in-the-raja-shivaji-anthem",
+      "title": "The Soul of Chhatrapati Shivaji Maharaj in the Raja Shivaji Anthem",
+      "date": "2026-05-01",
+      "excerpt": "A deep dive into the Raja Shivaji Anthem — decoding each line to understand why Chhatrapati Shivaji Maharaj remains the ultimate ideal of warrior leadership, spiritual depth, and righteous governance.",
+      "slug": "the-soul-of-chhatrapati-shivaji-maharaj-in-the-raja-shivaji-anthem",
+      "tags": ["history", "leadership", "maratha", "chhatrapati-shivaji-maharaj", "indian-history"],
+      "readTime": "6 min"
+    },
+    {
       "title": "From 100 Clicks to One Prompt: Building a Natural Language Interface for My Entire Web App",
       "slug": "from-100-clicks-to-one-prompt",
       "date": "2026-04-29",
