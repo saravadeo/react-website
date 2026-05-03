@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "id": "bridging-the-observability-gap-automatic-tracing-for-vertx-postgresql-client",
+      "title": "Bridging the Observability Gap: Automatic Tracing for Vert.x PostgreSQL Client",
+      "date": "2026-05-03",
+      "excerpt": "How we contributed automatic tracing for the Vert.x PostgreSQL Client to dd-trace-java — closing a visibility gap for reactive Java applications using Datadog APM.",
+      "slug": "bridging-the-observability-gap-automatic-tracing-for-vertx-postgresql-client",
+      "tags": ["datadog", "vertx", "observability", "apm", "java", "distributed-systems", "tracing", "open-source"],
+      "readTime": "6 min"
+    },
+    {
       "id": "the-soul-of-chhatrapati-shivaji-maharaj-in-the-raja-shivaji-anthem",
       "title": "The Soul of Chhatrapati Shivaji Maharaj in the Raja Shivaji Anthem",
       "date": "2026-05-01",
