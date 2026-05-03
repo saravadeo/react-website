@@ -30,7 +30,7 @@ By initiating this change, the goal was to bring **out-of-the-box visibility** t
 
 ## Technical Deep Dive: Under the Hood
 
-The instrumentation (introduced in [PR #8457](https://github.com/DataDog/dd-trace-java/pull/8457) and finalized in [#8471](https://github.com/DataDog/dd-trace-java/pull/8471)) hooks into the Vert.x 4.2.0+ internals.
+The instrumentation (introduced in [PR #8457](https://github.com/DataDog/dd-trace-java/pull/8457) by [onkar-dream11](https://github.com/onkar-dream11) and finalized in [PR #8471](https://github.com/DataDog/dd-trace-java/pull/8471) by [vandonr](https://github.com/vandonr)) hooks into the Vert.x 4.2.0+ internals. The initial PR was opened on February 26, 2025, and after collaborative refinement over the following days, it was merged and is slated for the 1.48.0 release.
 
 ### 1. Bytecode Instrumentation
 
@@ -72,7 +72,7 @@ We focused on three key areas:
 
 ### Code Reusability
 
-We explored ways to **share common logic between different SQL clients** (like MySQL and PostgreSQL) within the Vert.x ecosystem. Rather than duplicating instrumentation code, we extracted shared patterns into reusable components that can serve future Vert.x client instrumentations.
+One of the key improvements in the collaborative review was **extracting shared logic into common modules**. [@vandonr](https://github.com/vandonr) refactored the code in commit [`2fbadf4`](https://github.com/DataDog/dd-trace-java/pull/8457/commits/2fbadf412322941626af7e8dd2a9e8411026873f) to move common Vert.x SQL code into a shared module, and further unified the older instrumentation in [`c6e281c`](https://github.com/DataDog/dd-trace-java/pull/8457/commits/c6e281c6836c372eb37212a5674c852c998ca05d). This means rather than duplicating instrumentation code for each SQL client, shared patterns can serve future Vert.x client instrumentations (like MySQL) — a much cleaner architecture.
 
 ### Rigorous Testing
 
@@ -85,7 +85,7 @@ Ensuring the instrumentation works across **various versions of Vert.x 4** and h
 
 ### CI/CD Alignment
 
-We migrated the branch to allow Datadog's internal CI suite to run **comprehensive performance and regression benchmarks**. This meant adapting our PR structure to fit their release pipeline, ensuring the contribution meets the same quality bar as any internal Datadog instrumentation.
+The PR was migrated to allow Datadog's internal CI suite to run **comprehensive performance and regression benchmarks**. The results confirmed **zero performance regression** — startup overhead remained effectively unchanged across all test configurations (tracing, appsec, iast, profiling variants on both petclinic and insecure-bank benchmarks). This meant adapting our PR structure to fit their release pipeline, ensuring the contribution meets the same quality bar as any internal Datadog instrumentation.
 
 ---
 
@@ -133,4 +133,13 @@ If you are using Vert.x and PostgreSQL, I encourage you to try out the new versi
 
 ---
 
-*Written on 2026-05-03 | Based on production experience contributing to dd-trace-java*
+## References
+
+- [PR #8457: Add vertx postgresql client instrumentation](https://github.com/DataDog/dd-trace-java/pull/8457) — Initial implementation by [onkar-dream11](https://github.com/onkar-dream11)
+- [PR #8471: Add vertx postgresql client instrumentation (finalized)](https://github.com/DataDog/dd-trace-java/pull/8471) — Refined and merged by [vandonr](https://github.com/vandonr)
+- [Datadog dd-trace-java Repository](https://github.com/DataDog/dd-trace-java)
+- [Eclipse Vert.x PostgreSQL Client Documentation](https://vertx.io/docs/)
+
+---
+
+*Written on 2026-05-03 | Based on production experience contributing to [dd-trace-java](https://github.com/DataDog/dd-trace-java)*
