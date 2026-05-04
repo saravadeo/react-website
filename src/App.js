@@ -10,6 +10,7 @@ import {
 import { Helmet } from "react-helmet-async";
 import BlogList from "./components/Blog/BlogList";
 import BlogPost from "./components/Blog/BlogPost";
+import PrivacyPolicy from "./components/PrivacyPolicy";
 import { trackPageView, trackEvent } from "./analytics";
 import "./scss/main.scss";
 
@@ -823,6 +824,7 @@ const Footer = () => {
             <a href="#experience" onClick={(e) => handleSectionClick(e, 'experience')}>Experience</a>
             <Link to="/blog">Blog</Link>
             <a href="#contact" onClick={(e) => handleSectionClick(e, 'contact')}>Contact</a>
+            <Link to="/privacy-policy">Privacy Policy</Link>
           </div>
         </div>
         <div className="footer__bottom">
@@ -906,6 +908,7 @@ const AppShell = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/blog" element={<BlogList />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
     </div>
   );
