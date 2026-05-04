@@ -4,102 +4,88 @@ const GA_MEASUREMENT_ID = "G-W2XRXD45SK";
 
 let gaInitialized = false;
 
-// Check if consent was previously granted (persisted by SecurePrivacy)
-const checkStoredConsent = () => {
+// Initialize GA (only call after consent)
+export const initGA = () => {
+  if (gaInitialized) return;
+  ReactGA.initialize(GA_MEASUREMENT_ID);
+  gaInitialized = true;
+};
+
+// Check if SecurePrivacy reports analytics consent already given
+const checkExistingConsent = () => {
   try {
-    // SecurePrivacy typically stores consent in localStorage or cookies
-    // Check common storage keys used by SecurePrivacy
-    const spConsent = localStorage.getItem("sp_consent");
-    const cookieConsent = document.cookie
-      .split("; ")
-      .find((row) => row.startsWith("cookieconsent_status="));
-    return (
-      spConsent === "accepted" ||
-      spConsent === "true" ||
-      (cookieConsent && cookieConsent.split("=")[1] === "dismiss")
-    );
+    // Use SecurePrivacy's API if available
+    if (window.sp && typeof window.sp.checkConsent === "function") {
+      return window.sp.checkConsent("analytics") || window.sp.checkConsent("google-analytics");
+    }
+    // Fallback: check localStorage/cookies for previously saved consent
+    const allConsents = window.sp?.allGivenConsents;
+    if (allConsents) return true;
+    return false;
   } catch (e) {
     return false;
   }
 };
 
-// Listen for SecurePrivacy consent events
+// Set up SecurePrivacy consent listeners
 const listenForConsent = () => {
-  // SecurePrivacy dispatches custom events when consent changes
-  const consentHandler = (event) => {
-    const detail = event.detail || {};
-    const type = event.type;
-
-    // SecurePrivacy fires various consent events
-    if (
-      type === "sp_consent_updated" ||
-      type === "cookieConsent" ||
-      type === "securePrivacyConsentAnalytics"
-    ) {
-      // If analytics consent was granted (or any consent that includes analytics)
-      const analyticsAllowed =
-        detail.analytics === true ||
-        detail.marketing === true ||
-        detail.type === "accept" ||
-        detail.type === "all";
-
-      if (analyticsAllowed && !gaInitialized) {
-        initGA();
-      }
+  // Listen for cookie banner accept/reject
+  window.addEventListener("sp_cookie_banner_click", (evt) => {
+    const choice = evt.detail; // "accept" or "reject"
+    if (choice === "accept" && !gaInitialized) {
+      initGA();
+      // Send initial pageview after consent
+      trackPageView(window.location.pathname);
     }
-  };
+  });
 
-  // Listen for multiple possible event names from SecurePrivacy
-  window.addEventListener("sp_consent_updated", consentHandler);
-  window.addEventListener("cookieConsent", consentHandler);
-  window.addEventListener("securePrivacyConsentAnalytics", consentHandler);
+  // Listen for consent save (fires after banner click is persisted)
+  window.addEventListener("sp_cookie_banner_save", (evt) => {
+    const choice = evt.detail; // "accept" or "reject"
+    if (choice === "accept" && !gaInitialized) {
+      initGA();
+      trackPageView(window.location.pathname);
+    }
+  });
 
-  // Also listen for the CMP (consent management platform) events
-  window.addEventListener("consent.update", consentHandler);
-  window.addEventListener("OneTrustLoaded", consentHandler);
-
-  // Fallback: listen for SecurePrivacy callback if available
-  if (window.securePrivacy && window.securePrivacy.onConsent) {
-    window.securePrivacy.onConsent((consent) => {
-      if (consent && consent.analytics && !gaInitialized) {
-        initGA();
-      }
-    });
-  }
+  // Listen for privacy banner accept/reject
+  window.addEventListener("sp_privacy_banner_click", (evt) => {
+    const choice = evt.detail;
+    if (choice === "accept" && !gaInitialized) {
+      initGA();
+      trackPageView(window.location.pathname);
+    }
+  });
 };
 
-export const initGA = () => {
-  if (gaInitialized) return;
-
-  ReactGA.initialize(GA_MEASUREMENT_ID);
-  gaInitialized = true;
-};
-
+// Main entry point — call on app startup
 export const initGAWithConsent = () => {
-  // Check if consent was already granted previously
-  if (checkStoredConsent()) {
-    initGA();
-  }
+  // Wait for SecurePrivacy to initialize
+  window.addEventListener("sp_init", () => {
+    // Check if user already gave consent (returning visitor)
+    if (checkExistingConsent()) {
+      initGA();
+      trackPageView(window.location.pathname);
+    }
+    // Set up listeners for new consent decisions
+    listenForConsent();
+  });
 
-  // Set up listeners for future consent changes
-  listenForConsent();
-
-  // Fallback: if no consent manager is detected after 3 seconds,
-  // initialize GA anyway (handles cases where SecurePrivacy doesn't load
-  // or is blocked by ad blockers)
+  // Fallback: if SecurePrivacy doesn't load within 10 seconds,
+  // check if sp object exists anyway, otherwise init GA directly
+  // (handles cases where SP is blocked by ad blockers)
   setTimeout(() => {
     if (!gaInitialized) {
-      // Check if SecurePrivacy script loaded at all
-      const spLoaded =
-        document.querySelector('script[src*="secureprivacy"]') !== null;
+      const spLoaded = typeof window.sp !== "undefined";
       if (!spLoaded) {
-        // No consent manager detected — safe to init GA
+        // No consent manager detected — initialize GA directly
         initGA();
+        trackPageView(window.location.pathname);
       }
-      // If SP loaded but user hasn't interacted yet, wait longer
-      // They'll get initialized via the event listener when they consent
+      // If SP loaded but user hasn't consented yet, keep waiting
+      // (they'll be initialized via the event listener when they consent)
     }
-  }, 5000);
+  }, 10000);
 };
 
 export const trackPageView = (path) => {
