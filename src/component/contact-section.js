@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ReactGA              from "react-ga4";
+import { trackEvent }              from "../analytics";
 
 class ContactSection extends Component {
     
@@ -15,10 +15,7 @@ class ContactSection extends Component {
     onSubmit = (event) => {
         event.stopPropagation();
         event.preventDefault();
-        ReactGA.event({
-                          category: "ContactUs",
-                          action  : "submit_clicked"
-                      });
+        trackEvent("Contact", "form_submit", undefined);
         if ( this.state.name && this.state.email && this.state.phoneNumber ) {
             const { name, email, phoneNumber } = this.state;
             const payload = { "text": `Name: ${ name }\nEmail: ${ email }\nPhone Number: ${ phoneNumber }` };

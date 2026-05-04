@@ -1,13 +1,10 @@
 import React, { Component } from "react";
-import ReactGA              from "react-ga4";
+import { trackEvent }              from "../analytics";
 
 class AboutSection extends Component {
     
     onKnowMoreClick = () => {
-        ReactGA.event({
-                          category: "Profile",
-                          action  : "know_more_clicked"
-                      });
+        trackEvent("About", "know_more_clicked", undefined);
     };
     
     render() {

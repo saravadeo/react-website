@@ -4,6 +4,9 @@ import { HelmetProvider } from 'react-helmet-async';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { initGAWithConsent } from './analytics';
+
+initGAWithConsent();
 
 const container = document.getElementById('root');
 const root = createRoot(container);

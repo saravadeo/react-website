@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ReactGA from "react-ga4";
+import { trackEvent } from "../analytics";
 
 class GeekHeader extends Component {
     render() {

@@ -2,6 +2,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import blogData from '../../data/blogList.json';
+import { trackEvent } from '../../analytics';
 import './Blog.css';
 
 const TURNSTILE_SITEKEY = '';
@@ -18,6 +19,13 @@ const BlogPost = () => {
   const postIndex = blogData.posts.findIndex((p) => p.slug === slug);
   const prevPost = postIndex > 0 ? blogData.posts[postIndex - 1] : null;
   const nextPost = postIndex < blogData.posts.length - 1 ? blogData.posts[postIndex + 1] : null;
+
+  // Track blog post view
+  useEffect(() => {
+    if (slug) {
+      trackEvent("Blog", "blog_post_view", slug);
+    }
+  }, [slug]);
 
   // Load reaction counts from reactions.json
   useEffect(() => {
@@ -48,6 +56,10 @@ const BlogPost = () => {
   // Handle reaction click
   const handleReaction = useCallback((type) => {
     const newUserState = !userReactions[type];
+
+    // Track reaction in GA
+    const reactionLabel = type === "liked" ? "helpful" : type === "learned" ? "learned" : "insightful";
+    trackEvent("Blog", "reaction_click", `${reactionLabel}_${slug}`);
 
     // Optimistic UI update
     const updatedUser = { ...userReactions, [type]: newUserState };
@@ -131,9 +143,9 @@ const BlogPost = () => {
         </div>
         <div className="blog-container">
           <nav className="blog-breadcrumb">
-            <Link to="/" className="blog-breadcrumb__link">← Portfolio</Link>
+            <Link to="/" className="blog-breadcrumb__link" onClick={() => trackEvent("Blog", "blog_back", "portfolio_home")}>← Portfolio</Link>
             <span className="blog-breadcrumb__sep">/</span>
-            <Link to="/blog" className="blog-breadcrumb__link">Blog</Link>
+            <Link to="/blog" className="blog-breadcrumb__link" onClick={() => trackEvent("Blog", "blog_back", "blog_list")}>Blog</Link>
           </nav>
           <article className="blog-article">
             <h1 className="blog-article__title">Post Not Found</h1>
@@ -176,9 +188,9 @@ const BlogPost = () => {
 
       <div className="blog-container">
         <nav className="blog-breadcrumb">
-          <Link to="/" className="blog-breadcrumb__link">← Portfolio</Link>
+          <Link to="/" className="blog-breadcrumb__link" onClick={() => trackEvent("Blog", "blog_back", "portfolio_home")}>← Portfolio</Link>
           <span className="blog-breadcrumb__sep">/</span>
-          <Link to="/blog" className="blog-breadcrumb__link">Blog</Link>
+          <Link to="/blog" className="blog-breadcrumb__link" onClick={() => trackEvent("Blog", "blog_back", "blog_list")}>Blog</Link>
           <span className="blog-breadcrumb__sep">/</span>
           <span className="blog-breadcrumb__current">{post.slug}</span>
         </nav>
@@ -265,7 +277,7 @@ const BlogPost = () => {
                 </Link>
               )}
             </div>
-            <Link to="/blog" className="blog-btn blog-btn--center">← All posts</Link>
+            <Link to="/blog" className="blog-btn blog-btn--center" onClick={() => trackEvent("Blog", "blog_back", slug)}>← All posts</Link>
           </footer>
         </article>
       </div>

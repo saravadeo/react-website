@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ReactGA from "react-ga4";
+import { trackEvent } from "../analytics";
 
 class GeekAbout extends Component {
     skills = [
@@ -12,11 +12,7 @@ class GeekAbout extends Component {
     ];
     
     onSkillClick = (skill) => {
-        ReactGA.event({
-            category: "About",
-            action: "skill_clicked",
-            label: skill
-        });
+        trackEvent("About", "skill_click", skill);
     };
     
     render() {

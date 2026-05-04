@@ -1,14 +1,11 @@
 import React, { Component } from "react";
-import ReactGA              from "react-ga4";
+import { trackEvent }              from "../analytics";
 
 class ExperienceSection extends Component {
     
     
     onPeopleAroundMeClick = () => {
-        ReactGA.event({
-                          category: "Experience",
-                          action  : "people_around_me_clicked"
-                      });
+        trackEvent("Experience", "card_click", "people_around_me");
     };
     
     render() {

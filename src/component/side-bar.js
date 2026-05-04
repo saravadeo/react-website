@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ReactGA              from "react-ga4";
+import { trackEvent } from "../analytics";
 
 class SideBar extends Component {
     
@@ -11,10 +11,7 @@ class SideBar extends Component {
     }
     
     togglePopup = () => {
-        ReactGA.event({
-                          category: "SideBar",
-                          action  : this.state.checked ? "side_bar_open" : "side_bar_close"
-                      });
+        trackEvent("Navigation", "mobile_menu_toggle", this.state.checked ? "close" : "open");
         this.setState({ checked: !this.state.checked });
     };
     

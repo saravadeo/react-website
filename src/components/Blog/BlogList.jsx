@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import blogData from '../../data/blogList.json';
+import { trackEvent } from '../../analytics';
 import './Blog.css';
 
 const BlogList = () => {
@@ -26,7 +27,7 @@ const BlogList = () => {
 
       <div className="blog-container blog-container--list">
         <nav className="blog-breadcrumb" aria-label="Breadcrumb">
-          <Link to="/" className="blog-breadcrumb__link">
+          <Link to="/" className="blog-breadcrumb__link" onClick={() => trackEvent("Blog", "blog_back", "portfolio_home")}>
             ← Portfolio
           </Link>
           <span className="blog-breadcrumb__sep">/</span>
@@ -49,7 +50,7 @@ const BlogList = () => {
           <ul className="blog-list-grid">
             {posts.map((post) => (
               <li key={post.id} className="blog-list-grid__cell">
-                <Link to={`/blog/${post.slug}`} className="blog-list-card-link">
+                <Link to={`/blog/${post.slug}`} className="blog-list-card-link" onClick={() => trackEvent("Blog", "blog_card_click", post.slug)}>
                   <article className="blog-list-card">
                     <div className="blog-list-card__accent" aria-hidden="true" />
                     <div className="blog-list-card__meta">

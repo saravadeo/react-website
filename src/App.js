@@ -10,6 +10,7 @@ import {
 import { Helmet } from "react-helmet-async";
 import BlogList from "./components/Blog/BlogList";
 import BlogPost from "./components/Blog/BlogPost";
+import { trackPageView, trackEvent } from "./analytics";
 import "./scss/main.scss";
 
 const SECTION_SCROLL_KEY = "pendingSection";
@@ -44,6 +45,7 @@ const Navigation = () => {
   const handleSectionClick = (e, sectionId) => {
     e.preventDefault();
     setIsMobileMenuOpen(false);
+    trackEvent("Navigation", "nav_click", sectionId);
     if (onHome) {
       scrollToId(sectionId);
     } else {
@@ -54,10 +56,22 @@ const Navigation = () => {
 
   const handleHomeClick = (e) => {
     setIsMobileMenuOpen(false);
+    trackEvent("Navigation", "logo_click", undefined);
     if (onHome) {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
+  };
+
+  const handleMobileToggle = () => {
+    setIsMobileMenuOpen((open) => {
+      trackEvent("Navigation", "mobile_menu_toggle", open ? "close" : "open");
+      return !open;
+    });
+  };
+
+  const handleBlogClick = () => {
+    trackEvent("Navigation", "nav_click", "blog");
   };
 
   const sectionLinks = [
@@ -86,7 +100,7 @@ const Navigation = () => {
           aria-expanded={isMobileMenuOpen}
           aria-controls="primary-menu"
           aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-          onClick={() => setIsMobileMenuOpen((open) => !open)}
+          onClick={handleMobileToggle}
         >
           <span aria-hidden="true" />
           <span aria-hidden="true" />
@@ -117,6 +131,7 @@ const Navigation = () => {
               className={
                 location.pathname.startsWith("/blog") ? "nav__link--active" : ""
               }
+              onClick={handleBlogClick}
             >
               Blog
             </Link>
@@ -232,7 +247,7 @@ const Hero = () => {
         <div className="hero__actions">
           <a href="#contact" onClick={(e) => handleSectionClick(e, 'contact')} className="btn btn--primary">Get in Touch</a>
           <a href="#experience" onClick={(e) => handleSectionClick(e, 'experience')} className="btn btn--secondary">View Experience</a>
-          <a href="https://github.com/saravadeo" target="_blank" rel="noopener noreferrer" className="btn btn--ghost">GitHub →</a>
+          <a href="https://github.com/saravadeo" target="_blank" rel="noopener noreferrer" className="btn btn--ghost" onClick={() => trackEvent("Contact", "social_click", "github")}>GitHub →</a>
         </div>
       </div>
       <div className="hero__scroll">
@@ -672,6 +687,7 @@ const OpenSource = () => {
             target="_blank" 
             rel="noopener noreferrer"
             className="btn btn--secondary btn--large"
+            onClick={() => trackEvent("Contact", "social_click", "github_profile")}
           >
             <span>View GitHub Profile</span>
             <span className="opensource__cta-arrow">→</span>
@@ -718,16 +734,17 @@ const Education = () => {
 // Contact Section
 const Contact = () => {
   const contacts = [
-    { icon: "📧", label: "Email", value: "saravadeo@yahoo.com", href: "mailto:saravadeo@yahoo.com" },
-    { icon: "📱", label: "Phone", value: "+91 9960498810", href: "tel:+919960498810" },
-    { icon: "📍", label: "Location", value: "Mumbai, Maharashtra, India", href: "https://maps.google.com/?q=Mumbai+Maharashtra+India" },
+    { icon: "📧", label: "Email", value: "saravadeo@yahoo.com", href: "mailto:saravadeo@yahoo.com", platform: "email" },
+    { icon: "📱", label: "Phone", value: "+91 9960498810", href: "tel:+919960498810", platform: "phone" },
+    { icon: "📍", label: "Location", value: "Mumbai, Maharashtra, India", href: "https://maps.google.com/?q=Mumbai+Maharashtra+India", platform: "maps" },
     {
       icon: "💼",
       label: "LinkedIn",
       value: "linkedin.com/in/onkar-sarvade-4b36ab63",
       href: "https://www.linkedin.com/in/onkar-sarvade-4b36ab63/",
+      platform: "linkedin",
     },
-    { icon: "⚡", label: "GitHub", value: "github.com/saravadeo", href: "https://github.com/saravadeo" },
+    { icon: "⚡", label: "GitHub", value: "github.com/saravadeo", href: "https://github.com/saravadeo", platform: "github" },
     {
       icon: "🌐",
       label: "Stack Overflow",
@@ -755,6 +772,7 @@ const Contact = () => {
                   key={index}
                   href={contact.href}
                   className="contact__card"
+                  onClick={() => trackEvent("Contact", "social_click", contact.platform)}
                   {...(openInNewTab
                     ? { target: "_blank", rel: "noopener noreferrer" }
                     : {})}
@@ -874,16 +892,24 @@ const HomePage = () => {
   );
 };
 
-const AppShell = () => (
-  <div className="App">
-    <Navigation />
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/blog" element={<BlogList />} />
-      <Route path="/blog/:slug" element={<BlogPost />} />
-    </Routes>
-  </div>
-);
+const AppShell = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    trackPageView(location.pathname);
+  }, [location.pathname]);
+
+  return (
+    <div className="App">
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/blog" element={<BlogList />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
+      </Routes>
+    </div>
+  );
+};
 
 const App = () => (
   <Router basename="/react-website">
