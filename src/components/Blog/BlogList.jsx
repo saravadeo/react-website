@@ -1,12 +1,24 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import blogData from '../../data/blogList.json';
 import { trackEvent } from '../../analytics';
 import './Blog.css';
 
+const POSTS_PER_PAGE = 6;
+
 const BlogList = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
   const { posts } = blogData;
+  const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
+  const currentPage = Math.max(1, Math.min(parseInt(searchParams.get('page') || '1', 10), totalPages || 1));
+  const currentPosts = posts.slice((currentPage - 1) * POSTS_PER_PAGE, currentPage * POSTS_PER_PAGE);
+
+  const goToPage = (page) => {
+    setSearchParams(page === 1 ? {} : { page });
+    trackEvent('Blog', 'blog_page_click', String(page));
+    document.querySelector('.blog-list-hero')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <div className="blog-page blog-page--list">
@@ -48,7 +60,7 @@ const BlogList = () => {
           </div>
         ) : (
           <ul className="blog-list-grid">
-            {posts.map((post) => (
+            {currentPosts.map((post) => (
               <li key={post.id} className="blog-list-grid__cell">
                 <Link to={`/blog/${post.slug}`} className="blog-list-card-link" onClick={() => trackEvent("Blog", "blog_card_click", post.slug)}>
                   <article className="blog-list-card">
@@ -82,6 +94,36 @@ const BlogList = () => {
               </li>
             ))}
           </ul>
+        )}
+
+        {totalPages > 1 && (
+          <nav className="blog-pagination" aria-label="Blog pagination">
+            <button
+              className="blog-pagination__btn blog-pagination__btn--prev"
+              onClick={() => goToPage(currentPage - 1)}
+              disabled={currentPage === 1}
+            >
+              ← Prev
+            </button>
+            <div className="blog-pagination__pages">
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                <button
+                  key={page}
+                  className={`blog-pagination__btn ${page === currentPage ? 'blog-pagination__btn--active' : ''}`}
+                  onClick={() => goToPage(page)}
+                >
+                  {page}
+                </button>
+              ))}
+            </div>
+            <button
+              className="blog-pagination__btn blog-pagination__btn--next"
+              onClick={() => goToPage(currentPage + 1)}
+              disabled={currentPage === totalPages}
+            >
+              Next →
+            </button>
+          </nav>
         )}
       </div>
     </div>
