@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "id": "how-i-built-an-ai-entertainment-agent-that-understands-what-i-actually-want-to-watch",
+      "title": "How I Built an AI Entertainment Agent That Understands What I Actually Want to Watch",
+      "date": "2026-05-08",
+      "excerpt": "Endless scrolling across Netflix, Prime Video, and YouTube every night? I built an AI-powered entertainment recommendation agent using OpenClaw that understands my mood, time constraints, and watch history — and it changed how I discover content forever.",
+      "slug": "how-i-built-an-ai-entertainment-agent-that-understands-what-i-actually-want-to-watch",
+      "tags": ["ai", "openclaw", "recommendation-engine", "entertainment", "personalization", "agents"],
+      "readTime": "8 min"
+    },
+    {
       "id": "bridging-the-observability-gap-automatic-tracing-for-vertx-postgresql-client",
       "title": "Bridging the Observability Gap: Automatic Tracing for Vert.x PostgreSQL Client",
       "date": "2026-05-03",
