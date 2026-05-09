@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "id": "how-i-built-an-ai-powered-youtube-shorts-factory-with-openclaw",
+      "title": "How I Built an AI-Powered YouTube Shorts Factory with OpenClaw",
+      "date": "2026-05-09",
+      "excerpt": "How I Built an AI-Powered YouTube Shorts Factory with OpenClaw 🚀 What if creating daily YouTube Shorts required almost no manual work? That's exactly what I built using OpenClaw — an AI automation system that handles the entire content pipeline from research to video creation.",
+      "slug": "how-i-built-an-ai-powered-youtube-shorts-factory-with-openclaw",
+      "tags": ["blog"],
+      "readTime": "3 min"
+    },
+    {
       "id": "how-i-built-an-ai-entertainment-agent-that-understands-what-i-actually-want-to-watch",
       "title": "How I Built an AI Entertainment Agent That Understands What I Actually Want to Watch",
       "date": "2026-05-08",
