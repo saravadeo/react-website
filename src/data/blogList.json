@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-05-10",
+      "title": "AI News Roundup: Anthropic–SpaceX Compute Deal, OpenAI's AI Phone, Kimi K2.6 & More (May 10, 2026)",
+      "date": "2026-05-10",
+      "excerpt": "The biggest AI developments this week: Anthropic locks in SpaceX's entire Colossus 1 supercomputer, OpenAI fast-tracks an AI phone for 2027, Moonshot AI open-sources Kimi K2.6 with GPT-5.5-level coding, and xAI launches Grok 4.3. Here's what matters.",
+      "slug": "ai-news-roundup-2026-05-10",
+      "tags": ["ai-news", "anthropic", "openai", "spacex", "kimi", "open-source", "ai-agents", "xai", "gpt-5.5", "claude"],
+      "readTime": "10 min"
+    },
+    {
       "id": "how-i-built-an-ai-powered-youtube-shorts-factory-with-openclaw",
       "title": "How I Built an AI-Powered YouTube Shorts Factory with OpenClaw",
       "date": "2026-05-09",
