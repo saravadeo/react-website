@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-05-11",
+      "title": "AI News Roundup: Anthropic's $44B ARR, Pentagon Blacklisting Battle, Cerebras $23B IPO & More (May 11, 2026)",
+      "date": "2026-05-11",
+      "excerpt": "The biggest AI developments this week: Anthropic hits ~$44B ARR with 80x YoY revenue growth, the Pentagon–Anthropic autonomous weapons dispute escalates to Congress, Cerebras files for a $23B IPO, Apple confirms Tim Cook's successor, and Google I/O 2026 is days away. Here's what matters.",
+      "slug": "ai-news-roundup-2026-05-11",
+      "tags": ["ai-news", "anthropic", "pentagon", "cerebras", "ipo", "openai", "apple", "google-io", "coreweave", "ai-policy"],
+      "readTime": "11 min"
+    },
+    {
       "id": "ai-news-roundup-2026-05-10",
       "title": "AI News Roundup: Anthropic–SpaceX Compute Deal, OpenAI's AI Phone, Kimi K2.6 & More (May 10, 2026)",
       "date": "2026-05-10",
