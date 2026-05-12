@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-05-12",
+      "title": "AI News Roundup — May 12, 2026: Google I/O Kicks Off, Big Tech's $650B AI Spending Spree, and OpenAI Drops GPT-5.5",
+      "date": "2026-05-12",
+      "excerpt": "Google's Android Show opens I/O week with Gemini Nano on-device and XR glasses, Big Tech commits a staggering $650B to AI infrastructure in 2026, OpenAI launches GPT-5.5 with Trusted Contacts, DeepSeek V4 enters the open-source arena, and Anthropic ships Claude Opus 4.7.",
+      "slug": "ai-news-roundup-2026-05-12",
+      "tags": ["ai-news", "google-io", "gpt-5.5", "deepseek-v4", "big-tech-ai-spending", "anthropic-agentic-coding", "claude-opus-4.7", "gemma-4", "meta-muse-spark", "open-source-ai"],
+      "readTime": "10 min"
+    },
+    {
       "id": "ai-news-roundup-2026-05-11",
       "title": "AI News Roundup: Anthropic's $44B ARR, Pentagon Blacklisting Battle, Cerebras $23B IPO & More (May 11, 2026)",
       "date": "2026-05-11",
