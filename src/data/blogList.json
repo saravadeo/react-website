@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-05-13",
+      "title": "AI News Roundup — May 13, 2026: Musk vs. Altman Trial Heats Up, Google Stops First AI Zero-Day, and Anthropic's Agents Learn to 'Dream'",
+      "date": "2026-05-13",
+      "excerpt": "Sam Altman takes the stand in the Musk v. OpenAI trial, Google identifies and stops the first known AI-developed zero-day exploit, Anthropic's Claude agents can now 'dream' to self-improve, and Anthropic locks in SpaceX's Colossus supercomputer — here's everything happening in AI.",
+      "slug": "ai-news-roundup-2026-05-13",
+      "tags": ["ai-news", "OpenAI trial", "Elon Musk", "Sam Altman", "Google zero-day", "AI cybersecurity", "Anthropic dreaming", "Claude Managed Agents", "AI agents", "SpaceX Colossus"],
+      "readTime": "9 min"
+    },
+    {
       "id": "ai-news-roundup-2026-05-12",
       "title": "AI News Roundup — May 12, 2026: Google I/O Kicks Off, Big Tech's $650B AI Spending Spree, and OpenAI Drops GPT-5.5",
       "date": "2026-05-12",
