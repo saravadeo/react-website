@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-05-14",
+      "title": "AI News Roundup — May 14, 2026: OpenAI Launches $4B DeployCo, Anthropic Counters with $1.5B Enterprise JV, and Apple Opens iOS to Rival AI Models",
+      "date": "2026-05-14",
+      "excerpt": "OpenAI spins out a $4B consulting subsidiary and acquires Tomoro, Anthropic partners with Blackstone and Goldman Sachs on a $1.5B enterprise venture, Apple will let iOS 27 users pick their AI model, GPT-5.5 Instant becomes the new ChatGPT default, and the Pentagon signs eight tech giants for classified AI — here's your May 14 briefing.",
+      "slug": "ai-news-roundup-2026-05-14",
+      "tags": ["ai-news", "OpenAI", "DeployCo", "Tomoro", "Anthropic", "Blackstone", "Goldman Sachs", "Apple", "iOS 27", "GPT-5.5 Instant", "Pentagon", "GenAI.mil", "AI consulting", "enterprise AI", "Apple Intelligence"],
+      "readTime": "10 min"
+    },
+    {
       "id": "ai-news-roundup-2026-05-13",
       "title": "AI News Roundup — May 13, 2026: Musk vs. Altman Trial Heats Up, Google Stops First AI Zero-Day, and Anthropic's Agents Learn to 'Dream'",
       "date": "2026-05-13",
