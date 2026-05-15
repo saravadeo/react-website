@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-05-15",
+      "title": "AI News Roundup — May 15, 2026: Anthropic Targets $950B Valuation, Google Debuts Googlebook, SAP Declares the Autonomous Enterprise, and Banks Scramble Over Mythos",
+      "date": "2026-05-15",
+      "excerpt": "Anthropic is in talks for a $950B valuation that would eclipse OpenAI, Google replaces the Chromebook with AI-native Googlebooks, SAP unveils its Autonomous Enterprise vision with 50+ Joule agents, US banks rush to patch zero-days found by Anthropic's Mythos, and the AI layoff wave accelerates — here's your May 15 briefing.",
+      "slug": "ai-news-roundup-2026-05-15",
+      "tags": ["ai-news", "Anthropic", "valuation", "Google", "Googlebook", "Gemini Intelligence", "SAP", "Autonomous Enterprise", "Joule", "Mythos", "cybersecurity", "banking", "Cloudflare", "layoffs", "Broadcom", "OpenAI", "AI chips"],
+      "readTime": "10 min"
+    },
+    {
       "id": "ai-news-roundup-2026-05-14",
       "title": "AI News Roundup — May 14, 2026: OpenAI Launches $4B DeployCo, Anthropic Counters with $1.5B Enterprise JV, and Apple Opens iOS to Rival AI Models",
       "date": "2026-05-14",
