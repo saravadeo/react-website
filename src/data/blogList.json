@@ -1,12 +1,54 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-05-16",
+      "title": "AI News Roundup — May 16, 2026: Musk v. Altman Heads to Jury, Anthropic Partners with Gates Foundation, NVIDIA Goes All-In on Open AI Agents, and Data Center Backlash Turns Violent",
+      "date": "2026-05-16",
+      "excerpt": "Closing arguments wrap in the Musk v. Altman trial as jury deliberations begin, Anthropic signs a $200M partnership with the Gates Foundation for global health AI, NVIDIA launches an open-source AI agent toolkit with 17 enterprise adopters, and anti-data-center sentiment turns violent — here's your May 16 briefing.",
+      "slug": "ai-news-roundup-2026-05-16",
+      "tags": [
+        "ai-news",
+        "Musk v. Altman",
+        "OpenAI trial",
+        "Anthropic",
+        "Gates Foundation",
+        "NVIDIA",
+        "Agent Toolkit",
+        "Codex mobile",
+        "AI data centers",
+        "Google I/O",
+        "xAI",
+        "Grok Computer",
+        "open-source AI",
+        "AI agents"
+      ],
+      "readTime": "10 min"
+    },
+    {
       "id": "ai-news-roundup-2026-05-15",
       "title": "AI News Roundup — May 15, 2026: Anthropic Targets $950B Valuation, Google Debuts Googlebook, SAP Declares the Autonomous Enterprise, and Banks Scramble Over Mythos",
       "date": "2026-05-15",
       "excerpt": "Anthropic is in talks for a $950B valuation that would eclipse OpenAI, Google replaces the Chromebook with AI-native Googlebooks, SAP unveils its Autonomous Enterprise vision with 50+ Joule agents, US banks rush to patch zero-days found by Anthropic's Mythos, and the AI layoff wave accelerates — here's your May 15 briefing.",
       "slug": "ai-news-roundup-2026-05-15",
-      "tags": ["ai-news", "Anthropic", "valuation", "Google", "Googlebook", "Gemini Intelligence", "SAP", "Autonomous Enterprise", "Joule", "Mythos", "cybersecurity", "banking", "Cloudflare", "layoffs", "Broadcom", "OpenAI", "AI chips"],
+      "tags": [
+        "ai-news",
+        "Anthropic",
+        "valuation",
+        "Google",
+        "Googlebook",
+        "Gemini Intelligence",
+        "SAP",
+        "Autonomous Enterprise",
+        "Joule",
+        "Mythos",
+        "cybersecurity",
+        "banking",
+        "Cloudflare",
+        "layoffs",
+        "Broadcom",
+        "OpenAI",
+        "AI chips"
+      ],
       "readTime": "10 min"
     },
     {
@@ -15,7 +57,23 @@
       "date": "2026-05-14",
       "excerpt": "OpenAI spins out a $4B consulting subsidiary and acquires Tomoro, Anthropic partners with Blackstone and Goldman Sachs on a $1.5B enterprise venture, Apple will let iOS 27 users pick their AI model, GPT-5.5 Instant becomes the new ChatGPT default, and the Pentagon signs eight tech giants for classified AI — here's your May 14 briefing.",
       "slug": "ai-news-roundup-2026-05-14",
-      "tags": ["ai-news", "OpenAI", "DeployCo", "Tomoro", "Anthropic", "Blackstone", "Goldman Sachs", "Apple", "iOS 27", "GPT-5.5 Instant", "Pentagon", "GenAI.mil", "AI consulting", "enterprise AI", "Apple Intelligence"],
+      "tags": [
+        "ai-news",
+        "OpenAI",
+        "DeployCo",
+        "Tomoro",
+        "Anthropic",
+        "Blackstone",
+        "Goldman Sachs",
+        "Apple",
+        "iOS 27",
+        "GPT-5.5 Instant",
+        "Pentagon",
+        "GenAI.mil",
+        "AI consulting",
+        "enterprise AI",
+        "Apple Intelligence"
+      ],
       "readTime": "10 min"
     },
     {
@@ -24,7 +82,18 @@
       "date": "2026-05-13",
       "excerpt": "Sam Altman takes the stand in the Musk v. OpenAI trial, Google identifies and stops the first known AI-developed zero-day exploit, Anthropic's Claude agents can now 'dream' to self-improve, and Anthropic locks in SpaceX's Colossus supercomputer — here's everything happening in AI.",
       "slug": "ai-news-roundup-2026-05-13",
-      "tags": ["ai-news", "OpenAI trial", "Elon Musk", "Sam Altman", "Google zero-day", "AI cybersecurity", "Anthropic dreaming", "Claude Managed Agents", "AI agents", "SpaceX Colossus"],
+      "tags": [
+        "ai-news",
+        "OpenAI trial",
+        "Elon Musk",
+        "Sam Altman",
+        "Google zero-day",
+        "AI cybersecurity",
+        "Anthropic dreaming",
+        "Claude Managed Agents",
+        "AI agents",
+        "SpaceX Colossus"
+      ],
       "readTime": "9 min"
     },
     {
@@ -33,7 +102,18 @@
       "date": "2026-05-12",
       "excerpt": "Google's Android Show opens I/O week with Gemini Nano on-device and XR glasses, Big Tech commits a staggering $650B to AI infrastructure in 2026, OpenAI launches GPT-5.5 with Trusted Contacts, DeepSeek V4 enters the open-source arena, and Anthropic ships Claude Opus 4.7.",
       "slug": "ai-news-roundup-2026-05-12",
-      "tags": ["ai-news", "google-io", "gpt-5.5", "deepseek-v4", "big-tech-ai-spending", "anthropic-agentic-coding", "claude-opus-4.7", "gemma-4", "meta-muse-spark", "open-source-ai"],
+      "tags": [
+        "ai-news",
+        "google-io",
+        "gpt-5.5",
+        "deepseek-v4",
+        "big-tech-ai-spending",
+        "anthropic-agentic-coding",
+        "claude-opus-4.7",
+        "gemma-4",
+        "meta-muse-spark",
+        "open-source-ai"
+      ],
       "readTime": "10 min"
     },
     {
@@ -42,7 +122,18 @@
       "date": "2026-05-11",
       "excerpt": "The biggest AI developments this week: Anthropic hits ~$44B ARR with 80x YoY revenue growth, the Pentagon–Anthropic autonomous weapons dispute escalates to Congress, Cerebras files for a $23B IPO, Apple confirms Tim Cook's successor, and Google I/O 2026 is days away. Here's what matters.",
       "slug": "ai-news-roundup-2026-05-11",
-      "tags": ["ai-news", "anthropic", "pentagon", "cerebras", "ipo", "openai", "apple", "google-io", "coreweave", "ai-policy"],
+      "tags": [
+        "ai-news",
+        "anthropic",
+        "pentagon",
+        "cerebras",
+        "ipo",
+        "openai",
+        "apple",
+        "google-io",
+        "coreweave",
+        "ai-policy"
+      ],
       "readTime": "11 min"
     },
     {
@@ -51,7 +142,18 @@
       "date": "2026-05-10",
       "excerpt": "The biggest AI developments this week: Anthropic locks in SpaceX's entire Colossus 1 supercomputer, OpenAI fast-tracks an AI phone for 2027, Moonshot AI open-sources Kimi K2.6 with GPT-5.5-level coding, and xAI launches Grok 4.3. Here's what matters.",
       "slug": "ai-news-roundup-2026-05-10",
-      "tags": ["ai-news", "anthropic", "openai", "spacex", "kimi", "open-source", "ai-agents", "xai", "gpt-5.5", "claude"],
+      "tags": [
+        "ai-news",
+        "anthropic",
+        "openai",
+        "spacex",
+        "kimi",
+        "open-source",
+        "ai-agents",
+        "xai",
+        "gpt-5.5",
+        "claude"
+      ],
       "readTime": "10 min"
     },
     {
@@ -60,7 +162,9 @@
       "date": "2026-05-09",
       "excerpt": "How I Built an AI-Powered YouTube Shorts Factory with OpenClaw 🚀 What if creating daily YouTube Shorts required almost no manual work? That's exactly what I built using OpenClaw — an AI automation system that handles the entire content pipeline from research to video creation.",
       "slug": "how-i-built-an-ai-powered-youtube-shorts-factory-with-openclaw",
-      "tags": ["blog"],
+      "tags": [
+        "blog"
+      ],
       "readTime": "3 min"
     },
     {
@@ -69,7 +173,14 @@
       "date": "2026-05-08",
       "excerpt": "Endless scrolling across Netflix, Prime Video, and YouTube every night? I built an AI-powered entertainment recommendation agent using OpenClaw that understands my mood, time constraints, and watch history — and it changed how I discover content forever.",
       "slug": "how-i-built-an-ai-entertainment-agent-that-understands-what-i-actually-want-to-watch",
-      "tags": ["ai", "openclaw", "recommendation-engine", "entertainment", "personalization", "agents"],
+      "tags": [
+        "ai",
+        "openclaw",
+        "recommendation-engine",
+        "entertainment",
+        "personalization",
+        "agents"
+      ],
       "readTime": "8 min"
     },
     {
@@ -78,7 +189,16 @@
       "date": "2026-05-03",
       "excerpt": "How we contributed automatic tracing for the Vert.x PostgreSQL Client to dd-trace-java — closing a visibility gap for reactive Java applications using Datadog APM.",
       "slug": "bridging-the-observability-gap-automatic-tracing-for-vertx-postgresql-client",
-      "tags": ["datadog", "vertx", "observability", "apm", "java", "distributed-systems", "tracing", "open-source"],
+      "tags": [
+        "datadog",
+        "vertx",
+        "observability",
+        "apm",
+        "java",
+        "distributed-systems",
+        "tracing",
+        "open-source"
+      ],
       "readTime": "6 min"
     },
     {
@@ -87,7 +207,13 @@
       "date": "2026-05-01",
       "excerpt": "A deep dive into the Raja Shivaji Anthem — decoding each line to understand why Chhatrapati Shivaji Maharaj remains the ultimate ideal of warrior leadership, spiritual depth, and righteous governance.",
       "slug": "the-soul-of-chhatrapati-shivaji-maharaj-in-the-raja-shivaji-anthem",
-      "tags": ["history", "leadership", "maratha", "chhatrapati-shivaji-maharaj", "indian-history"],
+      "tags": [
+        "history",
+        "leadership",
+        "maratha",
+        "chhatrapati-shivaji-maharaj",
+        "indian-history"
+      ],
       "readTime": "6 min"
     },
     {
@@ -95,7 +221,17 @@
       "slug": "from-100-clicks-to-one-prompt",
       "date": "2026-04-29",
       "readTime": "12 min",
-      "tags": ["natural-language-interface", "langchain", "langgraph", "mcp", "llm", "ai-agents", "system-design", "chatbot", "distributed-systems"],
+      "tags": [
+        "natural-language-interface",
+        "langchain",
+        "langgraph",
+        "mcp",
+        "llm",
+        "ai-agents",
+        "system-design",
+        "chatbot",
+        "distributed-systems"
+      ],
       "excerpt": "How I replaced a 100-click web workflow with a single natural language prompt — using LangChain, LangGraph, MCP, and Redis to build a production-ready AI-powered interface."
     },
     {
@@ -104,7 +240,13 @@
       "date": "2026-04-26",
       "excerpt": "What used to take 3-4 hours of focused writing now takes 30 seconds of note-taking. Here's how I built a thought-to-published pipeline that runs on autopilot.",
       "slug": "how-i-automated-my-technical-blog-with-openclaw",
-      "tags": ["automation", "blogging", "openclaw", "productivity", "developer-tools"],
+      "tags": [
+        "automation",
+        "blogging",
+        "openclaw",
+        "productivity",
+        "developer-tools"
+      ],
       "readTime": "4 min"
     },
     {
@@ -113,7 +255,15 @@
       "date": "2026-04-24",
       "excerpt": "BlockingQueue is a thread-safe queue from java.util.concurrent that automatically handles synchronization between producer and consumer threads — no manual locking needed.",
       "slug": "understanding-blockingqueue",
-      "tags": ["java", "concurrency", "distributed-systems", "blocking-queue", "producer-consumer", "backend", "system-design"],
+      "tags": [
+        "java",
+        "concurrency",
+        "distributed-systems",
+        "blocking-queue",
+        "producer-consumer",
+        "backend",
+        "system-design"
+      ],
       "readTime": "6 min"
     },
     {
@@ -122,7 +272,10 @@
       "date": "2026-04-23",
       "excerpt": "The name Onkar is derived from the Sanskrit word Omkar — the embodiment of the sacred sound Om. It represents ultimate reality, universal consciousness, and the origin of existence.",
       "slug": "the-meaning-of-onkar",
-      "tags": ["idea", "philosophy"],
+      "tags": [
+        "idea",
+        "philosophy"
+      ],
       "readTime": "2 min"
     },
     {
@@ -131,7 +284,14 @@
       "date": "2026-04-18",
       "excerpt": "A deep dive into MySQL's implicit type conversion behavior that caused unexpected query results in production. Learn why '1 - 3 - 4' = 1 evaluates to TRUE and how to prevent these silent bugs.",
       "slug": "mysql-unexpected-behaviour",
-      "tags": ["mysql", "sql", "database", "debugging", "performance", "type-conversion"],
+      "tags": [
+        "mysql",
+        "sql",
+        "database",
+        "debugging",
+        "performance",
+        "type-conversion"
+      ],
       "readTime": "5 min"
     },
     {
@@ -140,7 +300,12 @@
       "date": "2026-04-18",
       "excerpt": "How to optimize SEO for JavaScript websites using Prerender.io with AWS CloudFront and S3. Learn server-side pre-rendering techniques for better search visibility.",
       "slug": "seo-prerender-cloudfront",
-      "tags": ["seo", "aws", "cloudfront", "javascript"],
+      "tags": [
+        "seo",
+        "aws",
+        "cloudfront",
+        "javascript"
+      ],
       "readTime": "5 min"
     }
   ]
