@@ -1,6 +1,29 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-05-17",
+      "title": "AI News Roundup — May 17, 2026: Google I/O Countdown Begins, Anthropic's $900B Valuation Round Advances, and Meta's Avocado Stays Silent",
+      "date": "2026-05-17",
+      "excerpt": "Google I/O 2026 is 48 hours away with Gemini 4.0, Android XR glasses, and Aluminium OS on the agenda. Anthropic's $900B valuation round is progressing toward a May close, Meta's Avocado model stays conspicuously silent, and all five frontier labs now have CAISI pre-deployment evaluation agreements. Here's your May 17 briefing.",
+      "slug": "ai-news-roundup-2026-05-17",
+      "tags": [
+        "ai-news",
+        "Google I/O",
+        "Gemini 4.0",
+        "Android XR",
+        "Aluminium OS",
+        "Anthropic",
+        "valuation",
+        "Meta Avocado",
+        "OpenAI device",
+        "CAISI",
+        "AI regulation",
+        "TPU",
+        "Broadcom"
+      ],
+      "readTime": "9 min"
+    },
+    {
       "id": "ai-news-roundup-2026-05-16",
       "title": "AI News Roundup — May 16, 2026: Musk v. Altman Heads to Jury, Anthropic Partners with Gates Foundation, NVIDIA Goes All-In on Open AI Agents, and Data Center Backlash Turns Violent",
       "date": "2026-05-16",
