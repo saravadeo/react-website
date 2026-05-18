@@ -1,6 +1,30 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-05-18",
+      "title": "AI News Roundup — May 18, 2026: Musk v. Altman Goes to Jury, Cerebras Explodes in Biggest IPO of 2026, LinkedIn Cuts 900 Despite Record Revenue, and Pope Leo XIV Writes First AI Encyclical",
+      "date": "2026-05-18",
+      "excerpt": "The Musk v. Altman trial heads to jury deliberation, Cerebras soars 68% in the year's biggest IPO before retreating, LinkedIn cuts 900 jobs despite record revenue, Microsoft's AI chief predicts 18 months to white-collar automation, and Pope Leo XIV drafts the first papal encyclical on AI — here's your May 18 briefing.",
+      "slug": "ai-news-roundup-2026-05-18",
+      "tags": [
+        "ai-news",
+        "Musk v. Altman",
+        "OpenAI trial",
+        "Cerebras IPO",
+        "LinkedIn layoffs",
+        "AI jobs",
+        "Pope Leo XIV",
+        "AI encyclical",
+        "Microsoft",
+        "Mustafa Suleyman",
+        "Bumble AI",
+        "AI dating",
+        "AI automation",
+        "CBRS"
+      ],
+      "readTime": "10 min"
+    },
+    {
       "id": "ai-news-roundup-2026-05-17",
       "title": "AI News Roundup — May 17, 2026: Google I/O Countdown Begins, Anthropic's $900B Valuation Round Advances, and Meta's Avocado Stays Silent",
       "date": "2026-05-17",
