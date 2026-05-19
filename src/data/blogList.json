@@ -1,6 +1,28 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-05-19",
+      "title": "AI News Roundup — May 19, 2026: Google I/O Drops Gemini 4, Musk v. OpenAI Ends, and GPT-5.5 Goes Default",
+      "date": "2026-05-19",
+      "excerpt": "Google I/O 2026 kicks off with Gemini 4, Veo 4, Imagen 4, Beam, Lyria 2, Aluminum OS, and Android XR smart glasses. Musk lawsuit against OpenAI gets tossed by a jury. GPT-5.5 Instant becomes the new ChatGPT default.",
+      "slug": "ai-news-roundup-2026-05-19",
+      "tags": [
+        "ai-news",
+        "Google I/O",
+        "Gemini 4",
+        "Veo 4",
+        "Imagen 4",
+        "Beam",
+        "Lyria 2",
+        "Aluminum OS",
+        "Android XR",
+        "Musk v. OpenAI",
+        "GPT-5.5 Instant",
+        "OpenAI"
+      ],
+      "readTime": "6 min"
+    },
+    {
       "id": "ai-news-roundup-2026-05-18",
       "title": "AI News Roundup — May 18, 2026: Musk v. Altman Goes to Jury, Cerebras Explodes in Biggest IPO of 2026, LinkedIn Cuts 900 Despite Record Revenue, and Pope Leo XIV Writes First AI Encyclical",
       "date": "2026-05-18",
