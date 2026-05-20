@@ -1,6 +1,31 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-05-20",
+      "title": "AI News Roundup — May 20, 2026: Google I/O Day 2 Brings Gemini 3.5 Flash, Spark Agents, and Antigravity 2.0 — Plus Anthropic Overtakes OpenAI",
+      "date": "2026-05-20",
+      "excerpt": "Google I/O Day 2 delivers Gemini 3.5 Flash, Gemini Omni, Spark personal agents, and Antigravity 2.0 — plus the AI Ultra plan drops to 00, Googlebook enters the laptop market, and Anthropic surpasses OpenAI in business adoption for the first time.",
+      "slug": "ai-news-roundup-2026-05-20",
+      "tags": [
+        "ai-news",
+        "Google I/O",
+        "Gemini 3.5 Flash",
+        "Gemini Omni",
+        "Gemini Spark",
+        "Antigravity 2.0",
+        "AI Ultra",
+        "Googlebook",
+        "Aluminum OS",
+        "Blackstone",
+        "TPU",
+        "Anthropic",
+        "OpenAI",
+        "Gemma 4",
+        "agents"
+      ],
+      "readTime": "7 min"
+    },
+    {
       "id": "ai-news-roundup-2026-05-19",
       "title": "AI News Roundup — May 19, 2026: Google I/O Drops Gemini 4, Musk v. OpenAI Ends, and GPT-5.5 Goes Default",
       "date": "2026-05-19",
