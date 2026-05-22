@@ -1,6 +1,19 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-05-21",
+      "title": "AI News Roundup — May 21, 2026: Trump Pulls AI Executive Order, Karpathy Joins Anthropic, SpaceX Files for IPO, and Meta Reshuffles 7,000 Workers",
+      "date": "2026-05-21",
+      "excerpt": "Trump postpones a landmark AI executive order hours before signing, Andrej Karpathy joins Anthropic's pretraining team, SpaceX publicly files its S-1 for a $2T IPO, California signs a first-of-its-kind AI workforce EO, and Meta reassigns 7,000 employees to AI roles — plus Anthropic eyes a $900B valuation and Vercel unveils Zero.",
+      "slug": "ai-news-roundup-2026-05-21",
+      "tags": [
+        "ai",
+        "news"
+      ],
+      "category": "AI News",
+      "readTime": "8 min"
+    },
+    {
       "id": "ai-news-roundup-2026-05-20",
       "title": "AI News Roundup — May 20, 2026: Google I/O Day 2 Brings Gemini 3.5 Flash, Spark Agents, and Antigravity 2.0 — Plus Anthropic Overtakes OpenAI",
       "date": "2026-05-20",
