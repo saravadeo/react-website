@@ -1,6 +1,19 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-05-27",
+      "title": "AI News Roundup — May 27, 2026: OpenAI Joins Big Pharma, Anthropic Bets $200B on Google Cloud, Snap Blames AI for 1,000 Layoffs, and Meta Unveils Muse Spark",
+      "date": "2026-05-27",
+      "excerpt": "OpenAI formalizes a drug-discovery partnership with Novo Nordisk, Anthropic locks in a $200B Google Cloud deal alongside its SpaceX compute mega-deal, Snap lays off 1,000 workers citing AI advances, and Meta debuts Muse Spark — its most ambitious AI agent model yet.",
+      "slug": "ai-news-roundup-2026-05-27",
+      "tags": [
+        "ai",
+        "news"
+      ],
+      "category": "AI News",
+      "readTime": "9 min"
+    },
+    {
       "id": "ai-news-roundup-2026-05-26",
       "title": "AI News Roundup — May 26, 2026: OpenAI Cracks an 80-Year-Old Math Problem, DeepSeek Permanently Slashes Prices by 75%, Banks Declare War on Their Own Workforces, and the Pope’s AI Encyclical Arrives",
       "date": "2026-05-26",
