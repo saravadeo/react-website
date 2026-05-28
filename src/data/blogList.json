@@ -1,6 +1,19 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-05-28",
+      "title": "AI News Roundup — May 28, 2026: Canada Finds OpenAI Violated Privacy Laws, OpenAI Launches DeployCo, Anthropic Surpasses OpenAI Revenue, and KPMG Puts Claude in 276,000 Hands",
+      "date": "2026-05-28",
+      "excerpt": "Canada's Privacy Commissioner finds OpenAI violated PIPEDA by training ChatGPT on personal data without consent, OpenAI spins out a $10B DeployCo consulting subsidiary, Anthropic surpasses OpenAI in revenue at ~$30B annualized run rate, KPMG deploys Claude to all 276,000 employees, Cohere acquires Aleph Alpha for sovereign AI, and OpenRouter raises $113M at $1.3B valuation.",
+      "slug": "ai-news-roundup-2026-05-28",
+      "tags": [
+        "ai",
+        "news"
+      ],
+      "category": "AI News",
+      "readTime": "10 min"
+    },
+    {
       "id": "ai-news-roundup-2026-05-27",
       "title": "AI News Roundup — May 27, 2026: OpenAI Joins Big Pharma, Anthropic Bets $200B on Google Cloud, Snap Blames AI for 1,000 Layoffs, and Meta Unveils Muse Spark",
       "date": "2026-05-27",
