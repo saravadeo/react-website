@@ -1,6 +1,19 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-05-29",
+      "title": "AI News Roundup — May 29, 2026: Illinois Becomes First State to Mandate AI Safety Audits, DeepSeek Makes 75% Price Cut Permanent, Anthropic Doubles Claude Limits via SpaceX Colossus, and ChatGPT Voice Mode Runs on a Weaker Model",
+      "date": "2026-05-29",
+      "excerpt": "Illinois passes the first US state law requiring third-party AI safety audits of frontier developers, DeepSeek makes its 75% V4-Pro price cut permanent escalating the AI pricing war, Anthropic doubles Claude Code limits through a SpaceX Colossus deal with 220,000+ GPUs, and ChatGPT voice mode is revealed to run on a significantly weaker model.",
+      "slug": "ai-news-roundup-2026-05-29",
+      "tags": [
+        "ai",
+        "news"
+      ],
+      "category": "AI News",
+      "readTime": "10 min"
+    },
+    {
       "id": "ai-news-roundup-2026-05-28",
       "title": "AI News Roundup — May 28, 2026: Canada Finds OpenAI Violated Privacy Laws, OpenAI Launches DeployCo, Anthropic Surpasses OpenAI Revenue, and KPMG Puts Claude in 276,000 Hands",
       "date": "2026-05-28",
