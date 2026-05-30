@@ -1,6 +1,19 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-05-30",
+      "title": "AI News Roundup — May 30, 2026: Anthropic Overtakes OpenAI as Most Valuable AI Startup, Claude Opus 4.8 Ships, Nvidia Pours $6.5B into Photonics, and OpenAI Unveils Secure MCP Tunnel",
+      "date": "2026-05-30",
+      "excerpt": "Anthropic surpasses OpenAI as the world's most valuable AI startup at $965B valuation, Claude Opus 4.8 ships with 4x honesty gains and effort settings, Nvidia commits $6.5B to photonics to solve AI's copper bottleneck, OpenAI launches Secure MCP Tunnel for enterprise, and Ramp publishes findings from 10,000 coding agent sessions.",
+      "slug": "ai-news-roundup-2026-05-30",
+      "tags": [
+        "ai",
+        "news"
+      ],
+      "category": "AI News",
+      "readTime": "10 min"
+    },
+    {
       "id": "ai-news-roundup-2026-05-29",
       "title": "AI News Roundup — May 29, 2026: Illinois Becomes First State to Mandate AI Safety Audits, DeepSeek Makes 75% Price Cut Permanent, Anthropic Doubles Claude Limits via SpaceX Colossus, and ChatGPT Voice Mode Runs on a Weaker Model",
       "date": "2026-05-29",
