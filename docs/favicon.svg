@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="OS">
+  <rect width="32" height="32" rx="7" fill="#21262d"/>
+
+  <!-- [ -->
+  <rect x="4.5" y="7.5" width="2.4" height="17" rx="0.6" fill="#8957e5"/>
+  <rect x="4.5" y="7.5" width="5.5" height="2.4" rx="0.6" fill="#8957e5"/>
+  <rect x="4.5" y="22.1" width="5.5" height="2.4" rx="0.6" fill="#8957e5"/>
+
+  <!-- O -->
+  <circle
+    cx="12.4"
+    cy="16"
+    r="4"
+    fill="none"
+    stroke="#e6edf3"
+    stroke-width="2.6"
+  />
+
+  <!-- S -->
+  <path
+    fill="none"
+    stroke="#e6edf3"
+    stroke-width="2.4"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    d="M 23.8 11.2 C 20.5 11.2 18.2 12.8 18.2 15.4 C 18.2 16.9 19.2 17.9 21.4 18.4 C 23.4 18.8 24.3 19.7 24.3 21.3 C 24.3 23.3 22.4 24.8 19.2 24.8"
+  />
+
+  <!-- ] -->
+  <rect x="25.1" y="7.5" width="2.4" height="17" rx="0.6" fill="#8957e5"/>
+  <rect x="22" y="7.5" width="5.5" height="2.4" rx="0.6" fill="#8957e5"/>
+  <rect x="22" y="22.1" width="5.5" height="2.4" rx="0.6" fill="#8957e5"/>
+</svg>
