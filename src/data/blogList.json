@@ -1,6 +1,23 @@
 {
   "posts": [
     {
+      "id": "post-2026-05-31t08-09-00",
+      "title": "Post-2026-05-31T08-09-00",
+      "slug": "post-2026-05-31t08-09-00",
+      "date": "2026-06-02",
+      "tags": [
+        "acrylic-painting",
+        "canvas-art",
+        "personalized-gift",
+        "art",
+        "crafts",
+        "family"
+      ],
+      "category": "General",
+      "readTime": "3 min",
+      "excerpt": "Painting a Name, Painting a Memory  There is something magical about a blank canvas. It starts as a simple white surface, but with every brush stroke, splash of..."
+    },
+    {
       "id": "post-2026-05-31t06-45-00",
       "title": "Redis Internal Working: Unveiling the Magic",
       "slug": "post-2026-05-31t06-45-00",
