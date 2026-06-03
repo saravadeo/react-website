@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "ai-news-roundup-2026-06-03",
+      "title": "AI News Roundup — June 3, 2026: Trump's AI Executive Order, Microsoft Build Goes All-In on Agents, and Alphabet's $80B AI Bet",
+      "date": "2026-06-03",
+      "tags": ["ai", "news"],
+      "category": "AI News",
+      "readTime": "7 min",
+      "excerpt": "Trump signs a voluntary AI review executive order. Microsoft Build 2026 turns Windows into an AI agent platform. Alphabet raises $80 billion for AI infrastructure. Here's everything happening in AI this week."
+    },
+    {
       "id": "post-2026-05-31t08-09-00",
       "title": "Post-2026-05-31T08-09-00",
       "slug": "post-2026-05-31t08-09-00",
