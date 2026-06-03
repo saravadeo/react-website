@@ -120,6 +120,7 @@ const BlogPost = () => {
       .replace(/\*\*([^*]+)\*\*/gim, '<strong>$1</strong>')
       .replace(/\*([^*]+)\*/gim, '<em>$1</em>')
       .replace(/`([^`]+)`/gim, '<code>$1</code>')
+      .replace(/!\[([^\]]+)\]\(([^)]+)\)/gim, '<img src="$2" alt="$1" />')
       .replace(/\[([^\]]+)\]\(([^)]+)\)/gim, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
       .replace(/^- (.*$)/gim, '<li>$1</li>')
       .split('\n\n')
