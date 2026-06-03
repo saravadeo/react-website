@@ -10,9 +10,9 @@
       "excerpt": "Trump signs a voluntary AI review executive order. Microsoft Build 2026 turns Windows into an AI agent platform. Alphabet raises $80 billion for AI infrastructure. Here's everything happening in AI this week."
     },
     {
-      "id": "post-2026-05-31t08-09-00",
-      "title": "Post-2026-05-31T08-09-00",
-      "slug": "post-2026-05-31t08-09-00",
+      "id": "painting-a-name-painting-a-memory",
+      "title": "Painting a Name, Painting a Memory",
+      "slug": "painting-a-name-painting-a-memory",
       "date": "2026-06-02",
       "tags": [
         "acrylic-painting",
@@ -24,7 +24,8 @@
       ],
       "category": "General",
       "readTime": "3 min",
-      "excerpt": "Painting a Name, Painting a Memory  There is something magical about a blank canvas. It starts as a simple white surface, but with every brush stroke, splash of..."
+      "image": "/images/blog/dhruvi-painting-1.jpg",
+      "excerpt": "Painting a Name, Painting a Memory — There is something magical about a blank canvas. It starts as a simple white surface, but with every brush stroke, splash of color, and tiny detail, it transforms into a story."
     },
     {
       "id": "post-2026-05-31t06-45-00",

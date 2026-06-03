@@ -1,18 +1,23 @@
 ---
-title: "Post-2026-05-31T08-09-00"
+title: "Painting a Name, Painting a Memory"
 date: "2026-06-02"
 tags: ["acrylic-painting","canvas-art","personalized-gift","art","crafts","family"]
 category: "General"
 readTime: "3 min"
-slug: "post-2026-05-31t08-09-00"
-excerpt: "Painting a Name, Painting a Memory  There is something magical about a blank canvas. It starts as a simple white surface, but with every brush stroke, splash of..."
+slug: "painting-a-name-painting-a-memory"
+excerpt: "Painting a Name, Painting a Memory — There is something magical about a blank canvas. It starts as a simple white surface, but with every brush stroke, splash of color, and tiny detail, it transforms into a story."
+image: "/images/blog/dhruvi-painting-1.jpg"
 ---
 
-Painting a Name, Painting a Memory
+# Painting a Name, Painting a Memory
+
+![Dhruvi's personalized canvas painting — name with crown, flowers, and hearts](/images/blog/dhruvi-painting-1.jpg)
 
 There is something magical about a blank canvas. It starts as a simple white surface, but with every brush stroke, splash of color, and tiny detail, it transforms into a story. Acrylic painting gives us that power—the ability to turn emotions into something visible.
 
 Recently, I created a personalized canvas for my daughter, Dhruvi, and it reminded me why I love working with acrylic colors so much.
+
+![The completed canvas with art supplies — the creative process](/images/blog/dhruvi-painting-2.jpg)
 
 The canvas features soft pink tones blending into a dreamy background, delicate flowers along the bottom, tiny hearts scattered across the surface, and a golden crown above her name. The words "Blessed With Love" sit beneath her name, making the painting feel less like decoration and more like a celebration of family, love, and new beginnings.
 
