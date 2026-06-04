@@ -1,10 +1,25 @@
 {
   "posts": [
     {
+      "slug": "ai-news-roundup-2026-06-04",
+      "title": "AI News Roundup — June 4, 2026: xAI Restructures After SpaceX Merger, Google's $2.4B Windsurf Coup, SoftBank Bets $87B on France, and MiniMax M3 Enters the Ring",
+      "date": "2026-06-04",
+      "tags": [
+        "ai",
+        "news"
+      ],
+      "category": "AI News",
+      "readTime": "8 min",
+      "excerpt": "Elon Musk restructures xAI into four units after the SpaceX merger. Google swoops in on Windsurf for $2.4B, snatching it from OpenAI. SoftBank commits $87.3B to French AI data centers. MiniMax launches M3, an open-weight model claiming frontier coding performance."
+    },
+    {
       "slug": "ai-news-roundup-2026-06-03",
       "title": "AI News Roundup — June 3, 2026: Trump's AI Executive Order, Microsoft Build Goes All-In on Agents, and Alphabet's $80B AI Bet",
       "date": "2026-06-03",
-      "tags": ["ai", "news"],
+      "tags": [
+        "ai",
+        "news"
+      ],
       "category": "AI News",
       "readTime": "7 min",
       "excerpt": "Trump signs a voluntary AI review executive order. Microsoft Build 2026 turns Windows into an AI agent platform. Alphabet raises $80 billion for AI infrastructure. Here's everything happening in AI this week."
