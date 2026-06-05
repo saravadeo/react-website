@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "ai-news-roundup-2026-06-05",
+      "title": "AI News Roundup — June 5, 2026: D.C. Circuit Grills Pentagon in Anthropic Showdown, Canada Bets $200B on Sovereign AI, Chai Discovery Chases $3.4B Valuation, and Cognizant Hosts AI Forum",
+      "date": "2026-06-05",
+      "tags": ["ai", "news"],
+      "category": "AI News",
+      "readTime": "9 min",
+      "excerpt": "D.C. Circuit judges call the Pentagon's Anthropic blacklisting 'spectacular overreach.' Canada launches a $200B sovereign AI strategy with a public supercomputer. Chai Discovery is in talks to raise $400M at a $3.4B valuation. Cognizant brings enterprise leaders together at its AI Forum."
+    },
+    {
       "slug": "ai-news-roundup-2026-06-04",
       "title": "AI News Roundup — June 4, 2026: xAI Restructures After SpaceX Merger, Google's $2.4B Windsurf Coup, SoftBank Bets $87B on France, and MiniMax M3 Enters the Ring",
       "date": "2026-06-04",
