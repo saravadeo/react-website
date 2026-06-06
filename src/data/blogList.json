@@ -1,10 +1,25 @@
 {
   "posts": [
     {
+      "slug": "ai-news-roundup-2026-06-06",
+      "title": "AI News Roundup — June 6, 2026: Great American AI Act, ChatGPT Dreaming V3, Anthropic IPO, SpaceX Record Debut, and NVIDIA Reinvents the PC",
+      "date": "2026-06-06",
+      "tags": [
+        "ai",
+        "news"
+      ],
+      "category": "AI News",
+      "readTime": "10 min",
+      "excerpt": "A 269-page federal AI bill lands in Congress. ChatGPT gets a memory revolution with Dreaming V3. Anthropic confidentially files for IPO. SpaceX targets a $75B record. NVIDIA launches RTX Spark. Microsoft builds 7 models without OpenAI."
+    },
+    {
       "slug": "ai-news-roundup-2026-06-05",
       "title": "AI News Roundup — June 5, 2026: D.C. Circuit Grills Pentagon in Anthropic Showdown, Canada Bets $200B on Sovereign AI, Chai Discovery Chases $3.4B Valuation, and Cognizant Hosts AI Forum",
       "date": "2026-06-05",
-      "tags": ["ai", "news"],
+      "tags": [
+        "ai",
+        "news"
+      ],
       "category": "AI News",
       "readTime": "9 min",
       "excerpt": "D.C. Circuit judges call the Pentagon's Anthropic blacklisting 'spectacular overreach.' Canada launches a $200B sovereign AI strategy with a public supercomputer. Chai Discovery is in talks to raise $400M at a $3.4B valuation. Cognizant brings enterprise leaders together at its AI Forum."
