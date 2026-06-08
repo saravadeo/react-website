@@ -1,6 +1,24 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-06-08",
+      "title": "AI News Roundup: Anthropic's IPO Filing, ChatGPT Gets 'Dreaming' Memory, SpaceX Goes Public, and More — June 8, 2026",
+      "slug": "ai-news-roundup-2026-06-08",
+      "date": "2026-06-08",
+      "tags": [
+        "ai",
+        "news",
+        "anthropic",
+        "openai",
+        "spacex",
+        "apple",
+        "agents"
+      ],
+      "category": "AI News",
+      "readTime": "8 min",
+      "excerpt": "From Anthropic's confidential IPO filing and its call for an AI 'brake pedal,' to OpenAI's Dreaming memory system and ChatGPT Lockdown Mode, to SpaceX's historic IPO — here's everything that happened in AI this week."
+    },
+    {
       "id": "painting-a-name-painting-a-memory",
       "title": "Painting a Name, Painting a Memory",
       "slug": "painting-a-name-painting-a-memory",
