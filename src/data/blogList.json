@@ -1,6 +1,24 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-06-09",
+      "title": "AI News Roundup: OpenAI Files for IPO, Apple Unleashes Siri AI, SpaceX Debuts This Week — June 9, 2026",
+      "slug": "ai-news-roundup-2026-06-09",
+      "date": "2026-06-09",
+      "tags": [
+        "ai",
+        "news",
+        "openai",
+        "apple",
+        "spacex",
+        "ipo",
+        "siri"
+      ],
+      "category": "AI News",
+      "readTime": "9 min",
+      "excerpt": "OpenAI confidentially files for IPO days after Anthropic, Apple reinvents Siri with Gemini-powered AI at WWDC 2026, SpaceX prepares the largest IPO in history for June 12, and Florida becomes the first state to sue OpenAI over safety concerns."
+    },
+    {
       "id": "ai-news-roundup-2026-06-08",
       "title": "AI News Roundup: Anthropic's IPO Filing, ChatGPT Gets 'Dreaming' Memory, SpaceX Goes Public, and More — June 8, 2026",
       "slug": "ai-news-roundup-2026-06-08",
