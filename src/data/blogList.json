@@ -1,6 +1,27 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-06-10",
+      "title": "AI News Roundup: Anthropic Drops Fable 5 and a Safety Warning, OpenAI's IPO Race, Trump's AI Order, Meta's API Limbo — June 10, 2026",
+      "slug": "ai-news-roundup-2026-06-10",
+      "date": "2026-06-10",
+      "tags": [
+        "ai",
+        "news",
+        "anthropic",
+        "openai",
+        "meta",
+        "spacex",
+        "ipo",
+        "fable-5",
+        "agents",
+        "policy"
+      ],
+      "category": "AI News",
+      "readTime": "9 min",
+      "excerpt": "Anthropic releases its most powerful public model yet — Claude Fable 5 — on the same day it warns of recursive self-improvement risks, OpenAI's IPO filing targets an $850B valuation, Trump signs a sweeping AI executive order, and Meta's Muse Spark API gets delayed again."
+    },
+    {
       "id": "ai-news-roundup-2026-06-09",
       "title": "AI News Roundup: OpenAI Files for IPO, Apple Unleashes Siri AI, SpaceX Debuts This Week — June 9, 2026",
       "slug": "ai-news-roundup-2026-06-09",
