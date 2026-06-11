@@ -1,6 +1,27 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-06-11",
+      "title": "AI News Roundup: Microsoft Blocks Fable 5, SpaceX IPO Eve, ChatGPT Learns to Dream, Stanford's Sobering AI Report — June 11, 2026",
+      "slug": "ai-news-roundup-2026-06-11",
+      "date": "2026-06-11",
+      "tags": [
+        "ai",
+        "news",
+        "microsoft",
+        "anthropic",
+        "spacex",
+        "openai",
+        "google",
+        "apple",
+        "agents",
+        "policy"
+      ],
+      "category": "AI News",
+      "readTime": "10 min",
+      "excerpt": "Microsoft restricts employee use of Claude Fable 5 over data retention concerns, SpaceX's record-shattering $1.75T IPO debuts tomorrow, ChatGPT's Dreaming V3 rewrites how AI remembers you, and Stanford's 2026 AI Index reveals agents hitting human-level performance at unprecedented speed."
+    },
+    {
       "id": "ai-news-roundup-2026-06-10",
       "title": "AI News Roundup: Anthropic Drops Fable 5 and a Safety Warning, OpenAI's IPO Race, Trump's AI Order, Meta's API Limbo — June 10, 2026",
       "slug": "ai-news-roundup-2026-06-10",
