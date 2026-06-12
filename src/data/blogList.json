@@ -1,6 +1,27 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-06-12",
+      "title": "AI News Roundup: SpaceX IPO Day Arrives, OpenAI Files for IPO, EU AI Act Takes Effect, Codex Gets Business Plugins — June 12, 2026",
+      "slug": "ai-news-roundup-2026-06-12",
+      "date": "2026-06-12",
+      "tags": [
+        "ai",
+        "news",
+        "spacex",
+        "openai",
+        "anthropic",
+        "ipo",
+        "eu",
+        "codex",
+        "agents",
+        "policy"
+      ],
+      "category": "AI News",
+      "readTime": "10 min",
+      "excerpt": "SpaceX begins trading on Nasdaq in the largest IPO ever, OpenAI confidentially files for its own IPO, the EU AI Act's Code of Practice takes effect, and OpenAI puts Codex inside ChatGPT with six business plugins."
+    },
+    {
       "id": "ai-news-roundup-2026-06-11",
       "title": "AI News Roundup: Microsoft Blocks Fable 5, SpaceX IPO Eve, ChatGPT Learns to Dream, Stanford's Sobering AI Report — June 11, 2026",
       "slug": "ai-news-roundup-2026-06-11",
