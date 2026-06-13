@@ -1,6 +1,27 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-06-13",
+      "title": "AI News Roundup: SpaceX's $2 Trillion Nasdaq Debut, Musk Becomes Trillionaire, Google Gemini Live Translate Launches, Apple's Siri AI Rollout — June 13, 2026",
+      "slug": "ai-news-roundup-2026-06-13",
+      "date": "2026-06-13",
+      "tags": [
+        "ai",
+        "news",
+        "spacex",
+        "google",
+        "apple",
+        "anthropic",
+        "ipo",
+        "nvidia",
+        "agents",
+        "policy"
+      ],
+      "category": "AI News",
+      "readTime": "10 min",
+      "excerpt": "SpaceX closes its first trading day at a $2 trillion valuation making Elon Musk the world's first trillionaire, Google launches Gemini 3.5 Live Translate across 70+ languages, Apple's Siri AI begins rolling out with iOS 27, and Nvidia-backed Neura Robotics secures $1.4B to scale humanoid robots."
+    },
+    {
       "id": "ai-news-roundup-2026-06-12",
       "title": "AI News Roundup: SpaceX IPO Day Arrives, OpenAI Files for IPO, EU AI Act Takes Effect, Codex Gets Business Plugins — June 12, 2026",
       "slug": "ai-news-roundup-2026-06-12",
