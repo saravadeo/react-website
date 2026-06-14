@@ -1,6 +1,27 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-06-14",
+      "title": "AI News Roundup: US Government Shuts Down Claude Fable 5 and Mythos 5, OpenAI's $852B IPO Filing, Google Signs $920M/Month SpaceX Compute Deal — June 14, 2026",
+      "slug": "ai-news-roundup-2026-06-14",
+      "date": "2026-06-14",
+      "tags": [
+        "ai",
+        "news",
+        "anthropic",
+        "openai",
+        "google",
+        "spacex",
+        "ipo",
+        "export-controls",
+        "policy",
+        "agents"
+      ],
+      "category": "AI News",
+      "readTime": "10 min",
+      "excerpt": "The US government forces Anthropic to shut down Claude Fable 5 and Mythos 5 under a national security export directive, OpenAI confidentially files for an $852B IPO, Google signs a $920M/month deal with SpaceX for AI compute capacity, and Meta employees push back hard against Zuck's mandatory AI hackathon."
+    },
+    {
       "id": "ai-news-roundup-2026-06-13",
       "title": "AI News Roundup: SpaceX's $2 Trillion Nasdaq Debut, Musk Becomes Trillionaire, Google Gemini Live Translate Launches, Apple's Siri AI Rollout — June 13, 2026",
       "slug": "ai-news-roundup-2026-06-13",
