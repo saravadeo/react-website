@@ -1,6 +1,26 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-06-17",
+      "title": "AI News Roundup: G7 Leaders Fear US AI Kill Switch, Anthropic Joins Carbon Removal Coalition, GLM-5.2 Tops Open-Source Benchmarks, and Only 16% of Americans Trust AI — June 17, 2026",
+      "slug": "ai-news-roundup-2026-06-17",
+      "date": "2026-06-17",
+      "tags": [
+        "ai",
+        "news",
+        "anthropic",
+        "google",
+        "open-source",
+        "regulation",
+        "agents",
+        "robotics",
+        "gemini"
+      ],
+      "category": "AI News",
+      "readTime": "12 min",
+      "excerpt": "G7 leaders warn that the US could cut off AI model access overnight, Anthropic becomes the first AI startup to join the Frontier carbon removal coalition, Z.ai's GLM-5.2 dethrones competitors as the leading open-weights model, and a Pew study finds just 16% of Americans think AI will positively impact society."
+    },
+    {
       "id": "ai-news-roundup-2026-06-16",
       "title": "AI News Roundup: Anthropic Launches Claude Corps, ChatGPT Market Share Drops Below 50%, DOJ Shields xAI From Pollution Lawsuit, and France Dumps Palantir for Homegrown AI — June 16, 2026",
       "slug": "ai-news-roundup-2026-06-16",
