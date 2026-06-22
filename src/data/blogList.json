@@ -1,6 +1,27 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-06-22",
+      "title": "AI News Roundup: Anthropic Demands ID Verification, Trump Escalates Anthropic Crackdown, iOS 27 Brings Practical AI Beyond Siri, Sakana Launches Fugu Multi-Agent Orchestrator, and Open Models Close the Gap — June 22, 2026",
+      "slug": "ai-news-roundup-2026-06-22",
+      "date": "2026-06-22",
+      "tags": [
+        "ai",
+        "news",
+        "anthropic",
+        "apple",
+        "ios-27",
+        "sakana",
+        "fugu",
+        "open-source",
+        "privacy",
+        "policy"
+      ],
+      "category": "AI News",
+      "readTime": "11 min",
+      "excerpt": "Anthropic rolls out government ID verification for Claude users, the Trump administration escalates its crackdown on Anthropic while the AI ecosystem asks who benefits, iOS 27 brings practical AI features beyond Siri, Sakana AI launches Fugu — a multi-agent system delivered as one model API — and a compelling case that switching to open models now carries minimal downside."
+    },
+    {
       "id": "ai-news-roundup-2026-06-21",
       "title": "AI News Roundup: SpaceX Acquires Cursor for $60B, Nobel Laureate Jumper Leaves DeepMind for Anthropic, Cloudflare Launches Temporary Accounts for Agents, and GPT-5.5's Hallucination Problem Exposed — June 21, 2026",
       "slug": "ai-news-roundup-2026-06-21",
