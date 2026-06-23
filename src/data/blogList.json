@@ -1,6 +1,29 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-06-23",
+      "title": "AI News Roundup: Five Eyes Warns Devastating AI Attacks Are Months Away, Baseten Hits $13B Valuation, OpenAI Fights Open-Source Bugs, Groq Rises From Nvidia's Ashes, and AI Agents Start Running Cafes — June 23, 2026",
+      "slug": "ai-news-roundup-2026-06-23",
+      "date": "2026-06-23",
+      "tags": [
+        "ai",
+        "news",
+        "five-eyes",
+        "cybersecurity",
+        "baseten",
+        "openai",
+        "groq",
+        "spacex",
+        "agents",
+        "nvidia",
+        "anthropic",
+        "mythos"
+      ],
+      "category": "AI News",
+      "readTime": "12 min",
+      "excerpt": "Five Eyes intelligence agencies issue a rare joint warning that AI models capable of devastating cyberattacks on governments and businesses are only months away. Baseten reaches $13B valuation, OpenAI launches an open-source security initiative, Groq confirms $650M raise after Nvidia's talent drain, SpaceX inks a massive compute deal with Reflection AI, and an AI agent is literally running a Swedish cafe."
+    },
+    {
       "id": "ai-news-roundup-2026-06-22",
       "title": "AI News Roundup: Anthropic Demands ID Verification, Trump Escalates Anthropic Crackdown, iOS 27 Brings Practical AI Beyond Siri, Sakana Launches Fugu Multi-Agent Orchestrator, and Open Models Close the Gap — June 22, 2026",
       "slug": "ai-news-roundup-2026-06-22",
