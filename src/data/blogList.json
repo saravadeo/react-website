@@ -1,6 +1,28 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-06-24",
+      "title": "AI News Roundup: Anthropic Raises $30B and Poaches a Nobel Laureate, OpenAI's Cyber Model Beats Mythos, Nvidia Becomes World's Most Valuable Company, Oracle Cuts 21K Jobs for AI, and Meta Launches $299 Smart Glasses — June 24, 2026",
+      "slug": "ai-news-roundup-2026-06-24",
+      "date": "2026-06-24",
+      "tags": [
+        "ai",
+        "news",
+        "anthropic",
+        "openai",
+        "nvidia",
+        "oracle",
+        "meta",
+        "menlo-ventures",
+        "cybersecurity",
+        "smart-glasses",
+        "deepmind"
+      ],
+      "category": "AI News",
+      "readTime": "13 min",
+      "excerpt": "Anthropic closes a monster $30B round and poaches DeepMind's Nobel laureate John Jumper. OpenAI's GPT-5.5 Cyber beats Anthropic's banned Mythos model — and nobody's shutting it down. Nvidia officially becomes the world's most valuable company. Oracle admits AI cost 21,000 jobs. Meta drops $299 smart glasses. The AI arms race isn't slowing down — it's accelerating on every front."
+    },
+    {
       "id": "ai-news-roundup-2026-06-23",
       "title": "AI News Roundup: Five Eyes Warns Devastating AI Attacks Are Months Away, Baseten Hits $13B Valuation, OpenAI Fights Open-Source Bugs, Groq Rises From Nvidia's Ashes, and AI Agents Start Running Cafes — June 23, 2026",
       "slug": "ai-news-roundup-2026-06-23",
