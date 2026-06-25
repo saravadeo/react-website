@@ -1,8 +1,32 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-06-25",
+      "title": "AI News Roundup: OpenAI Unveils Its First Custom Chip 'Jalape\u00f1o', Anthropic Accuses Alibaba of Stealing Claude's Secrets, Google Brings Computer Use to Gemini 3.5 Flash, Qualcomm Buys Modular for $4B, and SpaceX Bets $6.3B on Reflection \u2014 June 25, 2026",
+      "slug": "ai-news-roundup-2026-06-25",
+      "date": "2026-06-25",
+      "tags": [
+        "ai",
+        "news",
+        "openai",
+        "anthropic",
+        "google",
+        "gemini",
+        "qualcomm",
+        "broadcom",
+        "alibaba",
+        "spacex",
+        "reflection",
+        "chips",
+        "cybersecurity"
+      ],
+      "category": "AI News",
+      "readTime": "14 min",
+      "excerpt": "OpenAI unveils Jalape\u00f1o, its first custom AI inference chip built with Broadcom. Anthropic accuses Alibaba of a brazen campaign to extract Claude's model capabilities. Google launches computer use in Gemini 3.5 Flash. Qualcomm acquires Modular for $4 billion in an AI software push. SpaceX signs a $6.3 billion compute deal with open-source startup Reflection. The AI hardware and security wars are now fully underway."
+    },
+    {
       "id": "ai-news-roundup-2026-06-24",
-      "title": "AI News Roundup: Anthropic Raises $30B and Poaches a Nobel Laureate, OpenAI's Cyber Model Beats Mythos, Nvidia Becomes World's Most Valuable Company, Oracle Cuts 21K Jobs for AI, and Meta Launches $299 Smart Glasses — June 24, 2026",
+      "title": "AI News Roundup: Anthropic Raises $30B and Poaches a Nobel Laureate, OpenAI's Cyber Model Beats Mythos, Nvidia Becomes World's Most Valuable Company, Oracle Cuts 21K Jobs for AI, and Meta Launches $299 Smart Glasses \u2014 June 24, 2026",
       "slug": "ai-news-roundup-2026-06-24",
       "date": "2026-06-24",
       "tags": [
@@ -20,11 +44,11 @@
       ],
       "category": "AI News",
       "readTime": "13 min",
-      "excerpt": "Anthropic closes a monster $30B round and poaches DeepMind's Nobel laureate John Jumper. OpenAI's GPT-5.5 Cyber beats Anthropic's banned Mythos model — and nobody's shutting it down. Nvidia officially becomes the world's most valuable company. Oracle admits AI cost 21,000 jobs. Meta drops $299 smart glasses. The AI arms race isn't slowing down — it's accelerating on every front."
+      "excerpt": "Anthropic closes a monster $30B round and poaches DeepMind's Nobel laureate John Jumper. OpenAI's GPT-5.5 Cyber beats Anthropic's banned Mythos model \u2014 and nobody's shutting it down. Nvidia officially becomes the world's most valuable company. Oracle admits AI cost 21,000 jobs. Meta drops $299 smart glasses. The AI arms race isn't slowing down \u2014 it's accelerating on every front."
     },
     {
       "id": "ai-news-roundup-2026-06-23",
-      "title": "AI News Roundup: Five Eyes Warns Devastating AI Attacks Are Months Away, Baseten Hits $13B Valuation, OpenAI Fights Open-Source Bugs, Groq Rises From Nvidia's Ashes, and AI Agents Start Running Cafes — June 23, 2026",
+      "title": "AI News Roundup: Five Eyes Warns Devastating AI Attacks Are Months Away, Baseten Hits $13B Valuation, OpenAI Fights Open-Source Bugs, Groq Rises From Nvidia's Ashes, and AI Agents Start Running Cafes \u2014 June 23, 2026",
       "slug": "ai-news-roundup-2026-06-23",
       "date": "2026-06-23",
       "tags": [
@@ -47,7 +71,7 @@
     },
     {
       "id": "ai-news-roundup-2026-06-22",
-      "title": "AI News Roundup: Anthropic Demands ID Verification, Trump Escalates Anthropic Crackdown, iOS 27 Brings Practical AI Beyond Siri, Sakana Launches Fugu Multi-Agent Orchestrator, and Open Models Close the Gap — June 22, 2026",
+      "title": "AI News Roundup: Anthropic Demands ID Verification, Trump Escalates Anthropic Crackdown, iOS 27 Brings Practical AI Beyond Siri, Sakana Launches Fugu Multi-Agent Orchestrator, and Open Models Close the Gap \u2014 June 22, 2026",
       "slug": "ai-news-roundup-2026-06-22",
       "date": "2026-06-22",
       "tags": [
@@ -64,11 +88,11 @@
       ],
       "category": "AI News",
       "readTime": "11 min",
-      "excerpt": "Anthropic rolls out government ID verification for Claude users, the Trump administration escalates its crackdown on Anthropic while the AI ecosystem asks who benefits, iOS 27 brings practical AI features beyond Siri, Sakana AI launches Fugu — a multi-agent system delivered as one model API — and a compelling case that switching to open models now carries minimal downside."
+      "excerpt": "Anthropic rolls out government ID verification for Claude users, the Trump administration escalates its crackdown on Anthropic while the AI ecosystem asks who benefits, iOS 27 brings practical AI features beyond Siri, Sakana AI launches Fugu \u2014 a multi-agent system delivered as one model API \u2014 and a compelling case that switching to open models now carries minimal downside."
     },
     {
       "id": "ai-news-roundup-2026-06-21",
-      "title": "AI News Roundup: SpaceX Acquires Cursor for $60B, Nobel Laureate Jumper Leaves DeepMind for Anthropic, Cloudflare Launches Temporary Accounts for Agents, and GPT-5.5's Hallucination Problem Exposed — June 21, 2026",
+      "title": "AI News Roundup: SpaceX Acquires Cursor for $60B, Nobel Laureate Jumper Leaves DeepMind for Anthropic, Cloudflare Launches Temporary Accounts for Agents, and GPT-5.5's Hallucination Problem Exposed \u2014 June 21, 2026",
       "slug": "ai-news-roundup-2026-06-21",
       "date": "2026-06-21",
       "tags": [
@@ -89,7 +113,7 @@
     },
     {
       "id": "ai-news-roundup-2026-06-18",
-      "title": "AI News Roundup: Noam Shazeer Leaves Google for OpenAI, DeepSeek Launches Vision, MCP Gets Zero-Touch OAuth, and 10K GitHub Repos Found Distributing Malware — June 18, 2026",
+      "title": "AI News Roundup: Noam Shazeer Leaves Google for OpenAI, DeepSeek Launches Vision, MCP Gets Zero-Touch OAuth, and 10K GitHub Repos Found Distributing Malware \u2014 June 18, 2026",
       "slug": "ai-news-roundup-2026-06-18",
       "date": "2026-06-18",
       "tags": [
@@ -110,7 +134,7 @@
     },
     {
       "id": "ai-news-roundup-2026-06-17",
-      "title": "AI News Roundup: G7 Leaders Fear US AI Kill Switch, Anthropic Joins Carbon Removal Coalition, GLM-5.2 Tops Open-Source Benchmarks, and Only 16% of Americans Trust AI — June 17, 2026",
+      "title": "AI News Roundup: G7 Leaders Fear US AI Kill Switch, Anthropic Joins Carbon Removal Coalition, GLM-5.2 Tops Open-Source Benchmarks, and Only 16% of Americans Trust AI \u2014 June 17, 2026",
       "slug": "ai-news-roundup-2026-06-17",
       "date": "2026-06-17",
       "tags": [
@@ -130,7 +154,7 @@
     },
     {
       "id": "ai-news-roundup-2026-06-16",
-      "title": "AI News Roundup: Anthropic Launches Claude Corps, ChatGPT Market Share Drops Below 50%, DOJ Shields xAI From Pollution Lawsuit, and France Dumps Palantir for Homegrown AI — June 16, 2026",
+      "title": "AI News Roundup: Anthropic Launches Claude Corps, ChatGPT Market Share Drops Below 50%, DOJ Shields xAI From Pollution Lawsuit, and France Dumps Palantir for Homegrown AI \u2014 June 16, 2026",
       "slug": "ai-news-roundup-2026-06-16",
       "date": "2026-06-16",
       "tags": [
@@ -146,11 +170,11 @@
       ],
       "category": "AI News",
       "readTime": "13 min",
-      "excerpt": "Anthropic unveils Claude Corps for enterprise agent swarms, ChatGPT's market share slips below 50% for the first time, the DOJ intervenes to shield xAI's data center from environmental lawsuits, and France drops Palantir as it bets €655M on sovereign AI."
+      "excerpt": "Anthropic unveils Claude Corps for enterprise agent swarms, ChatGPT's market share slips below 50% for the first time, the DOJ intervenes to shield xAI's data center from environmental lawsuits, and France drops Palantir as it bets \u20ac655M on sovereign AI."
     },
     {
       "id": "ai-news-roundup-2026-06-15",
-      "title": "AI News Roundup: Anthropic Flies Staff to D.C. After Fable Shutdown, OpenAI Faces 42-State Probe, Apple Reinvents Siri, and Google Loses Landmark AI Liability Case — June 15, 2026",
+      "title": "AI News Roundup: Anthropic Flies Staff to D.C. After Fable Shutdown, OpenAI Faces 42-State Probe, Apple Reinvents Siri, and Google Loses Landmark AI Liability Case \u2014 June 15, 2026",
       "slug": "ai-news-roundup-2026-06-15",
       "date": "2026-06-15",
       "tags": [
@@ -170,7 +194,7 @@
     },
     {
       "id": "ai-news-roundup-2026-06-14",
-      "title": "AI News Roundup: US Government Shuts Down Claude Fable 5 and Mythos 5, OpenAI's $852B IPO Filing, Google Signs $920M/Month SpaceX Compute Deal — June 14, 2026",
+      "title": "AI News Roundup: US Government Shuts Down Claude Fable 5 and Mythos 5, OpenAI's $852B IPO Filing, Google Signs $920M/Month SpaceX Compute Deal \u2014 June 14, 2026",
       "slug": "ai-news-roundup-2026-06-14",
       "date": "2026-06-14",
       "tags": [
@@ -191,7 +215,7 @@
     },
     {
       "id": "ai-news-roundup-2026-06-13",
-      "title": "AI News Roundup: SpaceX's $2 Trillion Nasdaq Debut, Musk Becomes Trillionaire, Google Gemini Live Translate Launches, Apple's Siri AI Rollout — June 13, 2026",
+      "title": "AI News Roundup: SpaceX's $2 Trillion Nasdaq Debut, Musk Becomes Trillionaire, Google Gemini Live Translate Launches, Apple's Siri AI Rollout \u2014 June 13, 2026",
       "slug": "ai-news-roundup-2026-06-13",
       "date": "2026-06-13",
       "tags": [
@@ -212,7 +236,7 @@
     },
     {
       "id": "ai-news-roundup-2026-06-12",
-      "title": "AI News Roundup: SpaceX IPO Day Arrives, OpenAI Files for IPO, EU AI Act Takes Effect, Codex Gets Business Plugins — June 12, 2026",
+      "title": "AI News Roundup: SpaceX IPO Day Arrives, OpenAI Files for IPO, EU AI Act Takes Effect, Codex Gets Business Plugins \u2014 June 12, 2026",
       "slug": "ai-news-roundup-2026-06-12",
       "date": "2026-06-12",
       "tags": [
@@ -233,7 +257,7 @@
     },
     {
       "id": "ai-news-roundup-2026-06-11",
-      "title": "AI News Roundup: Microsoft Blocks Fable 5, SpaceX IPO Eve, ChatGPT Learns to Dream, Stanford's Sobering AI Report — June 11, 2026",
+      "title": "AI News Roundup: Microsoft Blocks Fable 5, SpaceX IPO Eve, ChatGPT Learns to Dream, Stanford's Sobering AI Report \u2014 June 11, 2026",
       "slug": "ai-news-roundup-2026-06-11",
       "date": "2026-06-11",
       "tags": [
@@ -254,7 +278,7 @@
     },
     {
       "id": "ai-news-roundup-2026-06-10",
-      "title": "AI News Roundup: Anthropic Drops Fable 5 and a Safety Warning, OpenAI's IPO Race, Trump's AI Order, Meta's API Limbo — June 10, 2026",
+      "title": "AI News Roundup: Anthropic Drops Fable 5 and a Safety Warning, OpenAI's IPO Race, Trump's AI Order, Meta's API Limbo \u2014 June 10, 2026",
       "slug": "ai-news-roundup-2026-06-10",
       "date": "2026-06-10",
       "tags": [
@@ -271,11 +295,11 @@
       ],
       "category": "AI News",
       "readTime": "9 min",
-      "excerpt": "Anthropic releases its most powerful public model yet — Claude Fable 5 — on the same day it warns of recursive self-improvement risks, OpenAI's IPO filing targets an $850B valuation, Trump signs a sweeping AI executive order, and Meta's Muse Spark API gets delayed again."
+      "excerpt": "Anthropic releases its most powerful public model yet \u2014 Claude Fable 5 \u2014 on the same day it warns of recursive self-improvement risks, OpenAI's IPO filing targets an $850B valuation, Trump signs a sweeping AI executive order, and Meta's Muse Spark API gets delayed again."
     },
     {
       "id": "ai-news-roundup-2026-06-09",
-      "title": "AI News Roundup: OpenAI Files for IPO, Apple Unleashes Siri AI, SpaceX Debuts This Week — June 9, 2026",
+      "title": "AI News Roundup: OpenAI Files for IPO, Apple Unleashes Siri AI, SpaceX Debuts This Week \u2014 June 9, 2026",
       "slug": "ai-news-roundup-2026-06-09",
       "date": "2026-06-09",
       "tags": [
@@ -293,7 +317,7 @@
     },
     {
       "id": "ai-news-roundup-2026-06-08",
-      "title": "AI News Roundup: Anthropic's IPO Filing, ChatGPT Gets 'Dreaming' Memory, SpaceX Goes Public, and More — June 8, 2026",
+      "title": "AI News Roundup: Anthropic's IPO Filing, ChatGPT Gets 'Dreaming' Memory, SpaceX Goes Public, and More \u2014 June 8, 2026",
       "slug": "ai-news-roundup-2026-06-08",
       "date": "2026-06-08",
       "tags": [
@@ -307,7 +331,7 @@
       ],
       "category": "AI News",
       "readTime": "8 min",
-      "excerpt": "From Anthropic's confidential IPO filing and its call for an AI 'brake pedal,' to OpenAI's Dreaming memory system and ChatGPT Lockdown Mode, to SpaceX's historic IPO — here's everything that happened in AI this week."
+      "excerpt": "From Anthropic's confidential IPO filing and its call for an AI 'brake pedal,' to OpenAI's Dreaming memory system and ChatGPT Lockdown Mode, to SpaceX's historic IPO \u2014 here's everything that happened in AI this week."
     },
     {
       "id": "painting-a-name-painting-a-memory",
@@ -325,7 +349,7 @@
       "category": "General",
       "readTime": "3 min",
       "image": "/images/blog/dhruvi-painting-1.jpg",
-      "excerpt": "Painting a Name, Painting a Memory — There is something magical about a blank canvas. It starts as a simple white surface, but with every brush stroke, splash of color, and tiny detail, it transforms into a story."
+      "excerpt": "Painting a Name, Painting a Memory \u2014 There is something magical about a blank canvas. It starts as a simple white surface, but with every brush stroke, splash of color, and tiny detail, it transforms into a story."
     },
     {
       "id": "post-2026-05-31t06-45-00",
@@ -344,7 +368,7 @@
       "id": "how-i-built-an-ai-powered-youtube-shorts-factory-with-openclaw",
       "title": "How I Built an AI-Powered YouTube Shorts Factory with OpenClaw",
       "date": "2026-05-09",
-      "excerpt": "How I Built an AI-Powered YouTube Shorts Factory with OpenClaw 🚀 What if creating daily YouTube Shorts required almost no manual work? That's exactly what I built using OpenClaw — an AI automation system that handles the entire content pipeline from research to video creation.",
+      "excerpt": "How I Built an AI-Powered YouTube Shorts Factory with OpenClaw \ud83d\ude80 What if creating daily YouTube Shorts required almost no manual work? That's exactly what I built using OpenClaw \u2014 an AI automation system that handles the entire content pipeline from research to video creation.",
       "slug": "how-i-built-an-ai-powered-youtube-shorts-factory-with-openclaw",
       "tags": [
         "blog"
@@ -355,7 +379,7 @@
       "id": "how-i-built-an-ai-entertainment-agent-that-understands-what-i-actually-want-to-watch",
       "title": "How I Built an AI Entertainment Agent That Understands What I Actually Want to Watch",
       "date": "2026-05-08",
-      "excerpt": "Endless scrolling across Netflix, Prime Video, and YouTube every night? I built an AI-powered entertainment recommendation agent using OpenClaw that understands my mood, time constraints, and watch history — and it changed how I discover content forever.",
+      "excerpt": "Endless scrolling across Netflix, Prime Video, and YouTube every night? I built an AI-powered entertainment recommendation agent using OpenClaw that understands my mood, time constraints, and watch history \u2014 and it changed how I discover content forever.",
       "slug": "how-i-built-an-ai-entertainment-agent-that-understands-what-i-actually-want-to-watch",
       "tags": [
         "ai",
@@ -371,7 +395,7 @@
       "id": "bridging-the-observability-gap-automatic-tracing-for-vertx-postgresql-client",
       "title": "Bridging the Observability Gap: Automatic Tracing for Vert.x PostgreSQL Client",
       "date": "2026-05-03",
-      "excerpt": "How we contributed automatic tracing for the Vert.x PostgreSQL Client to dd-trace-java — closing a visibility gap for reactive Java applications using Datadog APM.",
+      "excerpt": "How we contributed automatic tracing for the Vert.x PostgreSQL Client to dd-trace-java \u2014 closing a visibility gap for reactive Java applications using Datadog APM.",
       "slug": "bridging-the-observability-gap-automatic-tracing-for-vertx-postgresql-client",
       "tags": [
         "datadog",
@@ -389,7 +413,7 @@
       "id": "the-soul-of-chhatrapati-shivaji-maharaj-in-the-raja-shivaji-anthem",
       "title": "The Soul of Chhatrapati Shivaji Maharaj in the Raja Shivaji Anthem",
       "date": "2026-05-01",
-      "excerpt": "A deep dive into the Raja Shivaji Anthem — decoding each line to understand why Chhatrapati Shivaji Maharaj remains the ultimate ideal of warrior leadership, spiritual depth, and righteous governance.",
+      "excerpt": "A deep dive into the Raja Shivaji Anthem \u2014 decoding each line to understand why Chhatrapati Shivaji Maharaj remains the ultimate ideal of warrior leadership, spiritual depth, and righteous governance.",
       "slug": "the-soul-of-chhatrapati-shivaji-maharaj-in-the-raja-shivaji-anthem",
       "tags": [
         "history",
@@ -416,7 +440,7 @@
         "chatbot",
         "distributed-systems"
       ],
-      "excerpt": "How I replaced a 100-click web workflow with a single natural language prompt — using LangChain, LangGraph, MCP, and Redis to build a production-ready AI-powered interface."
+      "excerpt": "How I replaced a 100-click web workflow with a single natural language prompt \u2014 using LangChain, LangGraph, MCP, and Redis to build a production-ready AI-powered interface."
     },
     {
       "id": "how-i-automated-my-technical-blog-with-openclaw",
@@ -437,7 +461,7 @@
       "id": "understanding-blockingqueue",
       "title": "Understanding BlockingQueue in Java: A System Design Primitive",
       "date": "2026-04-24",
-      "excerpt": "BlockingQueue is a thread-safe queue from java.util.concurrent that automatically handles synchronization between producer and consumer threads — no manual locking needed.",
+      "excerpt": "BlockingQueue is a thread-safe queue from java.util.concurrent that automatically handles synchronization between producer and consumer threads \u2014 no manual locking needed.",
       "slug": "understanding-blockingqueue",
       "tags": [
         "java",
@@ -454,7 +478,7 @@
       "id": "the-meaning-of-onkar",
       "title": "The Meaning of Onkar",
       "date": "2026-04-23",
-      "excerpt": "The name Onkar is derived from the Sanskrit word Omkar — the embodiment of the sacred sound Om. It represents ultimate reality, universal consciousness, and the origin of existence.",
+      "excerpt": "The name Onkar is derived from the Sanskrit word Omkar \u2014 the embodiment of the sacred sound Om. It represents ultimate reality, universal consciousness, and the origin of existence.",
       "slug": "the-meaning-of-onkar",
       "tags": [
         "idea",
