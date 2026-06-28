@@ -1,6 +1,29 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-06-28",
+      "title": "AI News Roundup: OpenAI Launches GPT-5.6 Sol Under Government-Gated Rollout, Trump Signs AI Oversight Executive Order, Anthropic Accuses Alibaba of Cloning Claude, Samsung Bets $648 Billion on AI, and the Vatican Enters the AI Ethics Arena — June 28, 2026",
+      "slug": "ai-news-roundup-2026-06-28",
+      "date": "2026-06-28",
+      "tags": [
+        "ai",
+        "news",
+        "openai",
+        "gpt-5.6",
+        "anthropic",
+        "alibaba",
+        "trump",
+        "regulation",
+        "samsung",
+        "vatican",
+        "qualcomm",
+        "palantir"
+      ],
+      "category": "AI News",
+      "readTime": "14 min",
+      "excerpt": "OpenAI releases GPT-5.6 Sol — but only to government-approved 'trusted partners,' marking the first US-gated AI model rollout. Trump signs an executive order seeking early government access to powerful AI models. Anthropic accuses Alibaba of running 29 million fake queries to clone Claude. Samsung prepares a staggering $648 billion investment plan as AI reshapes South Korea. Qualcomm forecasts $15 billion in data center chip sales by 2029. And Pope Leo XIV launches a Vatican commission on AI ethics."
+    },
+    {
       "id": "ai-news-roundup-2026-06-26",
       "title": "AI News Roundup: US Loosens Anthropic's Mythos Restrictions, OpenAI Poaches Apple's Vision Pro Chief and Leans Toward 2027 IPO, Anthropic and OpenAI Wage $27M Proxy War in Congress, Meta to Replace 90% of Content Reviewers with AI, and Malaysia Seizes $13M in Smuggled AI Chips — June 26, 2026",
       "slug": "ai-news-roundup-2026-06-26",
