@@ -1,6 +1,23 @@
 {
   "posts": [
     {
+      "id": "turn-your-bathroom-into-a-creative-station",
+      "title": "Turn Your Bathroom Into a Creative Station: How Daily Rituals Can Build Powerful Habits",
+      "slug": "turn-your-bathroom-into-a-creative-station",
+      "date": "2026-06-28",
+      "tags": [
+        "habits",
+        "creativity",
+        "productivity",
+        "habit-stacking",
+        "daily-routine",
+        "lifestyle"
+      ],
+      "category": "General",
+      "readTime": "7 min",
+      "excerpt": "Your bathroom routine is the most reliable habit you have. What if you could hijack it to build a creative practice? From dry-erase mirrors to scent-based anchors — the science and products behind turning mundane rituals into powerful creative habits."
+    },
+    {
       "id": "painting-a-name-painting-a-memory",
       "title": "Painting a Name, Painting a Memory",
       "slug": "painting-a-name-painting-a-memory",
@@ -16,7 +33,7 @@
       "category": "General",
       "readTime": "3 min",
       "image": "/images/blog/dhruvi-painting-1.jpg",
-      "excerpt": "Painting a Name, Painting a Memory \u2014 There is something magical about a blank canvas. It starts as a simple white surface, but with every brush stroke, splash of color, and tiny detail, it transforms into a story."
+      "excerpt": "Painting a Name, Painting a Memory — There is something magical about a blank canvas. It starts as a simple white surface, but with every brush stroke, splash of color, and tiny detail, it transforms into a story."
     },
     {
       "id": "post-2026-05-31t06-45-00",
@@ -35,7 +52,7 @@
       "id": "how-i-built-an-ai-powered-youtube-shorts-factory-with-openclaw",
       "title": "How I Built an AI-Powered YouTube Shorts Factory with OpenClaw",
       "date": "2026-05-09",
-      "excerpt": "How I Built an AI-Powered YouTube Shorts Factory with OpenClaw \ud83d\ude80 What if creating daily YouTube Shorts required almost no manual work? That's exactly what I built using OpenClaw \u2014 an AI automation system that handles the entire content pipeline from research to video creation.",
+      "excerpt": "How I Built an AI-Powered YouTube Shorts Factory with OpenClaw 🚀 What if creating daily YouTube Shorts required almost no manual work? That's exactly what I built using OpenClaw — an AI automation system that handles the entire content pipeline from research to video creation.",
       "slug": "how-i-built-an-ai-powered-youtube-shorts-factory-with-openclaw",
       "tags": [
         "blog"
@@ -46,7 +63,7 @@
       "id": "how-i-built-an-ai-entertainment-agent-that-understands-what-i-actually-want-to-watch",
       "title": "How I Built an AI Entertainment Agent That Understands What I Actually Want to Watch",
       "date": "2026-05-08",
-      "excerpt": "Endless scrolling across Netflix, Prime Video, and YouTube every night? I built an AI-powered entertainment recommendation agent using OpenClaw that understands my mood, time constraints, and watch history \u2014 and it changed how I discover content forever.",
+      "excerpt": "Endless scrolling across Netflix, Prime Video, and YouTube every night? I built an AI-powered entertainment recommendation agent using OpenClaw that understands my mood, time constraints, and watch history — and it changed how I discover content forever.",
       "slug": "how-i-built-an-ai-entertainment-agent-that-understands-what-i-actually-want-to-watch",
       "tags": [
         "ai",
@@ -62,7 +79,7 @@
       "id": "bridging-the-observability-gap-automatic-tracing-for-vertx-postgresql-client",
       "title": "Bridging the Observability Gap: Automatic Tracing for Vert.x PostgreSQL Client",
       "date": "2026-05-03",
-      "excerpt": "How we contributed automatic tracing for the Vert.x PostgreSQL Client to dd-trace-java \u2014 closing a visibility gap for reactive Java applications using Datadog APM.",
+      "excerpt": "How we contributed automatic tracing for the Vert.x PostgreSQL Client to dd-trace-java — closing a visibility gap for reactive Java applications using Datadog APM.",
       "slug": "bridging-the-observability-gap-automatic-tracing-for-vertx-postgresql-client",
       "tags": [
         "datadog",
@@ -80,7 +97,7 @@
       "id": "the-soul-of-chhatrapati-shivaji-maharaj-in-the-raja-shivaji-anthem",
       "title": "The Soul of Chhatrapati Shivaji Maharaj in the Raja Shivaji Anthem",
       "date": "2026-05-01",
-      "excerpt": "A deep dive into the Raja Shivaji Anthem \u2014 decoding each line to understand why Chhatrapati Shivaji Maharaj remains the ultimate ideal of warrior leadership, spiritual depth, and righteous governance.",
+      "excerpt": "A deep dive into the Raja Shivaji Anthem — decoding each line to understand why Chhatrapati Shivaji Maharaj remains the ultimate ideal of warrior leadership, spiritual depth, and righteous governance.",
       "slug": "the-soul-of-chhatrapati-shivaji-maharaj-in-the-raja-shivaji-anthem",
       "tags": [
         "history",
@@ -107,7 +124,7 @@
         "chatbot",
         "distributed-systems"
       ],
-      "excerpt": "How I replaced a 100-click web workflow with a single natural language prompt \u2014 using LangChain, LangGraph, MCP, and Redis to build a production-ready AI-powered interface."
+      "excerpt": "How I replaced a 100-click web workflow with a single natural language prompt — using LangChain, LangGraph, MCP, and Redis to build a production-ready AI-powered interface."
     },
     {
       "id": "how-i-automated-my-technical-blog-with-openclaw",
@@ -128,7 +145,7 @@
       "id": "understanding-blockingqueue",
       "title": "Understanding BlockingQueue in Java: A System Design Primitive",
       "date": "2026-04-24",
-      "excerpt": "BlockingQueue is a thread-safe queue from java.util.concurrent that automatically handles synchronization between producer and consumer threads \u2014 no manual locking needed.",
+      "excerpt": "BlockingQueue is a thread-safe queue from java.util.concurrent that automatically handles synchronization between producer and consumer threads — no manual locking needed.",
       "slug": "understanding-blockingqueue",
       "tags": [
         "java",
@@ -145,7 +162,7 @@
       "id": "the-meaning-of-onkar",
       "title": "The Meaning of Onkar",
       "date": "2026-04-23",
-      "excerpt": "The name Onkar is derived from the Sanskrit word Omkar \u2014 the embodiment of the sacred sound Om. It represents ultimate reality, universal consciousness, and the origin of existence.",
+      "excerpt": "The name Onkar is derived from the Sanskrit word Omkar — the embodiment of the sacred sound Om. It represents ultimate reality, universal consciousness, and the origin of existence.",
       "slug": "the-meaning-of-onkar",
       "tags": [
         "idea",
