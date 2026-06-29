@@ -2,16 +2,19 @@
   "posts": [
     {
       "id": "post-2026-06-28t18-16-54",
-      "title": "Post-2026-06-28T18-16-54",
-      "slug": "post-2026-06-28t18-16-54",
+      "title": "The Anti-Impulse Shopping App: What If You Could Undo Your Order at the Door?",
+      "slug": "the-anti-impulse-shopping-app",
       "date": "2026-06-29",
       "tags": [
-        "app-idea",
-        "blog"
+        "behavioral-economics",
+        "e-commerce",
+        "product-design",
+        "impulse-buying",
+        "app-idea"
       ],
-      "category": "General",
-      "readTime": "1 min",
-      "excerpt": "I have idea regarding creating app for online ordering where user can place order and make payment and wait for delivery and but at the end they get delivery of message saying they don't need these things and they get refund on same day delivery."
+      "category": "Product Design",
+      "readTime": "6 min",
+      "excerpt": "Online shopping makes buying effortless — and regretting inevitable. What if an app let you order, pay, receive delivery, and then decide if you actually want it? A cooling-off period built right into the delivery moment."
     },
     {
       "id": "turn-your-bathroom-into-a-creative-station",
