@@ -1,6 +1,19 @@
 {
   "posts": [
     {
+      "id": "post-2026-06-28t18-16-54",
+      "title": "Post-2026-06-28T18-16-54",
+      "slug": "post-2026-06-28t18-16-54",
+      "date": "2026-06-29",
+      "tags": [
+        "app-idea",
+        "blog"
+      ],
+      "category": "General",
+      "readTime": "1 min",
+      "excerpt": "I have idea regarding creating app for online ordering where user can place order and make payment and wait for delivery and but at the end they get delivery of message saying they don't need these things and they get refund on same day delivery."
+    },
+    {
       "id": "turn-your-bathroom-into-a-creative-station",
       "title": "Turn Your Bathroom Into a Creative Station: How Daily Rituals Can Build Powerful Habits",
       "slug": "turn-your-bathroom-into-a-creative-station",
