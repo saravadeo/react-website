@@ -1,6 +1,16 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-06-30",
+      "title": "AI News Roundup: South Korea Bets $1 Trillion on Chips and Humanoid Robots, SCOTUS Rules Geofence Warrants Need Privacy Protections, Qwen 3.6 Runs Locally Like a Frontier Model, OpenAI Teases Codex Hardware, and Anthropic Partners with California — June 30, 2026",
+      "slug": "ai-news-roundup-2026-06-30",
+      "date": "2026-06-30",
+      "tags": ["ai", "news", "south-korea", "scotus", "qwen", "openai", "anthropic", "cursor", "ornith", "regulation", "privacy"],
+      "category": "AI News",
+      "readTime": "15 min",
+      "excerpt": "South Korea commits $1 trillion to memory chips, AI data centers, and humanoid robots by 2028. The US Supreme Court rules geofence warrants require Fourth Amendment protections. Qwen 3.6 27B becomes the first local model that genuinely competes with frontier AI. OpenAI teases custom hardware for Codex. California makes Claude available to all state agencies. Ornith-1.0 launches as a self-improving open-source coding agent. And Cursor brings AI coding to your iPhone."
+    },
+    {
       "id": "post-2026-06-28t18-16-54",
       "title": "The Anti-Impulse Shopping App: What If You Could Undo Your Order at the Door?",
       "slug": "the-anti-impulse-shopping-app",
