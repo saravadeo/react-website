@@ -1,6 +1,16 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-07-01",
+      "title": "AI News Roundup: Anthropic's AI for Science Event, SpaceX-Reflection $6.3B Compute Deal, Stanford's 2026 AI Index, GPT-5.6 Restricted Access, Colorado Amends AI Law, and White House AI Executive Order — July 1, 2026",
+      "slug": "ai-news-roundup-2026-07-01",
+      "date": "2026-07-01",
+      "tags": ["ai", "news", "anthropic", "spacex", "stanford", "openai", "regulation", "government", "gpt-5.6", "reflection"],
+      "category": "AI News",
+      "readTime": "16 min",
+      "excerpt": "Anthropic hosts its first AI for Science event with Nobel laureate John Jumper. SpaceX signs a $6.3B compute deal with Reflection AI starting July 1. Stanford's 2026 AI Index reveals AI adoption hit 53% in just three years. GPT-5.6 models remain restricted to government-approved partners. Colorado amends its AI law before enforcement begins. And the White House issues a sweeping executive order on AI innovation and security."
+    },
+    {
       "id": "ai-news-roundup-2026-06-30",
       "title": "AI News Roundup: South Korea Bets $1 Trillion on Chips and Humanoid Robots, SCOTUS Rules Geofence Warrants Need Privacy Protections, Qwen 3.6 Runs Locally Like a Frontier Model, OpenAI Teases Codex Hardware, and Anthropic Partners with California — June 30, 2026",
       "slug": "ai-news-roundup-2026-06-30",
