@@ -1,21 +1,65 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-07-02",
+      "title": "AI News Roundup: Anthropic Redeploys Fable 5 After Export Controls Lifted, Claude Sonnet 5 Launches, Claude Science Debuts, OpenAI's Executive Hiring Spree, and OpenClaw Goes Mobile \u2014 July 2, 2026",
+      "slug": "ai-news-roundup-2026-07-02",
+      "date": "2026-07-02",
+      "tags": [
+        "ai",
+        "news",
+        "anthropic",
+        "claude",
+        "sonnet-5",
+        "fable-5",
+        "openai",
+        "openclaw",
+        "government",
+        "regulation"
+      ],
+      "category": "AI News",
+      "readTime": "15 min",
+      "excerpt": "Anthropic redeployed Claude Fable 5 globally on July 1 after the US lifted export controls. Claude Sonnet 5 launched as the most agentic Sonnet yet. Claude Science debuted as a research workbench for scientists. OpenAI hired five top executives from Google, Meta, OpenClaw, and ServiceNow ahead of a possible IPO. And OpenClaw shipped native iOS and Android apps."
+    },
+    {
       "id": "ai-news-roundup-2026-07-01",
-      "title": "AI News Roundup: Anthropic's AI for Science Event, SpaceX-Reflection $6.3B Compute Deal, Stanford's 2026 AI Index, GPT-5.6 Restricted Access, Colorado Amends AI Law, and White House AI Executive Order — July 1, 2026",
+      "title": "AI News Roundup: Anthropic's AI for Science Event, SpaceX-Reflection $6.3B Compute Deal, Stanford's 2026 AI Index, GPT-5.6 Restricted Access, Colorado Amends AI Law, and White House AI Executive Order \u2014 July 1, 2026",
       "slug": "ai-news-roundup-2026-07-01",
       "date": "2026-07-01",
-      "tags": ["ai", "news", "anthropic", "spacex", "stanford", "openai", "regulation", "government", "gpt-5.6", "reflection"],
+      "tags": [
+        "ai",
+        "news",
+        "anthropic",
+        "spacex",
+        "stanford",
+        "openai",
+        "regulation",
+        "government",
+        "gpt-5.6",
+        "reflection"
+      ],
       "category": "AI News",
       "readTime": "16 min",
       "excerpt": "Anthropic hosts its first AI for Science event with Nobel laureate John Jumper. SpaceX signs a $6.3B compute deal with Reflection AI starting July 1. Stanford's 2026 AI Index reveals AI adoption hit 53% in just three years. GPT-5.6 models remain restricted to government-approved partners. Colorado amends its AI law before enforcement begins. And the White House issues a sweeping executive order on AI innovation and security."
     },
     {
       "id": "ai-news-roundup-2026-06-30",
-      "title": "AI News Roundup: South Korea Bets $1 Trillion on Chips and Humanoid Robots, SCOTUS Rules Geofence Warrants Need Privacy Protections, Qwen 3.6 Runs Locally Like a Frontier Model, OpenAI Teases Codex Hardware, and Anthropic Partners with California — June 30, 2026",
+      "title": "AI News Roundup: South Korea Bets $1 Trillion on Chips and Humanoid Robots, SCOTUS Rules Geofence Warrants Need Privacy Protections, Qwen 3.6 Runs Locally Like a Frontier Model, OpenAI Teases Codex Hardware, and Anthropic Partners with California \u2014 June 30, 2026",
       "slug": "ai-news-roundup-2026-06-30",
       "date": "2026-06-30",
-      "tags": ["ai", "news", "south-korea", "scotus", "qwen", "openai", "anthropic", "cursor", "ornith", "regulation", "privacy"],
+      "tags": [
+        "ai",
+        "news",
+        "south-korea",
+        "scotus",
+        "qwen",
+        "openai",
+        "anthropic",
+        "cursor",
+        "ornith",
+        "regulation",
+        "privacy"
+      ],
       "category": "AI News",
       "readTime": "15 min",
       "excerpt": "South Korea commits $1 trillion to memory chips, AI data centers, and humanoid robots by 2028. The US Supreme Court rules geofence warrants require Fourth Amendment protections. Qwen 3.6 27B becomes the first local model that genuinely competes with frontier AI. OpenAI teases custom hardware for Codex. California makes Claude available to all state agencies. Ornith-1.0 launches as a self-improving open-source coding agent. And Cursor brings AI coding to your iPhone."
@@ -34,7 +78,7 @@
       ],
       "category": "Product Design",
       "readTime": "6 min",
-      "excerpt": "Online shopping makes buying effortless — and regretting inevitable. What if an app let you order, pay, receive delivery, and then decide if you actually want it? A cooling-off period built right into the delivery moment."
+      "excerpt": "Online shopping makes buying effortless \u2014 and regretting inevitable. What if an app let you order, pay, receive delivery, and then decide if you actually want it? A cooling-off period built right into the delivery moment."
     },
     {
       "id": "turn-your-bathroom-into-a-creative-station",
@@ -51,7 +95,7 @@
       ],
       "category": "General",
       "readTime": "7 min",
-      "excerpt": "Your bathroom routine is the most reliable habit you have. What if you could hijack it to build a creative practice? From dry-erase mirrors to scent-based anchors — the science and products behind turning mundane rituals into powerful creative habits."
+      "excerpt": "Your bathroom routine is the most reliable habit you have. What if you could hijack it to build a creative practice? From dry-erase mirrors to scent-based anchors \u2014 the science and products behind turning mundane rituals into powerful creative habits."
     },
     {
       "id": "painting-a-name-painting-a-memory",
@@ -69,7 +113,7 @@
       "category": "General",
       "readTime": "3 min",
       "image": "/images/blog/dhruvi-painting-1.jpg",
-      "excerpt": "Painting a Name, Painting a Memory — There is something magical about a blank canvas. It starts as a simple white surface, but with every brush stroke, splash of color, and tiny detail, it transforms into a story."
+      "excerpt": "Painting a Name, Painting a Memory \u2014 There is something magical about a blank canvas. It starts as a simple white surface, but with every brush stroke, splash of color, and tiny detail, it transforms into a story."
     },
     {
       "id": "post-2026-05-31t06-45-00",
@@ -88,7 +132,7 @@
       "id": "how-i-built-an-ai-powered-youtube-shorts-factory-with-openclaw",
       "title": "How I Built an AI-Powered YouTube Shorts Factory with OpenClaw",
       "date": "2026-05-09",
-      "excerpt": "How I Built an AI-Powered YouTube Shorts Factory with OpenClaw 🚀 What if creating daily YouTube Shorts required almost no manual work? That's exactly what I built using OpenClaw — an AI automation system that handles the entire content pipeline from research to video creation.",
+      "excerpt": "How I Built an AI-Powered YouTube Shorts Factory with OpenClaw \ud83d\ude80 What if creating daily YouTube Shorts required almost no manual work? That's exactly what I built using OpenClaw \u2014 an AI automation system that handles the entire content pipeline from research to video creation.",
       "slug": "how-i-built-an-ai-powered-youtube-shorts-factory-with-openclaw",
       "tags": [
         "blog"
@@ -99,7 +143,7 @@
       "id": "how-i-built-an-ai-entertainment-agent-that-understands-what-i-actually-want-to-watch",
       "title": "How I Built an AI Entertainment Agent That Understands What I Actually Want to Watch",
       "date": "2026-05-08",
-      "excerpt": "Endless scrolling across Netflix, Prime Video, and YouTube every night? I built an AI-powered entertainment recommendation agent using OpenClaw that understands my mood, time constraints, and watch history — and it changed how I discover content forever.",
+      "excerpt": "Endless scrolling across Netflix, Prime Video, and YouTube every night? I built an AI-powered entertainment recommendation agent using OpenClaw that understands my mood, time constraints, and watch history \u2014 and it changed how I discover content forever.",
       "slug": "how-i-built-an-ai-entertainment-agent-that-understands-what-i-actually-want-to-watch",
       "tags": [
         "ai",
@@ -115,7 +159,7 @@
       "id": "bridging-the-observability-gap-automatic-tracing-for-vertx-postgresql-client",
       "title": "Bridging the Observability Gap: Automatic Tracing for Vert.x PostgreSQL Client",
       "date": "2026-05-03",
-      "excerpt": "How we contributed automatic tracing for the Vert.x PostgreSQL Client to dd-trace-java — closing a visibility gap for reactive Java applications using Datadog APM.",
+      "excerpt": "How we contributed automatic tracing for the Vert.x PostgreSQL Client to dd-trace-java \u2014 closing a visibility gap for reactive Java applications using Datadog APM.",
       "slug": "bridging-the-observability-gap-automatic-tracing-for-vertx-postgresql-client",
       "tags": [
         "datadog",
@@ -133,7 +177,7 @@
       "id": "the-soul-of-chhatrapati-shivaji-maharaj-in-the-raja-shivaji-anthem",
       "title": "The Soul of Chhatrapati Shivaji Maharaj in the Raja Shivaji Anthem",
       "date": "2026-05-01",
-      "excerpt": "A deep dive into the Raja Shivaji Anthem — decoding each line to understand why Chhatrapati Shivaji Maharaj remains the ultimate ideal of warrior leadership, spiritual depth, and righteous governance.",
+      "excerpt": "A deep dive into the Raja Shivaji Anthem \u2014 decoding each line to understand why Chhatrapati Shivaji Maharaj remains the ultimate ideal of warrior leadership, spiritual depth, and righteous governance.",
       "slug": "the-soul-of-chhatrapati-shivaji-maharaj-in-the-raja-shivaji-anthem",
       "tags": [
         "history",
@@ -160,7 +204,7 @@
         "chatbot",
         "distributed-systems"
       ],
-      "excerpt": "How I replaced a 100-click web workflow with a single natural language prompt — using LangChain, LangGraph, MCP, and Redis to build a production-ready AI-powered interface."
+      "excerpt": "How I replaced a 100-click web workflow with a single natural language prompt \u2014 using LangChain, LangGraph, MCP, and Redis to build a production-ready AI-powered interface."
     },
     {
       "id": "how-i-automated-my-technical-blog-with-openclaw",
@@ -181,7 +225,7 @@
       "id": "understanding-blockingqueue",
       "title": "Understanding BlockingQueue in Java: A System Design Primitive",
       "date": "2026-04-24",
-      "excerpt": "BlockingQueue is a thread-safe queue from java.util.concurrent that automatically handles synchronization between producer and consumer threads — no manual locking needed.",
+      "excerpt": "BlockingQueue is a thread-safe queue from java.util.concurrent that automatically handles synchronization between producer and consumer threads \u2014 no manual locking needed.",
       "slug": "understanding-blockingqueue",
       "tags": [
         "java",
@@ -198,7 +242,7 @@
       "id": "the-meaning-of-onkar",
       "title": "The Meaning of Onkar",
       "date": "2026-04-23",
-      "excerpt": "The name Onkar is derived from the Sanskrit word Omkar — the embodiment of the sacred sound Om. It represents ultimate reality, universal consciousness, and the origin of existence.",
+      "excerpt": "The name Onkar is derived from the Sanskrit word Omkar \u2014 the embodiment of the sacred sound Om. It represents ultimate reality, universal consciousness, and the origin of existence.",
       "slug": "the-meaning-of-onkar",
       "tags": [
         "idea",
