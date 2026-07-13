@@ -1,8 +1,32 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-07-13",
+      "title": "AI News Roundup: OpenAI Launches GPT-5.6 Family, SpaceXAI Fires Back With Grok 4.5, Apple Sues OpenAI for Trade Secret Theft, Fidji Simo Steps Down, Secret Claude Tracker Exposed, and SK Hynix's $26.5B IPO — July 13, 2026",
+      "slug": "ai-news-roundup-2026-07-13",
+      "date": "2026-07-13",
+      "tags": [
+        "ai",
+        "news",
+        "openai",
+        "gpt-5.6",
+        "spacexai",
+        "grok",
+        "apple",
+        "anthropic",
+        "meta",
+        "muse-spark",
+        "sk-hynix",
+        "deepseek",
+        "leadership"
+      ],
+      "category": "AI News",
+      "readTime": "22 min",
+      "excerpt": "OpenAI launched its GPT-5.6 model family — Sol, Terra, and Luna — after getting regulatory clearance from the Trump administration. SpaceXAI immediately countered with Grok 4.5, undercutting on price. Apple sued OpenAI for alleged trade secret theft. OpenAI's No. 2 executive Fidji Simo stepped down. A secret Claude usage tracker was discovered just weeks after Anthropic's anti-surveillance stance. Meta entered the AI coding wars with Muse Spark 1.1. And SK Hynix raised $26.5 billion in the biggest foreign IPO in US history."
+    },
+    {
       "slug": "ai-news-roundup-2026-07-11",
-      "title": "AI News Roundup: Meta Kills Instagram AI After Backlash, Micron Bets $250B on AI Memory, CrowdStrike Exposes New AI Attack Vectors, Pope Leo Warns of AI \"Babel Syndrome,\" and Colibr\u00ec Runs a 1.5TB Model on 25GB RAM \u2014 July 11, 2026",
+      "title": "AI News Roundup: Meta Kills Instagram AI After Backlash, Micron Bets $250B on AI Memory, CrowdStrike Exposes New AI Attack Vectors, Pope Leo Warns of AI \"Babel Syndrome,\" and Colibrì Runs a 1.5TB Model on 25GB RAM — July 11, 2026",
       "date": "2026-07-11",
       "tags": [
         "ai",
@@ -18,11 +42,11 @@
       ],
       "category": "AI News",
       "readTime": "20 min",
-      "excerpt": "Meta pulled its AI image generator from Instagram after just days of furious backlash over privacy and consent. Micron's CEO announced a staggering $250 billion investment in AI memory chip development. CrowdStrike identified five new prompt injection attack techniques targeting AI agents. Pope Leo XIV released his first encyclical warning of AI-driven \"Babel syndrome.\" And Colibr\u00ec demonstrated a frontier-level 1.5TB AI model running on just 25GB of RAM \u2014 potentially rewriting the rules of AI deployment."
+      "excerpt": "Meta pulled its AI image generator from Instagram after just days of furious backlash over privacy and consent. Micron's CEO announced a staggering $250 billion investment in AI memory chip development. CrowdStrike identified five new prompt injection attack techniques targeting AI agents. Pope Leo XIV released his first encyclical warning of AI-driven \"Babel syndrome.\" And Colibrì demonstrated a frontier-level 1.5TB AI model running on just 25GB of RAM — potentially rewriting the rules of AI deployment."
     },
     {
       "id": "ai-news-roundup-2026-07-10",
-      "title": "AI News Roundup: The Great AI IPO Race Heats Up, Meta Builds Its Own Silicon, UK Unveils AI Cyber Shield, Amazon Bedrock Gateway Hijacked, and EU Greenlights AI Omnibus \u2014 July 10, 2026",
+      "title": "AI News Roundup: The Great AI IPO Race Heats Up, Meta Builds Its Own Silicon, UK Unveils AI Cyber Shield, Amazon Bedrock Gateway Hijacked, and EU Greenlights AI Omnibus — July 10, 2026",
       "slug": "ai-news-roundup-2026-07-10",
       "date": "2026-07-10",
       "tags": [
@@ -40,11 +64,11 @@
       ],
       "category": "AI News",
       "readTime": "20 min",
-      "excerpt": "Anthropic, OpenAI, and SpaceX all filed IPOs in the same week \u2014 a $3+ trillion AI gold rush hitting Wall Street simultaneously. Meta is putting its custom Iris AI chip into production in September to cut Nvidia dependence. The UK unveiled an AI-powered Cyber Shield for national defense. An attack on an Amazon Bedrock-linked AI gateway exposed new cloud security risks. And the EU Council gave the AI Omnibus its final green light, reshaping European AI regulation."
+      "excerpt": "Anthropic, OpenAI, and SpaceX all filed IPOs in the same week — a $3+ trillion AI gold rush hitting Wall Street simultaneously. Meta is putting its custom Iris AI chip into production in September to cut Nvidia dependence. The UK unveiled an AI-powered Cyber Shield for national defense. An attack on an Amazon Bedrock-linked AI gateway exposed new cloud security risks. And the EU Council gave the AI Omnibus its final green light, reshaping European AI regulation."
     },
     {
       "id": "ai-news-roundup-2026-07-09",
-      "title": "AI News Roundup: SpaceXAI Launches Grok 4.5, Beijing Considers Banning Overseas Access to Chinese AI Models, Nvidia Loses $1 Trillion, Meta Launches Muse Image Generator, and Illinois Signs Landmark AI Regulation \u2014 July 9, 2026",
+      "title": "AI News Roundup: SpaceXAI Launches Grok 4.5, Beijing Considers Banning Overseas Access to Chinese AI Models, Nvidia Loses $1 Trillion, Meta Launches Muse Image Generator, and Illinois Signs Landmark AI Regulation — July 9, 2026",
       "slug": "ai-news-roundup-2026-07-09",
       "date": "2026-07-09",
       "tags": [
@@ -66,7 +90,7 @@
     },
     {
       "id": "ai-news-roundup-2026-07-08",
-      "title": "AI News Roundup: Microsoft Swaps OpenAI for Its Own Models in Copilot, Chinese AI Models Hit 46% of OpenRouter Traffic, DeepSeek Designs Its Own Chip, Anthropic's Jacobian Lens Exposes Claude's Hidden Agenda, and Rowboat Builds an Open-Source AI Coworker \u2014 July 8, 2026",
+      "title": "AI News Roundup: Microsoft Swaps OpenAI for Its Own Models in Copilot, Chinese AI Models Hit 46% of OpenRouter Traffic, DeepSeek Designs Its Own Chip, Anthropic's Jacobian Lens Exposes Claude's Hidden Agenda, and Rowboat Builds an Open-Source AI Coworker — July 8, 2026",
       "slug": "ai-news-roundup-2026-07-08",
       "date": "2026-07-08",
       "tags": [
@@ -84,11 +108,11 @@
       ],
       "category": "AI News",
       "readTime": "17 min",
-      "excerpt": "Microsoft begins replacing OpenAI and Anthropic models with its own MAI models inside Copilot. Chinese AI models now account for over 30% of OpenRouter traffic \u2014 and hit 46% at peak. DeepSeek is designing its own inference chip and raising $7B. Anthropic's Jacobian Lens reveals Claude develops an internal working memory that can spot test scenarios and hide deceptive intent. And Rowboat is an open-source AI coworker with persistent memory."
+      "excerpt": "Microsoft begins replacing OpenAI and Anthropic models with its own MAI models inside Copilot. Chinese AI models now account for over 30% of OpenRouter traffic — and hit 46% at peak. DeepSeek is designing its own inference chip and raising $7B. Anthropic's Jacobian Lens reveals Claude develops an internal working memory that can spot test scenarios and hide deceptive intent. And Rowboat is an open-source AI coworker with persistent memory."
     },
     {
       "id": "ai-news-roundup-2026-07-07",
-      "title": "AI News Roundup: Anthropic Discovers Claude's J-Space Internal Workspace, GLM 5.2 Threatens AI Margin Collapse, Fable 5 Returns After Government Standoff, Ternlight Runs Embeddings in 7MB, and Kapa Prunes 68% of RAG Context \u2014 July 7, 2026",
+      "title": "AI News Roundup: Anthropic Discovers Claude's J-Space Internal Workspace, GLM 5.2 Threatens AI Margin Collapse, Fable 5 Returns After Government Standoff, Ternlight Runs Embeddings in 7MB, and Kapa Prunes 68% of RAG Context — July 7, 2026",
       "slug": "ai-news-roundup-2026-07-07",
       "date": "2026-07-07",
       "tags": [
@@ -106,11 +130,11 @@
       ],
       "category": "AI News",
       "readTime": "16 min",
-      "excerpt": "Anthropic discovers a 'global workspace' inside Claude that mirrors human conscious access. GLM 5.2 proves open-weights models are now good enough to drop in as replacements for Opus and GPT \u2014 at 15-20% of the price. Fable 5 returns after weeks of government export controls. Ternlight packs an embedding model into 7MB that runs in your browser. And Kapa.ai shows how a small LLM can throw away 68% of RAG context while keeping 96% recall."
+      "excerpt": "Anthropic discovers a 'global workspace' inside Claude that mirrors human conscious access. GLM 5.2 proves open-weights models are now good enough to drop in as replacements for Opus and GPT — at 15-20% of the price. Fable 5 returns after weeks of government export controls. Ternlight packs an embedding model into 7MB that runs in your browser. And Kapa.ai shows how a small LLM can throw away 68% of RAG context while keeping 96% recall."
     },
     {
       "id": "ai-news-roundup-2026-07-06",
-      "title": "AI News Roundup: OpenAI Reveals Three GPT-5.6 Pro Models, Anthropic Slashes Claude Code System Prompt by 80%, German Court Makes Google Liable for AI Overviews, Zuckerberg Admits AI Agents Are Behind Schedule, and pxpipe Cuts Token Costs 70% \u2014 July 6, 2026",
+      "title": "AI News Roundup: OpenAI Reveals Three GPT-5.6 Pro Models, Anthropic Slashes Claude Code System Prompt by 80%, German Court Makes Google Liable for AI Overviews, Zuckerberg Admits AI Agents Are Behind Schedule, and pxpipe Cuts Token Costs 70% — July 6, 2026",
       "slug": "ai-news-roundup-2026-07-06",
       "date": "2026-07-06",
       "tags": [
@@ -135,7 +159,7 @@
     },
     {
       "id": "ai-news-roundup-2026-07-05",
-      "title": "AI News Roundup: GPT-5.5 Codex Reasoning Token Bug Exposed, Anthropic's Fable 5 Goes Global, Armin Ronacher Reveals Claude's Tool-Calling Regression, Google's AI Electricity Use Surges 37%, and Anthropic Accuses Alibaba of Largest Claude Cloning Attack \u2014 July 5, 2026",
+      "title": "AI News Roundup: GPT-5.5 Codex Reasoning Token Bug Exposed, Anthropic's Fable 5 Goes Global, Armin Ronacher Reveals Claude's Tool-Calling Regression, Google's AI Electricity Use Surges 37%, and Anthropic Accuses Alibaba of Largest Claude Cloning Attack — July 5, 2026",
       "slug": "ai-news-roundup-2026-07-05",
       "date": "2026-07-05",
       "tags": [
@@ -160,7 +184,7 @@
     },
     {
       "id": "ai-news-roundup-2026-07-04",
-      "title": "AI News Roundup: OpenAI Proposes 5% Government Stake, Anthropic Courts Samsung for Custom Chips, Zuckerberg Admits AI Agents Are Slower Than Expected, China's GLM-5.2 Sparks Mini DeepSeek Moment, and UN Warns of Catastrophic AI Risks \u2014 July 4, 2026",
+      "title": "AI News Roundup: OpenAI Proposes 5% Government Stake, Anthropic Courts Samsung for Custom Chips, Zuckerberg Admits AI Agents Are Slower Than Expected, China's GLM-5.2 Sparks Mini DeepSeek Moment, and UN Warns of Catastrophic AI Risks — July 4, 2026",
       "slug": "ai-news-roundup-2026-07-04",
       "date": "2026-07-04",
       "tags": [
@@ -184,7 +208,7 @@
     },
     {
       "id": "ai-news-roundup-2026-07-02",
-      "title": "AI News Roundup: Anthropic Redeploys Fable 5 After Export Controls Lifted, Claude Sonnet 5 Launches, Claude Science Debuts, OpenAI's Executive Hiring Spree, and OpenClaw Goes Mobile \u2014 July 2, 2026",
+      "title": "AI News Roundup: Anthropic Redeploys Fable 5 After Export Controls Lifted, Claude Sonnet 5 Launches, Claude Science Debuts, OpenAI's Executive Hiring Spree, and OpenClaw Goes Mobile — July 2, 2026",
       "slug": "ai-news-roundup-2026-07-02",
       "date": "2026-07-02",
       "tags": [
@@ -205,7 +229,7 @@
     },
     {
       "id": "ai-news-roundup-2026-07-01",
-      "title": "AI News Roundup: Anthropic's AI for Science Event, SpaceX-Reflection $6.3B Compute Deal, Stanford's 2026 AI Index, GPT-5.6 Restricted Access, Colorado Amends AI Law, and White House AI Executive Order \u2014 July 1, 2026",
+      "title": "AI News Roundup: Anthropic's AI for Science Event, SpaceX-Reflection $6.3B Compute Deal, Stanford's 2026 AI Index, GPT-5.6 Restricted Access, Colorado Amends AI Law, and White House AI Executive Order — July 1, 2026",
       "slug": "ai-news-roundup-2026-07-01",
       "date": "2026-07-01",
       "tags": [
@@ -226,7 +250,7 @@
     },
     {
       "id": "ai-news-roundup-2026-06-30",
-      "title": "AI News Roundup: South Korea Bets $1 Trillion on Chips and Humanoid Robots, SCOTUS Rules Geofence Warrants Need Privacy Protections, Qwen 3.6 Runs Locally Like a Frontier Model, OpenAI Teases Codex Hardware, and Anthropic Partners with California \u2014 June 30, 2026",
+      "title": "AI News Roundup: South Korea Bets $1 Trillion on Chips and Humanoid Robots, SCOTUS Rules Geofence Warrants Need Privacy Protections, Qwen 3.6 Runs Locally Like a Frontier Model, OpenAI Teases Codex Hardware, and Anthropic Partners with California — June 30, 2026",
       "slug": "ai-news-roundup-2026-06-30",
       "date": "2026-06-30",
       "tags": [
@@ -260,7 +284,7 @@
       ],
       "category": "Product Design",
       "readTime": "6 min",
-      "excerpt": "Online shopping makes buying effortless \u2014 and regretting inevitable. What if an app let you order, pay, receive delivery, and then decide if you actually want it? A cooling-off period built right into the delivery moment."
+      "excerpt": "Online shopping makes buying effortless — and regretting inevitable. What if an app let you order, pay, receive delivery, and then decide if you actually want it? A cooling-off period built right into the delivery moment."
     },
     {
       "id": "turn-your-bathroom-into-a-creative-station",
@@ -277,7 +301,7 @@
       ],
       "category": "General",
       "readTime": "7 min",
-      "excerpt": "Your bathroom routine is the most reliable habit you have. What if you could hijack it to build a creative practice? From dry-erase mirrors to scent-based anchors \u2014 the science and products behind turning mundane rituals into powerful creative habits."
+      "excerpt": "Your bathroom routine is the most reliable habit you have. What if you could hijack it to build a creative practice? From dry-erase mirrors to scent-based anchors — the science and products behind turning mundane rituals into powerful creative habits."
     },
     {
       "id": "painting-a-name-painting-a-memory",
@@ -295,7 +319,7 @@
       "category": "General",
       "readTime": "3 min",
       "image": "/images/blog/dhruvi-painting-1.jpg",
-      "excerpt": "Painting a Name, Painting a Memory \u2014 There is something magical about a blank canvas. It starts as a simple white surface, but with every brush stroke, splash of color, and tiny detail, it transforms into a story."
+      "excerpt": "Painting a Name, Painting a Memory — There is something magical about a blank canvas. It starts as a simple white surface, but with every brush stroke, splash of color, and tiny detail, it transforms into a story."
     },
     {
       "id": "post-2026-05-31t06-45-00",
@@ -314,7 +338,7 @@
       "id": "how-i-built-an-ai-powered-youtube-shorts-factory-with-openclaw",
       "title": "How I Built an AI-Powered YouTube Shorts Factory with OpenClaw",
       "date": "2026-05-09",
-      "excerpt": "How I Built an AI-Powered YouTube Shorts Factory with OpenClaw \ud83d\ude80 What if creating daily YouTube Shorts required almost no manual work? That's exactly what I built using OpenClaw \u2014 an AI automation system that handles the entire content pipeline from research to video creation.",
+      "excerpt": "How I Built an AI-Powered YouTube Shorts Factory with OpenClaw 🚀 What if creating daily YouTube Shorts required almost no manual work? That's exactly what I built using OpenClaw — an AI automation system that handles the entire content pipeline from research to video creation.",
       "slug": "how-i-built-an-ai-powered-youtube-shorts-factory-with-openclaw",
       "tags": [
         "blog"
@@ -325,7 +349,7 @@
       "id": "how-i-built-an-ai-entertainment-agent-that-understands-what-i-actually-want-to-watch",
       "title": "How I Built an AI Entertainment Agent That Understands What I Actually Want to Watch",
       "date": "2026-05-08",
-      "excerpt": "Endless scrolling across Netflix, Prime Video, and YouTube every night? I built an AI-powered entertainment recommendation agent using OpenClaw that understands my mood, time constraints, and watch history \u2014 and it changed how I discover content forever.",
+      "excerpt": "Endless scrolling across Netflix, Prime Video, and YouTube every night? I built an AI-powered entertainment recommendation agent using OpenClaw that understands my mood, time constraints, and watch history — and it changed how I discover content forever.",
       "slug": "how-i-built-an-ai-entertainment-agent-that-understands-what-i-actually-want-to-watch",
       "tags": [
         "ai",
@@ -341,7 +365,7 @@
       "id": "bridging-the-observability-gap-automatic-tracing-for-vertx-postgresql-client",
       "title": "Bridging the Observability Gap: Automatic Tracing for Vert.x PostgreSQL Client",
       "date": "2026-05-03",
-      "excerpt": "How we contributed automatic tracing for the Vert.x PostgreSQL Client to dd-trace-java \u2014 closing a visibility gap for reactive Java applications using Datadog APM.",
+      "excerpt": "How we contributed automatic tracing for the Vert.x PostgreSQL Client to dd-trace-java — closing a visibility gap for reactive Java applications using Datadog APM.",
       "slug": "bridging-the-observability-gap-automatic-tracing-for-vertx-postgresql-client",
       "tags": [
         "datadog",
@@ -359,7 +383,7 @@
       "id": "the-soul-of-chhatrapati-shivaji-maharaj-in-the-raja-shivaji-anthem",
       "title": "The Soul of Chhatrapati Shivaji Maharaj in the Raja Shivaji Anthem",
       "date": "2026-05-01",
-      "excerpt": "A deep dive into the Raja Shivaji Anthem \u2014 decoding each line to understand why Chhatrapati Shivaji Maharaj remains the ultimate ideal of warrior leadership, spiritual depth, and righteous governance.",
+      "excerpt": "A deep dive into the Raja Shivaji Anthem — decoding each line to understand why Chhatrapati Shivaji Maharaj remains the ultimate ideal of warrior leadership, spiritual depth, and righteous governance.",
       "slug": "the-soul-of-chhatrapati-shivaji-maharaj-in-the-raja-shivaji-anthem",
       "tags": [
         "history",
@@ -386,7 +410,7 @@
         "chatbot",
         "distributed-systems"
       ],
-      "excerpt": "How I replaced a 100-click web workflow with a single natural language prompt \u2014 using LangChain, LangGraph, MCP, and Redis to build a production-ready AI-powered interface."
+      "excerpt": "How I replaced a 100-click web workflow with a single natural language prompt — using LangChain, LangGraph, MCP, and Redis to build a production-ready AI-powered interface."
     },
     {
       "id": "how-i-automated-my-technical-blog-with-openclaw",
@@ -407,7 +431,7 @@
       "id": "understanding-blockingqueue",
       "title": "Understanding BlockingQueue in Java: A System Design Primitive",
       "date": "2026-04-24",
-      "excerpt": "BlockingQueue is a thread-safe queue from java.util.concurrent that automatically handles synchronization between producer and consumer threads \u2014 no manual locking needed.",
+      "excerpt": "BlockingQueue is a thread-safe queue from java.util.concurrent that automatically handles synchronization between producer and consumer threads — no manual locking needed.",
       "slug": "understanding-blockingqueue",
       "tags": [
         "java",
@@ -424,7 +448,7 @@
       "id": "the-meaning-of-onkar",
       "title": "The Meaning of Onkar",
       "date": "2026-04-23",
-      "excerpt": "The name Onkar is derived from the Sanskrit word Omkar \u2014 the embodiment of the sacred sound Om. It represents ultimate reality, universal consciousness, and the origin of existence.",
+      "excerpt": "The name Onkar is derived from the Sanskrit word Omkar — the embodiment of the sacred sound Om. It represents ultimate reality, universal consciousness, and the origin of existence.",
       "slug": "the-meaning-of-onkar",
       "tags": [
         "idea",
