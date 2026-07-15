@@ -80,6 +80,7 @@ const Navigation = () => {
     { name: "Skills", id: "skills" },
     { name: "Experience", id: "experience" },
     { name: "Open Source", id: "opensource" },
+    { name: "Apps", id: "apps" },
     { name: "Education", id: "education" },
     { name: "Contact", id: "contact" },
   ];
@@ -699,6 +700,109 @@ const OpenSource = () => {
   );
 };
 
+// Apps Section
+const Apps = () => {
+  const apps = [
+    {
+      name: "YCal",
+      icon: "📅",
+      tagline: "Yahoo Calendar, reimagined",
+      description:
+        "A native calendar app for iOS & Android that brings Yahoo Calendar to your phone with a beautiful, fast, and intuitive experience. Solo-developed from concept to launch.",
+      tags: ["React Native", "iOS", "Android", "Calendar", "Solo Dev"],
+      website: "https://saravadeo.github.io/ycal-website",
+      playStore: "https://play.google.com/store/apps/details?id=com.ycal.mobile",
+      status: "shipped",
+    },
+    {
+      name: "ChallengeCam",
+      icon: "🎯",
+      tagline: "Create viral challenge videos",
+      description:
+        "A mobile-first challenge video maker — face cam + overlay in one take. Record emoji, memory, eyesight, reaction, sports, and brain challenges and share directly to TikTok, Reels, and Shorts. Solo-developed end-to-end.",
+      tags: ["React Native", "Android", "Video", "Social Media", "Solo Dev"],
+      website: "https://www.thechallengecam.com/",
+      playStore: "https://play.google.com/store/apps/details?id=com.challengecam.app",
+      status: "shipped",
+    },
+  ];
+
+  const getStatusBadge = (status) => {
+    const badges = {
+      shipped: { text: "Shipped", class: "status--shipped" },
+    };
+    return badges[status] || { text: status, class: "" };
+  };
+
+  return (
+    <section id="apps" className="section section--apps">
+      <div className="container">
+        <div className="section__header section__header--centered">
+          <span className="section__eyebrow">Side Projects</span>
+          <h2 className="section__title">Apps I've Built</h2>
+          <p className="section__subtitle">
+            Solo-developed mobile apps from concept to launch
+          </p>
+        </div>
+
+        <div className="apps__grid">
+          {apps.map((app, index) => {
+            const statusBadge = getStatusBadge(app.status);
+            return (
+              <a
+                key={index}
+                href={app.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="apps__card"
+                onClick={() => trackEvent("Apps", "app_click", app.name)}
+              >
+                <div className="apps__card-header">
+                  <div className="apps__meta">
+                    <span className="apps__icon" aria-hidden="true">
+                      {app.icon}
+                    </span>
+                    <span className="apps__name">{app.name}</span>
+                  </div>
+                  <div className="apps__badges">
+                    <span className={`apps__status ${statusBadge.class}`}>
+                      {statusBadge.text}
+                    </span>
+                  </div>
+                </div>
+                <p className="apps__tagline">{app.tagline}</p>
+                <p className="apps__description">{app.description}</p>
+                <div className="apps__tags">
+                  {app.tags.map((tag, idx) => (
+                    <span key={idx} className="apps__tag">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <div className="apps__actions">
+                  <span className="apps__action">Visit Website →</span>
+                  <a
+                    href={app.playStore}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="apps__action"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      trackEvent("Apps", "playstore_click", app.name);
+                    }}
+                  >
+                    Get it on Play Store →
+                  </a>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+};
+
 // Education Section
 const Education = () => {
   return (
@@ -887,6 +991,7 @@ const HomePage = () => {
       <Skills />
       <Experience />
       <OpenSource />
+      <Apps />
       <Education />
       <Contact />
       <Footer />

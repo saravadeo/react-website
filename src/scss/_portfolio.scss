@@ -361,6 +361,10 @@
   background: $geek-bg-secondary;
 }
 
+.section--apps {
+  background: $geek-bg-secondary;
+}
+
 .section--education {
   background: $geek-bg-primary;
 }
@@ -854,6 +858,159 @@
   }
 }
 
+// ——— Apps ———
+.apps {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    @include geek-card;
+    padding: 1.5rem;
+    border-radius: 14px;
+    color: inherit;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, $geek-accent-purple, $geek-accent-blue, $geek-accent-cyan);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+
+    &:hover {
+      border-color: $geek-accent-purple;
+      transform: translateY(-4px);
+    }
+  }
+
+  &__card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__icon {
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+
+  &__name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: $geek-text-primary;
+  }
+
+  &__badges {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__status {
+    font-family: $font-mono;
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    &.status--shipped {
+      background: rgba($geek-accent-blue, 0.15);
+      color: $geek-accent-blue;
+      border: 1px solid rgba($geek-accent-blue, 0.3);
+    }
+  }
+
+  &__tagline {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: $geek-accent-purple-light;
+    margin: 0 0 0.5rem;
+    line-height: 1.4;
+  }
+
+  &__description {
+    font-size: 0.875rem;
+    color: $geek-text-secondary;
+    line-height: 1.65;
+    margin: 0 0 1rem;
+    flex-grow: 1;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-bottom: 1rem;
+  }
+
+  &__tag {
+    font-family: $font-mono;
+    font-size: 0.65rem;
+    padding: 0.2rem 0.45rem;
+    border-radius: 4px;
+    background: rgba($geek-accent-cyan, 0.1);
+    color: $geek-accent-cyan;
+    border: 1px solid rgba($geek-accent-cyan, 0.2);
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: auto;
+  }
+
+  &__action {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.45rem 0.85rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    background: rgba($geek-bg-tertiary, 0.8);
+    color: $geek-text-primary;
+    border: 1px solid $geek-border;
+    transition: border-color 0.2s, background 0.2s;
+
+    &:hover {
+      border-color: $geek-accent-purple;
+      background: rgba($geek-accent-purple, 0.08);
+    }
+  }
+}
+
 // Centered header variant
 .section__header--centered {
   text-align: center;
@@ -1197,7 +1354,8 @@
 
   .impact__card,
   .skills__card,
-  .opensource__card {
+  .opensource__card,
+  .apps__card {
     padding: 1.15rem;
   }
 }
