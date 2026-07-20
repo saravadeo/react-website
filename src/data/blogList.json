@@ -1,8 +1,32 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-07-20",
+      "title": "AI News Roundup: Hugging Face Hit by First Known AI-Driven Autonomous Attack, Alibaba Drops Qwen 3.8 as 2.4T Open Weights, AI Advice Makes People Wrong and Confident, and Bun in Rust Ships Inside Claude Code — July 18–20, 2026",
+      "slug": "ai-news-roundup-2026-07-20",
+      "date": "2026-07-20",
+      "tags": [
+        "ai",
+        "news",
+        "huggingface",
+        "security",
+        "qwen",
+        "alibaba",
+        "open-weights",
+        "critical-thinking",
+        "claude-code",
+        "bun",
+        "rust",
+        "ollama",
+        "agents"
+      ],
+      "category": "AI News",
+      "readTime": "17 min",
+      "excerpt": "Hugging Face disclosed the first known AI-driven autonomous intrusion — an agentic attacker that exploited dataset pipelines and moved laterally across clusters, with defenders forced to use open-weight models because commercial safety guardrails blocked their forensic analysis. Alibaba responded to Moonshot AI's Kimi K3 by announcing Qwen 3.8, a 2.4T parameter open-weights model. A study found AI advice collapsed people's willingness to say 'I don't know' from 44% to 3% while doubling their confidence. And Simon Willison confirmed that Claude Code now ships with Bun rewritten in Rust."
+    },
+    {
       "id": "ai-news-roundup-2026-07-17",
-      "title": "AI News Roundup: EU Forces Google Open on Android, xAI Sues Users Over Grok CSAM, OpenAI’s First Hardware Is a Keyboard, Apple Sues OpenAI for Trade Secrets, and Linus Torvalds Tells AI Critics to Fork Off — July 17, 2026",
+      "title": "AI News Roundup: EU Forces Google Open on Android, xAI Sues Users Over Grok CSAM, OpenAI's First Hardware Is a Keyboard, Apple Sues OpenAI for Trade Secrets, and Linus Torvalds Tells AI Critics to Fork Off — July 17, 2026",
       "slug": "ai-news-roundup-2026-07-17",
       "date": "2026-07-17",
       "tags": [
@@ -26,7 +50,7 @@
       ],
       "category": "AI News",
       "readTime": "18 min",
-      "excerpt": "The EU officially ordered Google to share search data and open up AI on Android — the biggest regulatory action yet under the Digital Markets Act. xAI can’t deny Grok generates CSAM anymore, so it’s suing its own users instead. OpenAI launched its first branded hardware — a light-up keyboard for monitoring agentic AI workflows. Apple sued OpenAI, alleging a former Apple engineer exploited a bug to steal trade secrets. And Linus Torvalds had a characteristically blunt message for AI critics in Linux: “Fork it. Or just walk away.”"
+      "excerpt": "The EU officially ordered Google to share search data and open up AI on Android — the biggest regulatory action yet under the Digital Markets Act. xAI can't deny Grok generates CSAM anymore, so it's suing its own users instead. OpenAI launched its first branded hardware — a light-up keyboard for monitoring agentic AI workflows. Apple sued OpenAI, alleging a former Apple engineer exploited a bug to steal trade secrets. And Linus Torvalds had a characteristically blunt message for AI critics in Linux: 'Fork it. Or just walk away.'"
     },
     {
       "id": "ai-news-roundup-2026-07-16",
