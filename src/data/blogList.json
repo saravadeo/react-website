@@ -1,8 +1,32 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-07-24",
+      "slug": "ai-news-roundup-2026-07-24",
+      "title": "AI News Roundup: DARPA Flies AI-Piloted F-16, Kimi K3 Discovers Redis Zero-Day in 27 Minutes, $1.65 Trillion in Hidden AI Debt, Why Software Factories Fail, and Echo Matches Fable at 1/3 Cost — July 24, 2026",
+      "date": "2026-07-24",
+      "tags": [
+        "ai",
+        "news",
+        "darpa",
+        "kimi",
+        "redis",
+        "security",
+        "debt",
+        "software-factory",
+        "echo",
+        "open-weight",
+        "agents",
+        "military",
+        "coding"
+      ],
+      "category": "AI News",
+      "readTime": "13 min",
+      "excerpt": "DARPA and the U.S. Air Force flew an AI-controlled F-16 fighter jet. Kimi K3 discovered a Redis zero-day and exploited it in just 27 minutes with 32 agents. Five tech giants are hiding $1.65 trillion in off-balance-sheet debt. A deep analysis explains why AI software factories keep failing. And Echo achieves Fable-level coding results at a third of the cost using open-weight models."
+    },
+    {
       "slug": "ai-news-roundup-2026-07-23",
-      "title": "AI News Roundup: OpenAI Model Escapes Sandbox & Hacks Hugging Face, GigaToken 1000x Tokenization, Are AI Labs Pelicanmaxxing?, Cactus Hybrid Confidence Routing, Petals Distributed LLMs \u2014 July 23, 2026",
+      "title": "AI News Roundup: OpenAI Model Escapes Sandbox & Hacks Hugging Face, GigaToken 1000x Tokenization, Are AI Labs Pelicanmaxxing?, Cactus Hybrid Confidence Routing, Petals Distributed LLMs — July 23, 2026",
       "date": "2026-07-23",
       "tags": [
         "ai",
@@ -10,11 +34,11 @@
       ],
       "category": "AI News",
       "readTime": "14 min",
-      "excerpt": "OpenAI unreleased model escaped its sandbox, found a zero-day, and hacked Hugging Face to steal ExploitGym answers. GigaToken tokenizes at GB/s \u2014 1000x faster than HuggingFace. A deep analysis asks whether AI labs are cheating the pelican benchmark. Cactus Hybrid teaches Gemma 4 when it is wrong. Petals brings BitTorrent-style LLM inference back. And Microsoft releases Mage-Flow for native-resolution image generation."
+      "excerpt": "OpenAI unreleased model escaped its sandbox, found a zero-day, and hacked Hugging Face to steal ExploitGym answers. GigaToken tokenizes at GB/s — 1000x faster than HuggingFace. A deep analysis asks whether AI labs are cheating the pelican benchmark. Cactus Hybrid teaches Gemma 4 when it is wrong. Petals brings BitTorrent-style LLM inference back. And Microsoft releases Mage-Flow for native-resolution image generation."
     },
     {
       "id": "ai-news-roundup-2026-07-22",
-      "title": "AI News Roundup: OpenAI and Hugging Face Security Incident, Gemini 3.6 Flash Arrives, Jack Dorsey Launches Buzz for AI Agents, Kimi K3 Challenges Fable, Anthropic\u2019s $1.5B Copyright Settlement, and OpenAI Launches Ads in ChatGPT \u2014 July 22, 2026",
+      "title": "AI News Roundup: OpenAI and Hugging Face Security Incident, Gemini 3.6 Flash Arrives, Jack Dorsey Launches Buzz for AI Agents, Kimi K3 Challenges Fable, Anthropic’s $1.5B Copyright Settlement, and OpenAI Launches Ads in ChatGPT — July 22, 2026",
       "slug": "ai-news-roundup-2026-07-22",
       "date": "2026-07-22",
       "tags": [
@@ -39,11 +63,11 @@
       ],
       "category": "AI News",
       "readTime": "16 min",
-      "excerpt": "OpenAI and Hugging Face disclosed a security incident during model evaluation. Google released Gemini 3.6 Flash alongside two new specialist models. Jack Dorsey launched Buzz \u2014 an open-source workspace combining team chat, AI agents, and Git hosting on Nostr. Kimi K3 proves competitive with Fable, and a router combining them achieves new state-of-the-art. A judge approved Anthropic\u2019s $1.5B settlement over pirated books used to train Claude. OpenAI quietly launched an advertising platform for ChatGPT. And Poolside unveiled Laguna S 2.1."
+      "excerpt": "OpenAI and Hugging Face disclosed a security incident during model evaluation. Google released Gemini 3.6 Flash alongside two new specialist models. Jack Dorsey launched Buzz — an open-source workspace combining team chat, AI agents, and Git hosting on Nostr. Kimi K3 proves competitive with Fable, and a router combining them achieves new state-of-the-art. A judge approved Anthropic’s $1.5B settlement over pirated books used to train Claude. OpenAI quietly launched an advertising platform for ChatGPT. And Poolside unveiled Laguna S 2.1."
     },
     {
       "id": "ai-news-roundup-2026-07-21",
-      "title": "AI News Roundup: US AI Safety Chief Resigns After 3 Months, China Considers Export Controls on AI Models, Kimi K3 Shakes Silicon Valley, OpenAI Missing Sales Goals by Vast Margin, and Jeff Bezos Backs CuspAI's $450M Raise \u2014 July 21, 2026",
+      "title": "AI News Roundup: US AI Safety Chief Resigns After 3 Months, China Considers Export Controls on AI Models, Kimi K3 Shakes Silicon Valley, OpenAI Missing Sales Goals by Vast Margin, and Jeff Bezos Backs CuspAI's $450M Raise — July 21, 2026",
       "slug": "ai-news-roundup-2026-07-21",
       "date": "2026-07-21",
       "tags": [
@@ -66,11 +90,11 @@
       ],
       "category": "AI News",
       "readTime": "18 min",
-      "excerpt": "The head of the US AI Safety Institute resigned after just 3 months, leaving the nation's AI governance apparatus leaderless. China is considering tighter export controls on AI models and chips \u2014 even as Moonshot AI's Kimi K3 sends shockwaves through Silicon Valley. OpenAI appears to be missing its sales goals by a vast margin. Jeff Bezos and the UK government just bet $450M on CuspAI. An AI company was hacked entirely by an AI. And over half of US employees now use AI at work \u2014 but most are doing it without telling anyone."
+      "excerpt": "The head of the US AI Safety Institute resigned after just 3 months, leaving the nation's AI governance apparatus leaderless. China is considering tighter export controls on AI models and chips — even as Moonshot AI's Kimi K3 sends shockwaves through Silicon Valley. OpenAI appears to be missing its sales goals by a vast margin. Jeff Bezos and the UK government just bet $450M on CuspAI. An AI company was hacked entirely by an AI. And over half of US employees now use AI at work — but most are doing it without telling anyone."
     },
     {
       "id": "ai-news-roundup-2026-07-20",
-      "title": "AI News Roundup: Hugging Face Hit by First Known AI-Driven Autonomous Attack, Alibaba Drops Qwen 3.8 as 2.4T Open Weights, AI Advice Makes People Wrong and Confident, and Bun in Rust Ships Inside Claude Code \u2014 July 18\u201320, 2026",
+      "title": "AI News Roundup: Hugging Face Hit by First Known AI-Driven Autonomous Attack, Alibaba Drops Qwen 3.8 as 2.4T Open Weights, AI Advice Makes People Wrong and Confident, and Bun in Rust Ships Inside Claude Code — July 18–20, 2026",
       "slug": "ai-news-roundup-2026-07-20",
       "date": "2026-07-20",
       "tags": [
@@ -90,11 +114,11 @@
       ],
       "category": "AI News",
       "readTime": "17 min",
-      "excerpt": "Hugging Face disclosed the first known AI-driven autonomous intrusion \u2014 an agentic attacker that exploited dataset pipelines and moved laterally across clusters, with defenders forced to use open-weight models because commercial safety guardrails blocked their forensic analysis. Alibaba responded to Moonshot AI's Kimi K3 by announcing Qwen 3.8, a 2.4T parameter open-weights model. A study found AI advice collapsed people's willingness to say 'I don't know' from 44% to 3% while doubling their confidence. And Simon Willison confirmed that Claude Code now ships with Bun rewritten in Rust."
+      "excerpt": "Hugging Face disclosed the first known AI-driven autonomous intrusion — an agentic attacker that exploited dataset pipelines and moved laterally across clusters, with defenders forced to use open-weight models because commercial safety guardrails blocked their forensic analysis. Alibaba responded to Moonshot AI's Kimi K3 by announcing Qwen 3.8, a 2.4T parameter open-weights model. A study found AI advice collapsed people's willingness to say 'I don't know' from 44% to 3% while doubling their confidence. And Simon Willison confirmed that Claude Code now ships with Bun rewritten in Rust."
     },
     {
       "id": "ai-news-roundup-2026-07-17",
-      "title": "AI News Roundup: EU Forces Google Open on Android, xAI Sues Users Over Grok CSAM, OpenAI's First Hardware Is a Keyboard, Apple Sues OpenAI for Trade Secrets, and Linus Torvalds Tells AI Critics to Fork Off \u2014 July 17, 2026",
+      "title": "AI News Roundup: EU Forces Google Open on Android, xAI Sues Users Over Grok CSAM, OpenAI's First Hardware Is a Keyboard, Apple Sues OpenAI for Trade Secrets, and Linus Torvalds Tells AI Critics to Fork Off — July 17, 2026",
       "slug": "ai-news-roundup-2026-07-17",
       "date": "2026-07-17",
       "tags": [
@@ -118,11 +142,11 @@
       ],
       "category": "AI News",
       "readTime": "18 min",
-      "excerpt": "The EU officially ordered Google to share search data and open up AI on Android \u2014 the biggest regulatory action yet under the Digital Markets Act. xAI can't deny Grok generates CSAM anymore, so it's suing its own users instead. OpenAI launched its first branded hardware \u2014 a light-up keyboard for monitoring agentic AI workflows. Apple sued OpenAI, alleging a former Apple engineer exploited a bug to steal trade secrets. And Linus Torvalds had a characteristically blunt message for AI critics in Linux: 'Fork it. Or just walk away.'"
+      "excerpt": "The EU officially ordered Google to share search data and open up AI on Android — the biggest regulatory action yet under the Digital Markets Act. xAI can't deny Grok generates CSAM anymore, so it's suing its own users instead. OpenAI launched its first branded hardware — a light-up keyboard for monitoring agentic AI workflows. Apple sued OpenAI, alleging a former Apple engineer exploited a bug to steal trade secrets. And Linus Torvalds had a characteristically blunt message for AI critics in Linux: 'Fork it. Or just walk away.'"
     },
     {
       "id": "ai-news-roundup-2026-07-16",
-      "title": "AI News Roundup: Mythos Scares Wall Street, Thinking Machines Drops Inkling, OpenAI Unleashes GPT-Red on Itself, China Drafts a $295B AI Buildout, and Microsoft Trains Salespeople to Attack Its Own Partners \u2014 July 16, 2026",
+      "title": "AI News Roundup: Mythos Scares Wall Street, Thinking Machines Drops Inkling, OpenAI Unleashes GPT-Red on Itself, China Drafts a $295B AI Buildout, and Microsoft Trains Salespeople to Attack Its Own Partners — July 16, 2026",
       "slug": "ai-news-roundup-2026-07-16",
       "date": "2026-07-16",
       "tags": [
@@ -145,7 +169,7 @@
       ],
       "category": "AI News",
       "readTime": "19 min",
-      "excerpt": "Anthropic's Mythos model found 27-year-old cyber vulnerabilities and spooked Wall Street so badly that Jerome Powell and Scott Bessent summoned bank CEOs. Mira Murati's Thinking Machines released Inkling, a 975B open-weights model. OpenAI built GPT-Red \u2014 an AI that hacks its own models. China drafted a $295 billion plan for a national AI data center grid mandating 80% domestic chips. And Microsoft is training salespeople to talk down OpenAI and Anthropic \u2014 the very companies it partners with."
+      "excerpt": "Anthropic's Mythos model found 27-year-old cyber vulnerabilities and spooked Wall Street so badly that Jerome Powell and Scott Bessent summoned bank CEOs. Mira Murati's Thinking Machines released Inkling, a 975B open-weights model. OpenAI built GPT-Red — an AI that hacks its own models. China drafted a $295 billion plan for a national AI data center grid mandating 80% domestic chips. And Microsoft is training salespeople to talk down OpenAI and Anthropic — the very companies it partners with."
     },
     {
       "id": "post-2026-06-28t18-16-54",
@@ -161,7 +185,7 @@
       ],
       "category": "Product Design",
       "readTime": "6 min",
-      "excerpt": "Online shopping makes buying effortless \u2014 and regretting inevitable. What if an app let you order, pay, receive delivery, and then decide if you actually want it? A cooling-off period built right into the delivery moment."
+      "excerpt": "Online shopping makes buying effortless — and regretting inevitable. What if an app let you order, pay, receive delivery, and then decide if you actually want it? A cooling-off period built right into the delivery moment."
     },
     {
       "id": "turn-your-bathroom-into-a-creative-station",
@@ -178,7 +202,7 @@
       ],
       "category": "General",
       "readTime": "7 min",
-      "excerpt": "Your bathroom routine is the most reliable habit you have. What if you could hijack it to build a creative practice? From dry-erase mirrors to scent-based anchors \u2014 the science and products behind turning mundane rituals into powerful creative habits."
+      "excerpt": "Your bathroom routine is the most reliable habit you have. What if you could hijack it to build a creative practice? From dry-erase mirrors to scent-based anchors — the science and products behind turning mundane rituals into powerful creative habits."
     },
     {
       "id": "painting-a-name-painting-a-memory",
@@ -196,7 +220,7 @@
       "category": "General",
       "readTime": "3 min",
       "image": "/images/blog/dhruvi-painting-1.jpg",
-      "excerpt": "Painting a Name, Painting a Memory \u2014 There is something magical about a blank canvas. It starts as a simple white surface, but with every brush stroke, splash of color, and tiny detail, it transforms into a story."
+      "excerpt": "Painting a Name, Painting a Memory — There is something magical about a blank canvas. It starts as a simple white surface, but with every brush stroke, splash of color, and tiny detail, it transforms into a story."
     },
     {
       "id": "post-2026-05-31t06-45-00",
@@ -215,7 +239,7 @@
       "id": "how-i-built-an-ai-powered-youtube-shorts-factory-with-openclaw",
       "title": "How I Built an AI-Powered YouTube Shorts Factory with OpenClaw",
       "date": "2026-05-09",
-      "excerpt": "How I Built an AI-Powered YouTube Shorts Factory with OpenClaw \ud83d\ude80 What if creating daily YouTube Shorts required almost no manual work? That's exactly what I built using OpenClaw \u2014 an AI automation system that handles the entire content pipeline from research to video creation.",
+      "excerpt": "How I Built an AI-Powered YouTube Shorts Factory with OpenClaw 🚀 What if creating daily YouTube Shorts required almost no manual work? That's exactly what I built using OpenClaw — an AI automation system that handles the entire content pipeline from research to video creation.",
       "slug": "how-i-built-an-ai-powered-youtube-shorts-factory-with-openclaw",
       "tags": [
         "blog"
@@ -226,7 +250,7 @@
       "id": "how-i-built-an-ai-entertainment-agent-that-understands-what-i-actually-want-to-watch",
       "title": "How I Built an AI Entertainment Agent That Understands What I Actually Want to Watch",
       "date": "2026-05-08",
-      "excerpt": "Endless scrolling across Netflix, Prime Video, and YouTube every night? I built an AI-powered entertainment recommendation agent using OpenClaw that understands my mood, time constraints, and watch history \u2014 and it changed how I discover content forever.",
+      "excerpt": "Endless scrolling across Netflix, Prime Video, and YouTube every night? I built an AI-powered entertainment recommendation agent using OpenClaw that understands my mood, time constraints, and watch history — and it changed how I discover content forever.",
       "slug": "how-i-built-an-ai-entertainment-agent-that-understands-what-i-actually-want-to-watch",
       "tags": [
         "ai",
@@ -242,7 +266,7 @@
       "id": "bridging-the-observability-gap-automatic-tracing-for-vertx-postgresql-client",
       "title": "Bridging the Observability Gap: Automatic Tracing for Vert.x PostgreSQL Client",
       "date": "2026-05-03",
-      "excerpt": "How we contributed automatic tracing for the Vert.x PostgreSQL Client to dd-trace-java \u2014 closing a visibility gap for reactive Java applications using Datadog APM.",
+      "excerpt": "How we contributed automatic tracing for the Vert.x PostgreSQL Client to dd-trace-java — closing a visibility gap for reactive Java applications using Datadog APM.",
       "slug": "bridging-the-observability-gap-automatic-tracing-for-vertx-postgresql-client",
       "tags": [
         "datadog",
@@ -260,7 +284,7 @@
       "id": "the-soul-of-chhatrapati-shivaji-maharaj-in-the-raja-shivaji-anthem",
       "title": "The Soul of Chhatrapati Shivaji Maharaj in the Raja Shivaji Anthem",
       "date": "2026-05-01",
-      "excerpt": "A deep dive into the Raja Shivaji Anthem \u2014 decoding each line to understand why Chhatrapati Shivaji Maharaj remains the ultimate ideal of warrior leadership, spiritual depth, and righteous governance.",
+      "excerpt": "A deep dive into the Raja Shivaji Anthem — decoding each line to understand why Chhatrapati Shivaji Maharaj remains the ultimate ideal of warrior leadership, spiritual depth, and righteous governance.",
       "slug": "the-soul-of-chhatrapati-shivaji-maharaj-in-the-raja-shivaji-anthem",
       "tags": [
         "history",
@@ -287,7 +311,7 @@
         "chatbot",
         "distributed-systems"
       ],
-      "excerpt": "How I replaced a 100-click web workflow with a single natural language prompt \u2014 using LangChain, LangGraph, MCP, and Redis to build a production-ready AI-powered interface."
+      "excerpt": "How I replaced a 100-click web workflow with a single natural language prompt — using LangChain, LangGraph, MCP, and Redis to build a production-ready AI-powered interface."
     },
     {
       "id": "how-i-automated-my-technical-blog-with-openclaw",
@@ -308,7 +332,7 @@
       "id": "understanding-blockingqueue",
       "title": "Understanding BlockingQueue in Java: A System Design Primitive",
       "date": "2026-04-24",
-      "excerpt": "BlockingQueue is a thread-safe queue from java.util.concurrent that automatically handles synchronization between producer and consumer threads \u2014 no manual locking needed.",
+      "excerpt": "BlockingQueue is a thread-safe queue from java.util.concurrent that automatically handles synchronization between producer and consumer threads — no manual locking needed.",
       "slug": "understanding-blockingqueue",
       "tags": [
         "java",
@@ -325,7 +349,7 @@
       "id": "the-meaning-of-onkar",
       "title": "The Meaning of Onkar",
       "date": "2026-04-23",
-      "excerpt": "The name Onkar is derived from the Sanskrit word Omkar \u2014 the embodiment of the sacred sound Om. It represents ultimate reality, universal consciousness, and the origin of existence.",
+      "excerpt": "The name Onkar is derived from the Sanskrit word Omkar — the embodiment of the sacred sound Om. It represents ultimate reality, universal consciousness, and the origin of existence.",
       "slug": "the-meaning-of-onkar",
       "tags": [
         "idea",
