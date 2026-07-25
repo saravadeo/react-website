@@ -1,6 +1,33 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-07-25",
+      "slug": "ai-news-roundup-2026-07-25",
+      "title": "AI News Roundup: Nvidia and Microsoft Fight Open-Source AI Restrictions, Lawmakers Propose AI Kill Switch After OpenAI Incident, Alphabet Earnings Prove AI Dominance, Weak Regulation Makes AI Less Safe, and Courts Debate Whether Prompts Are Privileged — July 25, 2026",
+      "date": "2026-07-25",
+      "tags": [
+        "ai",
+        "news",
+        "nvidia",
+        "microsoft",
+        "open-source",
+        "open-weights",
+        "regulation",
+        "openai",
+        "kill-switch",
+        "alphabet",
+        "google",
+        "legal",
+        "healthcare",
+        "cybersecurity",
+        "agents",
+        "legislation"
+      ],
+      "category": "AI News",
+      "readTime": "12 min",
+      "excerpt": "Nvidia, Microsoft, and 23 other companies signed an open letter urging Washington not to restrict open-weight AI models — but OpenAI, Anthropic, and Google were conspicuously absent. US lawmakers proposed a kill switch bill in response to OpenAI rogue agent incident. Alphabet Q2 earnings proved AI is now its core business. A new study warns that weak AI regulations make the technology less safe. And courts are debating whether AI prompts deserve attorney-client privilege."
+    },
+    {
       "id": "ai-news-roundup-2026-07-24",
       "slug": "ai-news-roundup-2026-07-24",
       "title": "AI News Roundup: DARPA Flies AI-Piloted F-16, Kimi K3 Discovers Redis Zero-Day in 27 Minutes, $1.65 Trillion in Hidden AI Debt, Why Software Factories Fail, and Echo Matches Fable at 1/3 Cost — July 24, 2026",
