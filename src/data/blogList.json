@@ -1,6 +1,37 @@
 {
   "posts": [
     {
+      "slug": "ai-news-roundup-2026-07-27",
+      "title": "AI News Roundup: Google Pays SpaceX $920M/Month for AI Compute, AI Safety Grades Leave Everyone at C+, ChatGPT Falls Below 50% Market Share, Humans& Raises $480M Seed, and Grok 4.5 Launches Into a Bloodbath \u2014 July 27, 2026",
+      "date": "2026-07-27",
+      "tags": [
+        "ai",
+        "news",
+        "google",
+        "spacex",
+        "xAI",
+        "compute",
+        "ai-safety",
+        "chatgpt",
+        "market-share",
+        "humans",
+        "seed-round",
+        "grok",
+        "openai",
+        "presence",
+        "meta",
+        "anthropic",
+        "ipo",
+        "kimi-k3",
+        "open-weights",
+        "nobel",
+        "economics"
+      ],
+      "category": "AI News",
+      "readTime": "15 min",
+      "excerpt": "Google signed a staggering $920M/month deal with SpaceX for AI compute capacity \u2014 $11B annually from a single contract. The first AI Safety Index gave every major lab a C+ or lower, with SpaceXAI dead last. ChatGPT's market share dropped below 50% for the first time. Humans&, founded by Anthropic, xAI, and Google alums, raised a $480M seed round. Grok 4.5 launched into a market that just wiped $820B off tech stocks. OpenAI unveiled Presence \u2014 its enterprise voice agent platform. And 16 Nobel laureates joined 200+ economists warning of AI-driven job displacement."
+    },
+    {
       "id": "ai-news-roundup-2026-07-26",
       "slug": "ai-news-roundup-2026-07-26",
       "title": "AI News Roundup: Anthropic Launches Opus 5 With Token Efficiency Focus, Google Posts First-Ever Negative Cash Flow Quarter, $1.5B Anthropic Copyright Settlement Approved, US Army Burns Through Year's AI Token Supply, and Cloudflare Gives Websites Granular AI Bot Controls \u2014 July 26, 2026",
