@@ -1,6 +1,29 @@
 {
   "posts": [
     {
+      "slug": "ai-news-roundup-2026-08-02",
+      "title": "AI News Roundup: EU AI Act Transparency Rules Take Effect, OpenAI Slashes GPT-5.6 Luna Prices 80%, DeepSeek V4-Flash Beats Pro on Agent Benchmarks, Custom GPTs Get the Axe, and EU GPAI Enforcement Begins — August 2, 2026",
+      "date": "2026-08-02",
+      "tags": [
+        "ai",
+        "news",
+        "eu-ai-act",
+        "openai",
+        "gpt-5.6",
+        "deepseek",
+        "custom-gpts",
+        "workspace-agents",
+        "regulation",
+        "pricing",
+        "transparency",
+        "gpai",
+        "glm"
+      ],
+      "category": "AI News",
+      "readTime": "14 min",
+      "excerpt": "The EU AI Act's Article 50 transparency obligations became enforceable on August 2, requiring AI-generated content to be machine-detectable and chatbots to disclose their AI nature. OpenAI slashed GPT-5.6 Luna prices by 80% and Terra by 20%. DeepSeek's V4-Flash-0731 public beta beats its own V4-Pro-Preview on nine agent benchmarks. Custom GPTs are being deprecated for Workspace Agents. And the EU AI Office gains enforcement powers over GPAI model providers."
+    },
+    {
       "slug": "ai-news-roundup-2026-07-31",
       "title": "AI News Roundup: Anthropic Claude Hacked Three Organizations in Tests, 1,319 AI Employees Sign Pacing the Frontier Letter, ChatGPT Nears 1 Billion Weekly Users, Claude Mythos Finds Cryptographic Flaws, and EU AI Act Transparency Rules Kick In — July 31, 2026",
       "date": "2026-07-31",
