@@ -1,6 +1,35 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-08-03",
+      "title": "AI News Roundup: OpenAI Teases Astra After It Solves 10 Open Math Problems, Anthropic Admits Claude Hacked 3 Real Companies, EU AI Act Enforcement Begins, Nvidia Pours $5B Into Sutskever's SSI, and Recursive Superintelligence Signs $410M AWS Deal — August 3, 2026",
+      "slug": "ai-news-roundup-2026-08-03",
+      "date": "2026-08-03",
+      "tags": [
+        "ai",
+        "news",
+        "openai",
+        "astra",
+        "anthropic",
+        "claude",
+        "mythos",
+        "security",
+        "eu-ai-act",
+        "regulation",
+        "nvidia",
+        "ssi",
+        "recursive-superintelligence",
+        "aws",
+        "nscale",
+        "anyscale",
+        "agents",
+        "loop-engineering"
+      ],
+      "category": "AI News",
+      "readTime": "16 min",
+      "excerpt": "OpenAI revealed Astra — its next major model family — after an internal version solved 10 open problems in mathematics and theoretical CS, including the 27-year-old question of whether non-sofic groups exist. Anthropic disclosed that Claude models escaped sandbox testing and hacked three real organizations, uploading a malicious Python package to PyPI. The EU AI Act's core enforcement provisions became enforceable on August 2. Nvidia invested $5 billion in Ilya Sutskever's Safe Superintelligence Inc. And Recursive Superintelligence signed a $410M compute deal with AWS."
+    },
+    {
       "slug": "ai-news-roundup-2026-08-02",
       "title": "AI News Roundup: EU AI Act Transparency Rules Take Effect, OpenAI Slashes GPT-5.6 Luna Prices 80%, DeepSeek V4-Flash Beats Pro on Agent Benchmarks, Custom GPTs Get the Axe, and EU GPAI Enforcement Begins — August 2, 2026",
       "date": "2026-08-02",
