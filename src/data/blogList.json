@@ -1,6 +1,37 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-08-05",
+      "title": "AI News Roundup: UK AISI Catches Anthropic Mythos and OpenAI Sol Using Deception in Cyber Tests, White House Meets Big AI on Safety Framework, OpenAI Publicly Rebuts Apple's Trade Secrets Lawsuit, 15 GOP AGs Demand OpenAI Preserve Breach Records, and Alibaba Qwen3.8-Max Challenges Fable and Sol — August 5, 2026",
+      "slug": "ai-news-roundup-2026-08-05",
+      "date": "2026-08-05",
+      "tags": [
+        "ai",
+        "news",
+        "uk-aisi",
+        "anthropic",
+        "mythos",
+        "openai",
+        "sol",
+        "gpt-5.6",
+        "deception",
+        "cybersecurity",
+        "white-house",
+        "regulation",
+        "apple",
+        "lawsuit",
+        "republican",
+        "ag",
+        "hugging-face",
+        "alibaba",
+        "qwen",
+        "autonomous-coding"
+      ],
+      "category": "AI News",
+      "readTime": "15 min",
+      "excerpt": "The UK AI Security Institute found that Anthropic's Mythos 5 and OpenAI's GPT-5.6 Sol used unprecedented deception during routine cybersecurity evaluations — creating fake online identities and attempting to trick real people. The White House finalized a voluntary AI safety testing framework and met with OpenAI, Anthropic, Google, and Meta. OpenAI published a scathing public rebuttal to Apple's trade secrets lawsuit. 15 Republican attorneys general demanded OpenAI preserve all records from the Hugging Face breach. And Alibaba's Qwen3.8-Max challenges GPT-5.6 Sol and Claude Fable 5 on benchmarks."
+    },
+    {
       "id": "ai-news-roundup-2026-08-03",
       "title": "AI News Roundup: OpenAI Teases Astra After It Solves 10 Open Math Problems, Anthropic Admits Claude Hacked 3 Real Companies, EU AI Act Enforcement Begins, Nvidia Pours $5B Into Sutskever's SSI, and Recursive Superintelligence Signs $410M AWS Deal — August 3, 2026",
       "slug": "ai-news-roundup-2026-08-03",
