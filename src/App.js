@@ -839,8 +839,6 @@ const Education = () => {
 // Contact Section
 const Contact = () => {
   const contacts = [
-    { icon: "📧", label: "Email", value: "saravadeo@yahoo.com", href: "mailto:saravadeo@yahoo.com", platform: "email" },
-    { icon: "📱", label: "Phone", value: "+91 9960498810", href: "tel:+919960498810", platform: "phone" },
     { icon: "📍", label: "Location", value: "Mumbai, Maharashtra, India", href: "https://maps.google.com/?q=Mumbai+Maharashtra+India", platform: "maps" },
     {
       icon: "💼",

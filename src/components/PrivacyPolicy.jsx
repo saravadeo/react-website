@@ -63,13 +63,10 @@ const PrivacyPolicy = () => {
               <div className="pp-info-block">
                 <p className="pp-info-block__line"><strong>Onkar Sarvade</strong></p>
                 <p className="pp-info-block__line">Staff Software Engineer</p>
-                <p className="pp-info-block__line">
-                  Email: <a href="mailto:onkar@saravadeo.com" className="pp-link">onkar@saravadeo.com</a>
-                </p>
               </div>
               <p className="pp-section__text">
                 If you have any questions about this Privacy Policy or how your data is handled,
-                please contact me at the email address above.
+                please reach out through the contact options provided on the site.
               </p>
             </section>
 
@@ -217,8 +214,7 @@ const PrivacyPolicy = () => {
                 </li>
               </ul>
               <p className="pp-section__text">
-                To exercise any of these rights, please contact me at{' '}
-                <a href="mailto:onkar@saravadeo.com" className="pp-link">onkar@saravadeo.com</a>.
+                To exercise any of these rights, please reach out through the contact options provided on the site.
                 I will respond to your request within 30 days, as required by GDPR.
               </p>
               <p className="pp-section__text">
@@ -309,9 +305,7 @@ const PrivacyPolicy = () => {
               </p>
               <div className="pp-info-block">
                 <p className="pp-info-block__line"><strong>Onkar Sarvade</strong></p>
-                <p className="pp-info-block__line">
-                  Email: <a href="mailto:onkar@saravadeo.com" className="pp-link">onkar@saravadeo.com</a>
-                </p>
+                <p className="pp-info-block__line">Reachable via the contact section of this site.</p>
               </div>
             </section>
           </div>

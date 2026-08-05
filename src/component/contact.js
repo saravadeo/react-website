@@ -16,11 +16,6 @@ const Contact = () => {
                     </p>
                     
                     <div className="contact__links">
-                        <a href="mailto:onkar@saravadeo.com" className="contact__link">
-                            <span className="contact__link-icon">✉</span>
-                            onkar@saravadeo.com
-                        </a>
-                        
                         <a href="https://github.com/saravadeo" target="_blank" rel="noopener noreferrer" className="contact__link">
                             <span className="contact__link-icon">⚡</span>
                             GitHub
