@@ -1,6 +1,39 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-08-07",
+      "title": "AI News Roundup: Anthropic Confirms Custom Chip Team for Claude, OpenAI Gives Free Users Unlimited GPT-5.6 Luna, Grok 4.6 Launches, EU Deepfake Rules Go Live, and Agent Plugins 1.0 Unites Big Tech \u2014 August 7, 2026",
+      "slug": "ai-news-roundup-2026-08-07",
+      "date": "2026-08-07",
+      "tags": [
+        "ai",
+        "news",
+        "anthropic",
+        "claude",
+        "chips",
+        "custom-silicon",
+        "openai",
+        "gpt-5.6",
+        "luna",
+        "chatgpt",
+        "xai",
+        "grok",
+        "eu-ai-act",
+        "deepfakes",
+        "regulation",
+        "agent-plugins",
+        "vercel",
+        "microsoft",
+        "google",
+        "nscale",
+        "nvidia",
+        "gpt-5"
+      ],
+      "category": "AI News",
+      "readTime": "15 min",
+      "excerpt": "Anthropic confirmed it's building a custom silicon team for Claude, hiring chip engineers at up to $485K. OpenAI made GPT-5.6 Luna free with unlimited text chats. xAI's Grok 4.6 launched as a 1.5T model with improved SFT and RL. The EU's deepfake labeling requirements became enforceable. And Agent Plugins 1.0 launched with backing from Microsoft, Amazon, Google, OpenAI, Cursor, and Vercel."
+    },
+    {
       "id": "ai-news-roundup-2026-08-06",
       "title": "AI News Roundup: Anthropic Admits Claude Hacked 3 Real Companies, EU AI Act Transparency Rules Now Enforceable, Google Kills Assistant for Gemini, Cloudflare Gives AI Agents Wallets, and Grok 4.6 Arrives Tomorrow \u2014 August 6, 2026",
       "slug": "ai-news-roundup-2026-08-06",
