@@ -1,6 +1,29 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-08-13",
+      "title": "AI News Roundup: Nvidia Assembles a $500 Billion AI Infrastructure Alliance, Anthropic Posts First Profit at $10.9B Revenue, OpenAI S-1 Looms, Google Launches Pixel 11 With Tensor G6, DeepMind Loses Jeff Dean to Discovery Loop, and Claude Code Flips to Auto Mode — August 13, 2026",
+      "slug": "ai-news-roundup-2026-08-13",
+      "date": "2026-08-13",
+      "tags": [
+        "ai",
+        "news",
+        "nvidia",
+        "anthropic",
+        "openai",
+        "ipo",
+        "pixel",
+        "google",
+        "deepmind",
+        "claude-code",
+        "infrastructure",
+        "discovery-loop"
+      ],
+      "category": "AI News",
+      "readTime": "18 min",
+      "excerpt": "Nvidia partnered with six Wall Street giants to mobilize $500 billion for AI infrastructure. Anthropic posted its first-ever operating profit on $10.9B in Q2 revenue. OpenAI S-1 is expected any day with an $852B–$1T valuation target. Google launched the Pixel 11 with Tensor G6 and deeper Gemini integration. Jeff Dean left Google after 27 years to co-found Discovery Loop. And Claude Code is about to stop asking for permission."
+    },
+    {
       "id": "ai-news-roundup-2026-08-12",
       "title": "AI News Roundup: Meta Open-Sources Muse Glimmer for Local Agents, OpenAI Launches GPT-5.6-Cyber and Finds Chrome Zero-Days, Anthropic Builds Its Own Data Centers With Theseus, and OpenAI Completes $7B Tender Offer — August 12, 2026",
       "slug": "ai-news-roundup-2026-08-12",
