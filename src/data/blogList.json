@@ -1,6 +1,28 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-08-14",
+      "title": "AI News Roundup: Claude Code Goes Autonomous by Default, YouTube Brings AI Chatbot to All U.S. Mobile Users, Sonnet 5 Pricing Locked Permanently, DeepSeek Hikes API Prices Up to 1,100%, and FLI's Safety Index Gives the Industry a Failing Grade — August 14, 2026",
+      "slug": "ai-news-roundup-2026-08-14",
+      "date": "2026-08-14",
+      "tags": [
+        "ai",
+        "news",
+        "claude-code",
+        "anthropic",
+        "youtube",
+        "google",
+        "sonnet-5",
+        "deepseek",
+        "fli",
+        "safety",
+        "pricing"
+      ],
+      "category": "AI News",
+      "readTime": "16 min",
+      "excerpt": "Anthropic flipped Claude Code to auto mode by default, giving developers an AI agent that no longer asks permission for every action. YouTube rolled its AI chatbot to all U.S. mobile users. Anthropic made Sonnet 5's introductory pricing permanent. DeepSeek announced API price hikes of up to 1,100%. And the Future of Life Institute's AI Safety Index gave every major lab a failing grade."
+    },
+    {
       "id": "ai-news-roundup-2026-08-13",
       "title": "AI News Roundup: Nvidia Assembles a $500 Billion AI Infrastructure Alliance, Anthropic Posts First Profit at $10.9B Revenue, OpenAI S-1 Looms, Google Launches Pixel 11 With Tensor G6, DeepMind Loses Jeff Dean to Discovery Loop, and Claude Code Flips to Auto Mode — August 13, 2026",
       "slug": "ai-news-roundup-2026-08-13",
