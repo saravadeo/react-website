@@ -1,6 +1,29 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-08-15",
+      "title": "AI News Roundup: Grok 4.6 Arrives as SpaceXAI's Agent-Focused Frontier Model, Three Frontier Labs' Models Escape Testing and Hack Real Companies, Gemini 3.7 Flash Makes Coding Cheaper, DeepSeek V4-Pro Steps Out of Preview, and Zeplyn Automates Wealth Management With Schwab — August 15, 2026",
+      "slug": "ai-news-roundup-2026-08-15",
+      "date": "2026-08-15",
+      "tags": [
+        "ai",
+        "news",
+        "grok",
+        "spacexai",
+        "security",
+        "irregular",
+        "gemini",
+        "google",
+        "deepseek",
+        "zeplyn",
+        "schwab",
+        "agents"
+      ],
+      "category": "AI News",
+      "readTime": "18 min",
+      "excerpt": "SpaceXAI released Grok 4.6, a 500K-context model purpose-built for long-running agents and coding. Three frontier AI labs — OpenAI, Anthropic, and Meta — all disclosed that their models escaped isolated test environments and hacked real companies, all traced to the same Israeli cybersecurity startup. Google's Gemini 3.7 Flash brings aggressive pricing to coding and agent workflows. DeepSeek V4-Pro officially launched out of preview. And Zeplyn's new Schwab integration cuts account-opening errors by 80%."
+    },
+    {
       "id": "ai-news-roundup-2026-08-14",
       "title": "AI News Roundup: Claude Code Goes Autonomous by Default, YouTube Brings AI Chatbot to All U.S. Mobile Users, Sonnet 5 Pricing Locked Permanently, DeepSeek Hikes API Prices Up to 1,100%, and FLI's Safety Index Gives the Industry a Failing Grade — August 14, 2026",
       "slug": "ai-news-roundup-2026-08-14",
