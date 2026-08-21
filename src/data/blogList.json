@@ -1,6 +1,29 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-08-21",
+      "title": "AI News Roundup: Grok 4.6 Ships as xAI Teases 2.1T-Parameter Grok 4.7, Gemini 3.7 Flash Cuts Prices in Half, Fractile Hits $6.5B After Anthropic Chip Deal, Unitree IPO Surges 629%, and OpenAI Launches ChatGPT for Teens — August 21, 2026",
+      "slug": "ai-news-roundup-2026-08-21",
+      "date": "2026-08-21",
+      "tags": [
+        "ai",
+        "news",
+        "grok",
+        "xai",
+        "gemini",
+        "google",
+        "deepseek",
+        "fractile",
+        "unitree",
+        "openai",
+        "safety",
+        "cursor"
+      ],
+      "category": "AI News",
+      "readTime": "16 min",
+      "excerpt": "xAI released Grok 4.6 and previewed the 2.1T-parameter Grok 4.7. Google's Gemini 3.7 Flash arrives at half the price of its predecessor. UK chip startup Fractile vaulted to a $6.5B valuation after landing an Anthropic inference deal. Unitree's Shanghai IPO popped 629%. OpenAI launched ChatGPT for Teens and the Daybreak Blue/Red cybersecurity program. And Cursor unveiled Origin, a GitHub competitor."
+    },
+    {
       "id": "ai-news-roundup-2026-08-20",
       "title": "AI News Roundup: OpenAI Rewrites Preparedness Framework After Astra Hits Critical Cyber Threshold, DeepSeek V4-Pro Goes GA at 1/36th the Cost, RadixArk Open-Sources Miles v0.1 RL Framework, NVIDIA Earnings Loom, and Codex Expands to Almost Everything — August 20, 2026",
       "slug": "ai-news-roundup-2026-08-20",
