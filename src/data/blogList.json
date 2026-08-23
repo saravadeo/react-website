@@ -1,6 +1,27 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-08-22",
+      "title": "AI News Roundup: Mystery Model OX Alpha Topples GPT-5.6 on Coding Benchmarks, OpenAI Cuts Sol Pricing 50%, Qwen 3.8-Max Ships 2.4T Open Weights, GLM-5.3 Leads CyberGym, and Anthropic Preps $2T IPO — August 22, 2026",
+      "slug": "ai-news-roundup-2026-08-22",
+      "date": "2026-08-22",
+      "tags": [
+        "ai",
+        "news",
+        "openai",
+        "anthropic",
+        "qwen",
+        "glm",
+        "ox-alpha",
+        "deepseek",
+        "safety",
+        "regulation"
+      ],
+      "category": "AI News",
+      "readTime": "15 min",
+      "excerpt": "A mystery model called OX Alpha beat GPT-5.6 on coding benchmarks at 80% DeepSWE. OpenAI slashed GPT-5.6 Sol pricing by 50%. Alibaba shipped Qwen 3.8-Max with 2.4T open weights. GLM-5.3 topped CyberGym at 84.5%. And Anthropic is preparing a mega-IPO targeting $2 trillion."
+    },
+    {
       "id": "ai-news-roundup-2026-08-21",
       "title": "AI News Roundup: Grok 4.6 Ships as xAI Teases 2.1T-Parameter Grok 4.7, Gemini 3.7 Flash Cuts Prices in Half, Fractile Hits $6.5B After Anthropic Chip Deal, Unitree IPO Surges 629%, and OpenAI Launches ChatGPT for Teens — August 21, 2026",
       "slug": "ai-news-roundup-2026-08-21",
