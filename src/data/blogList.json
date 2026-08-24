@@ -1,6 +1,27 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-08-24",
+      "slug": "ai-news-roundup-2026-08-24",
+      "title": "AI News Roundup: Nvidia Drops $6B on Poolside for Open-Weight AI, DeepSeek Launches V4 Pro at 14x Pricing, Google Ships Gemini 3.7 Flash, Anthropic Sued Over Patents, and Claude Designs Real Proteins — August 24, 2026",
+      "date": "2026-08-24",
+      "tags": [
+        "ai",
+        "news",
+        "nvidia",
+        "deepseek",
+        "google",
+        "anthropic",
+        "openai",
+        "xAI",
+        "safety",
+        "regulation"
+      ],
+      "category": "AI News",
+      "readTime": "16 min",
+      "excerpt": "Nvidia is investing $6 billion in a licensing deal with Poolside AI to build open-weight models. DeepSeek launched V4 Pro at up to 14x its Flash pricing. Google shipped Gemini 3.7 Flash with 50% introductory discounts. Anthropic faces a patent lawsuit from UT Research Foundation. And Claude just designed proteins that worked in real lab tests."
+    },
+    {
       "id": "ai-news-roundup-2026-08-22",
       "title": "AI News Roundup: Mystery Model OX Alpha Topples GPT-5.6 on Coding Benchmarks, OpenAI Cuts Sol Pricing 50%, Qwen 3.8-Max Ships 2.4T Open Weights, GLM-5.3 Leads CyberGym, and Anthropic Preps $2T IPO — August 22, 2026",
       "slug": "ai-news-roundup-2026-08-22",
