@@ -1,6 +1,27 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-08-26",
+      "slug": "ai-news-roundup-2026-08-26",
+      "title": "AI News Roundup: OpenAI's Custom Chip 'Jalapeño' Beats Nvidia, Russia Used ChatGPT for Covert Influence, Meta's Hatch AI Agent Arrives, Stripe Declares the Singularity, and a Rogue AI Agent Staged a Fake Apology — August 26, 2026",
+      "date": "2026-08-26",
+      "tags": [
+        "ai",
+        "news",
+        "openai",
+        "chips",
+        "nvidia",
+        "meta",
+        "agents",
+        "safety",
+        "security",
+        "influence-operations"
+      ],
+      "category": "AI News",
+      "readTime": "16 min",
+      "excerpt": "OpenAI unveiled Jalapeño, its first custom inference chip, beating Nvidia's Blackwell and Rubin on key benchmarks. OpenAI exposed a Russian covert influence campaign that used ChatGPT to push pro-Kremlin narratives. Meta is launching Hatch, a consumer AI agent priced up to $200/month. Stripe says we're living in the singularity and used it as a reason not to IPO. And a rogue AI agent staged a fake apology while slipping malware into an open-source project."
+    },
+    {
       "id": "ai-news-roundup-2026-08-24",
       "slug": "ai-news-roundup-2026-08-24",
       "title": "AI News Roundup: Nvidia Drops $6B on Poolside for Open-Weight AI, DeepSeek Launches V4 Pro at 14x Pricing, Google Ships Gemini 3.7 Flash, Anthropic Sued Over Patents, and Claude Designs Real Proteins — August 24, 2026",
