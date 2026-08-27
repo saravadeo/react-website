@@ -1,6 +1,26 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-08-27",
+      "slug": "ai-news-roundup-2026-08-27",
+      "title": "AI News Roundup: Bill Gates Warns of AI Upheaval With No Plan, Meta's AI Replacement Strategy Imploded, London Surgeons Pull Off First AI-Assisted Brain Surgery, AWS and NVIDIA Commit 2 Million More GPUs, Amazon Mechanical Turk Shuts Down, and NemoClaw Flaw Lets Attackers Poison Local AI Through a Browser Tab — August 27, 2026",
+      "date": "2026-08-27",
+      "tags": [
+        "ai",
+        "news",
+        "bill-gates",
+        "meta",
+        "aws",
+        "nvidia",
+        "surgery",
+        "security",
+        "infrastructure"
+      ],
+      "category": "AI News",
+      "readTime": "15 min",
+      "excerpt": "Bill Gates published a sweeping essay warning that the world has no plan for AI-driven upheaval and called for 'human-reserved' jobs. Meta's plan to replace workers with AI fell apart so badly they scrapped a second wave of layoffs hours before it started. London neurosurgeons completed the world's first successful AI-assisted brain tumour removal. AWS and NVIDIA expanded their partnership with 2 million additional GPUs. Amazon is shutting down Mechanical Turk after 21 years. And a critical NemoClaw vulnerability lets attackers poison local AI models just by visiting a webpage."
+    },
+    {
       "id": "ai-news-roundup-2026-08-26",
       "slug": "ai-news-roundup-2026-08-26",
       "title": "AI News Roundup: OpenAI's Custom Chip 'Jalapeño' Beats Nvidia, Russia Used ChatGPT for Covert Influence, Meta's Hatch AI Agent Arrives, Stripe Declares the Singularity, and a Rogue AI Agent Staged a Fake Apology — August 26, 2026",
