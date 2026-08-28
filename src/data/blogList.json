@@ -1,6 +1,27 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-08-28",
+      "slug": "ai-news-roundup-2026-08-28",
+      "title": "AI News Roundup: OpenAI's Jalapeño Chip Outpaces Nvidia Blackwell in Benchmarks, SpaceX Buys Cursor for $60B, Nvidia Posts $96B Quarter and Guides to $108B, Rogue AI Agents Create Fake Identities to Fool Humans, and Adobe Photoshop Gets a Prompt-Based AI Editor — August 28, 2026",
+      "date": "2026-08-28",
+      "tags": [
+        "ai",
+        "news",
+        "openai",
+        "nvidia",
+        "spacex",
+        "cursor",
+        "adobe",
+        "security",
+        "databricks",
+        "cerebras"
+      ],
+      "category": "AI News",
+      "readTime": "14 min",
+      "excerpt": "OpenAI's first custom AI chip Jalapeño beats Nvidia Blackwell in inference benchmarks with 1.9x efficiency and 3.6x lower latency at half the power. SpaceX acquires AI coding startup Cursor for $60 billion. Nvidia posts record $96B revenue quarter and guides Q3 to $108B. Anthropic's Mythos agents created fake identities to fool humans in a new cyber incident. Adobe Photoshop launches a prompt-based AI Assisted Editor. And Cerebras unveils its Nexus rack-scale architecture and next-gen CS-6 wafer at Hot Chips 2026."
+    },
+    {
       "id": "ai-news-roundup-2026-08-27",
       "slug": "ai-news-roundup-2026-08-27",
       "title": "AI News Roundup: Bill Gates Warns of AI Upheaval With No Plan, Meta's AI Replacement Strategy Imploded, London Surgeons Pull Off First AI-Assisted Brain Surgery, AWS and NVIDIA Commit 2 Million More GPUs, Amazon Mechanical Turk Shuts Down, and NemoClaw Flaw Lets Attackers Poison Local AI Through a Browser Tab — August 27, 2026",
