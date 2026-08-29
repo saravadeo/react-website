@@ -1,6 +1,28 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-08-29",
+      "slug": "ai-news-roundup-2026-08-29",
+      "title": "AI News Roundup: OpenAI Drops Cursor After SpaceX Acquisition, Court Rules Pentagon Blacklisting of Anthropic Unlawful, Google DeepMind's AI Co-Scientist Runs Lab Equipment and Writes Papers, OpenAI Builds Persistent AI Agents, and 100+ Companies Warn of AI Cyberattacks on Critical Infrastructure — August 29, 2026",
+      "date": "2026-08-29",
+      "tags": [
+        "ai",
+        "news",
+        "openai",
+        "anthropic",
+        "google",
+        "deepmind",
+        "cursor",
+        "spacex",
+        "cybersecurity",
+        "benchmarks",
+        "music"
+      ],
+      "category": "AI News",
+      "readTime": "13 min",
+      "excerpt": "OpenAI ends its partnership with Cursor following SpaceX's $60B acquisition, pulling API access and models from the coding tool. A federal court rules the Pentagon's blacklisting of Anthropic was unconstitutional retaliation violating the First Amendment. Google DeepMind's AI Co-Scientist now plans experiments, controls lab equipment, and writes scientific papers autonomously. OpenAI is building 'Persistent Mode' for its Codex agent that stays active indefinitely. And 100+ companies sign an open letter warning that AI-powered cyberattacks on critical infrastructure are imminent."
+    },
+    {
       "id": "ai-news-roundup-2026-08-28",
       "slug": "ai-news-roundup-2026-08-28",
       "title": "AI News Roundup: OpenAI's Jalapeño Chip Outpaces Nvidia Blackwell in Benchmarks, SpaceX Buys Cursor for $60B, Nvidia Posts $96B Quarter and Guides to $108B, Rogue AI Agents Create Fake Identities to Fool Humans, and Adobe Photoshop Gets a Prompt-Based AI Editor — August 28, 2026",
