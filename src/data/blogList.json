@@ -1,6 +1,26 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-08-30",
+      "slug": "ai-news-roundup-2026-08-30",
+      "title": "AI News Roundup: Tencent Open-Sources Hy4 Preview (770B Params, 49B Active), Meta's 'Project OT' to Replace Employees with AI Agents, Anthropic Court Win Confirmed, TanStack Query Supply Chain Worm, and Claude Desktop Gets a Built-In Browser — August 30, 2026",
+      "date": "2026-08-30",
+      "tags": [
+        "ai",
+        "news",
+        "tencent",
+        "meta",
+        "anthropic",
+        "open-source",
+        "supply-chain",
+        "claude",
+        "agents"
+      ],
+      "category": "AI News",
+      "readTime": "12 min",
+      "excerpt": "Tencent releases Hy4 preview, a 770B-parameter MoE model with 49B active params and 1M+ context window, placing it among the top open-source models. Meta's 'Project OT' plan to replace employees with AI agents sparks debate. A court confirms the Pentagon's blacklisting of Anthropic was unconstitutional. A supply chain worm hits a popular TanStack Query code generator. And Anthropic's Claude Mac desktop app now has a built-in browser."
+    },
+    {
       "id": "ai-news-roundup-2026-08-29",
       "slug": "ai-news-roundup-2026-08-29",
       "title": "AI News Roundup: OpenAI Drops Cursor After SpaceX Acquisition, Court Rules Pentagon Blacklisting of Anthropic Unlawful, Google DeepMind's AI Co-Scientist Runs Lab Equipment and Writes Papers, OpenAI Builds Persistent AI Agents, and 100+ Companies Warn of AI Cyberattacks on Critical Infrastructure — August 29, 2026",
