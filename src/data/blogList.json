@@ -1,6 +1,29 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-09-03",
+      "slug": "ai-news-roundup-2026-09-03",
+      "title": "AI News Roundup: G20 Pushes Carolina Principles for Light-Touch AI Regulation, Google Ships Gemini 3.8 Flash With Cyber Model, Meta Muse Voice Transcribe Handles Real-Time Multi-Language Audio, FDA Opens GenAI Medical Device Regulation, and OVES Enterprise Integrates Nemesis AI Into German Autonomous Naval Vessels — September 3, 2026",
+      "date": "2026-09-03",
+      "tags": [
+        "ai",
+        "news",
+        "g20",
+        "regulation",
+        "google",
+        "gemini",
+        "meta",
+        "muse",
+        "fda",
+        "healthcare",
+        "defense",
+        "agents"
+      ],
+      "category": "AI News",
+      "readTime": "14 min",
+      "excerpt": "The US pushes Carolina Principles at the G20 Innovation Ministerial in Chapel Hill, with Jensen Huang and Sam Altman advocating against heavy AI regulation. Google ships Gemini 3.8 Flash and a new Flash Cyber model under the Fairwind Program. Meta introduces Muse Voice Transcribe for real-time multi-language speaker diarization. The FDA publishes a landmark discussion paper on generative AI medical device regulation. And Romania's OVES Enterprise partners with Germany's STARK to integrate Nemesis AI into autonomous naval vessels."
+    },
+    {
       "id": "ai-news-roundup-2026-08-30",
       "slug": "ai-news-roundup-2026-08-30",
       "title": "AI News Roundup: Tencent Open-Sources Hy4 Preview (770B Params, 49B Active), Meta's 'Project OT' to Replace Employees with AI Agents, Anthropic Court Win Confirmed, TanStack Query Supply Chain Worm, and Claude Desktop Gets a Built-In Browser — August 30, 2026",
