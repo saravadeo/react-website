@@ -1,6 +1,19 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-09-04",
+      "slug": "ai-news-roundup-2026-09-04",
+      "title": "AI News Roundup: Anthropic's New Models, Nvidia Buys Hugging Face, OpenAI's Cyber Risk, and More (Sept 2026)",
+      "date": "2026-09-04",
+      "tags": [
+        "ai",
+        "news"
+      ],
+      "category": "AI News",
+      "readTime": "9 min",
+      "excerpt": "The biggest AI stories from late August to early September 2026 — Anthropic launches Fable 5.1 and Mythos 5.1, Nvidia acquires Hugging Face for $12.9B, OpenAI flags critical cybersecurity risks, Texas freezes data center permits, and Uber cuts 3,300 jobs for robotaxis."
+    },
+    {
       "id": "ai-news-roundup-2026-09-03",
       "slug": "ai-news-roundup-2026-09-03",
       "title": "AI News Roundup: G20 Pushes Carolina Principles for Light-Touch AI Regulation, Google Ships Gemini 3.8 Flash With Cyber Model, Meta Muse Voice Transcribe Handles Real-Time Multi-Language Audio, FDA Opens GenAI Medical Device Regulation, and OVES Enterprise Integrates Nemesis AI Into German Autonomous Naval Vessels — September 3, 2026",
