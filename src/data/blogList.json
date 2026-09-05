@@ -1,6 +1,19 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-09-05",
+      "slug": "ai-news-roundup-2026-09-05",
+      "title": "AI News Roundup: OpenAI Launches GPT-6 Astra, Daybreak's $1B Cyber Defense Pledge, Opaque Reasoning Under Fire, Google Assistant Bows Out, and IFM Opens K2 Horizon (Sept 2026)",
+      "date": "2026-09-05",
+      "tags": [
+        "ai",
+        "news"
+      ],
+      "category": "AI News",
+      "readTime": "11 min",
+      "excerpt": "The biggest AI stories from early September 2026 — OpenAI launches GPT-6 Astra with critical cyber capabilities, commits $1B to frontline defenders, opaque reasoning architectures spark safety concerns, Google Assistant shuts down for Gemini, and IFM releases the largest fully open-source model fleet in AI history."
+    },
+    {
       "id": "ai-news-roundup-2026-09-04",
       "slug": "ai-news-roundup-2026-09-04",
       "title": "AI News Roundup: Anthropic's New Models, Nvidia Buys Hugging Face, OpenAI's Cyber Risk, and More (Sept 2026)",
