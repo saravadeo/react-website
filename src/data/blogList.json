@@ -1,6 +1,19 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-09-06",
+      "slug": "ai-news-roundup-2026-09-06",
+      "title": "AI News Roundup: Astra's Zero-Day Powers Spur 15-State Probe, Chrome Under Active Attack, Anthropic Fires Back with Fable & Mythos, Google Arms Pentagon with Gemini, and Thinking Machines Raises $6B (Sept 2026)",
+      "date": "2026-09-06",
+      "tags": [
+        "ai",
+        "news"
+      ],
+      "category": "AI News",
+      "readTime": "12 min",
+      "excerpt": "The biggest AI stories from early September 2026 — GPT-6 Astra's autonomous zero-day discovery triggers a multi-state investigation, a critical Chrome V8 flaw is actively exploited, Anthropic launches Claude Fable 5.1 and Mythos 5.1, Google deploys Gemini agents inside the Pentagon, and Thinking Machines Lab raises $6B at a $40B valuation."
+    },
+    {
       "id": "ai-news-roundup-2026-09-05",
       "slug": "ai-news-roundup-2026-09-05",
       "title": "AI News Roundup: OpenAI Launches GPT-6 Astra, Daybreak's $1B Cyber Defense Pledge, Opaque Reasoning Under Fire, Google Assistant Bows Out, and IFM Opens K2 Horizon (Sept 2026)",
