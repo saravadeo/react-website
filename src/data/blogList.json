@@ -1,6 +1,19 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-09-09",
+      "slug": "ai-news-roundup-2026-09-09",
+      "title": "AI News Roundup: GPT-6 Astra Declares AGI Era, Anthropic IPO Targets Mid-October, Mistral Raises Record €3B, Pennsylvania Reconvenes on AI Laws, and Amazon Kills Mechanical Turk (Sept 2026)",
+      "date": "2026-09-09",
+      "tags": [
+        "ai",
+        "news"
+      ],
+      "category": "AI News",
+      "readTime": "14 min",
+      "excerpt": "The biggest AI stories from September 2026 — OpenAI launches GPT-6 Astra and declares the AGI era, Anthropic's IPO shifts toward mid-October at up to $2T valuation, Mistral raises Europe's largest tech round at €3B, Pennsylvania lawmakers reconvene with major AI bills on the table, and Amazon shuts down Mechanical Turk after 21 years."
+    },
+    {
       "id": "ai-news-roundup-2026-09-06",
       "slug": "ai-news-roundup-2026-09-06",
       "title": "AI News Roundup: Astra's Zero-Day Powers Spur 15-State Probe, Chrome Under Active Attack, Anthropic Fires Back with Fable & Mythos, Google Arms Pentagon with Gemini, and Thinking Machines Raises $6B (Sept 2026)",
