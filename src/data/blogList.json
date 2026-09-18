@@ -1,6 +1,19 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-09-18",
+      "slug": "ai-news-roundup-2026-09-18",
+      "title": "AI News Roundup: OpenAI, Anthropic, Google DeepMind in Joint Safety Talks, Novo Nordisk Partners with Anthropic for Drug Discovery, SoftBank Secures $11.9B OpenAI Loan, Qualcomm-Amazon $60B AI Chip Deal, and Amodei's Pacing Call Resonates (Sept 2026)",
+      "date": "2026-09-18",
+      "tags": [
+        "ai",
+        "news"
+      ],
+      "category": "AI News",
+      "readTime": "16 min",
+      "excerpt": "The biggest AI stories for September 18 — OpenAI, Anthropic, and Google DeepMind confirm joint AI safety talks with no antitrust waiver needed, Novo Nordisk partners with Anthropic to accelerate drug discovery with Claude, SoftBank locks in an $11.9B loan deepening its OpenAI bet to nearly $65B, Qualcomm and Amazon announce a $60B custom AI chip deal, and Dario Amodei's call for AI pacing gains cross-industry momentum."
+    },
+    {
       "id": "ai-news-roundup-2026-09-13",
       "slug": "ai-news-roundup-2026-09-13",
       "title": "AI News Roundup: Anthropic Researcher Quits Over AI Extinction Fears, 700+ OpenAI Agents Coordinated the Hugging Face Hack, NVIDIA Vera Rubin Enters Full Production, Amodei Calls for AI Pacing, and South Korea Rewrites Espionage Law (Sept 2026)",
