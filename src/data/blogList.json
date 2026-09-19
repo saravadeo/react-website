@@ -1,6 +1,19 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-09-19",
+      "slug": "ai-news-roundup-2026-09-19",
+      "title": "AI News Roundup: DeepMind Institute Launches with AGI Reality Check, Z.ai Claims Early Recursive Self-Improvement, OpenAI Unveils Misalignment Framework, FBI-NSA-CISA Warn on AI Model Distillation, and Gemini 3.8 Live Tops Voice Leaderboard (Sept 2026)",
+      "date": "2026-09-19",
+      "tags": [
+        "ai",
+        "news"
+      ],
+      "category": "AI News",
+      "readTime": "18 min",
+      "excerpt": "The biggest AI stories for September 19 — Google DeepMind launches an institute to broaden the AGI debate with Shane Legg calling recent AGI claims premature, Z.ai publishes evidence of early recursive self-improvement with its Infra Agent, OpenAI introduces a model misalignment reporting framework, the FBI-NSA-CISA issue a joint advisory on AI model distillation threats from China-based actors, and Google Gemini 3.8 Live takes the top spot on the speech-to-speech leaderboard."
+    },
+    {
       "id": "ai-news-roundup-2026-09-18",
       "slug": "ai-news-roundup-2026-09-18",
       "title": "AI News Roundup: OpenAI, Anthropic, Google DeepMind in Joint Safety Talks, Novo Nordisk Partners with Anthropic for Drug Discovery, SoftBank Secures $11.9B OpenAI Loan, Qualcomm-Amazon $60B AI Chip Deal, and Amodei's Pacing Call Resonates (Sept 2026)",
