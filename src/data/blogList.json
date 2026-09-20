@@ -1,6 +1,19 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-09-20",
+      "slug": "ai-news-roundup-2026-09-20",
+      "title": "AI News Roundup: Anthropic Launches Claude Docs & Slides, Zero-Click RCE Flaw Hits Major AI Coding Agents, NVIDIA Acquires Hugging Face for $12.93B, Arcee AI Raises $150M at Unicorn Valuation, and OpenAI Cuts Cursor Model Access After SpaceX Acquisition (Sept 2026)",
+      "date": "2026-09-20",
+      "tags": [
+        "ai",
+        "news"
+      ],
+      "category": "AI News",
+      "readTime": "17 min",
+      "excerpt": "The biggest AI stories for September 20 — Anthropic merges Claude Chat and Cowork into a unified experience with new Docs and Slides, a zero-click RCE vulnerability hits four major AI coding agents, NVIDIA closes its $12.93B Hugging Face acquisition, Arcee AI raises $150M Series B at a $1B valuation to build American open-weight models, and OpenAI cuts Cursor model access following SpaceX acquisition of the coding startup."
+    },
+    {
       "id": "ai-news-roundup-2026-09-19",
       "slug": "ai-news-roundup-2026-09-19",
       "title": "AI News Roundup: DeepMind Institute Launches with AGI Reality Check, Z.ai Claims Early Recursive Self-Improvement, OpenAI Unveils Misalignment Framework, FBI-NSA-CISA Warn on AI Model Distillation, and Gemini 3.8 Live Tops Voice Leaderboard (Sept 2026)",
