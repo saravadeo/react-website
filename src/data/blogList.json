@@ -1,6 +1,19 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-09-21",
+      "slug": "ai-news-roundup-2026-09-21",
+      "title": "AI News Roundup: Google Open-Sources AX Agent Orchestrator, OpenAI's ChatGPT Ad Tracker Cross-Sites Users, Qwen Image 2.1 Debuts, Samsung Doubles HBM4 Output, and MCP's Reckoning Arrives (Sept 2026)",
+      "date": "2026-09-21",
+      "tags": [
+        "ai",
+        "news"
+      ],
+      "category": "AI News",
+      "readTime": "16 min",
+      "excerpt": "The biggest AI stories for September 21 — Google open-sources AX, a Kubernetes-style orchestrator for billions of agent tasks; a security researcher reveals ChatGPT's ad collector tracks users across 936+ advertiser sites; Alibaba releases Qwen-Image-2.1; Samsung plans to double HBM4 output; and a viral essay argues MCP has been overtaken by smarter models."
+    },
+    {
       "id": "ai-news-roundup-2026-09-20",
       "slug": "ai-news-roundup-2026-09-20",
       "title": "AI News Roundup: Anthropic Launches Claude Docs & Slides, Zero-Click RCE Flaw Hits Major AI Coding Agents, NVIDIA Acquires Hugging Face for $12.93B, Arcee AI Raises $150M at Unicorn Valuation, and OpenAI Cuts Cursor Model Access After SpaceX Acquisition (Sept 2026)",
