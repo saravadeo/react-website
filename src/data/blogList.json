@@ -1,6 +1,19 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-09-25",
+      "slug": "ai-news-roundup-2026-09-25",
+      "title": "AI News Roundup: Google Launches Gemini 3.8 Live Avatar, Project Suncatcher Sends AI to Space, DeepMind Chief Teases Gemini 4, Muse Filesystem Revealed, and Gemini Can Now Call Businesses For You (Sept 2026)",
+      "date": "2026-09-25",
+      "tags": [
+        "ai",
+        "news"
+      ],
+      "category": "AI News",
+      "readTime": "14 min",
+      "excerpt": "Google gives Gemini a face with Live Avatar, launches an AI-equipped satellite into orbit via Project Suncatcher, and DeepMind's new chief says Gemini 4 is almost ready. Meanwhile, Meta's Muse filesystem gets exposed, Gemini learns to call businesses on your behalf, and Jensen Huang's climate comments draw fire."
+    },
+    {
       "id": "ai-news-roundup-2026-09-21",
       "slug": "ai-news-roundup-2026-09-21",
       "title": "AI News Roundup: Google Open-Sources AX Agent Orchestrator, OpenAI's ChatGPT Ad Tracker Cross-Sites Users, Qwen Image 2.1 Debuts, Samsung Doubles HBM4 Output, and MCP's Reckoning Arrives (Sept 2026)",
