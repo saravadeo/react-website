@@ -953,7 +953,7 @@ const HomePage = () => {
     "@type": "WebPage",
     "name": "Onkar Sarvade - Staff Software Engineer",
     "description": "Portfolio of Onkar Sarvade — Staff Software Engineer with 11+ years of experience in distributed systems, scalable backend architecture, and cloud-native applications.",
-    "url": "https://saravadeo.github.io/react-website/",
+    "url": "https://onkarsarvade.com/",
     "mainEntity": {
       "@type": "Person",
       "name": "Onkar Sarvade",
@@ -975,10 +975,10 @@ const HomePage = () => {
         <meta name="keywords" content="Onkar Sarvade, Staff Software Engineer, Distributed Systems, Scalable Backend, Microservices Architecture, Cloud Native Applications, Observability Engineering, Event Driven Systems, Fault Tolerant Systems, OpenTelemetry, Apache Kafka, AWS, System Design, Backend Engineering" />
         <meta property="og:title" content="Onkar Sarvade | Staff Software Engineer" />
         <meta property="og:description" content="Onkar Sarvade — Staff Software Engineer building scalable backend systems, microservices, and observability platforms." />
-        <meta property="og:url" content="https://saravadeo.github.io/react-website/" />
+        <meta property="og:url" content="https://onkarsarvade.com/" />
         <meta name="twitter:title" content="Onkar Sarvade | Staff Software Engineer" />
         <meta name="twitter:description" content="Staff Software Engineer with 11+ years building scalable backend systems and observability platforms." />
-        <link rel="canonical" href="https://saravadeo.github.io/react-website/" />
+        <link rel="canonical" href="https://onkarsarvade.com/" />
         <meta name="geo.region" content="IN-MH" />
         <meta name="geo.placename" content="Mumbai" />
         <script type="application/ld+json">{JSON.stringify(homePageSchema)}</script>
@@ -1018,7 +1018,7 @@ const AppShell = () => {
 };
 
 const App = () => (
-  <Router basename="/react-website">
+  <Router basename="/">
     <AppShell />
   </Router>
 );

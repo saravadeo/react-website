@@ -7,9 +7,9 @@
       // Single Page App redirect hack for GitHub Pages
       // Store the full URL so index.html can restore it via history.replaceState
       sessionStorage.redirect = window.location.href;
-      // Redirect to the root of the react-website subpath
+      // Redirect to the root
       var l = window.location;
-      l.replace(l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + '/react-website/');
+      l.replace(l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + '/');
     </script>
   </head>
   <body>

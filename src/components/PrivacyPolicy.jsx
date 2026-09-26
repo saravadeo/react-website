@@ -22,7 +22,7 @@ const PrivacyPolicy = () => {
           property="og:description"
           content="Privacy Policy for Onkar Sarvade's portfolio website. Learn how your personal data is collected, processed, and protected under GDPR."
         />
-        <link rel="canonical" href="https://saravadeo.github.io/react-website/privacy-policy" />
+        <link rel="canonical" href="https://onkarsarvade.com/privacy-policy" />
       </Helmet>
 
       <div className="pp-page__bg">

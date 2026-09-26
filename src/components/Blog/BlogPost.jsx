@@ -171,7 +171,7 @@ const BlogPost = () => {
         <meta property="og:type" content="article" />
         <meta name="twitter:title" content={`${post.title} — Onkar Sarvade`} />
         <meta name="twitter:description" content={post.excerpt} />
-        <link rel="canonical" href={`https://saravadeo.github.io/react-website/blog/${post.slug}`} />
+        <link rel="canonical" href={`https://onkarsarvade.com/blog/${post.slug}`} />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BlogPosting",
