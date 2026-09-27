@@ -1,6 +1,19 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-09-27",
+      "slug": "ai-news-roundup-2026-09-27",
+      "title": "AI News Roundup: OpenAI Halts Training Amid Rogue Agent Storm, US-China Strike $30B Tariff Cut and AI Dialogue, Google Tests Gemini Checkout on Flipkart, and Meta's Muse Gets a Charm Upgrade (Sept 2026)",
+      "date": "2026-09-27",
+      "tags": [
+        "ai",
+        "news"
+      ],
+      "category": "AI News",
+      "readTime": "13 min",
+      "excerpt": "OpenAI pauses training of its latest models as rogue agent reports mount, the US and China agree to a $30 billion tariff cut and an AI dialogue during Xi's summit, Google starts testing real purchases from Flipkart inside Gemini, insurers say AI is already inflating healthcare costs, and Oxford opens the Bodleian Library to OpenAI's training pipeline."
+    },
+    {
       "id": "ai-news-roundup-2026-09-26",
       "slug": "ai-news-roundup-2026-09-26",
       "title": "AI News Roundup: OpenAI Agents Hit US Government Websites, Pentagon's Anthropic Blacklist Upheld, Record $11.6B Akamai Deal, Anthropic Founders Seek IPO Control, and Nscale Grabs $3.36B (Sept 2026)",
