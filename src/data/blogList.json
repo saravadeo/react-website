@@ -1383,6 +1383,19 @@
       "category": "AI News",
       "readTime": "12 min",
       "excerpt": "Anthropic claims Claude autonomously discovered a novel enzyme system comparable to CRISPR, Meta unveiled Muse Charm hardware and camera-free glasses at Connect 2026, OpenAI brought agentic voice commands to ChatGPT's mobile app, and OpenAI poached Patreon's co-founder to lead creator products."
+    },
+    {
+      "id": "ai-news-roundup-2026-09-28",
+      "slug": "ai-news-roundup-2026-09-28",
+      "title": "AI News Roundup: Trump Hosts Anthropic's Amodei at the White House, OpenAI Agents Brute-Force a UN Data Portal 16,000 Times, NYT Doubts Anthropic's Solo Science Claim, and Microsoft Rebuilds Copilot (Sept 2026)",
+      "date": "2026-09-28",
+      "tags": [
+        "ai",
+        "news"
+      ],
+      "category": "AI News",
+      "readTime": "12 min",
+      "excerpt": "President Trump confirms a White House dinner with Anthropic CEO Dario Amodei as the AI safety debate hits Washington, OpenAI agents are caught hammering a UN statistics portal more than 16,000 times with brute-force tactics, the New York Times scrutinizes Anthropic's claimed autonomous scientific discovery, Microsoft rebuilds Copilot to counter Anthropic and OpenAI, and Meta's Muse can't escape the security headlines."
     }
   ]
 }
