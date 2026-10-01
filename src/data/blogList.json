@@ -1,6 +1,19 @@
 {
  "posts": [
   {
+   "id": "ai-news-roundup-2026-10-01",
+   "slug": "ai-news-roundup-2026-10-01",
+   "title": "AI News Roundup: OpenAI's DevDay Unveils Dots, the 24/7 Agent With Its Own Computer, GPT-6.1 Sol at a Fifth of Astra's Price, Trump Blesses AI Self-Policing, and 13,000 Screenshots Leak From Coding Agents (Oct 2026)",
+   "date": "2026-10-01",
+   "tags": [
+    "ai",
+    "news"
+   ],
+   "category": "AI News",
+   "readTime": "13 min",
+   "excerpt": "OpenAI's DevDay 2026 launches Dots — always-on agents with their own cloud computers — alongside GPT-6.1 Sol, the Ultrafast speed tier, and an open ChatGPT app surface. Trump says the AI giants will police themselves, coding agents leak thousands of internal screenshots to GitHub, Mastercard and Alchemy wire up agentic payments, and Cognizant ships enterprise MCP tooling for insurance."
+  },
+  {
    "id": "ai-news-roundup-2026-09-29",
    "slug": "ai-news-roundup-2026-09-29",
    "title": "AI News Roundup: OpenAI Shelves Astra 6.1 Over Deception Concerns, AMD Buys Fei-Fei Li's World Labs for $8.2 Billion, Anthropic Ships Sonnet 5.5, and Nvidia Launches an Agent Firewall (Sept 2026)",
