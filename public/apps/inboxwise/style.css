@@ -1,0 +1,42 @@
+/* Static pages for the Inboxwise Android app. Served as plain files (HTTP 200,
+   no JavaScript) so Google Play's privacy-policy check can read them. Styled to
+   match the site's Privacy Policy page (src/components/PrivacyPolicy.css). */
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;min-height:100vh;background:#0d1117;color:#e6edf3;
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.65;
+  background-image:radial-gradient(ellipse 100% 60% at 50% -10%,rgba(46,160,110,.14),transparent 60%),
+    linear-gradient(rgba(48,54,61,.10) 1px,transparent 1px),linear-gradient(90deg,rgba(48,54,61,.10) 1px,transparent 1px);
+  background-size:auto,48px 48px,48px 48px}
+a{color:#58a6ff}
+a:hover{color:#3fb986}
+.wrap{max-width:800px;margin:0 auto;padding:3rem 1.25rem 4rem}
+.crumb{font-size:.875rem;color:#8b949e;margin-bottom:2rem}
+.crumb a{text-decoration:none}
+.card{background:rgba(22,27,34,.6);border:1px solid rgba(48,54,61,.5);border-radius:16px;overflow:hidden}
+.card header{padding:2rem 2.5rem;border-bottom:1px solid rgba(48,54,61,.5)}
+.card .body{padding:2rem 2.5rem}
+h1{font-size:2rem;line-height:1.3;margin:0 0 .5rem;font-weight:700;
+  background:linear-gradient(135deg,#e6edf3 0%,#3fb986 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.meta{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.85rem;color:#8b949e;margin:0}
+h2{font-size:1.2rem;font-weight:600;margin:2rem 0 .75rem;padding-bottom:.4rem;border-bottom:1px solid rgba(48,54,61,.5)}
+h2:first-child{margin-top:0}
+p,li{color:#c9d1d9;font-size:1rem}
+ul{padding-left:1.25rem}
+li{margin:.35rem 0}
+strong{color:#e6edf3}
+.summary{background:rgba(46,160,110,.10);border:1px solid rgba(63,185,134,.35);border-radius:12px;padding:1rem 1.25rem;margin:0 0 1.5rem}
+.summary p{margin:.25rem 0}
+table{width:100%;border-collapse:collapse;margin:.5rem 0 1rem;font-size:.95rem}
+th,td{text-align:left;vertical-align:top;padding:.6rem .5rem;border-bottom:1px solid rgba(48,54,61,.5);color:#c9d1d9}
+th{color:#e6edf3;font-weight:600}
+code{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.88em;background:rgba(110,118,129,.2);padding:.1em .35em;border-radius:6px}
+.app{display:flex;gap:1.25rem;align-items:center}
+.app img{width:88px;height:88px;border-radius:22px;flex:none}
+.pill{display:inline-block;font-size:.8rem;font-weight:600;padding:.25rem .7rem;border-radius:999px;background:rgba(63,185,134,.15);color:#7ee2b8;margin:.2rem .3rem 0 0}
+footer{margin-top:2rem;font-size:.85rem;color:#8b949e;text-align:center}
+@media (max-width:600px){.card header,.card .body{padding:1.5rem 1.25rem}h1{font-size:1.6rem}.app img{width:64px;height:64px;border-radius:16px}}
+.app>div{min-width:0}
+h1,p,li,td{overflow-wrap:anywhere}
+table{table-layout:fixed}
+th:first-child,td:first-child{width:34%}
