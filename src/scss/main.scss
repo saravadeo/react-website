@@ -84,12 +84,29 @@ body.nav-open {
       border-radius: 4px;
     }
 
-    &-bracket {
-      color: $geek-accent-purple;
+    gap: 0.6rem;
+
+    &-avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      box-shadow: 0 0 0 1px rgba($geek-accent-purple, 0.35);
+      transition: box-shadow 0.3s;
+    }
+
+    &:hover &-avatar {
+      box-shadow: 0 0 0 1px $geek-accent-purple, 0 0 18px rgba($geek-accent-purple, 0.35);
     }
 
     &-text {
       color: $geek-text-primary;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+    }
+
+    &-dot {
+      color: $geek-accent-purple;
     }
   }
 

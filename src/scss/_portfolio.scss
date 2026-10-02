@@ -18,23 +18,103 @@
     pointer-events: none;
   }
 
-  &__grid {
+  // Low drifting mist along the bottom, like the valley in the avatar
+  &__mist {
     position: absolute;
-    inset: 0;
-    background-image: linear-gradient(rgba($geek-border, 0.35) 1px, transparent 1px),
-      linear-gradient(90deg, rgba($geek-border, 0.35) 1px, transparent 1px);
-    background-size: 48px 48px;
-    mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, black 20%, transparent 70%);
-    opacity: 0.5;
+    left: -10%;
+    right: -10%;
+    bottom: -10%;
+    height: 55%;
+    background:
+      radial-gradient(ellipse 40% 60% at 20% 80%, rgba($geek-text-primary, 0.045), transparent 70%),
+      radial-gradient(ellipse 45% 55% at 75% 85%, rgba($geek-text-primary, 0.035), transparent 70%);
+    filter: blur(20px);
+    animation: mist-drift 28s ease-in-out infinite alternate;
   }
 
   &__gradient {
     position: absolute;
     inset: 0;
     background:
-      radial-gradient(ellipse 100% 80% at 50% -20%, rgba($geek-accent-purple, 0.18), transparent 55%),
-      radial-gradient(ellipse 60% 50% at 100% 50%, rgba($geek-accent-blue, 0.08), transparent 50%),
-      radial-gradient(ellipse 50% 40% at 0% 80%, rgba($geek-accent-green-bright, 0.06), transparent 50%);
+      radial-gradient(ellipse 70% 60% at 50% 18%, rgba($geek-accent-purple, 0.13), transparent 60%),
+      radial-gradient(ellipse 40% 40% at 90% 60%, rgba($geek-accent-blue, 0.05), transparent 60%);
+  }
+
+  // ——— Identity: avatar + wordmark ———
+  &__identity {
+    display: flex;
+    align-items: center;
+    gap: clamp(1.5rem, 5vw, 3rem);
+    margin-bottom: clamp(1.75rem, 5vw, 2.75rem);
+    animation: monk-rise 1.2s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+
+  &__avatar-wrap {
+    position: relative;
+    flex-shrink: 0;
+    width: clamp(120px, 22vw, 190px);
+    aspect-ratio: 1;
+  }
+
+  &__avatar {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50%;
+    box-shadow: 0 0 70px rgba($geek-accent-purple, 0.25);
+  }
+
+  &__enso {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba($geek-accent-purple, 0.25);
+    border-right-color: transparent;
+    pointer-events: none;
+
+    &--inner {
+      inset: -12px;
+      animation: monk-breathe 9s ease-in-out infinite;
+    }
+
+    &--outer {
+      inset: -28px;
+      border-color: rgba($geek-text-primary, 0.07);
+      border-left-color: transparent;
+      animation: monk-breathe 14s ease-in-out infinite reverse;
+    }
+  }
+
+  &__brand {
+    min-width: 0;
+  }
+
+  &__wordmark {
+    font-family: $font-mono;
+    font-size: clamp(1.75rem, 6vw, 3.25rem);
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    line-height: 1.1;
+    color: $geek-text-primary;
+    margin: 0 0 0.5rem;
+  }
+
+  &__alias {
+    font-family: $font-serif;
+    font-style: italic;
+    font-size: clamp(1.15rem, 3.2vw, 1.5rem);
+    color: $geek-text-secondary;
+    margin: 0 0 0.6rem;
+  }
+
+  &__mantra {
+    font-family: $font-mono;
+    font-size: clamp(0.75rem, 2vw, 0.85rem);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: $geek-accent-purple;
+    margin: 0;
   }
 
   &__content {
@@ -50,6 +130,7 @@
     width: 100%;
     text-align: left;
     overflow: hidden;
+    animation: monk-rise 1.2s 0.25s cubic-bezier(0.2, 0.7, 0.2, 1) both;
   }
 
   &__terminal-header {
@@ -69,13 +150,13 @@
     flex-shrink: 0;
 
     &--red {
-      background: #ff5f57;
+      background: $geek-accent-purple;
     }
     &--yellow {
-      background: #febc2e;
+      background: $geek-accent-blue;
     }
     &--green {
-      background: #28c840;
+      background: $geek-border-light;
     }
   }
 
@@ -128,11 +209,11 @@
   }
 
   &__name {
-    font-family: $font-sans;
-    font-size: clamp(1.65rem, 5vw, 2.75rem);
-    font-weight: 800;
+    font-family: $font-serif;
+    font-size: clamp(1.9rem, 5.5vw, 3rem);
+    font-weight: 600;
     margin: 0;
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
     @include gradient-text;
     line-height: 1.15;
   }
@@ -318,7 +399,9 @@
   }
 
   &__eyebrow {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
     font-family: $font-mono;
     font-size: 0.8rem;
     font-weight: 600;
@@ -326,14 +409,24 @@
     text-transform: uppercase;
     letter-spacing: 0.12em;
     margin-bottom: 0.5rem;
+
+    // a short brush-stroke before every eyebrow
+    &::before {
+      content: "";
+      width: 1.5rem;
+      height: 1px;
+      background: currentColor;
+      opacity: 0.6;
+    }
   }
 
   &__title {
-    font-size: clamp(1.5rem, 4vw, 2rem);
-    font-weight: 800;
+    font-family: $font-serif;
+    font-size: clamp(1.85rem, 4.5vw, 2.5rem);
+    font-weight: 600;
     color: $geek-text-primary;
-    letter-spacing: -0.02em;
-    line-height: 1.2;
+    letter-spacing: 0;
+    line-height: 1.15;
     margin: 0 0 0.75rem;
   }
 
@@ -347,6 +440,7 @@
 
 .section--impact {
   background: $geek-bg-primary;
+  border-top: 1px solid $geek-border;
 }
 
 .section--skills {
@@ -363,6 +457,15 @@
 
 .section--apps {
   background: $geek-bg-secondary;
+}
+
+.section--monkbyte {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 50% 70% at 22% 50%, rgba($monk-saffron, 0.07), transparent 70%),
+    $geek-bg-primary;
+  border-top: 1px solid $geek-border;
 }
 
 .section--education {
@@ -1218,7 +1321,8 @@
     font-family: $font-mono;
     font-weight: 800;
     font-size: 1.25rem;
-    color: $geek-accent-purple-light;
+    color: $geek-text-primary;
+    letter-spacing: 0.28em;
     display: block;
     margin-bottom: 0.5rem;
   }
@@ -1228,6 +1332,28 @@
     color: $geek-text-secondary;
     margin: 0;
     line-height: 1.5;
+  }
+
+  &__mantra {
+    font-family: $font-serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: $geek-text-muted;
+    margin: 0.25rem 0 0;
+  }
+
+  &__alias {
+    display: inline-block;
+    margin-top: 0.6rem;
+    font-family: $font-mono;
+    font-size: 0.75rem;
+    color: $geek-text-muted;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $monk-saffron;
+    }
   }
 
   &__links {
@@ -1266,6 +1392,261 @@
   &__tech {
     font-family: $font-mono;
     font-size: 0.75rem;
+  }
+}
+
+// ——— Monk.Byte ———
+.monkbyte {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: clamp(2rem, 6vw, 5rem);
+  max-width: 900px;
+  margin: 0 auto;
+
+  &__visual {
+    position: relative;
+    width: clamp(160px, 24vw, 230px);
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+  }
+
+  // Hand-drawn-feeling ensō that paints itself in
+  &__enso {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+
+    path {
+      fill: none;
+      stroke: $monk-saffron;
+      stroke-width: 7;
+      stroke-linecap: round;
+      opacity: 0.85;
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+      filter: drop-shadow(0 0 14px rgba($monk-saffron, 0.35));
+    }
+
+    // thinner, drier second stroke so the ring reads as a brush, not a circle
+    .monkbyte__enso-bristle {
+      stroke-width: 2.5;
+      opacity: 0.4;
+      filter: none;
+    }
+  }
+
+  &--awake &__enso path {
+    animation: enso-draw 3.2s cubic-bezier(0.6, 0.1, 0.2, 1) forwards;
+  }
+
+  &--awake &__enso .monkbyte__enso-bristle {
+    animation-delay: 0.25s;
+  }
+
+  &__glyph {
+    font-family: $font-serif;
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    color: rgba($geek-text-primary, 0.85);
+    line-height: 1;
+  }
+
+  &__eyebrow {
+    color: $geek-text-muted;
+  }
+
+  &__name {
+    font-family: $font-mono;
+    font-size: clamp(1.6rem, 4.5vw, 2.25rem);
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    color: $geek-text-primary;
+    margin: 0 0 0.35rem;
+  }
+
+  &__tagline {
+    font-family: $font-serif;
+    font-style: italic;
+    font-size: 1.25rem;
+    color: $geek-text-secondary;
+    margin: 0 0 1.5rem;
+  }
+
+  &__mantra {
+    font-family: $font-serif;
+    font-size: clamp(1.5rem, 3.5vw, 1.9rem);
+    font-weight: 600;
+    color: $monk-saffron;
+    margin: 0 0 0.5rem;
+  }
+
+  &__pillars {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.6rem;
+    font-family: $font-mono;
+    font-size: 0.8rem;
+    color: $geek-text-secondary;
+    letter-spacing: 0.04em;
+    margin: 0 0 1.25rem;
+  }
+
+  &__sep {
+    color: $geek-text-muted;
+  }
+
+  &__text {
+    max-width: 52ch;
+    color: $geek-text-secondary;
+    line-height: 1.75;
+    margin: 0 0 1.75rem;
+  }
+
+  &__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 44px;
+    font-family: $font-mono;
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    color: $geek-text-primary;
+    text-decoration: none;
+    border-bottom: 1px solid rgba($monk-saffron, 0.4);
+    transition: color 0.3s, border-color 0.3s, gap 0.3s;
+
+    &:hover,
+    &:focus-visible {
+      color: $monk-saffron;
+      border-color: $monk-saffron;
+      gap: 0.85rem;
+    }
+  }
+
+  &__principles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+    gap: 1px;
+    max-width: 900px;
+    margin: clamp(3rem, 7vw, 4.5rem) auto 0;
+    background: $geek-border;
+    border: 1px solid $geek-border;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  &__principle {
+    background: $geek-bg-primary;
+    padding: 1.6rem 1.5rem;
+    transition: background 0.4s;
+
+    &:hover {
+      background: $geek-bg-secondary;
+    }
+  }
+
+  &__principle-mark {
+    display: block;
+    font-family: $font-serif;
+    font-size: 1.6rem;
+    color: $monk-saffron;
+    line-height: 1;
+    margin-bottom: 0.9rem;
+    opacity: 0.85;
+  }
+
+  &__principle-title {
+    font-family: $font-serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: $geek-text-primary;
+    margin: 0 0 0.4rem;
+  }
+
+  &__principle-text {
+    font-size: 0.9rem;
+    color: $geek-text-secondary;
+    line-height: 1.65;
+    margin: 0;
+  }
+}
+
+@keyframes monk-breathe {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.03);
+    opacity: 1;
+  }
+}
+
+@keyframes monk-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
+@keyframes enso-draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes mist-drift {
+  from {
+    transform: translateX(-3%);
+  }
+  to {
+    transform: translateX(3%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__identity,
+  .hero__terminal,
+  .hero__enso,
+  .hero__mist,
+  .monkbyte__enso path {
+    animation: none !important;
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero__identity {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .monkbyte {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+
+    &__pillars {
+      justify-content: center;
+    }
+
+    &__text {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 
