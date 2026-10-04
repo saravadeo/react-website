@@ -1,6 +1,19 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-10-04",
+      "slug": "ai-news-roundup-2026-10-04",
+      "title": "AI News Roundup: OpenAI's Safety Veteran Quits Saying 'The Time for Trial and Error Is Over,' Altman Calls an IPO 'Ill-Advised,' the FTC Probes AI's Consumer Risks, and xAI Reportedly Grabs dots.com (Oct 2026)",
+      "date": "2026-10-04",
+      "tags": [
+        "ai",
+        "news"
+      ],
+      "category": "AI News",
+      "readTime": "12 min",
+      "excerpt": "A three-and-a-half-year OpenAI safety veteran publishes a brutal essay in The Atlantic and walks out the door, Altman tells Fortune an IPO this year would be an 'ill-advised moment,' the FTC opens a consumer-risk investigation into OpenAI, Anthropic and other labs, xAI reportedly buys dots.com and points it at Grok, and Xiaomi's MiMo-V2.6-Pro becomes the open-weights world's favorite fight."
+    },
+    {
       "id": "ai-news-roundup-2026-10-03",
       "slug": "ai-news-roundup-2026-10-03",
       "title": "AI News Roundup: Google's Gemini 4 Argon Wins Benchmarks It Won't Let You Use, Anthropic's Sonnet 5.5 Is Too Good for Its Own Good, the Astra Cancel Gets a Post-Mortem, and the AP Officially Says AI Has No Feelings (Oct 2026)",
