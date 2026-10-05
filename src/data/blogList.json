@@ -1,6 +1,19 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-10-05",
+      "slug": "ai-news-roundup-2026-10-05",
+      "title": "AI News Roundup: Trump Unveils a 'Super Intelligence Force,' Google Freezes an Open Source Bug Bounty Drowning in AI Reports, Anthropic's Vatican Consciousness Lobbying Fails, and NYC Convenes Its Full Council Today (Oct 2026)",
+      "date": "2026-10-05",
+      "tags": [
+        "ai",
+        "news"
+      ],
+      "category": "AI News",
+      "readTime": "12 min",
+      "excerpt": "Washington gives one person the whole AI portfolio — Reuters reports Director of National Intelligence Jay Clayton will lead Trump's new 'Super Intelligence Force,' with a 120-day report due straight to the president. Google freezes its long-running open source bug bounty program after a flood of AI-generated submissions, the New York Times lays out Anthropic co-founder Chris Olah's failed push to get Pope Leo XIV to take machine consciousness seriously, Altman warns against handing AI 'religious authority,' NYC's full 51-member council convenes today with whistleblower rewards and a private right of action on the table, AWS drops NDAs on data-center deals, and SoftBank completes its $30 billion of OpenAI tranches for a stake near 13%."
+    },
+    {
       "id": "ai-news-roundup-2026-10-04",
       "slug": "ai-news-roundup-2026-10-04",
       "title": "AI News Roundup: OpenAI's Safety Veteran Quits Saying 'The Time for Trial and Error Is Over,' Altman Calls an IPO 'Ill-Advised,' the FTC Probes AI's Consumer Risks, and xAI Reportedly Grabs dots.com (Oct 2026)",
