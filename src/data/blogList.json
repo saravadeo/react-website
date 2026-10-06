@@ -1,6 +1,19 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-10-06",
+      "slug": "ai-news-roundup-2026-10-06",
+      "title": "AI News Roundup: OpenAI Starts Watermarking ChatGPT Text in the EU, the Pentagon Confirms It Has Stopped Using Claude, Reflection Debuts Beam, and ChatGPT's Image Generator Gets an Ad Test (Oct 2026)",
+      "date": "2026-10-06",
+      "tags": [
+        "ai",
+        "news"
+      ],
+      "category": "AI News",
+      "readTime": "12 min",
+      "excerpt": "OpenAI will embed an invisible 'textGrain' watermark in eligible ChatGPT and Codex outputs for EU users to comply with the AI Act's Article 50 — API opt-in worldwide, detector access for approved researchers only, and an explicit acknowledgment of the technology's limits. A Defense Department official tells the BBC the Pentagon 'has ceased the use of Anthropic products,' while BBC sources say Claude was still running in research, intelligence work, and Iran operations via Palantir's Maven last week. Nvidia-backed Reflection debuts Beam — 501 billion parameters, 23 billion active — claiming GLM-5.2-level results at roughly a quarter of the inference compute, with weights due this month. OpenAI will test clearly labeled visual ads around ChatGPT image generation for US users later in October. Plus: a Claude gray market in China, the US lead over China narrowing to 3%, SiMa.ai's $150 million edge-AI raise, and ElevenLabs' $300 million employee tender at $22 billion."
+    },
+    {
       "id": "ai-news-roundup-2026-10-05",
       "slug": "ai-news-roundup-2026-10-05",
       "title": "AI News Roundup: Trump Unveils a 'Super Intelligence Force,' Google Freezes an Open Source Bug Bounty Drowning in AI Reports, Anthropic's Vatican Consciousness Lobbying Fails, and NYC Convenes Its Full Council Today (Oct 2026)",
