@@ -4,14 +4,16 @@ export const links = {
   github: "https://github.com/saravadeo",
   linkedin: "https://www.linkedin.com/in/onkar-sarvade-4b36ab63/",
   stackoverflow: "https://stackoverflow.com/users/4539951/onkar-saravade",
-  instagram: "https://www.instagram.com/monk.byte/",
+  instagram: "https://www.instagram.com/shiponfriday/",
+  youtube: "https://www.youtube.com/@shiponfriday",
 };
 
 export const elsewhere = [
   { label: "GitHub", href: links.github, platform: "github" },
   { label: "LinkedIn", href: links.linkedin, platform: "linkedin" },
   { label: "Stack Overflow", href: links.stackoverflow, platform: "stackoverflow" },
-  { label: "Instagram", href: links.instagram, platform: "monkbyte_instagram" },
+  { label: "Instagram", href: links.instagram, platform: "shiponfriday_instagram" },
+  { label: "YouTube", href: links.youtube, platform: "shiponfriday_youtube" },
 ];
 
 export const apps = [
