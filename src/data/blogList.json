@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": "why-i-killed-my-daily-ai-news-blog",
+      "slug": "why-i-killed-my-daily-ai-news-blog",
+      "title": "Why I Killed My Daily AI-News Blog",
+      "date": "2026-10-07",
+      "tags": [
+        "blogging",
+        "automation",
+        "content",
+        "lessons"
+      ],
+      "category": "Engineering",
+      "readTime": "5 min",
+      "excerpt": "This morning my blog pipeline published its usual 10 AM post. A few hours later, I deleted it — and 63 of its siblings. Here’s why I shut down a machine that was working perfectly."
+    },
+    {
       "id": "post-2026-06-28t18-16-54",
       "title": "The Anti-Impulse Shopping App: What If You Could Undo Your Order at the Door?",
       "slug": "the-anti-impulse-shopping-app",
