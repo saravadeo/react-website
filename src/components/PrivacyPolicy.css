@@ -1,21 +1,14 @@
 /* Privacy Policy - Clean legal document style matching portfolio theme */
 
 .pp-page {
-  position: relative;
-  min-height: 100vh;
-  background: #0e0f12;
-  color: #e8eaed;
-  padding-top: calc(4.5rem + env(safe-area-inset-top, 0));
-  padding-bottom: max(3rem, env(safe-area-inset-bottom, 0));
+  padding-top: clamp(2rem, 6vw, 3rem);
 }
 
 /* Container */
 .pp-container {
   position: relative;
   z-index: 1;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+  width: 100%;
 }
 
 /* Breadcrumb */
@@ -25,46 +18,45 @@
   gap: 0.5rem;
   margin-bottom: 2rem;
   font-size: 0.875rem;
-  color: #a0a6b0;
+  color: var(--text-muted);
 }
 
 .pp-breadcrumb__link {
-  color: #7aabff;
+  color: var(--accent);
   text-decoration: none;
   transition: color 0.2s;
 }
 
 .pp-breadcrumb__link:hover {
-  color: #7aabff;
+  color: var(--accent);
   text-decoration: underline;
 }
 
 /* Article */
 .pp-article {
-  background: rgba(21, 23, 27, 0.6);
-  border: 1px solid rgba(38, 42, 49, 0.5);
-  border-radius: 16px;
-  backdrop-filter: blur(10px);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
   overflow: hidden;
 }
 
 /* Header */
 .pp-header {
   padding: 2rem 2.5rem;
-  border-bottom: 1px solid rgba(38, 42, 49, 0.5);
+  border-bottom: 1px solid var(--border);
 }
 
 .pp-header__title {
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.3;
-  color: #e8eaed;
+  color: var(--text);
   margin: 0 0 0.5rem;
 }
 
 .pp-header__date {
   font-size: 0.875rem;
-  color: #a0a6b0;
+  color: var(--text-muted);
   margin: 0;
   font-family: "JetBrains Mono", ui-monospace, monospace;
 }
@@ -86,16 +78,16 @@
 .pp-section__title {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #e8eaed;
+  color: var(--text);
   margin: 0 0 0.75rem;
   padding-bottom: 0.4rem;
-  border-bottom: 1px solid rgba(38, 42, 49, 0.5);
+  border-bottom: 1px solid var(--border);
 }
 
 .pp-section__text {
   font-size: 1rem;
   line-height: 1.7;
-  color: #c9ced6;
+  color: var(--text-soft);
   margin: 0 0 0.75rem;
 }
 
@@ -105,20 +97,20 @@
 
 /* Links */
 .pp-link {
-  color: #7aabff;
+  color: var(--accent);
   text-decoration: none;
   transition: color 0.2s;
 }
 
 .pp-link:hover {
-  color: #7aabff;
+  color: var(--accent);
   text-decoration: underline;
 }
 
 /* Info block */
 .pp-info-block {
-  background: rgba(14, 15, 18, 0.5);
-  border: 1px solid rgba(38, 42, 49, 0.6);
+  background: var(--surface-muted);
+  border: 1px solid var(--border);
   border-radius: 8px;
   padding: 1rem 1.25rem;
   margin: 0.75rem 0;
@@ -127,7 +119,7 @@
 .pp-info-block__line {
   margin: 0 0 0.25rem;
   line-height: 1.6;
-  color: #c9ced6;
+  color: var(--text-soft);
   font-size: 0.95rem;
 }
 
@@ -136,7 +128,7 @@
 }
 
 .pp-info-block__line strong {
-  color: #e8eaed;
+  color: var(--text);
 }
 
 /* Lists */
@@ -149,16 +141,16 @@
 .pp-list__item {
   margin-bottom: 0.5rem;
   line-height: 1.7;
-  color: #c9ced6;
+  color: var(--text-soft);
   font-size: 1rem;
 }
 
 .pp-list__item::marker {
-  color: #4f8ff7;
+  color: var(--accent);
 }
 
 .pp-list__item strong {
-  color: #e8eaed;
+  color: var(--text);
   font-weight: 600;
 }
 
@@ -173,25 +165,25 @@
   width: 100%;
   border-collapse: collapse;
   font-size: 0.9rem;
-  border: 1px solid rgba(38, 42, 49, 0.6);
+  border: 1px solid var(--border);
   border-radius: 8px;
 }
 
 .pp-table__th {
   text-align: left;
   padding: 0.75rem 1rem;
-  background: rgba(14, 15, 18, 0.6);
-  color: #e8eaed;
+  background: var(--surface-muted);
+  color: var(--text);
   font-weight: 600;
   font-size: 0.85rem;
-  border-bottom: 1px solid rgba(38, 42, 49, 0.6);
+  border-bottom: 1px solid var(--border);
   white-space: nowrap;
 }
 
 .pp-table__td {
   padding: 0.65rem 1rem;
-  color: #c9ced6;
-  border-bottom: 1px solid rgba(38, 42, 49, 0.4);
+  color: var(--text-soft);
+  border-bottom: 1px solid var(--border);
   line-height: 1.5;
   vertical-align: top;
 }
@@ -202,9 +194,6 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .pp-container {
-    padding: 0 1rem;
-  }
 
   .pp-header {
     padding: 1.5rem;

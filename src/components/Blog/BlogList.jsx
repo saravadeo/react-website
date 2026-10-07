@@ -5,50 +5,80 @@ import blogData from '../../data/blogList.json';
 import { trackEvent } from '../../analytics';
 import './Blog.css';
 
-const POSTS_PER_PAGE = 6;
+const POSTS_PER_PAGE = 12;
+
+const TOPICS = [
+  { id: 'all', label: 'All' },
+  { id: 'writing', label: 'Writing' },
+  { id: 'ai-news', label: 'AI news roundups' },
+];
+
+const matchesTopic = (post, topic) => {
+  if (topic === 'writing') return post.category !== 'AI News';
+  if (topic === 'ai-news') return post.category === 'AI News';
+  return true;
+};
 
 const BlogList = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const { posts } = blogData;
+  const topic = TOPICS.some((t) => t.id === searchParams.get('topic')) ? searchParams.get('topic') : 'all';
+  const posts = blogData.posts.filter((post) => matchesTopic(post, topic));
   const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
   const currentPage = Math.max(1, Math.min(parseInt(searchParams.get('page') || '1', 10), totalPages || 1));
   const currentPosts = posts.slice((currentPage - 1) * POSTS_PER_PAGE, currentPage * POSTS_PER_PAGE);
 
+  const setParams = (nextTopic, page) => {
+    const params = {};
+    if (nextTopic !== 'all') params.topic = nextTopic;
+    if (page > 1) params.page = page;
+    setSearchParams(params);
+  };
+
   const goToPage = (page) => {
-    setSearchParams(page === 1 ? {} : { page });
+    setParams(topic, page);
     trackEvent('Blog', 'blog_page_click', String(page));
-    document.querySelector('.blog-list-hero')?.scrollIntoView({ behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const selectTopic = (id) => {
+    setParams(id, 1);
+    trackEvent('Blog', 'blog_topic_click', id);
   };
 
   return (
     <div className="blog-page blog-page--list">
       <Helmet>
-        <title>Blog — Onkar Sarvade | System Design & Backend Engineering</title>
-        <meta name="description" content="Technical blog by Onkar Sarvade on system design, backend engineering, distributed systems, scalable architecture, and lessons from building production platforms." />
-        <meta name="keywords" content="Onkar Sarvade blog, system design, backend engineering, distributed systems, scalable architecture, observability, microservices, cloud native" />
-        <meta property="og:title" content="Blog — Onkar Sarvade | System Design & Backend Engineering" />
-        <meta property="og:description" content="Technical articles on system design, backend engineering, distributed systems, and building scalable production platforms." />
-        <meta name="twitter:title" content="Blog — Onkar Sarvade | System Design & Backend Engineering" />
-        <meta name="twitter:description" content="Technical articles on system design, backend engineering, and building scalable production platforms." />
+        <title>Blog — Onkar Sarvade</title>
+        <meta name="description" content="Writing by Onkar Sarvade on building apps, backend engineering, distributed systems and automation, plus daily AI news roundups." />
+        <meta name="keywords" content="Onkar Sarvade blog, indie apps, system design, backend engineering, distributed systems, observability, automation, AI news" />
+        <meta property="og:title" content="Blog — Onkar Sarvade" />
+        <meta property="og:description" content="Writing on building apps, backend engineering and automation, plus daily AI news roundups." />
+        <meta name="twitter:title" content="Blog — Onkar Sarvade" />
+        <meta name="twitter:description" content="Writing on building apps, backend engineering and automation, plus daily AI news roundups." />
         <link rel="canonical" href="https://www.onkarsarvade.com/blog" />
       </Helmet>
 
       <div className="blog-container blog-container--list">
-        <nav className="blog-breadcrumb" aria-label="Breadcrumb">
-          <Link to="/" className="blog-breadcrumb__link" onClick={() => trackEvent("Blog", "blog_back", "portfolio_home")}>
-            ← Portfolio
-          </Link>
-          <span className="blog-breadcrumb__sep">/</span>
-          <span className="blog-breadcrumb__current">Blog</span>
-        </nav>
-
         <header className="blog-list-hero">
-          <span className="blog-list-eyebrow">Writing</span>
-          <h1 className="blog-list-title">System Design & Backend Engineering Blog</h1>
+          <h1 className="blog-list-title">Blog</h1>
           <p className="blog-list-lede">
-            Technical notes on scalable system design, backend engineering, distributed systems, and shipping reliable cloud-native software.
+            Notes on building apps, backend engineering and automating my own work, plus a daily roundup of AI news.
           </p>
         </header>
+
+        <div className="blog-topics" role="group" aria-label="Filter posts">
+          {TOPICS.map((t) => (
+            <button
+              key={t.id}
+              type="button"
+              className={`blog-topics__btn ${t.id === topic ? 'blog-topics__btn--active' : ''}`}
+              aria-pressed={t.id === topic}
+              onClick={() => selectTopic(t.id)}
+            >
+              {t.label}
+            </button>
+          ))}
+        </div>
 
         {posts.length === 0 ? (
           <div className="blog-list-empty">
@@ -60,7 +90,6 @@ const BlogList = () => {
               <li key={post.id} className="blog-list-grid__cell">
                 <Link to={`/blog/${post.slug}`} className="blog-list-card-link" onClick={() => trackEvent("Blog", "blog_card_click", post.slug)}>
                   <article className="blog-list-card">
-                    <div className="blog-list-card__accent" aria-hidden="true" />
                     <div className="blog-list-card__meta">
                       <time dateTime={post.date} className="blog-list-card__date">
                         {post.date}
@@ -79,12 +108,6 @@ const BlogList = () => {
                         </span>
                       ))}
                     </div>
-                    <span className="blog-list-card__cta">
-                      Read article
-                      <span className="blog-list-card__cta-arrow" aria-hidden="true">
-                        →
-                      </span>
-                    </span>
                   </article>
                 </Link>
               </li>

@@ -114,6 +114,7 @@ const BlogPost = () => {
 
     let html = body
       .replace(/```(\w+)?\n([\s\S]*?)```/g, '<pre class="blog-code"><code class="language-$1">$2</code></pre>')
+      .replace(/^---$/gm, '<hr />')
       .replace(/^### (.*$)/gim, '<h3>$1</h3>')
       .replace(/^## (.*$)/gim, '<h2>$1</h2>')
       .replace(/^# (.*$)/gim, '<h1>$1</h1>')
@@ -142,9 +143,7 @@ const BlogPost = () => {
       <div className="blog-page">
         <div className="blog-container">
           <nav className="blog-breadcrumb">
-            <Link to="/" className="blog-breadcrumb__link" onClick={() => trackEvent("Blog", "blog_back", "portfolio_home")}>← Portfolio</Link>
-            <span className="blog-breadcrumb__sep">/</span>
-            <Link to="/blog" className="blog-breadcrumb__link" onClick={() => trackEvent("Blog", "blog_back", "blog_list")}>Blog</Link>
+            <Link to="/blog" className="blog-breadcrumb__link" onClick={() => trackEvent("Blog", "blog_back", "blog_list")}>← Blog</Link>
           </nav>
           <article className="blog-article">
             <h1 className="blog-article__title">Post Not Found</h1>
@@ -183,11 +182,7 @@ const BlogPost = () => {
 
       <div className="blog-container">
         <nav className="blog-breadcrumb">
-          <Link to="/" className="blog-breadcrumb__link" onClick={() => trackEvent("Blog", "blog_back", "portfolio_home")}>← Portfolio</Link>
-          <span className="blog-breadcrumb__sep">/</span>
-          <Link to="/blog" className="blog-breadcrumb__link" onClick={() => trackEvent("Blog", "blog_back", "blog_list")}>Blog</Link>
-          <span className="blog-breadcrumb__sep">/</span>
-          <span className="blog-breadcrumb__current">{post.slug}</span>
+          <Link to="/blog" className="blog-breadcrumb__link" onClick={() => trackEvent("Blog", "blog_back", "blog_list")}>← Blog</Link>
         </nav>
 
         <article className="blog-article">

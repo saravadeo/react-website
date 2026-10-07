@@ -28,7 +28,7 @@ const PrivacyPolicy = () => {
 
       <div className="pp-container">
         <nav className="pp-breadcrumb">
-          <Link to="/" className="pp-breadcrumb__link">← Portfolio</Link>
+          <Link to="/" className="pp-breadcrumb__link">← Home</Link>
         </nav>
 
         <article className="pp-article">
