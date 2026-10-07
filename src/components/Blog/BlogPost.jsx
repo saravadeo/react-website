@@ -140,10 +140,6 @@ const BlogPost = () => {
   if (!post) {
     return (
       <div className="blog-page">
-        <div className="blog-page__bg">
-          <div className="blog-page__grid" />
-          <div className="blog-page__glow" />
-        </div>
         <div className="blog-container">
           <nav className="blog-breadcrumb">
             <Link to="/" className="blog-breadcrumb__link" onClick={() => trackEvent("Blog", "blog_back", "portfolio_home")}>← Portfolio</Link>
@@ -184,10 +180,6 @@ const BlogPost = () => {
         })}</script>
       </Helmet>
 
-      <div className="blog-page__bg">
-        <div className="blog-page__grid" />
-        <div className="blog-page__glow" />
-      </div>
 
       <div className="blog-container">
         <nav className="blog-breadcrumb">

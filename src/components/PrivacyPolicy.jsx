@@ -25,10 +25,6 @@ const PrivacyPolicy = () => {
         <link rel="canonical" href="https://www.onkarsarvade.com/privacy-policy" />
       </Helmet>
 
-      <div className="pp-page__bg">
-        <div className="pp-page__grid" />
-        <div className="pp-page__glow" />
-      </div>
 
       <div className="pp-container">
         <nav className="pp-breadcrumb">

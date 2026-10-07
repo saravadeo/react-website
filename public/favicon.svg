@@ -1,7 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Monk.Byte">
-  <rect width="32" height="32" rx="16" fill="#0b0a09"/>
-  <!-- ensō -->
-  <path d="M23.5 8.2C20 5 13.4 5.2 9.6 9.4 5.6 13.8 6.6 21.2 12 24.4c5 3 11.6.8 13.6-4.6.9-2.4.7-5-.4-7.2"
-        fill="none" stroke="#e8873a" stroke-width="2.6" stroke-linecap="round"/>
-  <circle cx="16" cy="16" r="1.6" fill="#f1e9dc"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Onkar Sarvade">
+  <rect width="32" height="32" rx="7" fill="#0e0f12"/>
+  <text x="16" y="21.5" text-anchor="middle" font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="-0.5" fill="#e8eaed">OS</text>
+  <rect x="9" y="24.5" width="14" height="1.6" rx="0.8" fill="#4f8ff7"/>
 </svg>

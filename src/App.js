@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -77,7 +77,6 @@ const Navigation = () => {
   };
 
   const sectionLinks = [
-    { name: "Way", id: "monkbyte" },
     { name: "About", id: "about" },
     { name: "Skills", id: "skills" },
     { name: "Experience", id: "experience" },
@@ -94,16 +93,7 @@ const Navigation = () => {
     >
       <div className="nav__container">
         <Link to="/" className="nav__logo" onClick={handleHomeClick}>
-          <img
-            src="/images/monk-byte/avatar.webp"
-            alt=""
-            className="nav__logo-avatar"
-            width="30"
-            height="30"
-          />
-          <span className="nav__logo-text">
-            monk<span className="nav__logo-dot">.</span>byte
-          </span>
+          <span className="nav__logo-text">Onkar Sarvade</span>
         </Link>
         <button
           type="button"
@@ -153,56 +143,8 @@ const Navigation = () => {
   );
 };
 
-// Typing Effect Hook
-const useTypingEffect = (texts, typingSpeed = 80, pauseTime = 2000) => {
-  const [displayedText, setDisplayedText] = useState("");
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-
-  useEffect(() => {
-    let timeout;
-    const currentText = texts[currentIndex];
-
-    if (!isDeleting) {
-      if (displayedText.length < currentText.length) {
-        timeout = setTimeout(() => {
-          setDisplayedText(currentText.slice(0, displayedText.length + 1));
-        }, typingSpeed);
-      } else {
-        timeout = setTimeout(() => setIsDeleting(true), pauseTime);
-      }
-    } else if (isDeleting) {
-      if (displayedText.length > 0) {
-        timeout = setTimeout(() => {
-          setDisplayedText(displayedText.slice(0, -1));
-        }, typingSpeed / 2);
-      } else {
-        setIsDeleting(false);
-        setCurrentIndex((prev) => (prev + 1) % texts.length);
-      }
-    }
-
-    return () => clearTimeout(timeout);
-  }, [displayedText, isDeleting, currentIndex, texts, typingSpeed, pauseTime]);
-
-  return { displayedText, isTyping: !isDeleting };
-};
-
 // Hero Section
 const Hero = () => {
-  const techStacks = [
-    "Distributed Systems",
-    "OpenTelemetry & Observability",
-    "Apache Kafka & Event Streaming",
-    "AWS Cloud Architecture",
-    "AI-Powered Diagnostics",
-    "ClickHouse & Analytics",
-    "LangChain & LLM Orchestration",
-    "Microservices at Scale",
-  ];
-
-  const { displayedText, isTyping } = useTypingEffect(techStacks, 60, 2500);
-
   const handleSectionClick = (e, sectionId) => {
     e.preventDefault();
     scrollToId(sectionId);
@@ -210,87 +152,17 @@ const Hero = () => {
 
   return (
     <section className="hero">
-      <div className="hero__background">
-        <div className="hero__mist"></div>
-        <div className="hero__gradient"></div>
-      </div>
       <div className="hero__content">
-        <div className="hero__identity">
-          <div className="hero__avatar-wrap">
-            <span className="hero__enso hero__enso--outer" aria-hidden="true" />
-            <span className="hero__enso hero__enso--inner" aria-hidden="true" />
-            <img
-              src="/images/monk-byte/avatar.webp"
-              alt="Monk.Byte — a monk meditating with a laptop"
-              className="hero__avatar"
-              width="200"
-              height="200"
-              fetchpriority="high"
-            />
-          </div>
-          <div className="hero__brand">
-            <p className="hero__wordmark">MONK.BYTE</p>
-            <p className="hero__alias">A monk with a keyboard.</p>
-            <p className="hero__mantra">Less noise. More creation.</p>
-          </div>
-        </div>
-        <div className="hero__terminal">
-          <div className="hero__terminal-header">
-            <span className="hero__terminal-btn hero__terminal-btn--red"></span>
-            <span className="hero__terminal-btn hero__terminal-btn--yellow"></span>
-            <span className="hero__terminal-btn hero__terminal-btn--green"></span>
-            <span className="hero__terminal-title">monk@monk.byte:~</span>
-          </div>
-          <div className="hero__terminal-body">
-            <div className="hero__line">
-              <span className="hero__prompt">$</span>
-              <span className="hero__command"> whoami</span>
-            </div>
-            <div className="hero__line hero__line--output">
-              <h1 className="hero__name">Onkar Sarvade</h1>
-            </div>
-            <div className="hero__line">
-              <span className="hero__prompt">$</span>
-              <span className="hero__command"> cat practice.txt</span>
-            </div>
-            <div className="hero__line hero__line--output">
-              <p className="hero__subtitle">AI × Software × Automation × Experiments</p>
-            </div>
-            <div className="hero__line">
-              <span className="hero__prompt">$</span>
-              <span className="hero__command"> cat role.txt</span>
-            </div>
-            <div className="hero__line hero__line--output">
-              <p className="hero__title">Staff Software Engineer</p>
-              <p className="hero__subtitle">Scalable Backend Architecture | Cloud Native Systems</p>
-            </div>
-            <div className="hero__line">
-              <span className="hero__prompt">$</span>
-              <span className="hero__command"> echo $EXPERTISE</span>
-            </div>
-            <div className="hero__line hero__line--output hero__line--typing">
-              <span className="hero__typing">{displayedText}</span>
-              <span className={`hero__cursor ${isTyping ? "hero__cursor--blink" : ""}`}>█</span>
-            </div>
-            <div className="hero__line hero__line--prompt">
-              <span className="hero__prompt">$</span>
-              <span className="hero__cursor hero__cursor--blink">█</span>
-            </div>
-          </div>
-        </div>
-        <div className="hero__summary">
-          <p>Full stack developer and distributed systems engineer with <strong>11+ years</strong> of experience designing scalable backend platforms, event-driven microservices, and fault-tolerant cloud-native systems serving <strong>millions of users</strong> across fintech, e-commerce, and sports tech.</p>
-        </div>
+        <p className="hero__eyebrow">Mumbai, India · Dream11</p>
+        <h1 className="hero__name">Onkar Sarvade</h1>
+        <p className="hero__title">Staff Software Engineer — distributed systems, observability and cloud-native backends</p>
+        <p className="hero__summary">I design and scale backend platforms. Over <strong>11+ years</strong> I have built event-driven microservices, observability systems and fault-tolerant cloud infrastructure for products serving <strong>millions of users</strong> in fintech, e-commerce and sports tech.</p>
         <div className="hero__actions">
-          <a href={MONK_BYTE_INSTAGRAM} target="_blank" rel="noopener noreferrer" className="btn btn--primary" onClick={() => trackEvent("Contact", "social_click", "monkbyte_instagram_hero")}>Enter Monk Mode →</a>
-          <a href="#contact" onClick={(e) => handleSectionClick(e, 'contact')} className="btn btn--secondary">Get in Touch</a>
-          <a href="#experience" onClick={(e) => handleSectionClick(e, 'experience')} className="btn btn--ghost">The Journey</a>
-          <a href="https://github.com/saravadeo" target="_blank" rel="noopener noreferrer" className="btn btn--ghost" onClick={() => trackEvent("Contact", "social_click", "github")}>GitHub →</a>
+          <a href="#contact" onClick={(e) => handleSectionClick(e, 'contact')} className="btn btn--primary">Get in touch</a>
+          <a href="#experience" onClick={(e) => handleSectionClick(e, 'experience')} className="btn btn--secondary">View experience</a>
+          <a href="https://www.linkedin.com/in/onkar-sarvade-4b36ab63/" target="_blank" rel="noopener noreferrer" className="btn btn--ghost" onClick={() => trackEvent("Contact", "social_click", "linkedin_hero")}>LinkedIn ↗</a>
+          <a href="https://github.com/saravadeo" target="_blank" rel="noopener noreferrer" className="btn btn--ghost" onClick={() => trackEvent("Contact", "social_click", "github")}>GitHub ↗</a>
         </div>
-      </div>
-      <div className="hero__scroll">
-        <span>breathe · scroll</span>
-        <div className="hero__scroll-arrow">↓</div>
       </div>
     </section>
   );
@@ -324,25 +196,21 @@ const StatsBar = () => {
 const KeyImpact = () => {
   const impacts = [
     {
-      icon: "📊",
       title: "Observability Engineering Platform",
       description: "Built a scalable observability platform processing 16+ Gbps telemetry across 600+ microservices, enabling 500+ engineers with real-time insights for fault-tolerant systems",
       metrics: "16+ Gbps • 600+ services • 500+ engineers",
     },
     {
-      icon: "🎯",
       title: "Scalable System Design Standards",
       description: "Established organization-wide standards for distributed tracing, metrics, and logging across all engineering teams building high-performance backends",
       metrics: "Standardized • Automated • Monitored",
     },
     {
-      icon: "⚙️",
       title: "Cloud-Native ERP Platform",
       description: "Architected and delivered a cloud-native internal platform automating CMS, sales, invoicing, and operations with event-driven microservices architecture",
       metrics: "CMS • Sales • Invoicing • Operations",
     },
     {
-      icon: "🤖",
       title: "AI-Powered Observability Diagnostics",
       description: "Introduced AI-assisted anomaly detection and automated root-cause analysis for event-driven systems using LangChain and LangGraph observability patterns",
       metrics: "LangChain • LangGraph • LLM Orchestration",
@@ -353,13 +221,12 @@ const KeyImpact = () => {
     <section id="about" className="section section--impact">
       <div className="container">
         <div className="section__header">
-          <span className="section__eyebrow">The Practice</span>
+          <span className="section__eyebrow">Impact</span>
           <h2 className="section__title">Building Scalable Systems & Technical Leadership</h2>
         </div>
         <div className="impact__grid">
           {impacts.map((impact, index) => (
             <div key={index} className="impact__card">
-              <div className="impact__icon">{impact.icon}</div>
               <h3 className="impact__title">{impact.title}</h3>
               <p className="impact__description">{impact.description}</p>
               <span className="impact__metrics">{impact.metrics}</span>
@@ -376,42 +243,34 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "Languages & Frameworks",
-      icon: "📝",
       skills: ["Java", "Node.js", "TypeScript", "JavaScript", "React Native"],
     },
     {
       title: "Cloud & Infrastructure",
-      icon: "☁️",
       skills: ["AWS EC2", "RDS", "SQS", "CloudFront", "Distributed Cloud Systems"],
     },
     {
       title: "Observability Engineering",
-      icon: "🔍",
       skills: ["OpenTelemetry", "Distributed Tracing", "Monitoring", "Alerting", "Telemetry Systems", "Incident Management", "SigNoz", "ClickHouse"],
     },
     {
       title: "Event-Driven Systems",
-      icon: "📨",
       skills: ["Apache Kafka", "Event-Driven Architecture", "High-Throughput Messaging", "Stream Processing"],
     },
     {
       title: "Data & Storage",
-      icon: "🗄️",
       skills: ["MySQL", "PostgreSQL", "Redis", "MongoDB", "ElasticSearch", "ClickHouse"],
     },
     {
       title: "Architecture",
-      icon: "🏗️",
       skills: ["Distributed Systems", "Event-Driven Architecture", "Microservices", "Component-Driven UI", "Scalable System Design"],
     },
     {
       title: "AI & ML Systems",
-      icon: "🧠",
       skills: ["LangChain", "LangGraph", "LLM Orchestration", "AI-Assisted Diagnostics", "Anomaly Detection"],
     },
     {
       title: "Open Source",
-      icon: "🌟",
       skills: ["Vert.x", "Datadog", "Apache Kafka", "Spark", "LogWise"],
     },
   ];
@@ -420,14 +279,13 @@ const Skills = () => {
     <section id="skills" className="section section--skills">
       <div className="container">
         <div className="section__header">
-          <span className="section__eyebrow">Tools of the Craft</span>
+          <span className="section__eyebrow">Skills</span>
           <h2 className="section__title">Backend & Systems Engineering Skills</h2>
         </div>
         <div className="skills__grid">
           {skillCategories.map((category, index) => (
             <div key={index} className="skills__card">
               <div className="skills__header">
-                <span className="skills__icon">{category.icon}</span>
                 <h3 className="skills__category-title">{category.title}</h3>
               </div>
               <div className="skills__items">
@@ -520,7 +378,7 @@ const Experience = () => {
     <section id="experience" className="section section--experience">
       <div className="container">
         <div className="section__header">
-          <span className="section__eyebrow">The Journey</span>
+          <span className="section__eyebrow">Experience</span>
           <h2 className="section__title">Backend & Systems Engineering Experience</h2>
           <p className="section__subtitle">11+ years building scalable backend systems, microservices, and distributed platforms</p>
         </div>
@@ -625,19 +483,6 @@ const OpenSource = () => {
     },
   ];
 
-  const getIconForType = (type) => {
-    const icons = {
-      tracing: "🔍",
-      instrumentation: "🔧",
-      bugfix: "🐛",
-      project: "📦",
-      feature: "✨",
-      tool: "🛠️",
-      app: "📱"
-    };
-    return icons[type] || "📝";
-  };
-
   const getStatusBadge = (status) => {
     const badges = {
       merged: { text: "Merged", class: "status--merged" },
@@ -651,7 +496,7 @@ const OpenSource = () => {
     <section id="opensource" className="section section--opensource">
       <div className="container">
         <div className="section__header section__header--centered">
-          <span className="section__eyebrow">Offerings</span>
+          <span className="section__eyebrow">Open Source</span>
           <h2 className="section__title">Open Source Contributions</h2>
           <p className="section__subtitle">
             Contributing to observability, distributed systems, and developer tooling
@@ -691,9 +536,6 @@ const OpenSource = () => {
               >
                 <div className="opensource__card-header">
                   <div className="opensource__meta">
-                    <span className="opensource__icon" aria-hidden="true">
-                      {getIconForType(contrib.type)}
-                    </span>
                     <span className="opensource__org">{contrib.org}</span>
                   </div>
                   <div className="opensource__badges">
@@ -741,7 +583,6 @@ const Apps = () => {
   const apps = [
     {
       name: "YCal",
-      icon: "📅",
       tagline: "Yahoo Calendar, reimagined",
       description:
         "A native calendar app for iOS & Android that brings Yahoo Calendar to your phone with a beautiful, fast, and intuitive experience. Solo-developed from concept to launch.",
@@ -752,7 +593,6 @@ const Apps = () => {
     },
     {
       name: "ChallengeCam",
-      icon: "🎯",
       tagline: "Create viral challenge videos",
       description:
         "A mobile-first challenge video maker — face cam + overlay in one take. Record emoji, memory, eyesight, reaction, sports, and brain challenges and share directly to TikTok, Reels, and Shorts. Solo-developed end-to-end.",
@@ -774,7 +614,7 @@ const Apps = () => {
     <section id="apps" className="section section--apps">
       <div className="container">
         <div className="section__header section__header--centered">
-          <span className="section__eyebrow">Things Shipped</span>
+          <span className="section__eyebrow">Apps</span>
           <h2 className="section__title">Apps I've Built</h2>
           <p className="section__subtitle">
             Solo-developed mobile apps from concept to launch
@@ -795,9 +635,6 @@ const Apps = () => {
               >
                 <div className="apps__card-header">
                   <div className="apps__meta">
-                    <span className="apps__icon" aria-hidden="true">
-                      {app.icon}
-                    </span>
                     <span className="apps__name">{app.name}</span>
                   </div>
                   <div className="apps__badges">
@@ -839,118 +676,13 @@ const Apps = () => {
   );
 };
 
-// Monk.Byte — the philosophy
-const MonkByte = () => {
-  const pillars = ["AI", "Software", "Automation", "Experiments"];
-  const principles = [
-    {
-      mark: "一",
-      title: "Deep focus",
-      text: "One problem, fully. No tabs, no pings — just the work and the next keystroke.",
-    },
-    {
-      mark: "二",
-      title: "Minimal distractions",
-      text: "Remove what doesn't matter until only the essential code remains.",
-    },
-    {
-      mark: "三",
-      title: "Ship quickly",
-      text: "Random idea in the morning, working software by night. Then let it go.",
-    },
-  ];
-
-  // Paint the ensō only once the section scrolls into view
-  const ref = useRef(null);
-  const [awake, setAwake] = useState(false);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el || !("IntersectionObserver" in window)) {
-      setAwake(true);
-      return;
-    }
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setAwake(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.35 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
-  return (
-    <section id="monkbyte" className="section section--monkbyte">
-      <div className="container">
-        <div ref={ref} className={`monkbyte ${awake ? "monkbyte--awake" : ""}`}>
-          <div className="monkbyte__visual" aria-hidden="true">
-            <svg className="monkbyte__enso" viewBox="0 0 200 200">
-              <path
-                d="M150 44 C 120 18, 62 22, 38 62 C 14 102, 34 158, 86 172 C 136 186, 182 150, 178 98 C 176 74, 166 58, 156 50"
-                pathLength="1"
-              />
-              <path
-                className="monkbyte__enso-bristle"
-                d="M146 50 C 118 28, 66 30, 44 66 C 22 104, 42 152, 90 164 C 134 175, 172 142, 170 98"
-                pathLength="1"
-              />
-            </svg>
-            <span className="monkbyte__glyph">禅</span>
-          </div>
-          <div className="monkbyte__body">
-            <span className="section__eyebrow monkbyte__eyebrow">The Way</span>
-            <h2 className="monkbyte__name">MONK.BYTE</h2>
-            <p className="monkbyte__tagline">A monk with a keyboard.</p>
-            <p className="monkbyte__mantra">Less noise. More creation.</p>
-            <p className="monkbyte__pillars">
-              {pillars.map((p, i) => (
-                <React.Fragment key={p}>
-                  {i > 0 && <span className="monkbyte__sep" aria-hidden="true">×</span>}
-                  <span>{p}</span>
-                </React.Fragment>
-              ))}
-            </p>
-            <p className="monkbyte__text">
-              The idea is simple: deep focus, minimal distractions, and using AI
-              and code to turn random ideas into working software &mdash; then
-              shipping them quickly.
-            </p>
-            <a
-              href={MONK_BYTE_INSTAGRAM}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="monkbyte__cta"
-              onClick={() => trackEvent("Contact", "social_click", "monkbyte_instagram")}
-            >
-              Enter Monk Mode <span aria-hidden="true">→</span>
-            </a>
-          </div>
-        </div>
-        <div className="monkbyte__principles">
-          {principles.map((pr) => (
-            <div key={pr.title} className="monkbyte__principle">
-              <span className="monkbyte__principle-mark" aria-hidden="true">{pr.mark}</span>
-              <h3 className="monkbyte__principle-title">{pr.title}</h3>
-              <p className="monkbyte__principle-text">{pr.text}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // Education Section
 const Education = () => {
   return (
     <section id="education" className="section section--education">
       <div className="container">
         <div className="section__header">
-          <span className="section__eyebrow">Foundations</span>
+          <span className="section__eyebrow">Education</span>
           <h2 className="section__title">Education</h2>
         </div>
         <div className="education__card">
@@ -980,20 +712,24 @@ const Education = () => {
 // Contact Section
 const Contact = () => {
   const contacts = [
-    { icon: "📍", label: "Location", value: "Mumbai, Maharashtra, India", href: "https://maps.google.com/?q=Mumbai+Maharashtra+India", platform: "maps" },
+    { label: "Location", value: "Mumbai, Maharashtra, India", href: "https://maps.google.com/?q=Mumbai+Maharashtra+India", platform: "maps" },
     {
-      icon: "💼",
       label: "LinkedIn",
       value: "linkedin.com/in/onkar-sarvade-4b36ab63",
       href: "https://www.linkedin.com/in/onkar-sarvade-4b36ab63/",
       platform: "linkedin",
     },
-    { icon: "⚡", label: "GitHub", value: "github.com/saravadeo", href: "https://github.com/saravadeo", platform: "github" },
+    { label: "GitHub", value: "github.com/saravadeo", href: "https://github.com/saravadeo", platform: "github" },
     {
-      icon: "🌐",
       label: "Stack Overflow",
       value: "stackoverflow.com/users/4539951/onkar-saravade",
       href: "https://stackoverflow.com/users/4539951/onkar-saravade",
+    },
+    {
+      label: "Instagram",
+      value: "Monk.Byte — side projects and experiments",
+      href: MONK_BYTE_INSTAGRAM,
+      platform: "monkbyte_instagram",
     },
   ];
 
@@ -1001,12 +737,12 @@ const Contact = () => {
     <section id="contact" className="section section--contact">
       <div className="container">
         <div className="section__header">
-          <span className="section__eyebrow">Seek</span>
+          <span className="section__eyebrow">Contact</span>
           <h2 className="section__title">Get In Touch</h2>
         </div>
         <div className="contact__content">
           <p className="contact__text">
-            I&apos;m always interested in discussing distributed systems engineering, scalable backend architecture, cloud-native development, and new opportunities. Let&apos;s connect and build something resilient together.
+            I&apos;m happy to talk about distributed systems, backend architecture, observability and new opportunities. LinkedIn is the quickest way to reach me.
           </p>
           <div className="contact__grid">
             {contacts.map((contact, index) => {
@@ -1021,7 +757,6 @@ const Contact = () => {
                     ? { target: "_blank", rel: "noopener noreferrer" }
                     : {})}
                 >
-                  <span className="contact__icon">{contact.icon}</span>
                   <div className="contact__info">
                     <span className="contact__label">{contact.label}</span>
                     <span className="contact__value">{contact.value}</span>
@@ -1057,9 +792,8 @@ const Footer = () => {
       <div className="footer__container">
         <div className="footer__content">
           <div className="footer__brand">
-            <span className="footer__logo">MONK.BYTE</span>
-            <p className="footer__tagline">Onkar Sarvade • Staff Software Engineer</p>
-            <p className="footer__mantra">Less noise. More creation.</p>
+            <span className="footer__logo">Onkar Sarvade</span>
+            <p className="footer__tagline">Staff Software Engineer · Mumbai, India</p>
             <a
               href={MONK_BYTE_INSTAGRAM}
               target="_blank"
@@ -1067,7 +801,7 @@ const Footer = () => {
               className="footer__alias"
               onClick={() => trackEvent("Contact", "social_click", "monkbyte_footer")}
             >
-              Enter Monk Mode →
+              Monk.Byte on Instagram ↗
             </a>
           </div>
           <div className="footer__links">
@@ -1081,8 +815,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer__bottom">
-          <p>© 2026 Onkar Sarvade · Monk.Byte</p>
-          <p className="footer__tech">Built in deep focus • React + SCSS</p>
+          <p>© 2026 Onkar Sarvade</p>
         </div>
       </div>
     </footer>
@@ -1122,13 +855,13 @@ const HomePage = () => {
   return (
     <>
       <Helmet>
-        <title>Monk.Byte — Onkar Sarvade | Staff Software Engineer</title>
+        <title>Onkar Sarvade | Staff Software Engineer</title>
         <meta name="description" content="Onkar Sarvade — Staff Software Engineer with 11+ years building scalable backend systems, microservices architecture, and high-performance observability platforms." />
         <meta name="keywords" content="Onkar Sarvade, Staff Software Engineer, Distributed Systems, Scalable Backend, Microservices Architecture, Cloud Native Applications, Observability Engineering, Event Driven Systems, Fault Tolerant Systems, OpenTelemetry, Apache Kafka, AWS, System Design, Backend Engineering" />
-        <meta property="og:title" content="Monk.Byte — Onkar Sarvade | Staff Software Engineer" />
+        <meta property="og:title" content="Onkar Sarvade | Staff Software Engineer" />
         <meta property="og:description" content="Onkar Sarvade — Staff Software Engineer building scalable backend systems, microservices, and observability platforms." />
         <meta property="og:url" content="https://www.onkarsarvade.com/" />
-        <meta name="twitter:title" content="Monk.Byte — Onkar Sarvade | Staff Software Engineer" />
+        <meta name="twitter:title" content="Onkar Sarvade | Staff Software Engineer" />
         <meta name="twitter:description" content="Staff Software Engineer with 11+ years building scalable backend systems and observability platforms." />
         <link rel="canonical" href="https://www.onkarsarvade.com/" />
         <meta name="geo.region" content="IN-MH" />
@@ -1137,7 +870,6 @@ const HomePage = () => {
       </Helmet>
       <Hero />
       <StatsBar />
-      <MonkByte />
       <KeyImpact />
       <Skills />
       <Experience />

@@ -1,271 +1,60 @@
 // Portfolio layout — matches App.js structure; responsive desktop + mobile
 
-// ——— Hero (terminal) ———
+// ——— Hero ———
 .hero {
   position: relative;
-  min-height: 100vh;
-  min-height: 100dvh;
+  min-height: min(88vh, 820px);
+  min-height: min(88dvh, 820px);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: calc(5.5rem + env(safe-area-inset-top, 0)) 1.25rem 4rem;
-  overflow: hidden;
+  padding: calc(6.5rem + env(safe-area-inset-top, 0)) 1.25rem 4.5rem;
   background: $geek-bg-primary;
 
-  &__background {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-  }
-
-  // Low drifting mist along the bottom, like the valley in the avatar
-  &__mist {
-    position: absolute;
-    left: -10%;
-    right: -10%;
-    bottom: -10%;
-    height: 55%;
-    background:
-      radial-gradient(ellipse 40% 60% at 20% 80%, rgba($geek-text-primary, 0.045), transparent 70%),
-      radial-gradient(ellipse 45% 55% at 75% 85%, rgba($geek-text-primary, 0.035), transparent 70%);
-    filter: blur(20px);
-    animation: mist-drift 28s ease-in-out infinite alternate;
-  }
-
-  &__gradient {
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(ellipse 70% 60% at 50% 18%, rgba($geek-accent-purple, 0.13), transparent 60%),
-      radial-gradient(ellipse 40% 40% at 90% 60%, rgba($geek-accent-blue, 0.05), transparent 60%);
-  }
-
-  // ——— Identity: avatar + wordmark ———
-  &__identity {
-    display: flex;
-    align-items: center;
-    gap: clamp(1.5rem, 5vw, 3rem);
-    margin-bottom: clamp(1.75rem, 5vw, 2.75rem);
-    animation: monk-rise 1.2s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-  }
-
-  &__avatar-wrap {
-    position: relative;
-    flex-shrink: 0;
-    width: clamp(120px, 22vw, 190px);
-    aspect-ratio: 1;
-  }
-
-  &__avatar {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    display: block;
-    border-radius: 50%;
-    box-shadow: 0 0 70px rgba($geek-accent-purple, 0.25);
-  }
-
-  &__enso {
-    position: absolute;
-    border-radius: 50%;
-    border: 1px solid rgba($geek-accent-purple, 0.25);
-    border-right-color: transparent;
-    pointer-events: none;
-
-    &--inner {
-      inset: -12px;
-      animation: monk-breathe 9s ease-in-out infinite;
-    }
-
-    &--outer {
-      inset: -28px;
-      border-color: rgba($geek-text-primary, 0.07);
-      border-left-color: transparent;
-      animation: monk-breathe 14s ease-in-out infinite reverse;
-    }
-  }
-
-  &__brand {
-    min-width: 0;
-  }
-
-  &__wordmark {
-    font-family: $font-mono;
-    font-size: clamp(1.75rem, 6vw, 3.25rem);
-    font-weight: 700;
-    letter-spacing: 0.3em;
-    line-height: 1.1;
-    color: $geek-text-primary;
-    margin: 0 0 0.5rem;
-  }
-
-  &__alias {
-    font-family: $font-serif;
-    font-style: italic;
-    font-size: clamp(1.15rem, 3.2vw, 1.5rem);
-    color: $geek-text-secondary;
-    margin: 0 0 0.6rem;
-  }
-
-  &__mantra {
-    font-family: $font-mono;
-    font-size: clamp(0.75rem, 2vw, 0.85rem);
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: $geek-accent-purple;
-    margin: 0;
-  }
-
   &__content {
-    position: relative;
-    z-index: 1;
     width: 100%;
-    max-width: 920px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 clamp(0rem, 2vw, 0.25rem);
   }
 
-  &__terminal {
-    @include geek-terminal;
-    width: 100%;
-    text-align: left;
-    overflow: hidden;
-    animation: monk-rise 1.2s 0.25s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-  }
-
-  &__terminal-header {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.65rem 1rem;
-    background: rgba($geek-bg-tertiary, 0.6);
-    border-bottom: 1px solid $geek-border;
-    flex-wrap: wrap;
-  }
-
-  &__terminal-btn {
-    width: 11px;
-    height: 11px;
-    border-radius: 50%;
-    flex-shrink: 0;
-
-    &--red {
-      background: $geek-accent-purple;
-    }
-    &--yellow {
-      background: $geek-accent-blue;
-    }
-    &--green {
-      background: $geek-border-light;
-    }
-  }
-
-  &__terminal-title {
-    margin-left: auto;
+  &__eyebrow {
     font-family: $font-mono;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 500;
     color: $geek-text-muted;
-    white-space: nowrap;
-  }
-
-  &__terminal-body {
-    padding: 1rem 1rem 1.25rem;
-    font-family: $font-mono;
-    font-size: clamp(0.8rem, 2.5vw, 0.95rem);
-    line-height: 1.65;
-  }
-
-  &__line {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 0.35rem 0.5rem;
-    margin-bottom: 0.35rem;
-    word-break: break-word;
-
-    &--output {
-      padding-left: 1.25rem;
-      margin-bottom: 0.65rem;
-    }
-
-    &--typing {
-      color: $geek-accent-green-bright;
-      min-height: 1.6em;
-    }
-
-    &--prompt {
-      margin-bottom: 0;
-    }
-  }
-
-  &__prompt {
-    color: $geek-accent-purple-light;
-    flex-shrink: 0;
-    user-select: none;
-  }
-
-  &__command {
-    color: $geek-text-secondary;
+    letter-spacing: 0.04em;
+    margin: 0 0 1.25rem;
   }
 
   &__name {
-    font-family: $font-serif;
-    font-size: clamp(1.9rem, 5.5vw, 3rem);
-    font-weight: 600;
-    margin: 0;
-    letter-spacing: 0;
-    @include gradient-text;
-    line-height: 1.15;
+    font-size: clamp(2.5rem, 7vw, 4.25rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    color: $geek-text-primary;
+    margin: 0 0 0.75rem;
   }
 
   &__title {
-    font-family: $font-sans;
-    font-size: clamp(1rem, 3vw, 1.2rem);
-    font-weight: 600;
-    color: $geek-accent-purple-light;
-    margin: 0 0 0.35rem;
-    line-height: 1.3;
-  }
-
-  &__subtitle {
-    font-family: $font-sans;
-    font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+    font-size: clamp(1.15rem, 3vw, 1.5rem);
+    font-weight: 500;
     color: $geek-text-secondary;
-    margin: 0;
-    line-height: 1.45;
-  }
-
-  &__typing {
-    color: $geek-accent-green-bright;
-  }
-
-  &__cursor {
-    color: $geek-accent-green-bright;
-    font-weight: 400;
-
-    &--blink {
-      animation: blink 1s step-end infinite;
-    }
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+    margin: 0 0 1.75rem;
   }
 
   &__summary {
-    margin-top: 1.75rem;
-    padding: 1.25rem 1.35rem;
-    background: rgba($geek-bg-secondary, 0.65);
-    border: 1px solid $geek-border;
-    border-radius: 12px;
-    backdrop-filter: blur(8px);
+    max-width: 680px;
+    font-size: clamp(1rem, 2.6vw, 1.1rem);
+    line-height: 1.75;
+    color: $geek-text-secondary;
+    margin: 0;
 
-    p {
-      margin: 0;
-      font-size: clamp(0.95rem, 2.8vw, 1.05rem);
-      line-height: 1.75;
-      color: $geek-text-secondary;
-
-      strong {
-        color: $geek-text-primary;
-        font-weight: 600;
-      }
+    strong {
+      color: $geek-text-primary;
+      font-weight: 600;
     }
   }
 
@@ -273,28 +62,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
-    margin-top: 1.5rem;
-    justify-content: flex-start;
-  }
-
-  &__scroll {
-    position: absolute;
-    bottom: 1.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.35rem;
-    font-size: 0.75rem;
-    color: $geek-text-muted;
-    font-family: $font-mono;
-    opacity: 0.85;
-    pointer-events: none;
-  }
-
-  &__scroll-arrow {
-    animation: float 2.5s ease-in-out infinite;
+    margin-top: 2.25rem;
   }
 }
 
@@ -316,12 +84,11 @@
   min-height: 44px;
 
   &--primary {
-    background: linear-gradient(135deg, $geek-accent-purple 0%, $geek-accent-purple-dark 100%);
+    background: $geek-accent-purple;
     color: #fff;
 
     &:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 28px rgba($geek-accent-purple, 0.35);
+      background: $geek-accent-purple-dark;
     }
   }
 
@@ -372,10 +139,10 @@
 
   &__value {
     display: block;
-    font-family: $font-mono;
     font-size: clamp(1.5rem, 4vw, 2.25rem);
-    font-weight: 800;
-    color: $geek-accent-purple-light;
+    font-weight: 700;
+    color: $geek-text-primary;
+    letter-spacing: -0.02em;
     line-height: 1.1;
     margin-bottom: 0.35rem;
   }
@@ -409,23 +176,13 @@
     text-transform: uppercase;
     letter-spacing: 0.12em;
     margin-bottom: 0.5rem;
-
-    // a short brush-stroke before every eyebrow
-    &::before {
-      content: "";
-      width: 1.5rem;
-      height: 1px;
-      background: currentColor;
-      opacity: 0.6;
-    }
   }
 
   &__title {
-    font-family: $font-serif;
-    font-size: clamp(1.85rem, 4.5vw, 2.5rem);
-    font-weight: 600;
+    font-size: clamp(1.75rem, 4.2vw, 2.25rem);
+    font-weight: 700;
     color: $geek-text-primary;
-    letter-spacing: 0;
+    letter-spacing: -0.02em;
     line-height: 1.15;
     margin: 0 0 0.75rem;
   }
@@ -459,15 +216,6 @@
   background: $geek-bg-secondary;
 }
 
-.section--monkbyte {
-  position: relative;
-  overflow: hidden;
-  background:
-    radial-gradient(ellipse 50% 70% at 22% 50%, rgba($monk-saffron, 0.07), transparent 70%),
-    $geek-bg-primary;
-  border-top: 1px solid $geek-border;
-}
-
 .section--education {
   background: $geek-bg-primary;
 }
@@ -481,8 +229,12 @@
 .impact {
   &__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
+
+    @media (max-width: 700px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__card {
@@ -615,7 +367,7 @@
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    background: linear-gradient(135deg, $geek-accent-purple, $geek-accent-blue);
+    background: $geek-accent-purple;
     border: 3px solid $geek-bg-primary;
     box-shadow: 0 0 0 1px $geek-border;
     flex-shrink: 0;
@@ -627,7 +379,7 @@
     flex: 1;
     min-height: 2rem;
     margin-top: 0.35rem;
-    background: linear-gradient(180deg, $geek-accent-purple 0%, $geek-border 100%);
+    background: $geek-border;
     border-radius: 1px;
   }
 
@@ -768,13 +520,9 @@
   }
 
   &__stat-number {
-    font-family: $font-mono;
     font-size: clamp(1.5rem, 3vw, 2rem);
     font-weight: 800;
-    background: $gradient-text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: $geek-text-primary;
   }
 
   &__stat-label {
@@ -815,25 +563,8 @@
     overflow: hidden;
     text-decoration: none;
 
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, $geek-accent-purple, $geek-accent-blue, $geek-accent-cyan);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    &:hover::before {
-      opacity: 1;
-    }
-
     &:hover {
-      border-color: $geek-accent-purple;
-      transform: translateY(-4px);
+      border-color: $geek-border-light;
     }
   }
 
@@ -985,25 +716,8 @@
     overflow: hidden;
     text-decoration: none;
 
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, $geek-accent-purple, $geek-accent-blue, $geek-accent-cyan);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    &:hover::before {
-      opacity: 1;
-    }
-
     &:hover {
-      border-color: $geek-accent-purple;
-      transform: translateY(-4px);
+      border-color: $geek-border-light;
     }
   }
 
@@ -1257,7 +971,6 @@
     &:hover {
       border-color: $geek-accent-purple;
       background: rgba($geek-accent-purple, 0.06);
-      transform: translateY(-2px);
     }
 
     &:focus-visible {
@@ -1318,11 +1031,10 @@
   }
 
   &__logo {
-    font-family: $font-mono;
-    font-weight: 800;
-    font-size: 1.25rem;
+    font-weight: 700;
+    font-size: 1.1rem;
     color: $geek-text-primary;
-    letter-spacing: 0.28em;
+    letter-spacing: -0.01em;
     display: block;
     margin-bottom: 0.5rem;
   }
@@ -1334,25 +1046,16 @@
     line-height: 1.5;
   }
 
-  &__mantra {
-    font-family: $font-serif;
-    font-style: italic;
-    font-size: 1rem;
-    color: $geek-text-muted;
-    margin: 0.25rem 0 0;
-  }
-
   &__alias {
     display: inline-block;
     margin-top: 0.6rem;
-    font-family: $font-mono;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     color: $geek-text-muted;
     text-decoration: none;
     transition: color 0.2s;
 
     &:hover {
-      color: $monk-saffron;
+      color: $geek-accent-purple-light;
     }
   }
 
@@ -1395,269 +1098,10 @@
   }
 }
 
-// ——— Monk.Byte ———
-.monkbyte {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  gap: clamp(2rem, 6vw, 5rem);
-  max-width: 900px;
-  margin: 0 auto;
-
-  &__visual {
-    position: relative;
-    width: clamp(160px, 24vw, 230px);
-    aspect-ratio: 1;
-    display: grid;
-    place-items: center;
-  }
-
-  // Hand-drawn-feeling ensō that paints itself in
-  &__enso {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    overflow: visible;
-
-    path {
-      fill: none;
-      stroke: $monk-saffron;
-      stroke-width: 7;
-      stroke-linecap: round;
-      opacity: 0.85;
-      stroke-dasharray: 1;
-      stroke-dashoffset: 1;
-      filter: drop-shadow(0 0 14px rgba($monk-saffron, 0.35));
-    }
-
-    // thinner, drier second stroke so the ring reads as a brush, not a circle
-    .monkbyte__enso-bristle {
-      stroke-width: 2.5;
-      opacity: 0.4;
-      filter: none;
-    }
-  }
-
-  &--awake &__enso path {
-    animation: enso-draw 3.2s cubic-bezier(0.6, 0.1, 0.2, 1) forwards;
-  }
-
-  &--awake &__enso .monkbyte__enso-bristle {
-    animation-delay: 0.25s;
-  }
-
-  &__glyph {
-    font-family: $font-serif;
-    font-size: clamp(2.5rem, 6vw, 3.5rem);
-    color: rgba($geek-text-primary, 0.85);
-    line-height: 1;
-  }
-
-  &__eyebrow {
-    color: $geek-text-muted;
-  }
-
-  &__name {
-    font-family: $font-mono;
-    font-size: clamp(1.6rem, 4.5vw, 2.25rem);
-    font-weight: 700;
-    letter-spacing: 0.28em;
-    color: $geek-text-primary;
-    margin: 0 0 0.35rem;
-  }
-
-  &__tagline {
-    font-family: $font-serif;
-    font-style: italic;
-    font-size: 1.25rem;
-    color: $geek-text-secondary;
-    margin: 0 0 1.5rem;
-  }
-
-  &__mantra {
-    font-family: $font-serif;
-    font-size: clamp(1.5rem, 3.5vw, 1.9rem);
-    font-weight: 600;
-    color: $monk-saffron;
-    margin: 0 0 0.5rem;
-  }
-
-  &__pillars {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.25rem 0.6rem;
-    font-family: $font-mono;
-    font-size: 0.8rem;
-    color: $geek-text-secondary;
-    letter-spacing: 0.04em;
-    margin: 0 0 1.25rem;
-  }
-
-  &__sep {
-    color: $geek-text-muted;
-  }
-
-  &__text {
-    max-width: 52ch;
-    color: $geek-text-secondary;
-    line-height: 1.75;
-    margin: 0 0 1.75rem;
-  }
-
-  &__cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    min-height: 44px;
-    font-family: $font-mono;
-    font-size: 0.85rem;
-    letter-spacing: 0.06em;
-    color: $geek-text-primary;
-    text-decoration: none;
-    border-bottom: 1px solid rgba($monk-saffron, 0.4);
-    transition: color 0.3s, border-color 0.3s, gap 0.3s;
-
-    &:hover,
-    &:focus-visible {
-      color: $monk-saffron;
-      border-color: $monk-saffron;
-      gap: 0.85rem;
-    }
-  }
-
-  &__principles {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
-    gap: 1px;
-    max-width: 900px;
-    margin: clamp(3rem, 7vw, 4.5rem) auto 0;
-    background: $geek-border;
-    border: 1px solid $geek-border;
-    border-radius: 12px;
-    overflow: hidden;
-  }
-
-  &__principle {
-    background: $geek-bg-primary;
-    padding: 1.6rem 1.5rem;
-    transition: background 0.4s;
-
-    &:hover {
-      background: $geek-bg-secondary;
-    }
-  }
-
-  &__principle-mark {
-    display: block;
-    font-family: $font-serif;
-    font-size: 1.6rem;
-    color: $monk-saffron;
-    line-height: 1;
-    margin-bottom: 0.9rem;
-    opacity: 0.85;
-  }
-
-  &__principle-title {
-    font-family: $font-serif;
-    font-size: 1.35rem;
-    font-weight: 600;
-    color: $geek-text-primary;
-    margin: 0 0 0.4rem;
-  }
-
-  &__principle-text {
-    font-size: 0.9rem;
-    color: $geek-text-secondary;
-    line-height: 1.65;
-    margin: 0;
-  }
-}
-
-@keyframes monk-breathe {
-  0%,
-  100% {
-    transform: rotate(0deg) scale(1);
-    opacity: 0.6;
-  }
-  50% {
-    transform: rotate(180deg) scale(1.03);
-    opacity: 1;
-  }
-}
-
-@keyframes monk-rise {
-  from {
-    opacity: 0;
-    transform: translateY(14px);
-    filter: blur(4px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-    filter: none;
-  }
-}
-
-@keyframes enso-draw {
-  from {
-    stroke-dashoffset: 1;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes mist-drift {
-  from {
-    transform: translateX(-3%);
-  }
-  to {
-    transform: translateX(3%);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero__identity,
-  .hero__terminal,
-  .hero__enso,
-  .hero__mist,
-  .monkbyte__enso path {
-    animation: none !important;
-    stroke-dashoffset: 0;
-  }
-}
-
-@media (max-width: 640px) {
-  .hero__identity {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .monkbyte {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    text-align: center;
-
-    &__pillars {
-      justify-content: center;
-    }
-
-    &__text {
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-}
-
 // ——— Responsive tweaks ———
 @media (max-width: 768px) {
   .hero {
     padding: calc(4.5rem + env(safe-area-inset-top, 0)) 1rem 3.5rem;
-
-    &__terminal-body {
-      padding: 0.85rem 0.85rem 1rem;
-    }
 
     &__actions {
       flex-direction: column;
@@ -1665,10 +1109,6 @@
       .btn {
         width: 100%;
       }
-    }
-
-    &__scroll {
-      display: none;
     }
   }
 

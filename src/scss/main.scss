@@ -68,7 +68,6 @@ body.nav-open {
   }
 
   &__logo {
-    font-family: $font-mono;
     font-size: 1.15rem;
     font-weight: 700;
     text-decoration: none;
@@ -84,29 +83,11 @@ body.nav-open {
       border-radius: 4px;
     }
 
-    gap: 0.6rem;
-
-    &-avatar {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      box-shadow: 0 0 0 1px rgba($geek-accent-purple, 0.35);
-      transition: box-shadow 0.3s;
-    }
-
-    &:hover &-avatar {
-      box-shadow: 0 0 0 1px $geek-accent-purple, 0 0 18px rgba($geek-accent-purple, 0.35);
-    }
-
     &-text {
       color: $geek-text-primary;
-      font-size: 0.95rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-    }
-
-    &-dot {
-      color: $geek-accent-purple;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
     }
   }
 

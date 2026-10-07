@@ -1,38 +1,35 @@
-// Monk.Byte Theme — ink-dark, saffron-lit, Zen-quiet
-// Colors optimized for premium feel with high contrast
+// Site theme — neutral dark with a single blue accent
 
-// Primary Background Colors (GitHub Dark-like depth)
-$geek-bg-primary: #0b0a09;
-$geek-bg-secondary: #13110e;
-$geek-bg-tertiary: #1e1a16;
-$geek-bg-card: #181512;
-$geek-bg-elevated: #221e19;
+// Background colors
+$geek-bg-primary: #0e0f12;
+$geek-bg-secondary: #15171b;
+$geek-bg-tertiary: #1c1f24;
+$geek-bg-card: #181a1f;
+$geek-bg-elevated: #20242a;
 
-// Text Colors (High contrast for readability)
-$geek-text-primary: #f1e9dc;
-$geek-text-secondary: #a89e8f;
-$geek-text-muted: #776d60;
+// Text colors
+$geek-text-primary: #e8eaed;
+$geek-text-secondary: #a0a6b0;
+$geek-text-muted: #7c838f;
 
-// Accent Colors — Monk.Byte: saffron robe, incense gold, jade
+// Accent colors
 // (variable names kept from the old purple theme so every component picks these up)
-$geek-accent-purple: #e8873a;
-$geek-accent-purple-light: #f4a259;
-$geek-accent-purple-dark: #b9601c;
-$geek-accent-blue: #d9b26a;
-$geek-accent-cyan: #8fbfa4;
-$geek-accent-green: #5f8a55;
-$geek-accent-green-bright: #7fa872;
+$geek-accent-purple: #4f8ff7;
+$geek-accent-purple-light: #7aabff;
+$geek-accent-purple-dark: #2f6fd6;
+$geek-accent-blue: #7aabff;
+$geek-accent-cyan: #8fa3bf;
+$geek-accent-green: #3f8f5f;
+$geek-accent-green-bright: #5fb37f;
 $geek-accent-orange: #f78166;
 $geek-accent-yellow: #d29922;
 $geek-accent-pink: #db61a2;
 
-$monk-saffron: #e8873a;
-
 // Borders & Effects
-$geek-border: #2b261f;
-$geek-border-light: #3e362c;
+$geek-border: #262a31;
+$geek-border-light: #353a43;
 $geek-border-glow: rgba($geek-accent-purple, 0.3);
-$geek-code-bg: #12100d;
+$geek-code-bg: #121418;
 
 // Gradients
 $gradient-hero: linear-gradient(135deg, $geek-bg-primary 0%, $geek-bg-secondary 50%, rgba($geek-accent-purple, 0.05) 100%);
@@ -42,7 +39,6 @@ $gradient-card: linear-gradient(180deg, $geek-bg-secondary 0%, rgba($geek-accent
 $gradient-terminal: linear-gradient(180deg, $geek-code-bg 0%, rgba($geek-accent-purple, 0.05) 100%);
 
 // Typography
-$font-serif: 'Cormorant Garamond', 'Noto Serif', Georgia, serif;
 $font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace;
 $font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
@@ -60,13 +56,11 @@ $shadow-glow-green: 0 0 20px rgba($geek-accent-green-bright, 0.4);
   background: $geek-bg-secondary;
   border: 1px solid $geek-border;
   border-radius: 12px;
-  box-shadow: $shadow-lg;
+  box-shadow: none;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   
   &:hover {
     border-color: $geek-border-light;
-    box-shadow: $shadow-xl, $shadow-glow-purple;
-    transform: translateY(-2px);
   }
 }
 
@@ -91,10 +85,7 @@ $shadow-glow-green: 0 0 20px rgba($geek-accent-green-bright, 0.4);
 }
 
 @mixin gradient-text {
-  background: $gradient-text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: $geek-text-primary;
 }
 
 @mixin flex-center {

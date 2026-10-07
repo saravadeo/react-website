@@ -32,10 +32,6 @@ const BlogList = () => {
         <meta name="twitter:description" content="Technical articles on system design, backend engineering, and building scalable production platforms." />
         <link rel="canonical" href="https://www.onkarsarvade.com/blog" />
       </Helmet>
-      <div className="blog-page__bg" aria-hidden="true">
-        <div className="blog-page__grid" />
-        <div className="blog-page__glow" />
-      </div>
 
       <div className="blog-container blog-container--list">
         <nav className="blog-breadcrumb" aria-label="Breadcrumb">

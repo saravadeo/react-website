@@ -1,6 +1,6 @@
 {
-  "short_name": "Monk.Byte",
-  "name": "Monk.Byte \u2014 Onkar Sarvade",
+  "short_name": "Onkar Sarvade",
+  "name": "Onkar Sarvade",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#0b0a09",
-  "background_color": "#0b0a09"
+  "theme_color": "#0e0f12",
+  "background_color": "#0e0f12"
 }
