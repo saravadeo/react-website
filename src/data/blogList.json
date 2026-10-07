@@ -1,6 +1,19 @@
 {
   "posts": [
     {
+      "id": "ai-news-roundup-2026-10-07",
+      "slug": "ai-news-roundup-2026-10-07",
+      "title": "AI News Roundup for October 7, 2026: OpenAI Brings Agents to Atlassian, Meta and Microsoft Rethink Claude, and OpenAI Eyes a $1.4 Trillion Round",
+      "date": "2026-10-07",
+      "tags": [
+        "ai",
+        "news"
+      ],
+      "category": "AI News",
+      "readTime": "6 min",
+      "excerpt": "OpenAI expands its Atlassian partnership to put GPT-6 agents inside Jira and Rovo, new Ironclad benchmarks show big agent gains on complex legal work (55% vs 41.6%), Meta and Microsoft quietly pull employees off Claude, CrowdStrike opens its agentic-security startup accelerator, and OpenAI's reported $30B funding round at a $1.4T valuation keeps rolling."
+    },
+    {
       "id": "ai-news-roundup-2026-10-06",
       "slug": "ai-news-roundup-2026-10-06",
       "title": "AI News Roundup: OpenAI Starts Watermarking ChatGPT Text in the EU, the Pentagon Confirms It Has Stopped Using Claude, Reflection Debuts Beam, and ChatGPT's Image Generator Gets an Ad Test (Oct 2026)",
