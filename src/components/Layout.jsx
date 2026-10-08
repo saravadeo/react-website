@@ -5,7 +5,7 @@ import { trackEvent } from "../analytics";
 
 const navItems = [
   { to: "/shiponfriday", label: "Apps" },
-  { to: "/projects", label: "Projects" },
+  { to: "/projects", label: "Open source" },
   { to: "/about", label: "About" },
   { to: "/blog", label: "Blog" },
 ];

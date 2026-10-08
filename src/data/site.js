@@ -59,40 +59,74 @@ export const apps = [
   },
 ];
 
+// Numbers checked against GitHub on 2026-10-09
+export const ossStats = [
+  { value: "2", label: "PRs merged into Datadog's Java tracer" },
+  { value: "127", label: "commits to LogWise, its top contributor" },
+  { value: "70+", label: "PRs merged across the Odin platform" },
+];
+
 export const openSource = [
   {
-    title: "dd-trace-java #8471",
+    title: "dd-trace-java",
     org: "Datadog",
-    description: "Vert.x PostgreSQL client instrumentation for Datadog APM in the Java tracer.",
-    status: "Merged",
-    link: "https://github.com/DataDog/dd-trace-java/pull/8471",
-  },
-  {
-    title: "dd-trace-java #11149",
-    org: "Datadog",
-    description: "Explicit charset for String.getBytes() to fix UTF-8 encoding on international deployments.",
-    status: "Merged",
-    link: "https://github.com/DataDog/dd-trace-java/pull/11149",
+    role: "Contributor",
+    link: "https://github.com/DataDog/dd-trace-java",
+    description:
+      "Datadog's APM tracer for Java and the JVM. I contributed new instrumentation and fixes upstream.",
+    highlights: [
+      {
+        text: "Vert.x PostgreSQL client instrumentation, so Vert.x 4 apps get database spans in Datadog APM automatically",
+        link: "https://github.com/DataDog/dd-trace-java/pull/8471",
+        label: "#8471",
+      },
+      {
+        text: "Explicit UTF-8 charset for String.getBytes(), fixing encoding bugs on servers with a non-UTF-8 default locale",
+        link: "https://github.com/DataDog/dd-trace-java/pull/11149",
+        label: "#11149",
+      },
+    ],
+    tags: ["Java", "APM", "Bytecode instrumentation"],
   },
   {
     title: "LogWise",
     org: "Dream Horizon",
-    description: "Open-source end-to-end logging: Vector → Kafka → Spark → S3/Athena, with Grafana dashboards and deployment automation.",
-    status: "Maintainer",
+    role: "Maintainer",
     link: "https://github.com/dream-horizon-org/logwise",
+    description:
+      "Open-source, cost-effective end-to-end logging: Vector → Kafka → Spark → S3/Athena, with Grafana dashboards, deployment automation and production scaling guides.",
+    highlights: [
+      { text: "Top contributor: 127 commits and 56 merged pull requests" },
+      { text: "89 stars on GitHub, LGPL-3.0" },
+    ],
+    tags: ["Java", "Kafka", "Spark", "Observability"],
+  },
+  {
+    title: "Odin",
+    org: "Dream Horizon",
+    role: "Contributor",
+    link: "https://github.com/dream-horizon-org/odin",
+    description:
+      "A production-ready deployment platform: define software once and deploy it anywhere, any number of times.",
+    highlights: [
+      { text: "Built the Asgard AI agent: an MCP server, agent service and chat dock in the dashboard" },
+      { text: "70+ merged pull requests across odin-ui, odin-mcp, odin-agent and the deployer" },
+    ],
+    tags: ["TypeScript", "MCP", "AI agents", "Platform"],
+  },
+];
+
+export const moreOpenSource = [
+  {
+    title: "prerender-io-cloudfront-s3",
+    org: "Personal",
+    description: "CloudFormation and manual setup for Prerender.io with CloudFront and S3, to make JavaScript SPAs crawlable.",
+    link: "https://github.com/saravadeo/prerender-io-cloudfront-s3",
   },
   {
     title: "Spark Streaming & Kafka rack-aware fetching",
     org: "Datadog / Apache Kafka",
     description: "Spark Structured Streaming integration using bytecode instrumentation, and follower fetching with rack-aware assignment in Kafka.",
-    status: "Merged",
-  },
-  {
-    title: "prerender-io-cloudfront-s3",
-    org: "Personal",
-    description: "CloudFormation and manual setup for Prerender.io with CloudFront and S3, to make JavaScript SPAs crawlable.",
-    status: "Maintainer",
-    link: "https://github.com/saravadeo/prerender-io-cloudfront-s3",
   },
 ];
 
