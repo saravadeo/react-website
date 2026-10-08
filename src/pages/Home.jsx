@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import blogData from "../data/blogList.json";
 import { apps } from "../data/site";
-import { AppRow } from "./Projects";
 
 // Personal writing first; the daily AI news roundups live on the blog page
 const recentWriting = blogData.posts
@@ -55,7 +54,7 @@ const Home = () => (
         learn along the way.
       </p>
       <div className="intro__actions">
-        <Link to="/projects" className="button button--primary">
+        <Link to="/shiponfriday" className="button button--primary">
           See what I&apos;m building
         </Link>
         <Link to="/blog" className="button">
@@ -65,17 +64,26 @@ const Home = () => (
     </section>
 
     <section className="block">
-      <div className="block__head">
-        <h2 className="block__title">Building now</h2>
-        <Link to="/projects" className="block__more">
-          All projects →
-        </Link>
-      </div>
-      <ul className="app-list">
-        {apps.map((app) => (
-          <AppRow key={app.name} app={app} />
-        ))}
-      </ul>
+      <h2 className="block__title">Building now</h2>
+      <Link to="/shiponfriday" className="sof-teaser">
+        <img src="/shiponfriday/avatar.png" alt="" className="sof-teaser__logo" width="56" height="56" />
+        <span className="sof-teaser__text">
+          <span className="sof-teaser__name">
+            Ship on <span>Friday</span>
+          </span>
+          <span className="sof-teaser__tagline">
+            {apps.length} apps I build solo with AI: {apps.map((app) => app.name).join(", ")}
+          </span>
+        </span>
+        <span className="sof-teaser__icons" aria-hidden="true">
+          {apps.map((app) => (
+            <img key={app.name} src={app.icon} alt="" width="28" height="28" />
+          ))}
+        </span>
+        <span className="app-row__arrow" aria-hidden="true">
+          →
+        </span>
+      </Link>
     </section>
 
     <section className="block">

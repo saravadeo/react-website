@@ -1,4 +1,4 @@
-// Content shared by the Home, Projects and About pages.
+// Content shared by the Home, Ship on Friday, Projects and About pages.
 
 export const links = {
   github: "https://github.com/saravadeo",
@@ -20,7 +20,7 @@ export const apps = [
   {
     name: "Inboxwise",
     initial: "I",
-    icon: "/apps/inboxwise/icon-512.png",
+    icon: "/shiponfriday/inboxwise.png",
     tagline: "A private, offline SMS organizer for Android",
     description:
       "Sorts your inbox, tracks UPI and card spending, reminds you about bills and warns you about scam SMS. It has no internet permission, so your messages never leave your phone.",
@@ -32,6 +32,7 @@ export const apps = [
   {
     name: "YCal",
     initial: "Y",
+    icon: "/shiponfriday/ycal.png",
     color: "#6b3fd4",
     tagline: "Yahoo Calendar, reimagined for your phone",
     description:
@@ -45,6 +46,7 @@ export const apps = [
   {
     name: "ChallengeCam",
     initial: "C",
+    icon: "/shiponfriday/challengecam.png",
     color: "#e0533d",
     tagline: "Record challenge videos in one take",
     description:

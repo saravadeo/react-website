@@ -17,6 +17,12 @@
   --soon: #9a5b00;
   --soon-soft: #fbf0dc;
 
+  // @shiponfriday brand (from ../shiponfriday/src/brand/Avatar.tsx)
+  --sof-bg: #12101f;
+  --sof-accent: #ff5a36;
+  --sof-flame: #ffc83d;
+  --sof-soft: #cfcbe3;
+
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
@@ -435,6 +441,129 @@ a {
   }
 }
 
+// ——— Ship on Friday ———
+.sof-hero {
+  margin-top: clamp(1.5rem, 5vw, 2.5rem);
+  padding: clamp(1.5rem, 6vw, 2.5rem);
+  border-radius: calc(var(--radius) + 6px);
+  background: var(--sof-bg);
+  color: #fff;
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(1rem, 4vw, 1.75rem);
+
+  &__logo {
+    width: 88px;
+    height: 88px;
+    border-radius: 22px;
+    flex-shrink: 0;
+  }
+
+  &__handle {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--sof-flame);
+    margin-bottom: 0.35rem;
+  }
+
+  &__title {
+    font-size: clamp(2rem, 7vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 1.05;
+    margin-bottom: 0.9rem;
+
+    span {
+      color: var(--sof-accent);
+    }
+  }
+
+  &__lede {
+    color: var(--sof-soft);
+    font-size: 1.05rem;
+    max-width: 32em;
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.25rem;
+    margin-top: 1.25rem;
+    font-weight: 600;
+
+    a {
+      color: #fff;
+    }
+  }
+}
+
+.sof-teaser {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.15rem;
+  border-radius: var(--radius);
+  background: var(--sof-bg);
+  color: #fff;
+
+  &:hover {
+    text-decoration: none;
+
+    .sof-teaser__name {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+  }
+
+  &__logo {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    flex-shrink: 0;
+  }
+
+  &__text {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+
+    span {
+      color: var(--sof-accent);
+    }
+  }
+
+  &__tagline {
+    color: var(--sof-soft);
+    font-size: 0.92rem;
+  }
+
+  &__icons {
+    display: flex;
+
+    img {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      box-shadow: 0 0 0 2px var(--sof-bg);
+
+      & + img {
+        margin-left: -6px;
+      }
+    }
+  }
+
+  .app-row__arrow {
+    color: var(--sof-soft);
+  }
+}
+
 // ——— Lists ———
 .post-list {
   list-style: none;
@@ -593,6 +722,20 @@ a {
 }
 
 @media (max-width: 560px) {
+  .sof-hero {
+    flex-direction: column;
+
+    &__logo {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+    }
+  }
+
+  .sof-teaser__icons {
+    display: none;
+  }
+
   .work-list__item,
   .skill-list__row {
     grid-template-columns: 1fr;

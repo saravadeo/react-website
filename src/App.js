@@ -9,6 +9,7 @@ import {
 import { Nav, Footer } from "./components/Layout";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
+import ShipOnFriday from "./pages/ShipOnFriday";
 import About from "./pages/About";
 import BlogList from "./components/Blog/BlogList";
 import BlogPost from "./components/Blog/BlogPost";
@@ -24,7 +25,7 @@ const LEGACY_ANCHORS = {
   "#education": "/about",
   "#contact": "/about",
   "#opensource": "/projects",
-  "#apps": "/projects",
+  "#apps": "/shiponfriday",
 };
 
 const AppShell = () => {
@@ -46,6 +47,8 @@ const AppShell = () => {
         ) : (
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/shiponfriday" element={<ShipOnFriday />} />
+            <Route path="/apps" element={<Navigate to="/shiponfriday" replace />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/about" element={<About />} />
             <Route path="/blog" element={<BlogList />} />

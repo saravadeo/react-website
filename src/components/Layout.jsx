@@ -4,6 +4,7 @@ import { elsewhere } from "../data/site";
 import { trackEvent } from "../analytics";
 
 const navItems = [
+  { to: "/shiponfriday", label: "Apps" },
   { to: "/projects", label: "Projects" },
   { to: "/about", label: "About" },
   { to: "/blog", label: "Blog" },
