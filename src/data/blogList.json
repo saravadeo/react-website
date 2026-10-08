@@ -1,6 +1,21 @@
 {
   "posts": [
     {
+      "id": "from-idea-to-play-store-what-launching-actually-costs",
+      "slug": "from-idea-to-play-store-what-launching-actually-costs",
+      "title": "From Idea to Play Store: What Launching Actually Costs",
+      "date": "2026-10-08",
+      "tags": [
+        "launch",
+        "marketing",
+        "play-store",
+        "lessons"
+      ],
+      "category": "Product Design",
+      "readTime": "6 min",
+      "excerpt": "On July 15 my marketing plan promised 400–900 downloads in sixteen days, from free channels, on a ₹0 budget. On July 31 the counter read fewer than ten. Here's the receipt — and the machine that kept running after the goal died."
+    },
+    {
       "id": "why-i-killed-my-daily-ai-news-blog",
       "slug": "why-i-killed-my-daily-ai-news-blog",
       "title": "Why I Killed My Daily AI-News Blog",
