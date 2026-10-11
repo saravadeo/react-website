@@ -20,8 +20,7 @@ const Projects = () => (
       <p className="page-head__lede">
         Most of my day job is observability and platform work, and a good part of it ships in the
         open: upstream fixes to Datadog&apos;s tracer, a logging stack I maintain, and an AI agent
-        for a deployment platform. The apps I build on my own live on{" "}
-        <a href="https://shiponfriday.com/">Ship on Friday</a>.
+        for a deployment platform.
       </p>
     </header>
 

@@ -1,10 +1,9 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import { elsewhere, links } from "../data/site";
+import { elsewhere } from "../data/site";
 import { trackEvent } from "../analytics";
 
 const navItems = [
-  { href: links.shiponfriday, label: "Apps" },
   { to: "/projects", label: "Open source" },
   { to: "/about", label: "About" },
   { to: "/blog", label: "Blog" },

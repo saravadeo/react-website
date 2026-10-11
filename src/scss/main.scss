@@ -17,12 +17,6 @@
   --soon: #9a5b00;
   --soon-soft: #fbf0dc;
 
-  // @shiponfriday brand (from ../shiponfriday/src/brand/Avatar.tsx)
-  --sof-bg: #12101f;
-  --sof-accent: #ff5a36;
-  --sof-flame: #ffc83d;
-  --sof-soft: #cfcbe3;
-
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
@@ -401,59 +395,6 @@ a {
     gap: 0.5rem 1.25rem;
     font-weight: 600;
     font-size: 0.95rem;
-  }
-}
-
-// ——— Ship on Friday teaser ———
-.sof-teaser {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem 1.15rem;
-  border-radius: var(--radius);
-  background: var(--sof-bg);
-  color: #fff;
-
-  &:hover {
-    text-decoration: none;
-
-    .sof-teaser__name {
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-  }
-
-  &__logo {
-    width: 56px;
-    height: 56px;
-    border-radius: 14px;
-    flex-shrink: 0;
-  }
-
-  &__text {
-    flex: 1;
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__name {
-    font-size: 1.15rem;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-
-    span {
-      color: var(--sof-accent);
-    }
-  }
-
-  &__tagline {
-    color: var(--sof-soft);
-    font-size: 0.92rem;
-  }
-
-  .app-row__arrow {
-    color: var(--sof-soft);
   }
 }
 

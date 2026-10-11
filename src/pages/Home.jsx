@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import blogData from "../data/blogList.json";
-import { links } from "../data/site";
 
 // Personal writing first; the daily AI news roundups live on the blog page
 const recentWriting = blogData.posts
@@ -54,31 +53,13 @@ const Home = () => (
         learn along the way.
       </p>
       <div className="intro__actions">
-        <a href={links.shiponfriday} className="button button--primary">
-          See what I&apos;m building
-        </a>
-        <Link to="/blog" className="button">
+        <Link to="/blog" className="button button--primary">
           Read the blog
         </Link>
+        <Link to="/projects" className="button">
+          Open source work
+        </Link>
       </div>
-    </section>
-
-    <section className="block">
-      <h2 className="block__title">Building now</h2>
-      <a href={links.shiponfriday} className="sof-teaser">
-        <img src="/images/shiponfriday-avatar.png" alt="" className="sof-teaser__logo" width="56" height="56" />
-        <span className="sof-teaser__text">
-          <span className="sof-teaser__name">
-            Ship on <span>Friday</span>
-          </span>
-          <span className="sof-teaser__tagline">
-            The small apps I build solo with AI, at shiponfriday.com
-          </span>
-        </span>
-        <span className="app-row__arrow" aria-hidden="true">
-          →
-        </span>
-      </a>
     </section>
 
     <section className="block">

@@ -26,14 +26,6 @@ const LEGACY_ANCHORS = {
   "#opensource": "/projects",
 };
 
-// The apps moved to their own site; old links land there.
-const ToShipOnFriday = () => {
-  useEffect(() => {
-    window.location.replace("https://shiponfriday.com/");
-  }, []);
-  return null;
-};
-
 const AppShell = () => {
   const location = useLocation();
 
@@ -53,8 +45,6 @@ const AppShell = () => {
         ) : (
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/shiponfriday" element={<ToShipOnFriday />} />
-            <Route path="/apps" element={<ToShipOnFriday />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/about" element={<About />} />
             <Route path="/blog" element={<BlogList />} />
