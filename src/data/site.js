@@ -1,4 +1,4 @@
-// Content shared by the Home, Ship on Friday, Projects and About pages.
+// Content shared by the Home, Projects and About pages.
 
 export const links = {
   github: "https://github.com/saravadeo",
@@ -6,6 +6,7 @@ export const links = {
   stackoverflow: "https://stackoverflow.com/users/4539951/onkar-saravade",
   instagram: "https://www.instagram.com/shiponfriday/",
   youtube: "https://www.youtube.com/@shiponfriday",
+  shiponfriday: "https://shiponfriday.com/",
 };
 
 export const elsewhere = [
@@ -16,48 +17,6 @@ export const elsewhere = [
   { label: "YouTube", href: links.youtube, platform: "shiponfriday_youtube" },
 ];
 
-export const apps = [
-  {
-    name: "Inboxwise",
-    initial: "I",
-    icon: "/shiponfriday/inboxwise.png",
-    tagline: "A private, offline SMS organizer for Android",
-    description:
-      "Sorts your inbox, tracks UPI and card spending, reminds you about bills and warns you about scam SMS. It has no internet permission, so your messages never leave your phone.",
-    status: "Coming soon",
-    platforms: "Android",
-    tags: ["Android", "Offline AI", "Privacy"],
-    website: "/apps/inboxwise/",
-  },
-  {
-    name: "YCal",
-    initial: "Y",
-    icon: "/shiponfriday/ycal.png",
-    color: "#6b3fd4",
-    tagline: "Yahoo Calendar, reimagined for your phone",
-    description:
-      "A native calendar app for iOS and Android that brings Yahoo Calendar to your phone with a fast, simple experience. Built solo from idea to launch.",
-    status: "Live",
-    platforms: "iOS · Android",
-    tags: ["React Native", "iOS", "Android"],
-    website: "https://saravadeo.github.io/ycal-website",
-    playStore: "https://play.google.com/store/apps/details?id=com.ycal.mobile",
-  },
-  {
-    name: "ChallengeCam",
-    initial: "C",
-    icon: "/shiponfriday/challengecam.png",
-    color: "#e0533d",
-    tagline: "Record challenge videos in one take",
-    description:
-      "Face cam plus overlay in a single recording. Make emoji, memory, eyesight, reaction, sports and brain challenges and share them straight to TikTok, Reels and Shorts. Built solo end to end.",
-    status: "Live",
-    platforms: "Android",
-    tags: ["React Native", "Video", "Android"],
-    website: "https://www.thechallengecam.com/",
-    playStore: "https://play.google.com/store/apps/details?id=com.challengecam.app",
-  },
-];
 
 // Numbers checked against GitHub on 2026-10-09
 export const ossStats = [

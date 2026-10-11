@@ -1,10 +1,10 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import { elsewhere } from "../data/site";
+import { elsewhere, links } from "../data/site";
 import { trackEvent } from "../analytics";
 
 const navItems = [
-  { to: "/shiponfriday", label: "Apps" },
+  { href: links.shiponfriday, label: "Apps" },
   { to: "/projects", label: "Open source" },
   { to: "/about", label: "About" },
   { to: "/blog", label: "Blog" },
@@ -23,16 +23,26 @@ export const Nav = () => (
       <nav aria-label="Primary">
         <ul className="site-nav__links">
           {navItems.map((item) => (
-            <li key={item.to}>
-              <NavLink
-                to={item.to}
-                className={({ isActive }) =>
-                  `site-nav__link${isActive ? " site-nav__link--active" : ""}`
-                }
-                onClick={() => trackEvent("Navigation", "nav_click", item.label.toLowerCase())}
-              >
-                {item.label}
-              </NavLink>
+            <li key={item.label}>
+              {item.href ? (
+                <a
+                  href={item.href}
+                  className="site-nav__link"
+                  onClick={() => trackEvent("Navigation", "nav_click", item.label.toLowerCase())}
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <NavLink
+                  to={item.to}
+                  className={({ isActive }) =>
+                    `site-nav__link${isActive ? " site-nav__link--active" : ""}`
+                  }
+                  onClick={() => trackEvent("Navigation", "nav_click", item.label.toLowerCase())}
+                >
+                  {item.label}
+                </NavLink>
+              )}
             </li>
           ))}
         </ul>

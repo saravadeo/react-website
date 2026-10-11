@@ -9,7 +9,6 @@ import {
 import { Nav, Footer } from "./components/Layout";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
-import ShipOnFriday from "./pages/ShipOnFriday";
 import About from "./pages/About";
 import BlogList from "./components/Blog/BlogList";
 import BlogPost from "./components/Blog/BlogPost";
@@ -25,7 +24,14 @@ const LEGACY_ANCHORS = {
   "#education": "/about",
   "#contact": "/about",
   "#opensource": "/projects",
-  "#apps": "/shiponfriday",
+};
+
+// The apps moved to their own site; old links land there.
+const ToShipOnFriday = () => {
+  useEffect(() => {
+    window.location.replace("https://shiponfriday.com/");
+  }, []);
+  return null;
 };
 
 const AppShell = () => {
@@ -47,8 +53,8 @@ const AppShell = () => {
         ) : (
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/shiponfriday" element={<ShipOnFriday />} />
-            <Route path="/apps" element={<Navigate to="/shiponfriday" replace />} />
+            <Route path="/shiponfriday" element={<ToShipOnFriday />} />
+            <Route path="/apps" element={<ToShipOnFriday />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/about" element={<About />} />
             <Route path="/blog" element={<BlogList />} />

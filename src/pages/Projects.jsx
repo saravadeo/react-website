@@ -1,6 +1,5 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 import { ossStats, openSource, moreOpenSource, links } from "../data/site";
 import { ExternalLink } from "../components/Layout";
 
@@ -22,7 +21,7 @@ const Projects = () => (
         Most of my day job is observability and platform work, and a good part of it ships in the
         open: upstream fixes to Datadog&apos;s tracer, a logging stack I maintain, and an AI agent
         for a deployment platform. The apps I build on my own live on{" "}
-        <Link to="/shiponfriday">Ship on Friday</Link>.
+        <a href="https://shiponfriday.com/">Ship on Friday</a>.
       </p>
     </header>
 

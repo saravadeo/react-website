@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import blogData from "../data/blogList.json";
-import { apps } from "../data/site";
+import { links } from "../data/site";
 
 // Personal writing first; the daily AI news roundups live on the blog page
 const recentWriting = blogData.posts
@@ -54,9 +54,9 @@ const Home = () => (
         learn along the way.
       </p>
       <div className="intro__actions">
-        <Link to="/shiponfriday" className="button button--primary">
+        <a href={links.shiponfriday} className="button button--primary">
           See what I&apos;m building
-        </Link>
+        </a>
         <Link to="/blog" className="button">
           Read the blog
         </Link>
@@ -65,25 +65,20 @@ const Home = () => (
 
     <section className="block">
       <h2 className="block__title">Building now</h2>
-      <Link to="/shiponfriday" className="sof-teaser">
-        <img src="/shiponfriday/avatar.png" alt="" className="sof-teaser__logo" width="56" height="56" />
+      <a href={links.shiponfriday} className="sof-teaser">
+        <img src="/images/shiponfriday-avatar.png" alt="" className="sof-teaser__logo" width="56" height="56" />
         <span className="sof-teaser__text">
           <span className="sof-teaser__name">
             Ship on <span>Friday</span>
           </span>
           <span className="sof-teaser__tagline">
-            {apps.length} apps I build solo with AI: {apps.map((app) => app.name).join(", ")}
+            The small apps I build solo with AI, at shiponfriday.com
           </span>
-        </span>
-        <span className="sof-teaser__icons" aria-hidden="true">
-          {apps.map((app) => (
-            <img key={app.name} src={app.icon} alt="" width="28" height="28" />
-          ))}
         </span>
         <span className="app-row__arrow" aria-hidden="true">
           →
         </span>
-      </Link>
+      </a>
     </section>
 
     <section className="block">
